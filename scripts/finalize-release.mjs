@@ -34,6 +34,11 @@ function requireRun(run,candidate,name,path){
  assert.equal(run.head_branch,'main','run_not_main');
  assert.equal(run.head_repository?.full_name??run.repository?.full_name,process.env.GITHUB_REPOSITORY??'mekala27-45/handoff','foreign_repository');
 }
+function requireModelTrace(trace,model){
+ assert.equal(trace.run_id,model.run_id+'-'+trace.fixture_id,'trace_case_run_identity');
+ assert.equal(trace.source_commit,model.source_commit,'trace_source_identity');
+ assert.ok(Array.isArray(trace.entries)&&trace.entries.length>0,'missing_trace_entries');
+}
 function requireVerification(value,candidate){
  assert.equal(value.source_commit,candidate,'verification_commit_mismatch');
  assert.equal(value.passed,true,'verification_failed');
@@ -132,6 +137,7 @@ function selfTest(){
  assert.equal(checkFaultCoverage(rows,plan,truth,report).length,1);
  for(const badRows of [[],[{...rows[0],fixture_id:'arbitrary'}],[{...rows[0],applicable:false}],[{...rows[0],injector_exercised:false}], [...rows,...rows]])assert.throws(()=>checkFaultCoverage(badRows,plan,truth,report));
  assert.throws(()=>checkFaultCoverage(rows,plan,truth,{...report,attempted_case_ids:[]}));assert.throws(()=>checkFaultCoverage(rows,plan,truth,{...report,metrics:report.metrics.map(m=>({...m,denominator:2}))}));
+ const model={run_id:'model-test',source_commit:candidate},trace={run_id:'model-test-fx_test',fixture_id:'fx_test',source_commit:candidate,entries:[{type:'tool_result'}]};requireModelTrace(trace,model);for(const bad of [{...trace,run_id:model.run_id},{...trace,source_commit:'b'.repeat(40)},{...trace,entries:[]}])assert.throws(()=>requireModelTrace(bad,model));
  console.log('release self-test: valid, stale, failed, missing and foreign evidence checks passed');
 }
 async function verify(){
@@ -159,7 +165,7 @@ async function verify(){
  const publicIndex=await read('apps/site/public/reports/index.json'),model=publicIndex['local-model'],originalModel=reportSchema.parse(await read('reports/runs/'+model.run_id+'.json'));
  for(const [key,value] of Object.entries(originalModel))assert.deepEqual(model[key],value,'public_model_manifest_mismatch:'+key);
  assert.equal(model.mode,'local-model');assert.equal(model.attempted_case_ids.length,16);assert.deepEqual(model.attempted_case_ids,plan.model_subset);assert.ok(model.model_digest);assert.equal(model.trace_cases.length,16);assert.deepEqual(model.trace_cases.map(t=>t.fixture_id),model.attempted_case_ids);
- for(const trace of model.trace_cases){assert.equal(trace.run_id,model.run_id);assert.equal(trace.source_commit,model.source_commit);assert.ok(Array.isArray(trace.entries)&&trace.entries.length>0);}
+ for(const trace of model.trace_cases)requireModelTrace(trace,model);
  assert.ok(model.trace_cases.some(t=>t.entries.some(e=>e.type==='tool_result')),'actual_model_tool_evidence_required');
  const skills=await read('reports/checks/skills.json');assert.equal(skills.passed,true);assert.ok(skills.results.length===3&&skills.results.every(r=>r.exit_code===0));
  const pages=await eventually('pages_workflow',async()=>{const a=(await github('/repos/'+repo+'/actions/workflows/pages.yml/runs?head_sha='+candidate+'&per_page=30')).workflow_runs;const run=a.find(r=>r.head_sha===candidate&&r.conclusion==='success');assert.ok(run);requireRun(run,candidate,'Publish reviewed Pages artifact','.github/workflows/pages.yml');return run;});
@@ -196,3 +202,4 @@ async function publish(){
 }
 const mode=process.argv[2];
 if(mode==='self-test')selfTest();else if(mode==='verify')await verify();else if(mode==='publish')await publish();else throw Error('use_self-test_verify_or_publish');
+
