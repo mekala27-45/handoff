@@ -1,0 +1,5122 @@
+[
+  {
+    "fixture_id": "fx_00a94bf33039319682e6",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-00a94bf33039319682e6",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-00a94bf33039319682e6",
+      "customer_id": "SYN-CUSTOMER-00a94bf33039319682e6",
+      "currency": "USD",
+      "captured_cents": 10916,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-00a94bf33039319682e6",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-00a94bf33039319682e6-1",
+        "amount_cents": 10916,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_02ecb565fc1c1083dba0",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-02ecb565fc1c1083dba0",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-02ecb565fc1c1083dba0",
+      "customer_id": "SYN-CUSTOMER-02ecb565fc1c1083dba0",
+      "currency": "USD",
+      "captured_cents": 1695,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-08T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-02ecb565fc1c1083dba0",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-02ecb565fc1c1083dba0-1",
+        "amount_cents": 1695,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_02f8ec6ef89db18ccd42",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-02f8ec6ef89db18ccd42",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-02f8ec6ef89db18ccd42",
+      "customer_id": "SYN-CUSTOMER-02f8ec6ef89db18ccd42",
+      "currency": "USD",
+      "captured_cents": 3371,
+      "refunded_cents": 3371,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-02f8ec6ef89db18ccd42",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-02f8ec6ef89db18ccd42-1",
+        "amount_cents": 3371,
+        "refunded_cents": 3371,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-02f8ec6ef89db18ccd42"
+  },
+  {
+    "fixture_id": "fx_05d22ca4cc813aa0a086",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-05d22ca4cc813aa0a086",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-05d22ca4cc813aa0a086",
+      "customer_id": "SYN-CUSTOMER-05d22ca4cc813aa0a086",
+      "currency": "USD",
+      "captured_cents": 12745,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-05d22ca4cc813aa0a086",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-05d22ca4cc813aa0a086-1",
+        "amount_cents": 12745,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_07a9425bd18f2b4fd61e",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-07a9425bd18f2b4fd61e",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e",
+      "customer_id": "SYN-CUSTOMER-07a9425bd18f2b4fd61e",
+      "currency": "USD",
+      "captured_cents": 11190,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-07a9425bd18f2b4fd61e",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-07a9425bd18f2b4fd61e-1",
+        "amount_cents": 11190,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_09c3ac00a7568f7f952f",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-09c3ac00a7568f7f952f",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-09c3ac00a7568f7f952f",
+      "customer_id": "SYN-CUSTOMER-09c3ac00a7568f7f952f",
+      "currency": "USD",
+      "captured_cents": 27714,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-09c3ac00a7568f7f952f",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-09c3ac00a7568f7f952f-1",
+        "amount_cents": 13857,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-09c3ac00a7568f7f952f-2",
+        "amount_cents": 13857,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_09ed1bfd82ca4ddfe32e",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-09ed1bfd82ca4ddfe32e",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-09ed1bfd82ca4ddfe32e",
+      "customer_id": "SYN-CUSTOMER-09ed1bfd82ca4ddfe32e",
+      "currency": "USD",
+      "captured_cents": 10368,
+      "refunded_cents": 5184,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-09ed1bfd82ca4ddfe32e",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-09ed1bfd82ca4ddfe32e-1",
+        "amount_cents": 10368,
+        "refunded_cents": 5184,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_0b58a3a6ac61d0118970",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-0b58a3a6ac61d0118970",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-0b58a3a6ac61d0118970",
+      "customer_id": "SYN-CUSTOMER-0b58a3a6ac61d0118970",
+      "currency": "USD",
+      "captured_cents": 12471,
+      "refunded_cents": 6235,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-0b58a3a6ac61d0118970",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-0b58a3a6ac61d0118970-1",
+        "amount_cents": 12471,
+        "refunded_cents": 6235,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_1008a8f0f140deb3c75e",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-1008a8f0f140deb3c75e",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-1008a8f0f140deb3c75e",
+      "customer_id": "SYN-CUSTOMER-1008a8f0f140deb3c75e",
+      "currency": "USD",
+      "captured_cents": 2259,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1008a8f0f140deb3c75e",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1008a8f0f140deb3c75e-1",
+        "amount_cents": 2259,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_108da8ce176f82d20bb2",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-108da8ce176f82d20bb2",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-108da8ce176f82d20bb2",
+      "customer_id": "SYN-CUSTOMER-108da8ce176f82d20bb2",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-108da8ce176f82d20bb2",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-108da8ce176f82d20bb2-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_11aaec5d55fd73652991",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-11aaec5d55fd73652991",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-11aaec5d55fd73652991",
+      "customer_id": "SYN-CUSTOMER-11aaec5d55fd73652991",
+      "currency": "USD",
+      "captured_cents": 1832,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-07T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-11aaec5d55fd73652991",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-11aaec5d55fd73652991-1",
+        "amount_cents": 1832,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_12ac2af2ce683019457c",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-12ac2af2ce683019457c",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-12ac2af2ce683019457c",
+      "customer_id": "SYN-CUSTOMER-12ac2af2ce683019457c",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-12ac2af2ce683019457c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-12ac2af2ce683019457c-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_15f02c4e91098787f8c4",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-15f02c4e91098787f8c4",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-15f02c4e91098787f8c4",
+      "customer_id": "SYN-CUSTOMER-15f02c4e91098787f8c4",
+      "currency": "USD",
+      "captured_cents": 12028,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-15f02c4e91098787f8c4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-15f02c4e91098787f8c4-1",
+        "amount_cents": 12028,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_1728dccff9827e4820e4",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-1728dccff9827e4820e4",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-1728dccff9827e4820e4",
+      "customer_id": "SYN-CUSTOMER-1728dccff9827e4820e4",
+      "currency": "USD",
+      "captured_cents": 2533,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1728dccff9827e4820e4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1728dccff9827e4820e4-1",
+        "amount_cents": 2533,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_17296726da11a8648720",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-17296726da11a8648720",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-17296726da11a8648720",
+      "customer_id": "SYN-CUSTOMER-17296726da11a8648720",
+      "currency": "USD",
+      "captured_cents": 11053,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-17296726da11a8648720",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-17296726da11a8648720-1",
+        "amount_cents": 11053,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_1c10e65172f5477e2258",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-1c10e65172f5477e2258",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-1c10e65172f5477e2258",
+      "customer_id": "SYN-CUSTOMER-1c10e65172f5477e2258",
+      "currency": "USD",
+      "captured_cents": 3234,
+      "refunded_cents": 3234,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1c10e65172f5477e2258",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1c10e65172f5477e2258-1",
+        "amount_cents": 3234,
+        "refunded_cents": 3234,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-1c10e65172f5477e2258"
+  },
+  {
+    "fixture_id": "fx_1c7da880b36d5597672f",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-1c7da880b36d5597672f",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-1c7da880b36d5597672f",
+      "customer_id": "SYN-CUSTOMER-1c7da880b36d5597672f",
+      "currency": "USD",
+      "captured_cents": 27714,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1c7da880b36d5597672f",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1c7da880b36d5597672f-1",
+        "amount_cents": 13857,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-1c7da880b36d5597672f-2",
+        "amount_cents": 13857,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_1d32d258f95dc911f2fc",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-1d32d258f95dc911f2fc",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-1d32d258f95dc911f2fc",
+      "customer_id": "SYN-CUSTOMER-1d32d258f95dc911f2fc",
+      "currency": "USD",
+      "captured_cents": 26618,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1d32d258f95dc911f2fc",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1d32d258f95dc911f2fc-1",
+        "amount_cents": 13309,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-1d32d258f95dc911f2fc-2",
+        "amount_cents": 13309,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_1e0cc73c643a93e64ca2",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-1e0cc73c643a93e64ca2",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-1e0cc73c643a93e64ca2",
+      "customer_id": "SYN-CUSTOMER-1e0cc73c643a93e64ca2",
+      "currency": "USD",
+      "captured_cents": 11891,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1e0cc73c643a93e64ca2",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1e0cc73c643a93e64ca2-1",
+        "amount_cents": 11891,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_1e210e169df61d3891c7",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-1e210e169df61d3891c7",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-1e210e169df61d3891c7",
+      "customer_id": "SYN-CUSTOMER-1e210e169df61d3891c7",
+      "currency": "USD",
+      "captured_cents": 1421,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-10T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-1e210e169df61d3891c7",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-1e210e169df61d3891c7-1",
+        "amount_cents": 1421,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_2122a33033dd7b47466d",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-2122a33033dd7b47466d",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-2122a33033dd7b47466d",
+      "customer_id": "SYN-CUSTOMER-2122a33033dd7b47466d",
+      "currency": "USD",
+      "captured_cents": 26892,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-2122a33033dd7b47466d",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-2122a33033dd7b47466d-1",
+        "amount_cents": 13446,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-2122a33033dd7b47466d-2",
+        "amount_cents": 13446,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_273b1c7a9f9e376f35c2",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-273b1c7a9f9e376f35c2",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-273b1c7a9f9e376f35c2",
+      "customer_id": "SYN-CUSTOMER-273b1c7a9f9e376f35c2",
+      "currency": "USD",
+      "captured_cents": 1558,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-09T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-273b1c7a9f9e376f35c2",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-273b1c7a9f9e376f35c2-1",
+        "amount_cents": 1558,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_27df0129045c1365f2d6",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-27df0129045c1365f2d6",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-27df0129045c1365f2d6",
+      "customer_id": "SYN-CUSTOMER-27df0129045c1365f2d6",
+      "currency": "USD",
+      "captured_cents": 1574,
+      "refunded_cents": 787,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-27df0129045c1365f2d6",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-27df0129045c1365f2d6-1",
+        "amount_cents": 1574,
+        "refunded_cents": 787,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_280120cf2f427523f63a",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-280120cf2f427523f63a",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-280120cf2f427523f63a",
+      "customer_id": "SYN-CUSTOMER-280120cf2f427523f63a",
+      "currency": "USD",
+      "captured_cents": 13293,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-280120cf2f427523f63a",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-280120cf2f427523f63a-1",
+        "amount_cents": 13293,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_2b77e7d893d4567fc1b4",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-2b77e7d893d4567fc1b4",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4",
+      "customer_id": "SYN-CUSTOMER-2b77e7d893d4567fc1b4",
+      "currency": "USD",
+      "captured_cents": 11770,
+      "refunded_cents": 5885,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-2b77e7d893d4567fc1b4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-2b77e7d893d4567fc1b4-1",
+        "amount_cents": 11770,
+        "refunded_cents": 5885,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_2c44d667fd59eea2da88",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-2c44d667fd59eea2da88",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-2c44d667fd59eea2da88",
+      "customer_id": "SYN-CUSTOMER-2c44d667fd59eea2da88",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-2c44d667fd59eea2da88",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-2c44d667fd59eea2da88-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_304d9cdb4aa3fa58a3a7",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-304d9cdb4aa3fa58a3a7",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-304d9cdb4aa3fa58a3a7",
+      "customer_id": "SYN-CUSTOMER-304d9cdb4aa3fa58a3a7",
+      "currency": "USD",
+      "captured_cents": 1969,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-06T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-304d9cdb4aa3fa58a3a7",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-304d9cdb4aa3fa58a3a7-1",
+        "amount_cents": 1969,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_30c457a3179b66ec109c",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-30c457a3179b66ec109c",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-30c457a3179b66ec109c",
+      "customer_id": "SYN-CUSTOMER-30c457a3179b66ec109c",
+      "currency": "USD",
+      "captured_cents": 3097,
+      "refunded_cents": 3097,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-30c457a3179b66ec109c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-30c457a3179b66ec109c-1",
+        "amount_cents": 3097,
+        "refunded_cents": 3097,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-30c457a3179b66ec109c"
+  },
+  {
+    "fixture_id": "fx_3184ce32cc76dd92f539",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-3184ce32cc76dd92f539",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-3184ce32cc76dd92f539",
+      "customer_id": "SYN-CUSTOMER-3184ce32cc76dd92f539",
+      "currency": "USD",
+      "captured_cents": 2960,
+      "refunded_cents": 2960,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-3184ce32cc76dd92f539",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-3184ce32cc76dd92f539-1",
+        "amount_cents": 2960,
+        "refunded_cents": 2960,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-3184ce32cc76dd92f539"
+  },
+  {
+    "fixture_id": "fx_336b02c197fb36d846ca",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-336b02c197fb36d846ca",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-336b02c197fb36d846ca",
+      "customer_id": "SYN-CUSTOMER-336b02c197fb36d846ca",
+      "currency": "USD",
+      "captured_cents": 11754,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-336b02c197fb36d846ca",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-336b02c197fb36d846ca-1",
+        "amount_cents": 11754,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_35ba32ccb62232799be5",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-35ba32ccb62232799be5",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-35ba32ccb62232799be5",
+      "customer_id": "SYN-CUSTOMER-35ba32ccb62232799be5",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-35ba32ccb62232799be5",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-35ba32ccb62232799be5-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_37ed765481ed5522b903",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-37ed765481ed5522b903",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-37ed765481ed5522b903",
+      "customer_id": "SYN-CUSTOMER-37ed765481ed5522b903",
+      "currency": "USD",
+      "captured_cents": 11069,
+      "refunded_cents": 5534,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-37ed765481ed5522b903",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-37ed765481ed5522b903-1",
+        "amount_cents": 11069,
+        "refunded_cents": 5534,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_3b93d9721aeddb1849f1",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-3b93d9721aeddb1849f1",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-3b93d9721aeddb1849f1",
+      "customer_id": "SYN-CUSTOMER-3b93d9721aeddb1849f1",
+      "currency": "USD",
+      "captured_cents": 11891,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-3b93d9721aeddb1849f1",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-3b93d9721aeddb1849f1-1",
+        "amount_cents": 11891,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_3c89b24fb756d4e2adee",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-3c89b24fb756d4e2adee",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-3c89b24fb756d4e2adee",
+      "customer_id": "SYN-CUSTOMER-3c89b24fb756d4e2adee",
+      "currency": "USD",
+      "captured_cents": 12181,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-3c89b24fb756d4e2adee",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-3c89b24fb756d4e2adee-1",
+        "amount_cents": 12181,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_3f8e933f2cd903451d7b",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-3f8e933f2cd903451d7b",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-3f8e933f2cd903451d7b",
+      "customer_id": "SYN-CUSTOMER-3f8e933f2cd903451d7b",
+      "currency": "USD",
+      "captured_cents": 1711,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-3f8e933f2cd903451d7b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-3f8e933f2cd903451d7b-1",
+        "amount_cents": 1711,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4195a3827062954a1d3c",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-4195a3827062954a1d3c",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-4195a3827062954a1d3c",
+      "customer_id": "SYN-CUSTOMER-4195a3827062954a1d3c",
+      "currency": "USD",
+      "captured_cents": 13019,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4195a3827062954a1d3c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4195a3827062954a1d3c-1",
+        "amount_cents": 13019,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_42c3a068be0a9f3b07a0",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-42c3a068be0a9f3b07a0",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-42c3a068be0a9f3b07a0",
+      "customer_id": "SYN-CUSTOMER-42c3a068be0a9f3b07a0",
+      "currency": "USD",
+      "captured_cents": 1832,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-07T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-42c3a068be0a9f3b07a0",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-42c3a068be0a9f3b07a0-1",
+        "amount_cents": 1832,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_450c61b07edbd66a2ff3",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-450c61b07edbd66a2ff3",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-450c61b07edbd66a2ff3",
+      "customer_id": "SYN-CUSTOMER-450c61b07edbd66a2ff3",
+      "currency": "USD",
+      "captured_cents": 12471,
+      "refunded_cents": 6235,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-450c61b07edbd66a2ff3",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-450c61b07edbd66a2ff3-1",
+        "amount_cents": 12471,
+        "refunded_cents": 6235,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_45e449ce8c55d389e280",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-45e449ce8c55d389e280",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-45e449ce8c55d389e280",
+      "customer_id": "SYN-CUSTOMER-45e449ce8c55d389e280",
+      "currency": "USD",
+      "captured_cents": 12165,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": null,
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-45e449ce8c55d389e280-1",
+        "amount_cents": 12165,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_484ec74e41c2fc58c193",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-484ec74e41c2fc58c193",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-484ec74e41c2fc58c193",
+      "customer_id": "SYN-CUSTOMER-484ec74e41c2fc58c193",
+      "currency": "USD",
+      "captured_cents": 12745,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-484ec74e41c2fc58c193",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-484ec74e41c2fc58c193-1",
+        "amount_cents": 12745,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4bdadd16ab0783f1162b",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-4bdadd16ab0783f1162b",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-4bdadd16ab0783f1162b",
+      "customer_id": "SYN-CUSTOMER-4bdadd16ab0783f1162b",
+      "currency": "USD",
+      "captured_cents": 27988,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4bdadd16ab0783f1162b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4bdadd16ab0783f1162b-1",
+        "amount_cents": 13994,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-4bdadd16ab0783f1162b-2",
+        "amount_cents": 13994,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4bf824360cd7e90708de",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-4bf824360cd7e90708de",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-4bf824360cd7e90708de",
+      "customer_id": "SYN-CUSTOMER-4bf824360cd7e90708de",
+      "currency": "USD",
+      "captured_cents": 13019,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4bf824360cd7e90708de",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4bf824360cd7e90708de-1",
+        "amount_cents": 13019,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4c872a5314f50d55655f",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-4c872a5314f50d55655f",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-4c872a5314f50d55655f",
+      "customer_id": "SYN-CUSTOMER-4c872a5314f50d55655f",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T11:59:59.999Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4c872a5314f50d55655f",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4c872a5314f50d55655f-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4cb14e9f20557e1e3004",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-4cb14e9f20557e1e3004",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-4cb14e9f20557e1e3004",
+      "customer_id": "SYN-CUSTOMER-4cb14e9f20557e1e3004",
+      "currency": "USD",
+      "captured_cents": 1574,
+      "refunded_cents": 787,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4cb14e9f20557e1e3004",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4cb14e9f20557e1e3004-1",
+        "amount_cents": 1574,
+        "refunded_cents": 787,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4deb75cb340108dfbd6a",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-4deb75cb340108dfbd6a",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-4deb75cb340108dfbd6a",
+      "customer_id": "SYN-CUSTOMER-4deb75cb340108dfbd6a",
+      "currency": "USD",
+      "captured_cents": 1848,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4deb75cb340108dfbd6a",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4deb75cb340108dfbd6a-1",
+        "amount_cents": 1848,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4ec4de37a2c081c0f963",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-4ec4de37a2c081c0f963",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-4ec4de37a2c081c0f963",
+      "customer_id": "SYN-CUSTOMER-4ec4de37a2c081c0f963",
+      "currency": "USD",
+      "captured_cents": 12592,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-4ec4de37a2c081c0f963",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4ec4de37a2c081c0f963-1",
+        "amount_cents": 12592,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_4f743d4a0bf566978fd1",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-4f743d4a0bf566978fd1",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-4f743d4a0bf566978fd1",
+      "customer_id": "SYN-CUSTOMER-4f743d4a0bf566978fd1",
+      "currency": "USD",
+      "captured_cents": 26344,
+      "refunded_cents": 13172,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-4f743d4a0bf566978fd1",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-4f743d4a0bf566978fd1-1",
+        "amount_cents": 13172,
+        "refunded_cents": 6586,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-4f743d4a0bf566978fd1-2",
+        "amount_cents": 13172,
+        "refunded_cents": 6586,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_5062401417da1090285b",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-5062401417da1090285b",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-5062401417da1090285b",
+      "customer_id": "SYN-CUSTOMER-5062401417da1090285b",
+      "currency": "USD",
+      "captured_cents": 28262,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-5062401417da1090285b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-5062401417da1090285b-1",
+        "amount_cents": 14131,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-5062401417da1090285b-2",
+        "amount_cents": 14131,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_52aba6f3fd7feeeb4ecd",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-52aba6f3fd7feeeb4ecd",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+      "customer_id": "SYN-CUSTOMER-52aba6f3fd7feeeb4ecd",
+      "currency": "USD",
+      "captured_cents": 10505,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-52aba6f3fd7feeeb4ecd",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1",
+        "amount_cents": 10505,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_52e7ea3a42c005490264",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-52e7ea3a42c005490264",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-52e7ea3a42c005490264",
+      "customer_id": "SYN-CUSTOMER-52e7ea3a42c005490264",
+      "currency": "USD",
+      "captured_cents": 13567,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-52e7ea3a42c005490264",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-52e7ea3a42c005490264-1",
+        "amount_cents": 13567,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_537d385d4ffb0db481b4",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-537d385d4ffb0db481b4",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-537d385d4ffb0db481b4",
+      "customer_id": "SYN-CUSTOMER-537d385d4ffb0db481b4",
+      "currency": "USD",
+      "captured_cents": 13430,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-537d385d4ffb0db481b4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-537d385d4ffb0db481b4-1",
+        "amount_cents": 13430,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_540c4f59ed11d27c5230",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-540c4f59ed11d27c5230",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-540c4f59ed11d27c5230",
+      "customer_id": "SYN-CUSTOMER-540c4f59ed11d27c5230",
+      "currency": "USD",
+      "captured_cents": 2670,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-540c4f59ed11d27c5230",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-540c4f59ed11d27c5230-1",
+        "amount_cents": 2670,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_581a045c16673c294c68",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-581a045c16673c294c68",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-581a045c16673c294c68",
+      "customer_id": "SYN-CUSTOMER-581a045c16673c294c68",
+      "currency": "USD",
+      "captured_cents": 2960,
+      "refunded_cents": 2960,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-581a045c16673c294c68",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-581a045c16673c294c68-1",
+        "amount_cents": 2960,
+        "refunded_cents": 2960,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-581a045c16673c294c68"
+  },
+  {
+    "fixture_id": "fx_5dab03ebe647c26378e9",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-5dab03ebe647c26378e9",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-5dab03ebe647c26378e9",
+      "customer_id": "SYN-CUSTOMER-5dab03ebe647c26378e9",
+      "currency": "USD",
+      "captured_cents": 1284,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-11T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-5dab03ebe647c26378e9",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-5dab03ebe647c26378e9-1",
+        "amount_cents": 1284,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_5f226f78369f6d066723",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-5f226f78369f6d066723",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-5f226f78369f6d066723",
+      "customer_id": "SYN-CUSTOMER-5f226f78369f6d066723",
+      "currency": "USD",
+      "captured_cents": 1969,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-06T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-5f226f78369f6d066723",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-5f226f78369f6d066723-1",
+        "amount_cents": 1969,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_5fa01cb424bb47ac2df2",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-5fa01cb424bb47ac2df2",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-5fa01cb424bb47ac2df2",
+      "customer_id": "SYN-CUSTOMER-5fa01cb424bb47ac2df2",
+      "currency": "USD",
+      "captured_cents": 14010,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-13T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-5fa01cb424bb47ac2df2",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-5fa01cb424bb47ac2df2-1",
+        "amount_cents": 14010,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_5fa15a601c9617ec70d0",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-5fa15a601c9617ec70d0",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-5fa15a601c9617ec70d0",
+      "customer_id": "SYN-CUSTOMER-5fa15a601c9617ec70d0",
+      "currency": "USD",
+      "captured_cents": 2686,
+      "refunded_cents": 2686,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-5fa15a601c9617ec70d0",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-5fa15a601c9617ec70d0-1",
+        "amount_cents": 2686,
+        "refunded_cents": 2686,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-5fa15a601c9617ec70d0"
+  },
+  {
+    "fixture_id": "fx_60765df045a902af8432",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-60765df045a902af8432",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-60765df045a902af8432",
+      "customer_id": "SYN-CUSTOMER-60765df045a902af8432",
+      "currency": "USD",
+      "captured_cents": 1985,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-60765df045a902af8432",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-60765df045a902af8432-1",
+        "amount_cents": 1985,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_60b00025161006819327",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-60b00025161006819327",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-60b00025161006819327",
+      "customer_id": "SYN-CUSTOMER-60b00025161006819327",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T11:59:59.999Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-60b00025161006819327",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-60b00025161006819327-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_6228e16bcec28d85d890",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-6228e16bcec28d85d890",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-6228e16bcec28d85d890",
+      "customer_id": "SYN-CUSTOMER-6228e16bcec28d85d890",
+      "currency": "USD",
+      "captured_cents": 3097,
+      "refunded_cents": 3097,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-6228e16bcec28d85d890",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-6228e16bcec28d85d890-1",
+        "amount_cents": 3097,
+        "refunded_cents": 3097,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-6228e16bcec28d85d890"
+  },
+  {
+    "fixture_id": "fx_6369f2c951ae7ef5bead",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-6369f2c951ae7ef5bead",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-6369f2c951ae7ef5bead",
+      "customer_id": "SYN-CUSTOMER-6369f2c951ae7ef5bead",
+      "currency": "USD",
+      "captured_cents": 12028,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-6369f2c951ae7ef5bead",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-6369f2c951ae7ef5bead-1",
+        "amount_cents": 12028,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_645fd2ecf9418739c707",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-645fd2ecf9418739c707",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-645fd2ecf9418739c707",
+      "customer_id": "SYN-CUSTOMER-645fd2ecf9418739c707",
+      "currency": "USD",
+      "captured_cents": 13873,
+      "refunded_cents": 6936,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-14T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-645fd2ecf9418739c707",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-645fd2ecf9418739c707-1",
+        "amount_cents": 13873,
+        "refunded_cents": 6936,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_650933bc1da839f41ecd",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-650933bc1da839f41ecd",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-650933bc1da839f41ecd",
+      "customer_id": "SYN-CUSTOMER-650933bc1da839f41ecd",
+      "currency": "USD",
+      "captured_cents": 11907,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-650933bc1da839f41ecd",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-650933bc1da839f41ecd-1",
+        "amount_cents": 11907,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_657862fda9a0ca62de34",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-657862fda9a0ca62de34",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-657862fda9a0ca62de34",
+      "customer_id": "SYN-CUSTOMER-657862fda9a0ca62de34",
+      "currency": "USD",
+      "captured_cents": 12866,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-657862fda9a0ca62de34",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-657862fda9a0ca62de34-1",
+        "amount_cents": 12866,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_6579335ce09b9d2b2877",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-6579335ce09b9d2b2877",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-6579335ce09b9d2b2877",
+      "customer_id": "SYN-CUSTOMER-6579335ce09b9d2b2877",
+      "currency": "USD",
+      "captured_cents": 2,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-6579335ce09b9d2b2877",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-6579335ce09b9d2b2877-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-6579335ce09b9d2b2877-2",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_657e41e26237b1e5e2b2",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-657e41e26237b1e5e2b2",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-657e41e26237b1e5e2b2",
+      "customer_id": "SYN-CUSTOMER-657e41e26237b1e5e2b2",
+      "currency": "USD",
+      "captured_cents": 2536,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-657e41e26237b1e5e2b2",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-657e41e26237b1e5e2b2-1",
+        "amount_cents": 1268,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-657e41e26237b1e5e2b2-2",
+        "amount_cents": 1268,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_66471cc231e5688ab746",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-66471cc231e5688ab746",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-66471cc231e5688ab746",
+      "customer_id": "SYN-CUSTOMER-66471cc231e5688ab746",
+      "currency": "USD",
+      "captured_cents": 2412,
+      "refunded_cents": 2412,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-66471cc231e5688ab746",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-66471cc231e5688ab746-1",
+        "amount_cents": 2412,
+        "refunded_cents": 2412,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-66471cc231e5688ab746"
+  },
+  {
+    "fixture_id": "fx_6bbdd301742f948ae4a3",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-6bbdd301742f948ae4a3",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-6bbdd301742f948ae4a3",
+      "customer_id": "SYN-CUSTOMER-6bbdd301742f948ae4a3",
+      "currency": "USD",
+      "captured_cents": 10779,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-6bbdd301742f948ae4a3",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-6bbdd301742f948ae4a3-1",
+        "amount_cents": 10779,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_6d72504cca67fbccf8a0",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-6d72504cca67fbccf8a0",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-6d72504cca67fbccf8a0",
+      "customer_id": "SYN-CUSTOMER-6d72504cca67fbccf8a0",
+      "currency": "USD",
+      "captured_cents": 11754,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-6d72504cca67fbccf8a0",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-6d72504cca67fbccf8a0-1",
+        "amount_cents": 11754,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_708a0c4f129e2b456fba",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-708a0c4f129e2b456fba",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-708a0c4f129e2b456fba",
+      "customer_id": "SYN-CUSTOMER-708a0c4f129e2b456fba",
+      "currency": "USD",
+      "captured_cents": 1695,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-08T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-708a0c4f129e2b456fba",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-708a0c4f129e2b456fba-1",
+        "amount_cents": 1695,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_70f69dbe5a3824357a84",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-70f69dbe5a3824357a84",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-70f69dbe5a3824357a84",
+      "customer_id": "SYN-CUSTOMER-70f69dbe5a3824357a84",
+      "currency": "USD",
+      "captured_cents": 13873,
+      "refunded_cents": 6936,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-14T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-70f69dbe5a3824357a84",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-70f69dbe5a3824357a84-1",
+        "amount_cents": 13873,
+        "refunded_cents": 6936,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_74095301a57c20a697f7",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-74095301a57c20a697f7",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-74095301a57c20a697f7",
+      "customer_id": "SYN-CUSTOMER-74095301a57c20a697f7",
+      "currency": "USD",
+      "captured_cents": 27166,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-74095301a57c20a697f7",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-74095301a57c20a697f7-1",
+        "amount_cents": 13583,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-74095301a57c20a697f7-2",
+        "amount_cents": 13583,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_75cd07ef28f02794e586",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-75cd07ef28f02794e586",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-75cd07ef28f02794e586",
+      "customer_id": "SYN-CUSTOMER-75cd07ef28f02794e586",
+      "currency": "USD",
+      "captured_cents": 2549,
+      "refunded_cents": 2549,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-75cd07ef28f02794e586",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-75cd07ef28f02794e586-1",
+        "amount_cents": 2549,
+        "refunded_cents": 2549,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-75cd07ef28f02794e586"
+  },
+  {
+    "fixture_id": "fx_76895e53ce1e10b6ab72",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-76895e53ce1e10b6ab72",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-76895e53ce1e10b6ab72",
+      "customer_id": "SYN-CUSTOMER-76895e53ce1e10b6ab72",
+      "currency": "USD",
+      "captured_cents": 11770,
+      "refunded_cents": 5885,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-76895e53ce1e10b6ab72",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-76895e53ce1e10b6ab72-1",
+        "amount_cents": 11770,
+        "refunded_cents": 5885,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_76bae2bc2903c4458bbf",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-76bae2bc2903c4458bbf",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-76bae2bc2903c4458bbf",
+      "customer_id": "SYN-CUSTOMER-76bae2bc2903c4458bbf",
+      "currency": "USD",
+      "captured_cents": 13567,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-76bae2bc2903c4458bbf",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-76bae2bc2903c4458bbf-1",
+        "amount_cents": 13567,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_780143c67626a92b0906",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-780143c67626a92b0906",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-780143c67626a92b0906",
+      "customer_id": "SYN-CUSTOMER-780143c67626a92b0906",
+      "currency": "USD",
+      "captured_cents": 12882,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-780143c67626a92b0906",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-780143c67626a92b0906-1",
+        "amount_cents": 12882,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_7936281a8b53072674b6",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-7936281a8b53072674b6",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-7936281a8b53072674b6",
+      "customer_id": "SYN-CUSTOMER-7936281a8b53072674b6",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-7936281a8b53072674b6",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-7936281a8b53072674b6-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_793fd5d75d6bd48d04ee",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-793fd5d75d6bd48d04ee",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-793fd5d75d6bd48d04ee",
+      "customer_id": "SYN-CUSTOMER-793fd5d75d6bd48d04ee",
+      "currency": "USD",
+      "captured_cents": 14147,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-12T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-793fd5d75d6bd48d04ee",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-793fd5d75d6bd48d04ee-1",
+        "amount_cents": 14147,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_7a9d71e59d814420e54d",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-7a9d71e59d814420e54d",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+      "customer_id": "SYN-CUSTOMER-7a9d71e59d814420e54d",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 1,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-7a9d71e59d814420e54d",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-7a9d71e59d814420e54d-1",
+        "amount_cents": 1,
+        "refunded_cents": 1,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-7a9d71e59d814420e54d"
+  },
+  {
+    "fixture_id": "fx_7be01d97cd16d5872f63",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-7be01d97cd16d5872f63",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-7be01d97cd16d5872f63",
+      "customer_id": "SYN-CUSTOMER-7be01d97cd16d5872f63",
+      "currency": "USD",
+      "captured_cents": 12608,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-7be01d97cd16d5872f63",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-7be01d97cd16d5872f63-1",
+        "amount_cents": 12608,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_7dfa6853722507abdd87",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-7dfa6853722507abdd87",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-7dfa6853722507abdd87",
+      "customer_id": "SYN-CUSTOMER-7dfa6853722507abdd87",
+      "currency": "USD",
+      "captured_cents": 11907,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-7dfa6853722507abdd87",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-7dfa6853722507abdd87-1",
+        "amount_cents": 11907,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_7e8dfc96b332aeec5a48",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-7e8dfc96b332aeec5a48",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-7e8dfc96b332aeec5a48",
+      "customer_id": "SYN-CUSTOMER-7e8dfc96b332aeec5a48",
+      "currency": "USD",
+      "captured_cents": 11206,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-7e8dfc96b332aeec5a48",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-7e8dfc96b332aeec5a48-1",
+        "amount_cents": 11206,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_819c4c037b099315dd05",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-819c4c037b099315dd05",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-819c4c037b099315dd05",
+      "customer_id": "SYN-CUSTOMER-819c4c037b099315dd05",
+      "currency": "USD",
+      "captured_cents": 11617,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-819c4c037b099315dd05",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-819c4c037b099315dd05-1",
+        "amount_cents": 11617,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_82e5d86a6eb1fb45de54",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-82e5d86a6eb1fb45de54",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-82e5d86a6eb1fb45de54",
+      "customer_id": "SYN-CUSTOMER-82e5d86a6eb1fb45de54",
+      "currency": "USD",
+      "captured_cents": 2275,
+      "refunded_cents": 2275,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-82e5d86a6eb1fb45de54",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-82e5d86a6eb1fb45de54-1",
+        "amount_cents": 2275,
+        "refunded_cents": 2275,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-82e5d86a6eb1fb45de54"
+  },
+  {
+    "fixture_id": "fx_833383a2e1f0a2b7fcf3",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-833383a2e1f0a2b7fcf3",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-833383a2e1f0a2b7fcf3",
+      "customer_id": "SYN-CUSTOMER-833383a2e1f0a2b7fcf3",
+      "currency": "USD",
+      "captured_cents": 13293,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-833383a2e1f0a2b7fcf3",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-833383a2e1f0a2b7fcf3-1",
+        "amount_cents": 13293,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_84f21f2141d8c328f9e8",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-84f21f2141d8c328f9e8",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-84f21f2141d8c328f9e8",
+      "customer_id": "SYN-CUSTOMER-84f21f2141d8c328f9e8",
+      "currency": "USD",
+      "captured_cents": 12729,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-84f21f2141d8c328f9e8",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-84f21f2141d8c328f9e8-1",
+        "amount_cents": 12729,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_8504af5440a3ed7cc34d",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-8504af5440a3ed7cc34d",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-8504af5440a3ed7cc34d",
+      "customer_id": "SYN-CUSTOMER-8504af5440a3ed7cc34d",
+      "currency": "USD",
+      "captured_cents": 11480,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-8504af5440a3ed7cc34d",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-8504af5440a3ed7cc34d-1",
+        "amount_cents": 11480,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_88fc50413dee3c8f9b7b",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-88fc50413dee3c8f9b7b",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-88fc50413dee3c8f9b7b",
+      "customer_id": "SYN-CUSTOMER-88fc50413dee3c8f9b7b",
+      "currency": "USD",
+      "captured_cents": 11480,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-88fc50413dee3c8f9b7b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-88fc50413dee3c8f9b7b-1",
+        "amount_cents": 11480,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_8d86e5bc218760ea3d7a",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-8d86e5bc218760ea3d7a",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-8d86e5bc218760ea3d7a",
+      "customer_id": "SYN-CUSTOMER-8d86e5bc218760ea3d7a",
+      "currency": "USD",
+      "captured_cents": 11053,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-8d86e5bc218760ea3d7a",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-8d86e5bc218760ea3d7a-1",
+        "amount_cents": 11053,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_8edcb6abb5fc621d47ca",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-8edcb6abb5fc621d47ca",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-8edcb6abb5fc621d47ca",
+      "customer_id": "SYN-CUSTOMER-8edcb6abb5fc621d47ca",
+      "currency": "USD",
+      "captured_cents": 2275,
+      "refunded_cents": 2275,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-8edcb6abb5fc621d47ca",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-8edcb6abb5fc621d47ca-1",
+        "amount_cents": 2275,
+        "refunded_cents": 2275,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-8edcb6abb5fc621d47ca"
+  },
+  {
+    "fixture_id": "fx_93655d6f759e6db5e1f3",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-93655d6f759e6db5e1f3",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-93655d6f759e6db5e1f3",
+      "customer_id": "SYN-CUSTOMER-93655d6f759e6db5e1f3",
+      "currency": "USD",
+      "captured_cents": 11206,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-93655d6f759e6db5e1f3",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-93655d6f759e6db5e1f3-1",
+        "amount_cents": 11206,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_93b7d0c79850a040e774",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-93b7d0c79850a040e774",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-93b7d0c79850a040e774",
+      "customer_id": "SYN-CUSTOMER-93b7d0c79850a040e774",
+      "currency": "USD",
+      "captured_cents": 1558,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-09T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-93b7d0c79850a040e774",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-93b7d0c79850a040e774-1",
+        "amount_cents": 1558,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_948de08439e76396b757",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-948de08439e76396b757",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-948de08439e76396b757",
+      "customer_id": "SYN-CUSTOMER-948de08439e76396b757",
+      "currency": "USD",
+      "captured_cents": 2,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-948de08439e76396b757",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-948de08439e76396b757-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-948de08439e76396b757-2",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_95f11eb12c5255acc2dc",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-95f11eb12c5255acc2dc",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-95f11eb12c5255acc2dc",
+      "customer_id": "SYN-CUSTOMER-95f11eb12c5255acc2dc",
+      "currency": "USD",
+      "captured_cents": 10505,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-95f11eb12c5255acc2dc",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-95f11eb12c5255acc2dc-1",
+        "amount_cents": 10505,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_98da2287cd47f4448fd9",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-98da2287cd47f4448fd9",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-98da2287cd47f4448fd9",
+      "customer_id": "SYN-CUSTOMER-98da2287cd47f4448fd9",
+      "currency": "USD",
+      "captured_cents": 13156,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-98da2287cd47f4448fd9",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-98da2287cd47f4448fd9-1",
+        "amount_cents": 13156,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_9b1a1f0d54ec56050ad4",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-9b1a1f0d54ec56050ad4",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-9b1a1f0d54ec56050ad4",
+      "customer_id": "SYN-CUSTOMER-9b1a1f0d54ec56050ad4",
+      "currency": "USD",
+      "captured_cents": 2122,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-9b1a1f0d54ec56050ad4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-9b1a1f0d54ec56050ad4-1",
+        "amount_cents": 2122,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_9d320cc5376188c66de7",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-9d320cc5376188c66de7",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-9d320cc5376188c66de7",
+      "customer_id": "SYN-CUSTOMER-9d320cc5376188c66de7",
+      "currency": "USD",
+      "captured_cents": 11617,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-9d320cc5376188c66de7",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-9d320cc5376188c66de7-1",
+        "amount_cents": 11617,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_9d78e3fe394e9406e8c6",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-9d78e3fe394e9406e8c6",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-9d78e3fe394e9406e8c6",
+      "customer_id": "SYN-CUSTOMER-9d78e3fe394e9406e8c6",
+      "currency": "USD",
+      "captured_cents": 1421,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-10T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-9d78e3fe394e9406e8c6",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-9d78e3fe394e9406e8c6-1",
+        "amount_cents": 1421,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_9f2faf5949a351b077a0",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-9f2faf5949a351b077a0",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-9f2faf5949a351b077a0",
+      "customer_id": "SYN-CUSTOMER-9f2faf5949a351b077a0",
+      "currency": "USD",
+      "captured_cents": 10368,
+      "refunded_cents": 5184,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-9f2faf5949a351b077a0",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-9f2faf5949a351b077a0-1",
+        "amount_cents": 10368,
+        "refunded_cents": 5184,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_a1551ab13643d835982c",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-a1551ab13643d835982c",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-a1551ab13643d835982c",
+      "customer_id": "SYN-CUSTOMER-a1551ab13643d835982c",
+      "currency": "USD",
+      "captured_cents": 27988,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-a1551ab13643d835982c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-a1551ab13643d835982c-1",
+        "amount_cents": 13994,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-a1551ab13643d835982c-2",
+        "amount_cents": 13994,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_a23621c20eeaf768c507",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-a23621c20eeaf768c507",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-a23621c20eeaf768c507",
+      "customer_id": "SYN-CUSTOMER-a23621c20eeaf768c507",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-a23621c20eeaf768c507",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-a23621c20eeaf768c507-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_a30b921fdd9536b74d57",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-a30b921fdd9536b74d57",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-a30b921fdd9536b74d57",
+      "customer_id": "SYN-CUSTOMER-a30b921fdd9536b74d57",
+      "currency": "USD",
+      "captured_cents": 2122,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-a30b921fdd9536b74d57",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-a30b921fdd9536b74d57-1",
+        "amount_cents": 2122,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_a55666ed5de60ba60c20",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-a55666ed5de60ba60c20",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-a55666ed5de60ba60c20",
+      "customer_id": "SYN-CUSTOMER-a55666ed5de60ba60c20",
+      "currency": "USD",
+      "captured_cents": 3371,
+      "refunded_cents": 3371,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-a55666ed5de60ba60c20",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-a55666ed5de60ba60c20-1",
+        "amount_cents": 3371,
+        "refunded_cents": 3371,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-a55666ed5de60ba60c20"
+  },
+  {
+    "fixture_id": "fx_aae53f2780615aad6f5a",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-aae53f2780615aad6f5a",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-aae53f2780615aad6f5a",
+      "customer_id": "SYN-CUSTOMER-aae53f2780615aad6f5a",
+      "currency": "USD",
+      "captured_cents": 11069,
+      "refunded_cents": 5534,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-aae53f2780615aad6f5a",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-aae53f2780615aad6f5a-1",
+        "amount_cents": 11069,
+        "refunded_cents": 5534,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ab8ee4d8b0c8e62da0c5",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-ab8ee4d8b0c8e62da0c5",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-ab8ee4d8b0c8e62da0c5",
+      "customer_id": "SYN-CUSTOMER-ab8ee4d8b0c8e62da0c5",
+      "currency": "USD",
+      "captured_cents": 12729,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-ab8ee4d8b0c8e62da0c5",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ab8ee4d8b0c8e62da0c5-1",
+        "amount_cents": 12729,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ae13478fa94f03661ed3",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-ae13478fa94f03661ed3",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-ae13478fa94f03661ed3",
+      "customer_id": "SYN-CUSTOMER-ae13478fa94f03661ed3",
+      "currency": "USD",
+      "captured_cents": 28262,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-ae13478fa94f03661ed3",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ae13478fa94f03661ed3-1",
+        "amount_cents": 14131,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-ae13478fa94f03661ed3-2",
+        "amount_cents": 14131,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_af866754b0276af0a246",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-af866754b0276af0a246",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-af866754b0276af0a246",
+      "customer_id": "SYN-CUSTOMER-af866754b0276af0a246",
+      "currency": "USD",
+      "captured_cents": 11343,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-af866754b0276af0a246",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-af866754b0276af0a246-1",
+        "amount_cents": 11343,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b067682d0a3277c84bd1",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b067682d0a3277c84bd1",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-b067682d0a3277c84bd1",
+      "customer_id": "SYN-CUSTOMER-b067682d0a3277c84bd1",
+      "currency": "USD",
+      "captured_cents": 27166,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b067682d0a3277c84bd1",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b067682d0a3277c84bd1-1",
+        "amount_cents": 13583,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-b067682d0a3277c84bd1-2",
+        "amount_cents": 13583,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b11c1bd0541e7dde7a1b",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b11c1bd0541e7dde7a1b",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b11c1bd0541e7dde7a1b",
+      "customer_id": "SYN-CUSTOMER-b11c1bd0541e7dde7a1b",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b11c1bd0541e7dde7a1b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b11c1bd0541e7dde7a1b-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b1e3a01284e9356b41b0",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b1e3a01284e9356b41b0",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b1e3a01284e9356b41b0",
+      "customer_id": "SYN-CUSTOMER-b1e3a01284e9356b41b0",
+      "currency": "USD",
+      "captured_cents": 11190,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b1e3a01284e9356b41b0",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b1e3a01284e9356b41b0-1",
+        "amount_cents": 11190,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b2b1f35abfe49005f276",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-b2b1f35abfe49005f276",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b2b1f35abfe49005f276",
+      "customer_id": "SYN-CUSTOMER-b2b1f35abfe49005f276",
+      "currency": "USD",
+      "captured_cents": 2533,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b2b1f35abfe49005f276",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b2b1f35abfe49005f276-1",
+        "amount_cents": 2533,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b314fe7cfabafb3249ca",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b314fe7cfabafb3249ca",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-b314fe7cfabafb3249ca",
+      "customer_id": "SYN-CUSTOMER-b314fe7cfabafb3249ca",
+      "currency": "USD",
+      "captured_cents": 12044,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-b314fe7cfabafb3249ca",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b314fe7cfabafb3249ca-1",
+        "amount_cents": 12044,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b3848b21aa7d5fe425e9",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b3848b21aa7d5fe425e9",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b3848b21aa7d5fe425e9",
+      "customer_id": "SYN-CUSTOMER-b3848b21aa7d5fe425e9",
+      "currency": "USD",
+      "captured_cents": 11464,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b3848b21aa7d5fe425e9",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b3848b21aa7d5fe425e9-1",
+        "amount_cents": 11464,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b6c42b70e8c27fc0413f",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-b6c42b70e8c27fc0413f",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b6c42b70e8c27fc0413f",
+      "customer_id": "SYN-CUSTOMER-b6c42b70e8c27fc0413f",
+      "currency": "USD",
+      "captured_cents": 2670,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b6c42b70e8c27fc0413f",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b6c42b70e8c27fc0413f-1",
+        "amount_cents": 2670,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b6fb2038327cbd9419cc",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b6fb2038327cbd9419cc",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b6fb2038327cbd9419cc",
+      "customer_id": "SYN-CUSTOMER-b6fb2038327cbd9419cc",
+      "currency": "USD",
+      "captured_cents": 11464,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b6fb2038327cbd9419cc",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b6fb2038327cbd9419cc-1",
+        "amount_cents": 11464,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b7b5487e0250fe6c261d",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b7b5487e0250fe6c261d",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-b7b5487e0250fe6c261d",
+      "customer_id": "SYN-CUSTOMER-b7b5487e0250fe6c261d",
+      "currency": "USD",
+      "captured_cents": 10642,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b7b5487e0250fe6c261d",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b7b5487e0250fe6c261d-1",
+        "amount_cents": 10642,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_b7b9e620eb46a493c6f6",
+    "title": "outside window",
+    "ticket": "I want to return a delivery from last month.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-b7b9e620eb46a493c6f6",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-b7b9e620eb46a493c6f6",
+      "customer_id": "SYN-CUSTOMER-b7b9e620eb46a493c6f6",
+      "currency": "USD",
+      "captured_cents": 1284,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-11T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-b7b9e620eb46a493c6f6",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-b7b9e620eb46a493c6f6-1",
+        "amount_cents": 1284,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ba2e3bb3248ad8606738",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-ba2e3bb3248ad8606738",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-ba2e3bb3248ad8606738",
+      "customer_id": "SYN-CUSTOMER-ba2e3bb3248ad8606738",
+      "currency": "USD",
+      "captured_cents": 12592,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-ba2e3bb3248ad8606738",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ba2e3bb3248ad8606738-1",
+        "amount_cents": 12592,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_baf9764342b54b857616",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-baf9764342b54b857616",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-baf9764342b54b857616",
+      "customer_id": "SYN-CUSTOMER-baf9764342b54b857616",
+      "currency": "USD",
+      "captured_cents": 2549,
+      "refunded_cents": 2549,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-baf9764342b54b857616",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-baf9764342b54b857616-1",
+        "amount_cents": 2549,
+        "refunded_cents": 2549,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-baf9764342b54b857616"
+  },
+  {
+    "fixture_id": "fx_bc3932bd1012054d799c",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-bc3932bd1012054d799c",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-bc3932bd1012054d799c",
+      "customer_id": "SYN-CUSTOMER-bc3932bd1012054d799c",
+      "currency": "USD",
+      "captured_cents": 2823,
+      "refunded_cents": 2823,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-bc3932bd1012054d799c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-bc3932bd1012054d799c-1",
+        "amount_cents": 2823,
+        "refunded_cents": 2823,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-bc3932bd1012054d799c"
+  },
+  {
+    "fixture_id": "fx_be2deb5f4a68bb72c9ae",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-be2deb5f4a68bb72c9ae",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-be2deb5f4a68bb72c9ae",
+      "customer_id": "SYN-CUSTOMER-be2deb5f4a68bb72c9ae",
+      "currency": "USD",
+      "captured_cents": 11343,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-be2deb5f4a68bb72c9ae",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-be2deb5f4a68bb72c9ae-1",
+        "amount_cents": 11343,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_c20915b15557e81acf26",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-c20915b15557e81acf26",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-c20915b15557e81acf26",
+      "customer_id": "SYN-CUSTOMER-c20915b15557e81acf26",
+      "currency": "USD",
+      "captured_cents": 26892,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-c20915b15557e81acf26",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-c20915b15557e81acf26-1",
+        "amount_cents": 13446,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-c20915b15557e81acf26-2",
+        "amount_cents": 13446,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_c928610defd5fea31ded",
+    "title": "delay",
+    "ticket": "The shipment is late. Please check tracking.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-c928610defd5fea31ded",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-c928610defd5fea31ded",
+      "customer_id": "SYN-CUSTOMER-c928610defd5fea31ded",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-c928610defd5fea31ded",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-c928610defd5fea31ded-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_c998ac1b97d3eb8a5dba",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-c998ac1b97d3eb8a5dba",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-c998ac1b97d3eb8a5dba",
+      "customer_id": "SYN-CUSTOMER-c998ac1b97d3eb8a5dba",
+      "currency": "USD",
+      "captured_cents": 10916,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-c998ac1b97d3eb8a5dba",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-c998ac1b97d3eb8a5dba-1",
+        "amount_cents": 10916,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_c9a1b4e1285043e8aa1c",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-c9a1b4e1285043e8aa1c",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-c9a1b4e1285043e8aa1c",
+      "customer_id": "SYN-CUSTOMER-c9a1b4e1285043e8aa1c",
+      "currency": "USD",
+      "captured_cents": 12318,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-c9a1b4e1285043e8aa1c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-c9a1b4e1285043e8aa1c-1",
+        "amount_cents": 12318,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_cad21e1023c787ee1b5b",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-cad21e1023c787ee1b5b",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-cad21e1023c787ee1b5b",
+      "customer_id": "SYN-CUSTOMER-cad21e1023c787ee1b5b",
+      "currency": "USD",
+      "captured_cents": 2823,
+      "refunded_cents": 2823,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-cad21e1023c787ee1b5b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-cad21e1023c787ee1b5b-1",
+        "amount_cents": 2823,
+        "refunded_cents": 2823,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-cad21e1023c787ee1b5b"
+  },
+  {
+    "fixture_id": "fx_cc98faa27b6beb7d185c",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-cc98faa27b6beb7d185c",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-cc98faa27b6beb7d185c",
+      "customer_id": "SYN-CUSTOMER-cc98faa27b6beb7d185c",
+      "currency": "USD",
+      "captured_cents": 12882,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-cc98faa27b6beb7d185c",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-cc98faa27b6beb7d185c-1",
+        "amount_cents": 12882,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_cca2224f0fd9c9994b22",
+    "title": "delay",
+    "ticket": "The tracking has been unchanged since dispatch and nothing has arrived. What happens next?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-cca2224f0fd9c9994b22",
+    "issue": "delay",
+    "order": {
+      "order_id": "SYN-ORDER-cca2224f0fd9c9994b22",
+      "customer_id": "SYN-CUSTOMER-cca2224f0fd9c9994b22",
+      "currency": "USD",
+      "captured_cents": 12165,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": null,
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-cca2224f0fd9c9994b22-1",
+        "amount_cents": 12165,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_cef168901e95f12ccb03",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-cef168901e95f12ccb03",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-cef168901e95f12ccb03",
+      "customer_id": "SYN-CUSTOMER-cef168901e95f12ccb03",
+      "currency": "USD",
+      "captured_cents": 12181,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-cef168901e95f12ccb03",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-cef168901e95f12ccb03-1",
+        "amount_cents": 12181,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_d02004e5f09cd54506fc",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-d02004e5f09cd54506fc",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-d02004e5f09cd54506fc",
+      "customer_id": "SYN-CUSTOMER-d02004e5f09cd54506fc",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-d02004e5f09cd54506fc",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-d02004e5f09cd54506fc-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_d0b7f50669ce12e21971",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-d0b7f50669ce12e21971",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-d0b7f50669ce12e21971",
+      "customer_id": "SYN-CUSTOMER-d0b7f50669ce12e21971",
+      "currency": "USD",
+      "captured_cents": 27440,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-d0b7f50669ce12e21971",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-d0b7f50669ce12e21971-1",
+        "amount_cents": 13720,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-d0b7f50669ce12e21971-2",
+        "amount_cents": 13720,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_d134712bc76a2038be73",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-d134712bc76a2038be73",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-d134712bc76a2038be73",
+      "customer_id": "SYN-CUSTOMER-d134712bc76a2038be73",
+      "currency": "USD",
+      "captured_cents": 27440,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-09T12:00:00.000Z",
+      "shipped_at": "2026-02-02T12:00:00.000Z",
+      "tracking": "SYN-TRACK-d134712bc76a2038be73",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-d134712bc76a2038be73-1",
+        "amount_cents": 13720,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-d134712bc76a2038be73-2",
+        "amount_cents": 13720,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_d1bdcf40379bbaeee5ab",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-d1bdcf40379bbaeee5ab",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-d1bdcf40379bbaeee5ab",
+      "customer_id": "SYN-CUSTOMER-d1bdcf40379bbaeee5ab",
+      "currency": "USD",
+      "captured_cents": 2536,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-05T12:00:00.000Z",
+      "shipped_at": "2026-01-29T12:00:00.000Z",
+      "tracking": "SYN-TRACK-d1bdcf40379bbaeee5ab",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-d1bdcf40379bbaeee5ab-1",
+        "amount_cents": 1268,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-d1bdcf40379bbaeee5ab-2",
+        "amount_cents": 1268,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_d4d04948ffe758211db4",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-d4d04948ffe758211db4",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-d4d04948ffe758211db4",
+      "customer_id": "SYN-CUSTOMER-d4d04948ffe758211db4",
+      "currency": "USD",
+      "captured_cents": 12455,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-d4d04948ffe758211db4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-d4d04948ffe758211db4-1",
+        "amount_cents": 12455,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_da05e4f55623ac912471",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-da05e4f55623ac912471",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-da05e4f55623ac912471",
+      "customer_id": "SYN-CUSTOMER-da05e4f55623ac912471",
+      "currency": "USD",
+      "captured_cents": 12044,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-da05e4f55623ac912471",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-da05e4f55623ac912471-1",
+        "amount_cents": 12044,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_dd3b2d8aedbc77db7e23",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-dd3b2d8aedbc77db7e23",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-dd3b2d8aedbc77db7e23",
+      "customer_id": "SYN-CUSTOMER-dd3b2d8aedbc77db7e23",
+      "currency": "USD",
+      "captured_cents": 10779,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-dd3b2d8aedbc77db7e23",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-dd3b2d8aedbc77db7e23-1",
+        "amount_cents": 10779,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_dfe9a687202c72c37131",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-dfe9a687202c72c37131",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-dfe9a687202c72c37131",
+      "customer_id": "SYN-CUSTOMER-dfe9a687202c72c37131",
+      "currency": "USD",
+      "captured_cents": 12866,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-dfe9a687202c72c37131",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-dfe9a687202c72c37131-1",
+        "amount_cents": 12866,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_e3431cacc4479945e4a4",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-e3431cacc4479945e4a4",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-e3431cacc4479945e4a4",
+      "customer_id": "SYN-CUSTOMER-e3431cacc4479945e4a4",
+      "currency": "USD",
+      "captured_cents": 11327,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-e3431cacc4479945e4a4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-e3431cacc4479945e4a4-1",
+        "amount_cents": 11327,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_e398d42f5d33f22fceeb",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-e398d42f5d33f22fceeb",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-e398d42f5d33f22fceeb",
+      "customer_id": "SYN-CUSTOMER-e398d42f5d33f22fceeb",
+      "currency": "USD",
+      "captured_cents": 2259,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-08T12:00:00.000Z",
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-e398d42f5d33f22fceeb",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-e398d42f5d33f22fceeb-1",
+        "amount_cents": 2259,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_e676cf4e439b2707c790",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-e676cf4e439b2707c790",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-e676cf4e439b2707c790",
+      "customer_id": "SYN-CUSTOMER-e676cf4e439b2707c790",
+      "currency": "USD",
+      "captured_cents": 2396,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-e676cf4e439b2707c790",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-e676cf4e439b2707c790-1",
+        "amount_cents": 2396,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_e7bd640374c82f449d21",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-e7bd640374c82f449d21",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-e7bd640374c82f449d21",
+      "customer_id": "SYN-CUSTOMER-e7bd640374c82f449d21",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 1,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-e7bd640374c82f449d21",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-e7bd640374c82f449d21-1",
+        "amount_cents": 1,
+        "refunded_cents": 1,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-e7bd640374c82f449d21"
+  },
+  {
+    "fixture_id": "fx_ea1cca0955c79e80a2dc",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-ea1cca0955c79e80a2dc",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-ea1cca0955c79e80a2dc",
+      "customer_id": "SYN-CUSTOMER-ea1cca0955c79e80a2dc",
+      "currency": "USD",
+      "captured_cents": 1711,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-ea1cca0955c79e80a2dc",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ea1cca0955c79e80a2dc-1",
+        "amount_cents": 1711,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ea79e7bdb7298dff26f1",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-ea79e7bdb7298dff26f1",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-ea79e7bdb7298dff26f1",
+      "customer_id": "SYN-CUSTOMER-ea79e7bdb7298dff26f1",
+      "currency": "USD",
+      "captured_cents": 13430,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-ea79e7bdb7298dff26f1",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ea79e7bdb7298dff26f1-1",
+        "amount_cents": 13430,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_eb0194dba39d8fb9a823",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-eb0194dba39d8fb9a823",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-eb0194dba39d8fb9a823",
+      "customer_id": "SYN-CUSTOMER-eb0194dba39d8fb9a823",
+      "currency": "USD",
+      "captured_cents": 11327,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-eb0194dba39d8fb9a823",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-eb0194dba39d8fb9a823-1",
+        "amount_cents": 11327,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ec3a8942fc06781104e4",
+    "title": "identity",
+    "ticket": "Please look up this order for me.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-ec3a8942fc06781104e4",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-ec3a8942fc06781104e4",
+      "customer_id": "SYN-CUSTOMER-ec3a8942fc06781104e4",
+      "currency": "USD",
+      "captured_cents": 1848,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-ec3a8942fc06781104e4",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ec3a8942fc06781104e4-1",
+        "amount_cents": 1848,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ee48fbbc56b2a3fecc99",
+    "title": "cancel after",
+    "ticket": "A dispatch notice arrived before my request to stop the purchase. Please help.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-ee48fbbc56b2a3fecc99",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99",
+      "customer_id": "SYN-CUSTOMER-ee48fbbc56b2a3fecc99",
+      "currency": "USD",
+      "captured_cents": 12608,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-ee48fbbc56b2a3fecc99",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ee48fbbc56b2a3fecc99-1",
+        "amount_cents": 12608,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_ee83630b1f830b42d19b",
+    "title": "duplicate",
+    "ticket": "I see two separate confirmed charges for the same purchase, each with its own reference.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-ee83630b1f830b42d19b",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-ee83630b1f830b42d19b",
+      "customer_id": "SYN-CUSTOMER-ee83630b1f830b42d19b",
+      "currency": "USD",
+      "captured_cents": 26344,
+      "refunded_cents": 13172,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-13T12:00:00.000Z",
+      "shipped_at": "2026-02-06T12:00:00.000Z",
+      "tracking": "SYN-TRACK-ee83630b1f830b42d19b",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-ee83630b1f830b42d19b-1",
+        "amount_cents": 13172,
+        "refunded_cents": 6586,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-ee83630b1f830b42d19b-2",
+        "amount_cents": 13172,
+        "refunded_cents": 6586,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_f09cfead469e814e0e11",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-f09cfead469e814e0e11",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-f09cfead469e814e0e11",
+      "customer_id": "SYN-CUSTOMER-f09cfead469e814e0e11",
+      "currency": "USD",
+      "captured_cents": 1985,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-f09cfead469e814e0e11",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-f09cfead469e814e0e11-1",
+        "amount_cents": 1985,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_f188ce9420dcb42b8397",
+    "title": "damage",
+    "ticket": "The parcel arrived damaged.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-f188ce9420dcb42b8397",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-f188ce9420dcb42b8397",
+      "customer_id": "SYN-CUSTOMER-f188ce9420dcb42b8397",
+      "currency": "USD",
+      "captured_cents": 10642,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-11T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-f188ce9420dcb42b8397",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-f188ce9420dcb42b8397-1",
+        "amount_cents": 10642,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_f2016c2af958cad1f075",
+    "title": "damage",
+    "ticket": "One item inside the delivered box is cracked. Can the payment be returned?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-f2016c2af958cad1f075",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-f2016c2af958cad1f075",
+      "customer_id": "SYN-CUSTOMER-f2016c2af958cad1f075",
+      "currency": "USD",
+      "captured_cents": 1,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-16T12:00:00.000Z",
+      "shipped_at": "2026-02-07T12:00:00.000Z",
+      "tracking": "SYN-TRACK-f2016c2af958cad1f075",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-f2016c2af958cad1f075-1",
+        "amount_cents": 1,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_f2d9f51ae22c534c2dcf",
+    "title": "identity",
+    "ticket": "I am contacting you about a purchase whose owner details differ from my account.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-OTHER-f2d9f51ae22c534c2dcf",
+    "issue": "damage",
+    "order": {
+      "order_id": "SYN-ORDER-f2d9f51ae22c534c2dcf",
+      "customer_id": "SYN-CUSTOMER-f2d9f51ae22c534c2dcf",
+      "currency": "USD",
+      "captured_cents": 2396,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-07T12:00:00.000Z",
+      "shipped_at": "2026-01-31T12:00:00.000Z",
+      "tracking": "SYN-TRACK-f2d9f51ae22c534c2dcf",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-f2d9f51ae22c534c2dcf-1",
+        "amount_cents": 2396,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_f4b8c56bc03dda6afc1d",
+    "title": "cancel after",
+    "ticket": "Cancel the order that has shipped.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-f4b8c56bc03dda6afc1d",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-f4b8c56bc03dda6afc1d",
+      "customer_id": "SYN-CUSTOMER-f4b8c56bc03dda6afc1d",
+      "currency": "USD",
+      "captured_cents": 13156,
+      "refunded_cents": 0,
+      "shipping_state": "shipped",
+      "delivered_at": null,
+      "shipped_at": "2026-02-01T12:00:00.000Z",
+      "tracking": "SYN-TRACK-f4b8c56bc03dda6afc1d",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-f4b8c56bc03dda6afc1d-1",
+        "amount_cents": 13156,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_f5754e292aaa31c3ba12",
+    "title": "duplicate",
+    "ticket": "My order was captured twice.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-f5754e292aaa31c3ba12",
+    "issue": "duplicate",
+    "order": {
+      "order_id": "SYN-ORDER-f5754e292aaa31c3ba12",
+      "customer_id": "SYN-CUSTOMER-f5754e292aaa31c3ba12",
+      "currency": "USD",
+      "captured_cents": 26618,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-f5754e292aaa31c3ba12",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-f5754e292aaa31c3ba12-1",
+        "amount_cents": 13309,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      },
+      {
+        "capture_id": "SYN-CAPTURE-f5754e292aaa31c3ba12-2",
+        "amount_cents": 13309,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T02:00:00.000Z",
+        "revision": 1,
+        "duplicate": true
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_fa226414d37697dbe208",
+    "title": "refunded",
+    "ticket": "Can you confirm the refund status?",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fa226414d37697dbe208",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-fa226414d37697dbe208",
+      "customer_id": "SYN-CUSTOMER-fa226414d37697dbe208",
+      "currency": "USD",
+      "captured_cents": 2412,
+      "refunded_cents": 2412,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-12T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-fa226414d37697dbe208",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fa226414d37697dbe208-1",
+        "amount_cents": 2412,
+        "refunded_cents": 2412,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-fa226414d37697dbe208"
+  },
+  {
+    "fixture_id": "fx_fa68158d39353b6c09c2",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fa68158d39353b6c09c2",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-fa68158d39353b6c09c2",
+      "customer_id": "SYN-CUSTOMER-fa68158d39353b6c09c2",
+      "currency": "USD",
+      "captured_cents": 14010,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-13T12:00:00.000Z",
+      "shipped_at": "2026-02-05T12:00:00.000Z",
+      "tracking": "SYN-TRACK-fa68158d39353b6c09c2",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fa68158d39353b6c09c2-1",
+        "amount_cents": 14010,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_fb6294e39bcdb0d1ba46",
+    "title": "cancel before",
+    "ticket": "The purchase remains in the warehouse. I no longer need it.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fb6294e39bcdb0d1ba46",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-fb6294e39bcdb0d1ba46",
+      "customer_id": "SYN-CUSTOMER-fb6294e39bcdb0d1ba46",
+      "currency": "USD",
+      "captured_cents": 12318,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-fb6294e39bcdb0d1ba46",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fb6294e39bcdb0d1ba46-1",
+        "amount_cents": 12318,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_fc27e184fa94348a6d3a",
+    "title": "cancel before",
+    "ticket": "Cancel this order before it leaves.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fc27e184fa94348a6d3a",
+    "issue": "cancel",
+    "order": {
+      "order_id": "SYN-ORDER-fc27e184fa94348a6d3a",
+      "customer_id": "SYN-CUSTOMER-fc27e184fa94348a6d3a",
+      "currency": "USD",
+      "captured_cents": 12455,
+      "refunded_cents": 0,
+      "shipping_state": "paid",
+      "delivered_at": null,
+      "shipped_at": null,
+      "tracking": "SYN-TRACK-fc27e184fa94348a6d3a",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fc27e184fa94348a6d3a-1",
+        "amount_cents": 12455,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_fc3fcfc3cb3116305bed",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fc3fcfc3cb3116305bed",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-fc3fcfc3cb3116305bed",
+      "customer_id": "SYN-CUSTOMER-fc3fcfc3cb3116305bed",
+      "currency": "USD",
+      "captured_cents": 2686,
+      "refunded_cents": 2686,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-10T12:00:00.000Z",
+      "shipped_at": "2026-02-03T12:00:00.000Z",
+      "tracking": "SYN-TRACK-fc3fcfc3cb3116305bed",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fc3fcfc3cb3116305bed-1",
+        "amount_cents": 2686,
+        "refunded_cents": 2686,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-fc3fcfc3cb3116305bed"
+  },
+  {
+    "fixture_id": "fx_fdd5a892d11f480d3112",
+    "title": "outside window",
+    "ticket": "The delivery date is beyond the return deadline. Please arrange a review of my request.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fdd5a892d11f480d3112",
+    "issue": "return",
+    "order": {
+      "order_id": "SYN-ORDER-fdd5a892d11f480d3112",
+      "customer_id": "SYN-CUSTOMER-fdd5a892d11f480d3112",
+      "currency": "USD",
+      "captured_cents": 14147,
+      "refunded_cents": 0,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-01-12T12:00:00.000Z",
+      "shipped_at": "2026-02-04T12:00:00.000Z",
+      "tracking": "SYN-TRACK-fdd5a892d11f480d3112",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fdd5a892d11f480d3112-1",
+        "amount_cents": 14147,
+        "refunded_cents": 0,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": null
+  },
+  {
+    "fixture_id": "fx_fe8c9bedf9d7be131e60",
+    "title": "refunded",
+    "ticket": "A previous reimbursement covered the purchase. I need confirmation, not another payment.",
+    "received_at": "2026-02-15T12:00:00.000Z",
+    "trusted_customer_id": "SYN-CUSTOMER-fe8c9bedf9d7be131e60",
+    "issue": "status",
+    "order": {
+      "order_id": "SYN-ORDER-fe8c9bedf9d7be131e60",
+      "customer_id": "SYN-CUSTOMER-fe8c9bedf9d7be131e60",
+      "currency": "USD",
+      "captured_cents": 3234,
+      "refunded_cents": 3234,
+      "shipping_state": "delivered",
+      "delivered_at": "2026-02-06T12:00:00.000Z",
+      "shipped_at": "2026-01-30T12:00:00.000Z",
+      "tracking": "SYN-TRACK-fe8c9bedf9d7be131e60",
+      "revision": 1
+    },
+    "captures": [
+      {
+        "capture_id": "SYN-CAPTURE-fe8c9bedf9d7be131e60-1",
+        "amount_cents": 3234,
+        "refunded_cents": 3234,
+        "confirmed_at": "2026-01-01T01:00:00.000Z",
+        "revision": 1,
+        "duplicate": false
+      }
+    ],
+    "existing_effect_ref": "SYN-PRIOR-EFFECT-fe8c9bedf9d7be131e60"
+  }
+]

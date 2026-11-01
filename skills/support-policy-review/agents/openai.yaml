@@ -1,0 +1,4 @@
+interface:
+  display_name: "Support Policy Review"
+  short_description: "Check scoped policy and proposal evidence"
+  default_prompt: "Use $support-policy-review to validate a Handoff proposal change."

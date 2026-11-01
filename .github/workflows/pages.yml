@@ -1,0 +1,47 @@
+name: Publish reviewed Pages artifact
+on:
+  workflow_dispatch:
+    inputs:
+      api_base:
+        description: Verified HTTPS API origin
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: handoff-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      VITE_API_BASE: ${{ inputs.api_base }}
+      SITE_BASE: /handoff/
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.19.0
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Require a ready configured API
+        run: node --input-type=module -e "const u=new URL(process.env.VITE_API_BASE);if(u.protocol!=='https:')throw Error('https_required');const r=await fetch(new URL('/ready',u));if(!r.ok)throw Error('api_not_ready');"
+      - run: npm run build --workspace apps/site
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
+        with:
+          path: apps/site/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy reviewed artifact
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346

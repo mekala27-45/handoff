@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'tests/browser',timeout:60000,expect:{timeout:10000},fullyParallel:false,workers:1,retries:0,reporter:[['list'],['json',{outputFile:'reports/checks/browser.json'}]],use:{baseURL:process.env.BROWSER_BASE_URL??'http://127.0.0.1:5173',headless:true,launchOptions:process.platform==='win32'?{executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'}:{},screenshot:'only-on-failure',trace:'off'},projects:[{name:'desktop',use:{viewport:{width:1440,height:1080}}}]});

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Failure Recovery"
+  short_description: "Test bounded failures and independent recovery"
+  default_prompt: "Use $workflow-failure-recovery to verify Handoff recovery behavior."

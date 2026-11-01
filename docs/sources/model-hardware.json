@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-11-01T02:49:12.230Z",
+  "platform": "win32",
+  "architecture": "x64",
+  "logical_cpus": 24,
+  "cpu_model": "Intel(R) Core(TM) Ultra 9 275HX",
+  "system_memory_bytes": 33737986048,
+  "resident_models": {
+    "models": [
+      {
+        "name": "qwen3:0.6b",
+        "model": "qwen3:0.6b",
+        "size": 1532367993,
+        "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "751.63M",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-31T23:17:27.3020562-04:00",
+        "size_vram": 0,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "measurement_limit": "Resident model allocation, not peak process RSS or throughput benchmark.",
+  "v1_correction": "The first held-out run used Vulkan. Its original reports and allocation evidence are retained. Version two disables Vulkan, CUDA, HIP and ROCm and verifies size_vram is zero before every case."
+}

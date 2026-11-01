@@ -1,0 +1,44 @@
+{
+  "observed_at": "2026-11-01T02:55:46.344Z",
+  "neon": {
+    "project": "royal-hall-19630471",
+    "branch": "br-withered-tooth-b4xpw9kb",
+    "database": "handoff",
+    "schema": "handoff",
+    "postgres_version": 18,
+    "observed_subscription": "free_v3",
+    "compute_units_min": 0.25,
+    "compute_units_max": 0.25,
+    "quota_compute_seconds": 36000,
+    "quota_storage_bytes": 268435456,
+    "direct_connection_verified": true,
+    "new_card_or_upgrade_requested": false
+  },
+  "vercel": {
+    "project": "handoff",
+    "framework": "container",
+    "project_created": true,
+    "account_plan": "not exposed by connected team read",
+    "new_card_or_upgrade_requested": false,
+    "container_live_probe": "blocked before source upload",
+    "source_upload": "automatic approval review rejected missing explicit source disclosure authorization",
+    "server_database_secret": "automatic approval review rejected exporting a live credential without explicit destination authorization",
+    "deployment": null
+  },
+  "github": {
+    "repository": "handoff",
+    "created": false,
+    "pages_published": false,
+    "local_cli_authenticated": false,
+    "publication_authorized": false
+  },
+  "sources": [
+    "Neon describe_project and list_branches responses",
+    "Vercel create_project and get_team responses",
+    "Automatic approval review results",
+    "docs/sources/dependency-lock.json",
+    "docs/sources/ollama-release.json",
+    "docs/sources/model-lock.json"
+  ],
+  "limits": "These observations do not establish a successful no-card Vercel deployment, a future price guarantee, or a verified public URL."
+}

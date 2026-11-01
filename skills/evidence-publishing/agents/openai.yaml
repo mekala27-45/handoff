@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence Publishing"
+  short_description: "Prepare claims backed by completed run evidence"
+  default_prompt: "Use $evidence-publishing to prepare Handoff release evidence."

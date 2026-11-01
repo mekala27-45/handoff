@@ -1,0 +1,12 @@
+{
+  "tag": "v0.40.13",
+  "prerelease": false,
+  "asset": {
+    "name": "ollama-windows-amd64.zip",
+    "size": 1601969847,
+    "url": "https://github.com/ollama/ollama/releases/download/v0.40.13/ollama-windows-amd64.zip",
+    "digest": "sha256:7afa38624fa62ee5d8293422d0ab084c1bb4603134c7f4dafce11a033b57cc19"
+  },
+  "verified_digest": "sha256:7afa38624fa62ee5d8293422d0ab084c1bb4603134c7f4dafce11a033b57cc19",
+  "observed_at": "2026-11-01T02:07:10.230Z"
+}

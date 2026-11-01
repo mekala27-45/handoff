@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+.env
+.env.*
+!.env.example
+.local/
+.eve/
+test-results/
+playwright-report/
+*.log
+*.zip
+*.tgz
+*.exe
+*.gguf
+.vercel/

@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-11-01T03:13:55.450Z",
+  "source": "https://www.postgresql.org/download/windows/",
+  "archive_url": "https://get.enterprisedb.com/postgresql/postgresql-18.6-5-windows-x64-binaries.zip",
+  "observed_archive_sha256": "e2246ba91d22345bc3d017586c09ede52d9df180b1eeb480f050445f1cad84e2",
+  "version": "18.6",
+  "binding": "127.0.0.1:54329",
+  "database": "handoff",
+  "schema": "handoff",
+  "fsync": true,
+  "synchronous_commit": true,
+  "authentication": "task-local trust on loopback; synthetic disposable data only",
+  "installation": "portable archive in task scratch; no Windows service or machine-wide installer"
+}

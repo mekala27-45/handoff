@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["packages/**/*.ts","apps/api/**/*.ts"],"exclude":["eval","tests","agent","apps/site","node_modules","build"]}

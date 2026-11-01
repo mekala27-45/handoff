@@ -1,0 +1,40 @@
+name: Verify Handoff
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:18-bookworm@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8
+        env:
+          POSTGRES_USER: handoff
+          POSTGRES_PASSWORD: handoff
+          POSTGRES_DB: handoff
+        ports: [5432:5432]
+        options: --health-cmd "pg_isready -U handoff" --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      DATABASE_URL: postgresql://handoff:handoff@127.0.0.1:5432/handoff
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.19.0
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: python3 scripts/validators/palette_validator.py palette.json
+      - run: npm run verify
+      - run: npm run eval:faults
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: verification-${{ github.sha }}
+          path: |
+            reports/checks
+            reports/runs
+            reports/faults
+            reports/environments
+          retention-days: 14

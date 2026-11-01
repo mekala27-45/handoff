@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","include":["agent/**/*.ts","packages/**/*.ts"],"exclude":["node_modules","build","eval","tests","apps/site"],"compilerOptions":{"noEmit":true}}

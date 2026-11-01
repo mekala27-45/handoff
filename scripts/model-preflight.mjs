@@ -1,0 +1,7 @@
+import { readFile,writeFile,mkdir } from 'node:fs/promises';
+const lock=JSON.parse(await readFile('docs/sources/model-lock.json','utf8'));
+const version=await fetch('http://127.0.0.1:11435/api/version').then(r=>r.json());if(version.version!==lock.ollama_version)throw Error('ollama_version_changed');
+const tags=await fetch('http://127.0.0.1:11435/api/tags').then(r=>r.json());if(tags.models?.find(x=>x.name==='qwen3:0.6b')?.digest!==lock.model.digest)throw Error('model_digest_changed_or_missing');
+const warm=await fetch('http://127.0.0.1:11435/api/generate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({model:'qwen3:0.6b',prompt:'Ready /no_think',stream:false,options:{num_predict:1,num_ctx:8192,num_gpu:0},keep_alive:'30m'}),signal:AbortSignal.timeout(120000)});if(!warm.ok)throw Error('model_warmup_failed');await warm.json();
+const ps=await fetch('http://127.0.0.1:11435/api/ps').then(r=>r.json()),loaded=ps.models?.find(x=>x.name==='qwen3:0.6b');if(!loaded||loaded.size_vram!==0||loaded.context_length!==8192)throw Error('cpu_context_preflight_failed');
+const result={observed_at:new Date().toISOString(),version:version.version,model:loaded,passed:true};await mkdir('reports/checks',{recursive:true});await writeFile('reports/checks/model-preflight.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({passed:true,model:loaded.name,size_vram:loaded.size_vram,context_length:loaded.context_length}));

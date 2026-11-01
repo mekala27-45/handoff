@@ -1,0 +1,16 @@
+.git
+.env*
+.local
+.eve
+node_modules
+build
+apps/site/dist
+eval
+tests
+reports/*
+!reports/public
+!reports/public/**
+skills
+*.log
+*.zip
+*.tgz

@@ -1,0 +1,32 @@
+{
+  "frozen_at": "2026-11-01T02:49:11.753Z",
+  "configuration_digest": "a4e5b0ef9d0df7c12c510bc42178075dbb09bf163fc55d8b9e17d28e50fec61f",
+  "configuration": {
+    "version": 2,
+    "inference_device": "cpu",
+    "gpu_backends_disabled": [
+      "CUDA",
+      "HIP",
+      "ROCm",
+      "Vulkan"
+    ],
+    "eve": "1.0.0-rc.1",
+    "model": "qwen3:0.6b",
+    "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "context": 8192,
+    "temperature": 0,
+    "turns": 4,
+    "tool_calls": 6,
+    "tokens_per_turn": 512,
+    "deadline_ms": 120000,
+    "files": {
+      "agent/agent.ts": "8c4195d2d135359b1a8428d5c46f09f6975d2cf16c660844a3d46a162e039601",
+      "agent/channels/evaluation.ts": "3cb1f31e89ab62ddbd8efbe0fb408868ff52d85dcba042b9cc5e3b3ccf2c8613",
+      "agent/instructions.md": "901ad012498aef8a295d0658e653d2682444cef8d7ef5bd9d19ac471ffe34ae4",
+      "agent/lib/runtime.ts": "9681f52d7cf70026cc04fed2cf2796f86256476a60037542205040ad4e573afa",
+      "agent/tools/find_policy_clauses.ts": "78379c033a00d01f37ebeb24dd6f10f85ddfbe7346c4318c5205d20684405eff",
+      "agent/tools/get_order_facts.ts": "019d3bd044f37b1944d66155b448d33f86be0dc733855fa37cb89eaa0d66beee",
+      "agent/tools/propose_resolution.ts": "99d80d71af4581ca45d8d7b57d0a07d52e15cb18c7ce5c03ce00f68e93e605ed"
+    }
+  }
+}

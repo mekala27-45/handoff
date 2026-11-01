@@ -1,0 +1,442 @@
+{
+  "observed_at": "2026-11-01T02:05:49.548Z",
+  "node": "24.19.0",
+  "packages": [
+    {
+      "name": "eve",
+      "version": "1.0.0-rc.1",
+      "engines": {
+        "node": ">=24"
+      },
+      "license": "Apache-2.0",
+      "dist": {
+        "shasum": "ab6a457760e4c0e46a04b65fb1809fa1da96cb6c",
+        "tarball": "https://registry.npmjs.org/eve/-/eve-1.0.0-rc.1.tgz",
+        "fileCount": 4428,
+        "integrity": "sha512-yg1zd3Wwi0OY+ue6NP8IV3gPa+Kth9jIB6Af0/sqVElySXWKxL9j0lNkTAddTI38SbyEu0Z11YCZhIlaOQTZLQ==",
+        "signatures": [
+          {
+            "sig": "MEQCID2PsXRTTOnTfExqTIDLfhTsj2X2TLdN2uLd3DdXAbKhAiA/TYYSKf4OGb1FiWsTT2SoHQ7znTNEBMG+WmpcxlvEVQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEYCIQC+W7gVMbE+LLYuryDFJPU4rGHTG//FTm18o5hj+GRT/QIhAPf1W6V99MAxrfPq+MkKY+66T8gJhUh3LUE066qooNjK",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/eve@1.0.0-rc.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 27335405
+      },
+      "peerDependencies": {
+        "ai": "^7.0.137",
+        "vue": "^3.5.0",
+        "chat": "^4.42.0",
+        "next": "^16.0.0",
+        "vite": "^8.3.1",
+        "react": "^19.0.0",
+        "svelte": "^5.0.0",
+        "dd-trace": "^6.13.0",
+        "@nuxt/kit": "^4.0.0",
+        "just-bash": "^3.6.0",
+        "braintrust": "^3.0.0",
+        "@linqapp/sdk": "^0.47.1",
+        "@nuxt/schema": "^4.0.0",
+        "@vercel/connect": "^2.7.0",
+        "@opentelemetry/api": "^1.0.0"
+      },
+      "dependencies": {
+        "nitro": "3.0.260903-beta",
+        "undici": "8.12.3"
+      }
+    },
+    {
+      "name": "pg",
+      "version": "8.23.1",
+      "engines": {
+        "node": ">= 16.0.0"
+      },
+      "license": "MIT",
+      "dist": {
+        "shasum": "e4848051a04aa2f968fd5671d075f89e5e7918b9",
+        "tarball": "https://registry.npmjs.org/pg/-/pg-8.23.1.tgz",
+        "fileCount": 20,
+        "integrity": "sha512-aL96AHANtWjPLDOLqnhx+ngp9+UK7ETEU8VJrDCGvsSSi/mGLcWYsS6Herg7lmaBJe4uwrfqsa7gTEFaSizDoQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCaQ7YY2yU8gtOVUdpEmdwhMZX8RimNffuKliyHO8GPcQIgdnqtDpcBEkCylJPazoNxAcwG0J+2ErEXsbGHsceQDbQ=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIQCoTOteRl6SbOEx95tHOsn0FgIOYsb5wPdT77A0PUDC8wIgUGnJrpGJKdY8o6QUGoU0GRtQVHfVx3aHN7ChoRaAMmo=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 102632
+      },
+      "peerDependencies": {
+        "pg-native": ">=3.0.1"
+      },
+      "dependencies": {
+        "pgpass": "1.0.5",
+        "pg-pool": "^3.14.0",
+        "pg-types": "2.2.0",
+        "pg-protocol": "^1.16.1",
+        "pg-cloudflare": "^1.4.1",
+        "pg-connection-string": "^2.14.1"
+      }
+    },
+    {
+      "name": "zod",
+      "version": "4.6.7",
+      "license": "MIT",
+      "dist": {
+        "shasum": "e806cf64a7f4e37635ce9f2f52c04c3766f75e5b",
+        "tarball": "https://registry.npmjs.org/zod/-/zod-4.6.7.tgz",
+        "fileCount": 840,
+        "integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCwQ7Os025hoW1C24cDvgD4t5gynQpYlWHx1ok/Bke33AIgPP2J7w4z9B/fqA62pHpEBvjlB5ScCMm3c0adt03XQlY=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/zod@4.6.7",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 6148944
+      }
+    },
+    {
+      "name": "vite",
+      "version": "8.3.5",
+      "engines": {
+        "node": "^20.19.0 || >=22.12.0"
+      },
+      "license": "MIT",
+      "dist": {
+        "shasum": "9614f66026cb92fe486cb9d3c90780b2a69fc85d",
+        "tarball": "https://registry.npmjs.org/vite/-/vite-8.3.5.tgz",
+        "fileCount": 37,
+        "integrity": "sha512-z1YpjieJ9g0ebTmQpLBv/oq9E3F9EIlOe+7LahW8SrE3LTiG3udBRUXQOlYXP9b+IC2q2phHeVxj9xGlw34OEQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCkxHmW9S61MNuyy4DXnW7ycbvIM+zLgMLTZY8apoH/7QIgUYeeXGnwTa1EtnZYtLxO8KeaaprYp0Zleoi3Z0ptC4o=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIBXwoS/AmN2uPnY/afXHZ95+19ukFqZNAU1UXqF3/wZEAiAPd1Qjn/zSliT6hF8t80jMjz9Gjqw324wpmsbW+fGQXQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/vite@8.3.5",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 2383283
+      },
+      "peerDependencies": {
+        "tsx": "^4.8.1",
+        "jiti": ">=1.21.0",
+        "less": "^4.0.0",
+        "sass": "^1.70.0",
+        "yaml": "^2.4.2",
+        "stylus": ">=0.54.8",
+        "terser": "^5.16.0",
+        "esbuild": "^0.27.0 || ^0.28.0",
+        "sugarss": "^5.0.0",
+        "@types/node": "^20.19.0 || >=22.12.0",
+        "sass-embedded": "^1.70.0",
+        "@vitejs/devtools": "^0.7.1 || ^0.8.0"
+      },
+      "dependencies": {
+        "postcss": "^8.5.30",
+        "rolldown": "~1.2.14",
+        "picomatch": "^4.0.7",
+        "tinyglobby": "^0.2.17",
+        "lightningcss": "^1.33.0"
+      }
+    },
+    {
+      "name": "typescript",
+      "version": "7.0.2",
+      "engines": {
+        "node": ">=16.20.0"
+      },
+      "license": "Apache-2.0",
+      "dist": {
+        "shasum": "9ec773d7954a8c182c17cc5bbd575aa28bc51582",
+        "tarball": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+        "fileCount": 416,
+        "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+        "signatures": [
+          {
+            "sig": "MEUCIHn8lVrLBbTJToaOcV3IJ0oVPREmFT5BhqmO2niVNCaSAiEAjbubGExGAYMSJN39iEgX/eDYhwBGnh/iyyGTRigXGjY=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 2497498
+      },
+      "dependencies": {
+        "@typescript/typescript-aix-ppc64": "7.0.2",
+        "@typescript/typescript-linux-arm": "7.0.2",
+        "@typescript/typescript-linux-x64": "7.0.2",
+        "@typescript/typescript-sunos-x64": "7.0.2",
+        "@typescript/typescript-win32-x64": "7.0.2",
+        "@typescript/typescript-darwin-x64": "7.0.2",
+        "@typescript/typescript-netbsd-x64": "7.0.2",
+        "@typescript/typescript-freebsd-x64": "7.0.2",
+        "@typescript/typescript-linux-arm64": "7.0.2",
+        "@typescript/typescript-linux-ppc64": "7.0.2",
+        "@typescript/typescript-linux-s390x": "7.0.2",
+        "@typescript/typescript-openbsd-x64": "7.0.2",
+        "@typescript/typescript-win32-arm64": "7.0.2",
+        "@typescript/typescript-darwin-arm64": "7.0.2",
+        "@typescript/typescript-netbsd-arm64": "7.0.2",
+        "@typescript/typescript-freebsd-arm64": "7.0.2",
+        "@typescript/typescript-linux-loong64": "7.0.2",
+        "@typescript/typescript-linux-riscv64": "7.0.2",
+        "@typescript/typescript-openbsd-arm64": "7.0.2",
+        "@typescript/typescript-linux-mips64el": "7.0.2"
+      }
+    },
+    {
+      "name": "@types/node",
+      "version": "26.6.6",
+      "license": "MIT",
+      "dist": {
+        "shasum": "9ed7b5817e728ed9216ef7c5b7d373fe3b777104",
+        "tarball": "https://registry.npmjs.org/@types/node/-/node-26.6.6.tgz",
+        "fileCount": 109,
+        "integrity": "sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==",
+        "signatures": [
+          {
+            "sig": "MEUCIHcSi7pEO72FMEZeNIDd+bzBw9AIYxx9grPD1AX6gZWRAiEA/fTMMgRXn/XqsiUeAvt5XLcc8PUtnTFPDRSYaB/wfH8=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIQCNB8OeetAA6h1cLh8nQ23dVtV1Vlts4Fz3zrT0WOWKDQIgTBe7om+aQ6ts3NNZPfemprMwZ9nnRN4xPoWjoazWA6Q=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 2586357
+      },
+      "peerDependencies": {},
+      "dependencies": {
+        "undici-types": "~8.9.0"
+      }
+    },
+    {
+      "name": "@types/pg",
+      "version": "8.23.1",
+      "license": "MIT",
+      "dist": {
+        "shasum": "7e712ce02cf44ad100862127f10f52e9c6b9d227",
+        "tarball": "https://registry.npmjs.org/@types/pg/-/pg-8.23.1.tgz",
+        "fileCount": 9,
+        "integrity": "sha512-fKVHpikPdg4GKks3JuLEhvwSyvwzF23hnabPy6DD8ljVbC7+6J5dQzdv4arV6jqq57djnMgs1HKBxX4P8aBI3A==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCGT3gAmd1foe4h5A+yaOnvnGkX4FmiT1+tr47rnCz5NgIhAPlL7G9WIK6VVbn78dzvvjLpr92Qv7fs2EeVm3TegnYG",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIECf+CMs6DtJn1Pv5baTTBd3pydqnHoxUG1uqL+954wEAiBThLT81ktCMBVT/tLtxIL2fhUbe9UonwJn0yW8y9pIDw==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 19802
+      },
+      "peerDependencies": {},
+      "dependencies": {
+        "pg-types": "^2.2.0",
+        "@types/node": "*",
+        "pg-protocol": "*"
+      }
+    },
+    {
+      "name": "@playwright/test",
+      "version": "1.64.1",
+      "engines": {
+        "node": ">=20"
+      },
+      "license": "Apache-2.0",
+      "dist": {
+        "shasum": "03d48b0cd135db5a70a6fbca54b2b91a597eed01",
+        "tarball": "https://registry.npmjs.org/@playwright/test/-/test-1.64.1.tgz",
+        "fileCount": 11,
+        "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg==",
+        "signatures": [
+          {
+            "sig": "MEQCIBTVqvK4UiyJ5CglJHnbSW85qB8cNoqbhAThIX1peUFIAiB4hJM1a9NVhdU6G8+UJeNZVN9rgbxqmLviU1wbPXpT6Q==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEUCIFZ/EP/h9yD11u7KZbhZWNH/lTVqDh7/9sWFIuXVYipbAiEAlVzSqPwCP7m7jg5t7q+m4n5AgE/M9kydfpma0U6pajE=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@playwright%2ftest@1.64.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 28542
+      },
+      "dependencies": {
+        "playwright": "1.64.1"
+      }
+    },
+    {
+      "name": "@ai-sdk/openai-compatible",
+      "version": "3.0.82",
+      "engines": {
+        "node": ">=22"
+      },
+      "license": "Apache-2.0",
+      "dist": {
+        "shasum": "401908a6f6fb24f6b1f479655df6b707d38c351f",
+        "tarball": "https://registry.npmjs.org/@ai-sdk/openai-compatible/-/openai-compatible-3.0.82.tgz",
+        "fileCount": 40,
+        "integrity": "sha512-wey0CbujWRkZbbrJjw/GJHyjXpt0v44PQKaTGTVGmigqnM057G7GQHDyZQQj9O0lICY5qJxzpn4wCSftT8BSQg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQD6/fNVEhbony3PuUALC+qVxFdUq2YJVqHs/4ifm9oAFwIgVHID4zQqQeol7ymKyJr9upO09AXSDtW29ucOGmWPul0=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEYCIQD+LB7ZsLBcP97n1PK6CcDGdbs91fB1o6a5g21YWXaDiAIhANiZEvdfih6CMxoqay49ZH5Lbs2oS9Tqxf1ta3H+NEP1",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@ai-sdk%2fopenai-compatible@3.0.82",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 426119
+      },
+      "peerDependencies": {
+        "zod": "^3.25.76 || ^4.1.8"
+      },
+      "dependencies": {
+        "@ai-sdk/provider": "4.0.35",
+        "@ai-sdk/provider-utils": "5.0.72"
+      }
+    },
+    {
+      "name": "@fontsource/zilla-slab",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "dist": {
+        "shasum": "d2e98620da3dbce6e5eaa9ab6847c4411c476153",
+        "tarball": "https://registry.npmjs.org/@fontsource/zilla-slab/-/zilla-slab-5.3.0.tgz",
+        "fileCount": 84,
+        "integrity": "sha512-xbdDx5OESJDQqp3GIp4pjBgI+qpcg4AxnHLN15ekfJbG+ZYaOXg3uBjDpYlkuPQpey91afxHBNaqZgzluJ2FWA==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCf07T01JUvxzd6MmZKsenmrn5v5SEc9lpL8DpN9cllqQIhAKYwPp8Lu6/fbOQLQOjopyEr+4+M9DPT6GXuYfJfEWhU",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@fontsource%2fzilla-slab@5.3.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 848700
+      }
+    },
+    {
+      "name": "@fontsource/asap",
+      "version": "5.3.0",
+      "license": "OFL-1.1",
+      "dist": {
+        "shasum": "560826a5a3f6c1b1b6b7c18775c44b2c64848fd7",
+        "tarball": "https://registry.npmjs.org/@fontsource/asap/-/asap-5.3.0.tgz",
+        "fileCount": 196,
+        "integrity": "sha512-zaSngeCGUKDOCh8TaVqn807zJLysSg4l5OXe4C7USZGilphzcfTTxoX7LOQwdG3toeW02ZKg8mH5s+PFrnYQ2A==",
+        "signatures": [
+          {
+            "sig": "MEUCICRQwPpbog/Rateu/qYKIo7TS7Zi7SYhcIGaAv5InqtMAiEArVT7Xnp4PHypYIs1j9mYYDBIqsu0FaaESpJd+HiHzpE=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@fontsource%2fasap@5.3.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 1526654
+      }
+    },
+    {
+      "name": "@fontsource/ubuntu-sans-mono",
+      "version": "5.3.0",
+      "license": "UFL-1.0",
+      "dist": {
+        "shasum": "0fb5f64930a9c717b94be5677238c5ebc1977a2e",
+        "tarball": "https://registry.npmjs.org/@fontsource/ubuntu-sans-mono/-/ubuntu-sans-mono-5.3.0.tgz",
+        "fileCount": 174,
+        "integrity": "sha512-7SGXQ43Q+gq7kSU2SMaHDBP5injQ07c0hYFsO5lwYT51WQ6qs2mO+lGfzb8Y6yTUZXuQFj2X4MyMZuvumu4TAw==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDnxmXQXTvcavAfEw4khbNJ0AWYcyArxtQrLaV3FoO+KQIhAKtjhuksHU/EInmjHCDGAf2I7KkpsaSBy/s3vSlXIXQW",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/@fontsource%2fubuntu-sans-mono@5.3.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 1106285
+      }
+    },
+    {
+      "name": "ai",
+      "version": "7.0.159",
+      "engines": {
+        "node": ">=22"
+      },
+      "license": "Apache-2.0",
+      "dist": {
+        "shasum": "371c69b2f33d1c115c6e288bbe715c385b7fd036",
+        "tarball": "https://registry.npmjs.org/ai/-/ai-7.0.159.tgz",
+        "fileCount": 714,
+        "integrity": "sha512-4e/BwDoKJlMNYZaqERcTbGte+4TwroN9qKnCprog/XVfD9InzVPlhCviDhN452JIRrRsYg9BT0WsQ2C3Ds2mVQ==",
+        "signatures": [
+          {
+            "sig": "MEQCIBGeuTutvhmn//0jt+F81WeQCd5dhVfa9M6Yyl6VB6XjAiAI5/v5u3iuXObptYIEF7gXtz9jgm5vqgaAPh/XBJNOFw==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          },
+          {
+            "sig": "MEQCIFeJKMORh2oypmY3g+QCKTYtToXjeKo81kbd6zDB0fkzAiBZNz/SsxWuqsjpC6cbIQAtZs3HN7+LA0JTQ+UsfqVhJQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "https://registry.npmjs.org/-/npm/v1/attestations/ai@7.0.159",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 8467517
+      }
+    }
+  ]
+}

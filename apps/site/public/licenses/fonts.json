@@ -1,0 +1,20 @@
+[
+  {
+    "font": "zilla-slab",
+    "version": "5.3.0",
+    "license": "OFL-1.1",
+    "source": "https://fontsource.org/fonts/zilla-slab"
+  },
+  {
+    "font": "asap",
+    "version": "5.3.0",
+    "license": "OFL-1.1",
+    "source": "https://fontsource.org/fonts/asap"
+  },
+  {
+    "font": "ubuntu-sans-mono",
+    "version": "5.3.0",
+    "license": "UFL-1.0",
+    "source": "https://fontsource.org/fonts/ubuntu-sans-mono"
+  }
+]

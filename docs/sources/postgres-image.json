@@ -1,0 +1,6 @@
+{
+  "image": "postgres:18-bookworm",
+  "digest": "sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8",
+  "retrieved_at": "2026-11-01T02:45:06.689Z",
+  "source": "https://hub.docker.com/_/postgres"
+}

@@ -1,0 +1,5 @@
+{
+  "image": "node:24.19.0-bookworm-slim",
+  "digest": "sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df",
+  "observed_at": "2026-11-01T02:16:22.988Z"
+}
