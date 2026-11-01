@@ -1,5 +1,5 @@
 import { defineChannel,GET,POST } from 'eve/channels';
-import { record,beginScope,endScope } from '../lib/runtime.js';
+import { record,beginScope,endScope,scope } from '../lib/runtime.js';
 const traceIdentifier=(value:unknown)=>typeof value==='string'&&/^[A-Za-z0-9_.:-]{1,100}$/.test(value)?value:null;
 function errorSummary(value:unknown){
  if(typeof value!=='string')return null;
@@ -17,6 +17,7 @@ export default defineChannel({routes:[
   const body=await request.json() as {message:string};if(typeof body.message!=='string'||body.message.length>4000)return new Response('Invalid',{status:400});
   try{await beginScope();}catch{return new Response('Busy',{status:409});}
   try{
+  if(params.runId!==(await scope()).run_id)return new Response('Scope mismatch',{status:409});
   const delivery=await from(params.runId!).send(body.message,{auth:null});
   await record('eve_delivery',{session_id:delivery.sessionId});
   const result=await delivery.result();await record('eve_result',{outcome:result.outcome});

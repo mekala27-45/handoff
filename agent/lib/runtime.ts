@@ -1,14 +1,20 @@
 import { readFile,appendFile,mkdir } from 'node:fs/promises';
 import { createPool } from '../../packages/db/client.js';
 import { Workflow } from '../../packages/domain/workflow.js';
+import type { Versions } from '../../packages/domain/evidence.js';
+import { ObservedSnapshots } from './snapshots.js';
 export const application=new Workflow(createPool(undefined,'handoff_agent'),{testMode:true});
 export const allowed=['find_policy_clauses','get_order_facts','propose_resolution'];
 export type Scope={run_id:string;case_id:string;order_id:string;capability:string;started_at:number};
 let activeScope:Scope|null=null;
 const observed=new Map<string,any[]>();
+const snapshots=new ObservedSnapshots();
 export async function observedResults(){return observed.get((await scope()).run_id)??[];}
-export async function beginScope(){if(activeScope)throw new Error('evaluation_busy');activeScope=JSON.parse(await readFile('.local/model-scope.json','utf8'));}
-export function endScope(){activeScope=null;}
+export async function rememberFactsSnapshot(versions:Versions){return snapshots.facts((await scope()).run_id,versions);}
+export async function rememberRefusedSnapshot(){return snapshots.refused((await scope()).run_id);}
+export async function resolveSnapshotToken(token:string){return snapshots.resolve((await scope()).run_id,token);}
+export async function beginScope(){if(activeScope)throw new Error('evaluation_busy');const next=JSON.parse(await readFile('.local/model-scope.json','utf8')) as Scope;snapshots.begin(next.run_id);observed.clear();activeScope=next;}
+export function endScope(){snapshots.end();observed.clear();activeScope=null;}
 export async function scope():Promise<Scope>{if(!activeScope)throw new Error('no_active_evaluation');return activeScope;}
 const globalState=globalThis as typeof globalThis & {handoffBudgets?:Map<string,{models:number;tools:number}>};
 globalState.handoffBudgets??=new Map();

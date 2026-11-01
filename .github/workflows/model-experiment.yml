@@ -1,8 +1,14 @@
-name: Develop Handoff model v3
+name: Evaluate Handoff model v3
 on:
   push:
     branches: [agent-quality-v3]
   workflow_dispatch:
+    inputs:
+      split:
+        description: Explicit split; held-out requires the committed frozen configuration
+        type: choice
+        options: [auto, development, held-out]
+        default: auto
 permissions:
   contents: read
 concurrency:
@@ -11,7 +17,7 @@ concurrency:
 jobs:
   development:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 55
     services:
       postgres:
         image: postgres:18-bookworm@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8
@@ -35,6 +41,18 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run compile
       - run: npm run check:agent
+      - name: Select registered split
+        id: split
+        env:
+          REQUESTED_SPLIT: ${{ inputs.split || 'auto' }}
+        run: |
+          split="$REQUESTED_SPLIT"
+          if [ "$split" = auto ]; then
+            if [ -f eval/plans/model-config-v3.json ]; then split=held-out; else split=development; fi
+          fi
+          if [ "$split" = held-out ]; then test -f eval/plans/model-config-v3.json; fi
+          case "$split" in development|held-out) ;; *) exit 1 ;; esac
+          echo "value=$split" >> "$GITHUB_OUTPUT"
       - name: Download and verify pinned official Linux Ollama
         run: |
           mkdir -p "$RUNNER_TEMP/handoff-ollama"
@@ -42,12 +60,48 @@ jobs:
           printf '%s  %s\n' c9490e0f520be21271d969e6703f012268b1d39f8b70dd58854e5bfef7a75bb6 "$RUNNER_TEMP/handoff-ollama.tar.zst" | sha256sum --check --status
           tar --zstd -xf "$RUNNER_TEMP/handoff-ollama.tar.zst" -C "$RUNNER_TEMP/handoff-ollama"
           echo "HANDOFF_OLLAMA_BINARY=$RUNNER_TEMP/handoff-ollama/bin/ollama" >> "$GITHUB_ENV"
-      - name: Run actual CPU inference on development only
-        run: node scripts/run-model-experiment.mjs --development
+      - name: Run actual CPU inference on the selected split
+        env:
+          MODEL_SPLIT: ${{ steps.split.outputs.value }}
+        run: node scripts/run-model-experiment.mjs "--$MODEL_SPLIT"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with:
-          name: model-development-v3-${{ github.sha }}
+          name: model-experiment-v3-${{ github.sha }}
           path: ${{ runner.temp }}/handoff-model-experiment-export
           if-no-files-found: warn
           retention-days: 14
+  publish-evidence:
+    needs: development
+    if: always() && github.ref == 'refs/heads/agent-quality-v3'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.19.0
+      - name: Retrieve original GitHub evidence artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HANDOFF_EVIDENCE_ARTIFACT_NAME: model-experiment-v3-${{ github.sha }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/evidence-current" "$RUNNER_TEMP/evidence-first"
+          if ! gh run download "$GITHUB_RUN_ID" --repo "$GITHUB_REPOSITORY" --name "$HANDOFF_EVIDENCE_ARTIFACT_NAME" --dir "$RUNNER_TEMP/evidence-current"; then
+            echo 'Current experiment export is unavailable; preserve earlier evidence if needed.'
+          fi
+          if ! gh api "repos/$GITHUB_REPOSITORY/contents/runs/41326684887/export-manifest.json?ref=model-evidence-v3" > /dev/null 2>&1; then
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/13092085189/zip" > "$RUNNER_TEMP/evidence-first.zip"
+            printf '%s  %s\n' 91011f1737dc8eb862a0827118047777468fe94e85faa5d38f6d32881296a777 "$RUNNER_TEMP/evidence-first.zip" | sha256sum --check --status
+            unzip -q "$RUNNER_TEMP/evidence-first.zip" -d "$RUNNER_TEMP/evidence-first"
+          fi
+      - name: Preserve exports on the dedicated GitHub evidence branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HANDOFF_EVIDENCE_ARTIFACT_NAME: model-experiment-v3-${{ github.sha }}
+        run: node scripts/publish-model-evidence.mjs
