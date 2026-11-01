@@ -1,0 +1,36 @@
+name: Finish verified Handoff publication
+on:
+  push:
+    branches: [release-publication-repair]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: handoff-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      CANDIDATE_COMMIT: f398c2445240b70f02d0a2cc4eb13a33c9255ffa
+      RELEASE_TAG: v0.1.0
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.19.0
+      - name: Require the original successful immutable attestation
+        run: |
+          test "$(gh api repos/$GITHUB_REPOSITORY/actions/runs/41324276432 --jq .head_sha)" = "$CANDIDATE_COMMIT"
+          test "$(gh api repos/$GITHUB_REPOSITORY/actions/runs/41324276432/jobs --jq '.jobs[] | select(.name == "attest") | .conclusion')" = success
+          gh run download 41324276432 --repo "$GITHUB_REPOSITORY" --name "release-attestation-$CANDIDATE_COMMIT" --dir release-assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: node scripts/finalize-release.mjs self-test
+      - name: Complete publication without changing the verified tag target
+        run: node scripts/finalize-release.mjs publish
+        env:
+          GH_TOKEN: ${{ github.token }}

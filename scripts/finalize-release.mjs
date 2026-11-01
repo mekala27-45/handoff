@@ -51,6 +51,11 @@ async function github(path,method='GET',body){
  if(!response.ok)throw Error('github_'+method+'_'+response.status+':'+path);
  return response.status===204?null:response.json();
 }
+async function findRelease(repo,tag){
+ try{return await github('/repos/'+repo+'/releases/tags/'+tag);}catch(error){if(!String(error.message).includes('github_GET_404:'))throw error;}
+ const releases=await github('/repos/'+repo+'/releases?per_page=100');
+ return releases.find(release=>release.tag_name===tag);
+}
 async function eventually(name,fn,deadline=Date.now()+360000){
  let last;
  while(Date.now()<deadline){try{return await fn();}catch(error){last=error;console.log('waiting:'+name);await sleep(5000);}}
@@ -191,15 +196,15 @@ async function publish(){
  try{ref=await github('/repos/'+repo+'/git/ref/tags/'+tag);}catch(error){if(!String(error.message).includes('github_GET_404:'))throw error;}
  if(ref){assert.equal(ref.object.type,'tag','existing_tag_must_be_annotated');const existing=await github('/repos/'+repo+'/git/tags/'+ref.object.sha);assert.equal(existing.object.sha,candidate,'tag_points_elsewhere');}
  else{const object=await github('/repos/'+repo+'/git/tags','POST',{tag,message:'Verified Handoff release '+tag+'\nCandidate: '+candidate+'\nCI: '+att.ci_run+'\nPages: '+att.pages_run,object:candidate,type:'commit'});await github('/repos/'+repo+'/git/refs','POST',{ref:'refs/tags/'+tag,sha:object.sha});}
- let release;try{release=await github('/repos/'+repo+'/releases/tags/'+tag);}catch(error){if(!String(error.message).includes('github_GET_404:'))throw error;}
- if(!release){execFileSync('gh',['release','create',tag,'--repo',repo,'--verify-tag','--draft','--title','Handoff '+tag,'--notes-file','release-assets/RESULTS.md'],{stdio:'inherit'});release=await github('/repos/'+repo+'/releases/tags/'+tag);}
+ let release=await findRelease(repo,tag);
+ if(!release){execFileSync('gh',['release','create',tag,'--repo',repo,'--verify-tag','--draft','--title','Handoff '+tag,'--notes-file','release-assets/RESULTS.md'],{stdio:'inherit'});release=await findRelease(repo,tag);}
+ assert.ok(release,'created_release_missing');
  const finalResults=(await readFile('release-assets/RESULTS.md','utf8')).replace('18  not done Verified release tag prepared and authorized publication complete; evidence: tag preparation passed; publication awaits the following publish job.','18  done Verified release tag prepared and authorized publication complete; evidence: annotated tag '+tag+' and this published release.').replace('This file is a prepared attestation until the publish job has successfully created and verified the annotated tag and release.','The publish job verified the annotated tag target and every required release asset before completing publication.');
  await writeFile('release-assets/RESULTS.md',finalResults);att.publication={tag,candidate_commit:candidate,authorized:true};await writeFile('release-assets/release-readiness.json',JSON.stringify(att,null,2)+'\n');
  execFileSync('gh',['release','upload',tag,'--repo',repo,'--clobber','release-assets/release-candidate.json','release-assets/release-readiness.json','release-assets/hosted.json','release-assets/RESULTS.md'],{stdio:'inherit'});
- const prepared=await github('/repos/'+repo+'/releases/tags/'+tag);for(const name of ['release-candidate.json','release-readiness.json','hosted.json','RESULTS.md'])assert.ok(prepared.assets.some(a=>a.name===name),'release_asset_missing:'+name);
+ const prepared=await findRelease(repo,tag);assert.ok(prepared,'prepared_release_missing');for(const name of ['release-candidate.json','release-readiness.json','hosted.json','RESULTS.md'])assert.ok(prepared.assets.some(a=>a.name===name),'release_asset_missing:'+name);
  await github('/repos/'+repo+'/releases/'+prepared.id,'PATCH',{draft:false,body:finalResults});
  const verified=await github('/repos/'+repo+'/releases/tags/'+tag);assert.equal(verified.draft,false);console.log(JSON.stringify({published:true,url:verified.html_url,tag,candidate_commit:candidate}));
 }
 const mode=process.argv[2];
 if(mode==='self-test')selfTest();else if(mode==='verify')await verify();else if(mode==='publish')await publish();else throw Error('use_self-test_verify_or_publish');
-
