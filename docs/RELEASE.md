@@ -1,6 +1,8 @@
 # Reviewable release procedure
 
-Publication is pending. Automatic approval review rejected the source and synthetic fixture upload to Vercel because this chat did not explicitly authorize disclosure to that destination. It separately rejected exporting the live Neon database credential to Vercel preview and production environments. Neither action succeeded. Do not retry through another route without explicit authorization covering those actions.
+The owner authorized GitHub publication, Vercel deployment and the isolated Neon credential's server environment destination on November 1, 2026. The source and fixtures are published, the API container is deployed, and its full synthetic HTTP workflow passed from an independent client with a separate SQL audit. The credential is stored as a sensitive Vercel variable. The first deployment safely rejected a pooled URL; the corrected deployment uses the direct endpoint.
+
+Automatic approval review separately rejected publishing evaluation diagnostics, including apps/site/public/reports/diagnostics.json. Every report file is excluded from the public GitHub tree pending artifact-specific authorization. Do not retry those exports through another route. Existing SSO settings remain unchanged; the production alias already accepted ordinary independent requests. Pages, CI and final browser outcomes must be read from their actual workflow runs before preparing a full-completion tag.
 
 The prepared scope is a public GitHub repository named `handoff`, a Vercel API project named `handoff`, and a GitHub Pages workbench. The source contains original synthetic fixtures, evaluator truth for reproducibility, sanitized run evidence and three coding-agent workflows. Runtime and site artifacts exclude evaluator truth, private logs, capabilities, credentials and model weights. No social post, email or other public message is included.
 

@@ -3,14 +3,22 @@
   "verification_commit": "294a45931dbc9e6ace666ad76844e15d787e5efd",
   "clean_rederivation_commit": "351f01a53890b1530616e76e72b24a082a37152a",
   "full_suite_passed": false,
-  "live_api": null,
-  "pages": null,
-  "publication_authorized": false,
+  "live_api": {
+    "url": "https://handoff-blond-one.vercel.app",
+    "source_commit": "e5a5617be59157845551c3f8d908560ad55a89c5",
+    "verified": true
+  },
+  "pages": {
+    "url": "https://mekala27-45.github.io/handoff/",
+    "source_commit": "ea4b363d533aea98e5055e0e44945e02595cb9fb",
+    "verified": false
+  },
+  "publication_authorized": true,
   "gates": [
     {
       "step": 1,
-      "done": false,
-      "evidence": "Dependency, model and no-card host probes recorded; evidence: `docs/sources/host-probes.json` records unresolved Vercel plan/live probe."
+      "done": true,
+      "evidence": "Active Vercel Hobby response and deployed container"
     },
     {
       "step": 2,
@@ -49,8 +57,8 @@
     },
     {
       "step": 9,
-      "done": false,
-      "evidence": "Functional live API verified from a separate client; evidence: no hosted URL; `docs/sources/host-probes.json`."
+      "done": true,
+      "evidence": "https://handoff-blond-one.vercel.app; independent HTTP workflow and separate Neon SQL audit"
     },
     {
       "step": 10,

@@ -1,6 +1,10 @@
 # Handoff measured results
 
-Local candidate built. Public release is incomplete. The workbench and API require starting their local servers; they are not currently running. There is no verified hosted API URL, Pages URL, public repository or release tag.
+Source published at https://github.com/mekala27-45/handoff. The API is deployed at https://handoff-blond-one.vercel.app and the Pages workflow targets https://mekala27-45.github.io/handoff/. The hosted API passed an independent HTTP workflow probe and a separate database audit on November 1, 2026. Pages deployment run 41322102512 succeeded. CI run 41322012040 passed types, unit tests, rederivation, build and database integration. Seven of eight browser tests passed; the recorded-model test failed with ENOENT because apps/site/public/reports/index.json is excluded by automatic approval review. The fault matrix was consequently skipped in that CI run. A verified full release tag remains pending.
+
+The owner authorized GitHub source, Vercel deployment and the isolated server database credential destination. Vercel's authenticated user response reports an active Hobby plan. Automatic approval review separately blocked all evaluation report publication, including site diagnostics; those files are excluded from the public repository. The public Evaluation view therefore reports Not evaluated. Original measurements below refer to the preserved local evidence and private review archive. The public source snapshot is remote commit `ea4b363d533aea98e5055e0e44945e02595cb9fb`, transferred from local commit `e5a5617be59157845551c3f8d908560ad55a89c5` with report directories excluded.
+
+The independent hosted probe verified CORS, no-store, forbidden-origin refusal, duplicate intake, proposal, approval, concurrent execution, receipt recovery, a fresh-key repeat and cross-session refusal. SQL then confirmed one approval, one simulated one-cent effect and a matching one-cent capture balance delta. No access-control change was applied; the existing production alias accepted the independent client's ordinary requests without a bypass token.
 
 Continuation on November 1, 2026: all 19 unit tests, all three type checks, the production site build and deterministic fixture rederivation passed. A fresh integrated run was blocked at migration: the Neon hostname could not resolve, and the disposable loopback PostgreSQL connection returned EACCES under the current execution restrictions. The earlier passing integration and browser evidence remains historical evidence, not a current full-suite pass. Independent regrading again passed all 750 stored baseline and applicable fault snapshots. No model inference or fault injection was rerun during this continuation. The clean-worktree offline rebuild passed on commit `351f01a53890b1530616e76e72b24a082a37152a`; see `reports/checks/clean-offline-continuation.json`. It reused copied installed dependencies, so it is not a fresh dependency installation. The archive is a source review package, not a verified hosted release.
 
@@ -99,7 +103,7 @@ The isolated Neon project reports the Free plan and no new card or upgrade was r
 
 ## Mandatory checklist
 
-1  not done Dependency, model and no-card host probes recorded; evidence: `docs/sources/host-probes.json` records unresolved Vercel plan/live probe.
+1  done Dependency, model and no-card host probes recorded; evidence: `docs/sources/host-probes.json`, active Hobby account response and successful container deployment.
 2  done Claim renderer rejects missing or invalid evidence; evidence: `tests/unit/claims.test.ts` and final unit report.
 3  done Synthetic data, split and independent truth registered; evidence: dataset digest `ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834`.
 4  done Isolated schema and independent persistence check pass; evidence: `reports/checks/integration.txt`.
@@ -107,7 +111,7 @@ The isolated Neon project reports the Free plan and no new card or upgrade was r
 6  done Proposal and monetary policy gates pass; evidence: `tests/unit/policy.test.ts` and independent audit report.
 7  done Approval digest, expiry and stale-review gates pass; evidence: `tests/integration/approval-clock.test.ts` and integration report.
 8  done One simulated effect survives duplicate execution; evidence: `eval/harness/audit.ts:ledgerQuery` and fault case table.
-9  not done Functional live API verified from a separate client; evidence: no hosted URL; `docs/sources/host-probes.json`.
+9  done Functional live API verified from a separate client; evidence: https://handoff-blond-one.vercel.app; private `reports/checks/hosted-continuation.json` and independent Neon SQL read.
 10  done Case workbench supports review and honest error states; evidence: `reports/checks/browser.json`.
 11  done Actual eve model-generated tool call demonstrated; evidence: `reports/model-traces/model-heldout-v2-1793501352417-fx_75cd07ef28f02794e586.json`.
 12  done Registered model attempts graded with full provenance; evidence: `reports/runs/model-heldout-v2-1793501352417.json` (0 / 16 correct).

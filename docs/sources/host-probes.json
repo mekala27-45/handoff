@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-11-01T02:55:46.344Z",
+  "observed_at": "2026-11-01T15:38:39.701Z",
   "neon": {
     "project": "royal-hall-19630471",
     "branch": "br-withered-tooth-b4xpw9kb",
@@ -18,19 +18,24 @@
     "project": "handoff",
     "framework": "container",
     "project_created": true,
-    "account_plan": "not exposed by connected team read",
+    "account_plan": "hobby; active authenticated user billing response",
     "new_card_or_upgrade_requested": false,
-    "container_live_probe": "blocked before source upload",
-    "source_upload": "automatic approval review rejected missing explicit source disclosure authorization",
-    "server_database_secret": "automatic approval review rejected exporting a live credential without explicit destination authorization",
-    "deployment": null
+    "container_live_probe": "deployed; full independent HTTP workflow and separate SQL audit passed",
+    "source_upload": "succeeded after owner authorization",
+    "server_database_secret": "sensitive preview and production server variable; direct endpoint",
+    "deployment": "dpl_GNqRCE3Ya8U36VcPq5W9YESNRar4",
+    "api_url": "https://handoff-blond-one.vercel.app"
   },
   "github": {
     "repository": "handoff",
-    "created": false,
-    "pages_published": false,
+    "created": true,
+    "pages_published": true,
     "local_cli_authenticated": false,
-    "publication_authorized": false
+    "publication_authorized": true,
+    "repository_url": "https://github.com/mekala27-45/handoff",
+    "pages_url": "https://mekala27-45.github.io/handoff/",
+    "pages_run": 41322102512,
+    "diagnostics_publication": "blocked by automatic approval review; all report files excluded"
   },
   "sources": [
     "Neon describe_project and list_branches responses",
@@ -40,5 +45,5 @@
     "docs/sources/ollama-release.json",
     "docs/sources/model-lock.json"
   ],
-  "limits": "These observations do not establish a successful no-card Vercel deployment, a future price guarantee, or a verified public URL."
+  "limits": "Recorded allowances and successful deployment do not guarantee future prices. Full release awaits CI, browser verification and permitted report publication."
 }

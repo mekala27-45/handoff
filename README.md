@@ -4,7 +4,7 @@ A synthetic support workbench that makes evidence, review and recovery visible. 
 
 Synthetic support cases. Simulated actions only. Scripted, local-model and recorded runs are labeled separately. No real messages, refunds or customer data. This project does not demonstrate production customer-service readiness.
 
-Public publication is pending authorization. Read [RESULTS.md](RESULTS.md) for measured evidence, checklist status and the exact tested commit. A running local demo is not a verified public deployment.
+The source is published at [mekala27-45/handoff](https://github.com/mekala27-45/handoff). The hosted API is [handoff-blond-one.vercel.app](https://handoff-blond-one.vercel.app/health), and the workbench is [GitHub Pages](https://mekala27-45.github.io/handoff/). Read [RESULTS.md](RESULTS.md) for measured evidence and verification limits. Publication of recorded report files is pending artifact-specific authorization, so the public Evaluation view currently displays Not evaluated. The complete private review package preserves the original runs.
 
 ## Run locally
 
