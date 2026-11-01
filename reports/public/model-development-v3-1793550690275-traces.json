@@ -1,0 +1,286 @@
+[
+  {
+    "fixture_id": "fx_07a9425bd18f2b4fd61e",
+    "run_id": "model-development-v3-1793550690275-fx_07a9425bd18f2b4fd61e",
+    "source_commit": "e55d3b9df58a20837e6e19b9630f8e4003868815",
+    "configuration_digest": "7a11fafbc1ad32348382b647eaf2d6cefb68a72e4f89602ef226cdab148380ec",
+    "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "entries": [
+      {
+        "at": "2026-11-01T16:31:30.680Z",
+        "type": "model_started",
+        "data": {
+          "runId": "run_0",
+          "modelId": "ollama/qwen3:0.6b",
+          "attempt": 0
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:30.709Z",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": 512,
+          "temperature": 0,
+          "reasoning_effort": "none"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:53.770Z",
+        "type": "eve_call_settled",
+        "data": {
+          "call_id": "call_3kv9xfeb",
+          "outcome": "failed",
+          "error_code": "ACTION_RESULT_FAILED"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:53.787Z",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_0",
+          "finishReason": "length",
+          "outcome": "completed"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:53.789Z",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 1,
+            "cacheWriteTokens": 0,
+            "inputTokens": 891,
+            "outputTokens": 512
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:53.846Z",
+        "type": "model_started",
+        "data": {
+          "runId": "run_1",
+          "modelId": "ollama/qwen3:0.6b",
+          "attempt": 0
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:53.856Z",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": 512,
+          "temperature": 0,
+          "reasoning_effort": "none"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:56.412Z",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_1",
+          "finishReason": "tool-calls",
+          "outcome": "completed"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:56.412Z",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 887,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1111,
+            "outputTokens": 23
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:56.444Z",
+        "type": "model_started",
+        "data": {
+          "runId": "run_2",
+          "modelId": "ollama/qwen3:0.6b",
+          "attempt": 0
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:56.452Z",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": 512,
+          "temperature": 0,
+          "reasoning_effort": "none"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.311Z",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.341Z",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e",
+              "customer_id": "SYN-CUSTOMER-07a9425bd18f2b4fd61e",
+              "currency": "USD",
+              "captured_cents": 11190,
+              "refunded_cents": 0,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-02-07T12:00:00.000Z",
+              "shipped_at": "2026-01-31T12:00:00.000Z",
+              "tracking": "SYN-TRACK-07a9425bd18f2b4fd61e",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-07a9425bd18f2b4fd61e-1",
+                "amount_cents": 11190,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-07a9425bd18f2b4fd61e-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.357Z",
+        "type": "eve_call_settled",
+        "data": {
+          "call_id": "call_x9ex0shn",
+          "outcome": "completed",
+          "error_code": null
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.380Z",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_2",
+          "finishReason": "tool-calls",
+          "outcome": "completed"
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.386Z",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1107,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1255,
+            "outputTokens": 44
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.425Z",
+        "type": "model_started",
+        "data": {
+          "runId": "run_3",
+          "modelId": "ollama/qwen3:0.6b",
+          "attempt": 0
+        }
+      },
+      {
+        "at": "2026-11-01T16:31:59.434Z",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": 512,
+          "temperature": 0,
+          "reasoning_effort": "none"
+        }
+      },
+      {
+        "at": "2026-11-01T16:32:11.127Z",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_3",
+          "finishReason": "stop",
+          "outcome": "completed"
+        }
+      },
+      {
+        "at": "2026-11-01T16:32:11.129Z",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_3"
+          },
+          "usage": {
+            "cacheReadTokens": 1251,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1750,
+            "outputTokens": 165
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T16:32:11.146Z",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  }
+]

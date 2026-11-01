@@ -40,6 +40,19 @@ test('recorded model evidence shows its real denominator and inspectable trace',
  expect(index.diagnostics.faults.reduce((n:number,f:any)=>n+f.not_applicable,0)).toBe(50);
  await page.screenshot({path:'.local/workbench-evaluation.png',fullPage:true});
 });
+
+test('agent experiment evidence is additive and keeps the original model visible',async({page})=>{
+ const index=JSON.parse(readFileSync('apps/site/public/reports/index.json','utf8')),original=index['local-model'];
+ const run={...original,run_id:'model-heldout-v3-browser-fixture',title:'Agent v3 held-out evaluation',split:'held-out',trace_cases:[],filename:'v3.json',cases_filename:'v3-cases.json',traces_filename:'v3-traces.json',changes:['Observed snapshot token.'],comparison_limits:['A different subset from original v2.'],metrics:original.metrics.map((m:any)=>({...m,numerator:m.metric_id==='proposal_correctness'?3:m.numerator}))};
+ index.model_experiments={[run.run_id]:run};await page.route('**/reports/index.json',route=>route.fulfill({json:index}));
+ await page.goto('/');await page.getByRole('button',{name:'03 Evaluation',exact:true}).click();await page.locator('button[data-mode="local-model"]').click();
+ await expect(page.getByRole('heading',{name:'Local Qwen evaluation',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Agent v3 experiments',exact:true})).toBeVisible();
+ const experiment=page.locator('[data-experiment-run="'+run.run_id+'"]');await expect(experiment.getByRole('heading',{name:'Agent v3 held-out evaluation',exact:true})).toBeVisible();
+ await expect(experiment.getByRole('link',{name:'Download agent v3 run manifest'})).toHaveAttribute('href',/v3.json$/);
+ const correctness=experiment.getByRole('row').filter({has:page.getByRole('rowheader',{name:'proposal correctness',exact:true})});await expect(correctness).toContainText('3');await expect(correctness).toContainText('16');
+ await page.getByText('Compare the same sixteen cases',{exact:true}).click();await expect(page.getByText('Original CPU model v2 subset. Agent v3 uses a separate fresh subset shown below.',{exact:true})).toBeVisible();
+});
 test('mobile, dark theme, reduced motion and zoom retain readable controls',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await expect(page.getByRole('heading',{name:'The dispatch board.'})).toBeVisible();await page.getByRole('button',{name:'Dark theme',exact:true}).click();await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);await page.screenshot({path:'.local/workbench-mobile.png',fullPage:true});

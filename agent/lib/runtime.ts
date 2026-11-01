@@ -3,6 +3,7 @@ import { createPool } from '../../packages/db/client.js';
 import { Workflow } from '../../packages/domain/workflow.js';
 import type { Versions } from '../../packages/domain/evidence.js';
 import { ObservedSnapshots } from './snapshots.js';
+import { createModelResponseDiagnostics } from './model-diagnostics.js';
 export const application=new Workflow(createPool(undefined,'handoff_agent'),{testMode:true});
 export const allowed=['find_policy_clauses','get_order_facts','propose_resolution'];
 export type Scope={run_id:string;case_id:string;order_id:string;capability:string;started_at:number};
@@ -37,5 +38,13 @@ export const modelFetch:typeof fetch=async(input,init)=>{
   request.reasoning_effort='none';
  }
  await record('effective_tool_inventory',{inventory,model:request.model,max_tokens:request.max_tokens,temperature:request.temperature,reasoning_effort:request.reasoning_effort??null});
- return fetch(input,{...init,body:JSON.stringify(request),signal:AbortSignal.any([init?.signal??new AbortController().signal,AbortSignal.timeout(Math.max(1,120000-(Date.now()-currentScope.started_at)))])});
+ const response=await fetch(input,{...init,body:JSON.stringify(request),signal:AbortSignal.any([init?.signal??new AbortController().signal,AbortSignal.timeout(Math.max(1,120000-(Date.now()-currentScope.started_at)))])});
+ const diagnostics=createModelResponseDiagnostics();
+ if(!response.body){await record('model_tool_admission',diagnostics.finish());return response;}
+ // Inspect only bounded tool-call metadata and forward every response byte unchanged.
+ const body=response.body.pipeThrough(new TransformStream<Uint8Array,Uint8Array>({
+  transform(chunk,controller){diagnostics.write(chunk);controller.enqueue(chunk);},
+  async flush(){await record('model_tool_admission',diagnostics.finish());}
+ }));
+ return new Response(body,{status:response.status,statusText:response.statusText,headers:response.headers});
 };

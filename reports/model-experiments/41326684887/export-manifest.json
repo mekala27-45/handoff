@@ -1,0 +1,39 @@
+{
+  "source_commit": "e55d3b9df58a20837e6e19b9630f8e4003868815",
+  "split": "development",
+  "exported": [
+    {
+      "file": "reports/runs/model-development-v3-1793550690275-cases.json",
+      "sha256": "a35b3db0c05c2de0c8d2be3260810b3198235577bd7ca1af27a158edf576b180"
+    },
+    {
+      "file": "reports/runs/model-development-v3-1793550690275.json",
+      "sha256": "1d08995c3c3e71c93b21dedd330addbf4e5d0449055bc21aa5fe66075c5bb746"
+    },
+    {
+      "file": "reports/runs/model-development-v3-1793550690275.txt",
+      "sha256": "fe05de9cbf71a5741c9158749974f656d91db3a0955841f847c24bdfbd94448c"
+    },
+    {
+      "file": "reports/model-traces/model-development-v3-1793550690275-fx_07a9425bd18f2b4fd61e.json",
+      "sha256": "212e69df9d1ae1ecc4c48028ffab918cd8eb974b27b37ae7cb6d98cdedd2f246"
+    },
+    {
+      "file": "reports/model-traces/model-development-v3-1793550690275-progress.json",
+      "sha256": "a35b3db0c05c2de0c8d2be3260810b3198235577bd7ca1af27a158edf576b180"
+    },
+    {
+      "file": "reports/environments/model-experiment-ci-1793550684399.json",
+      "sha256": "0f0ab932d1c8785dd97ddff50df4075f1063c35cbe98606e26ea87ab8cde75c2"
+    },
+    {
+      "file": "reports/checks/model-experiment-runner.json",
+      "sha256": "7d07dbad73148be5b17492da3b5fd8b83192f12593b03937b8ab85f433cd4f57"
+    },
+    {
+      "file": "reports/checks/model-preflight.json",
+      "sha256": "acf2ed40336c6f0b29ea653ba99a46e03d2fcf78680fee0326f736a185f964f5"
+    }
+  ],
+  "private_logs_exported": false
+}

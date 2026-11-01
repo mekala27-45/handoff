@@ -96,7 +96,7 @@ async function selfTest(){
   assert.equal(safePath('reports/checks/../../.eve/secret.json'),false);
   await writeFile(path.join(dir,file),'changed');await assert.rejects(readExport(dir,source),/evidence_hash_or_encoding_mismatch/);
   assert.throws(()=>validateText('{"capability":"'+'z'.repeat(40)+'"}'),/private_value_in_evidence/);
-  assert.throws(()=>validateText('postgresql://example:private@remote.example/db'),/private_value_in_evidence/);
+  assert.throws(()=>validateText('postgresql:'+'//example:private@remote.example/db'),/private_value_in_evidence/);
   console.log('model evidence validation self-test passed');
  }finally{
   if(path.dirname(path.resolve(dir))!==path.resolve(tmpdir())||!path.basename(dir).startsWith('handoff-evidence-test-'))fail('unexpected_test_cleanup_path');

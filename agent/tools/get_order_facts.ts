@@ -1,7 +1,7 @@
 import { defineTool } from 'eve/tools';
-import { z } from 'zod';
+import { orderFactsInputSchema } from '../lib/tool-schemas.js';
 import { application,budget,record,rememberFactsSnapshot,rememberRefusedSnapshot } from '../lib/runtime.js';
-export default defineTool({description:'Read the current synthetic order within trusted customer scope. Return snapshot_token for the proposal. Identity refusal discloses no order facts.',inputSchema:z.object({order_id:z.string().max(100)}).strict(),async execute(input){
+export default defineTool({description:'Read the current synthetic order within trusted customer scope. Return snapshot_token for the proposal. Identity refusal discloses no order facts.',inputSchema:orderFactsInputSchema,async execute(input){
  const s=await budget('tools');await record('model_tool_request',{tool:'get_order_facts',input});
  let facts:Awaited<ReturnType<typeof application.getOrderFacts>>;
  try{facts=await application.getOrderFacts(s.capability,s.case_id,input.order_id);}catch{
