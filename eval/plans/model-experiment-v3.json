@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "stage": "development-only",
+  "created_at": "2026-11-01T16:26:51.558Z",
+  "model": "qwen3:0.6b",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "development_case_ids": [
+    "fx_07a9425bd18f2b4fd61e"
+  ],
+  "held_out_case_ids": [],
+  "hypothesis": "Explicit OpenAI-compatible reasoning_effort:none will prevent reasoning consumption despite /no_think being insufficient. Admission and settled-call metadata will distinguish schema failures from missing model decisions.",
+  "changes": [
+    "reasoning_effort:none with reasoning field removed",
+    "safe settled-call diagnostics",
+    "CPU Linux and disposable local PostgreSQL instead of prior Windows CPU with direct Neon; device and database differences are disclosed"
+  ],
+  "unchanged": [
+    "model digest",
+    "three tool capabilities",
+    "tool schemas",
+    "policy validator",
+    "four model calls",
+    "six tool calls",
+    "512 output tokens per call",
+    "120-second case deadline"
+  ],
+  "held_out_rule": "No held-out inference until operating point and declared case IDs are committed and frozen. Preserve every development and original version-two outcome."
+}

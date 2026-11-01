@@ -1,0 +1,12 @@
+{
+  "tag": "v0.40.13",
+  "prerelease": false,
+  "source": "https://api.github.com/repos/ollama/ollama/releases/tags/v0.40.13",
+  "asset": {
+    "name": "ollama-linux-amd64.tar.zst",
+    "size": 1525346571,
+    "url": "https://github.com/ollama/ollama/releases/download/v0.40.13/ollama-linux-amd64.tar.zst",
+    "digest": "sha256:c9490e0f520be21271d969e6703f012268b1d39f8b70dd58854e5bfef7a75bb6"
+  },
+  "purpose": "Bounded Linux CPU development experiments; does not replace original Windows asset provenance"
+}

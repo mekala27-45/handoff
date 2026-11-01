@@ -22,10 +22,14 @@ export async function budget(kind:'models'|'tools'){
 export const modelFetch:typeof fetch=async(input,init)=>{
  const currentScope=await budget('models');
  const request=JSON.parse(String(init?.body??'{}')),inventory=(request.tools??[]).map((x:any)=>x.function?.name).sort();
- await record('effective_tool_inventory',{inventory,model:request.model,max_tokens:request.max_tokens??request.max_completion_tokens??null,temperature:request.temperature??null});
  if(JSON.stringify(inventory)!==JSON.stringify(allowed))throw new Error('tool_inventory_mismatch');
  const url=String(input);if(!url.startsWith('http://127.0.0.1:11435/'))throw new Error('nonlocal_model_endpoint');
  // A hard output bound also covers framework versions that omit modelOptions values.
  request.max_tokens=512;request.temperature=0;
+ if(process.env.HANDOFF_MODEL_EXPERIMENT==='v3'){
+  delete request.reasoning;
+  request.reasoning_effort='none';
+ }
+ await record('effective_tool_inventory',{inventory,model:request.model,max_tokens:request.max_tokens,temperature:request.temperature,reasoning_effort:request.reasoning_effort??null});
  return fetch(input,{...init,body:JSON.stringify(request),signal:AbortSignal.any([init?.signal??new AbortController().signal,AbortSignal.timeout(Math.max(1,120000-(Date.now()-currentScope.started_at)))])});
 };

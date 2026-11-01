@@ -1,0 +1,53 @@
+name: Develop Handoff model v3
+on:
+  push:
+    branches: [agent-quality-v3]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: handoff-model-development-v3
+  cancel-in-progress: false
+jobs:
+  development:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:18-bookworm@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8
+        env:
+          POSTGRES_USER: handoff
+          POSTGRES_PASSWORD: handoff
+          POSTGRES_DB: handoff
+        ports: [5432:5432]
+        options: --health-cmd "pg_isready -U handoff" --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      DATABASE_URL: postgresql://handoff:handoff@127.0.0.1:5432/handoff
+      HANDOFF_MODEL_EXPERIMENT: v3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.19.0
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run compile
+      - run: npm run check:agent
+      - name: Download and verify pinned official Linux Ollama
+        run: |
+          mkdir -p "$RUNNER_TEMP/handoff-ollama"
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/handoff-ollama.tar.zst" https://github.com/ollama/ollama/releases/download/v0.40.13/ollama-linux-amd64.tar.zst
+          printf '%s  %s\n' c9490e0f520be21271d969e6703f012268b1d39f8b70dd58854e5bfef7a75bb6 "$RUNNER_TEMP/handoff-ollama.tar.zst" | sha256sum --check --status
+          tar --zstd -xf "$RUNNER_TEMP/handoff-ollama.tar.zst" -C "$RUNNER_TEMP/handoff-ollama"
+          echo "HANDOFF_OLLAMA_BINARY=$RUNNER_TEMP/handoff-ollama/bin/ollama" >> "$GITHUB_ENV"
+      - name: Run actual CPU inference on development only
+        run: node scripts/run-model-experiment.mjs --development
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: model-development-v3-${{ github.sha }}
+          path: ${{ runner.temp }}/handoff-model-experiment-export
+          if-no-files-found: warn
+          retention-days: 14
