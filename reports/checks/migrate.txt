@@ -1,0 +1,17 @@
+C:\Daily Project Series-Chatgpt\handoff\node_modules\pg-pool\index.js:45
+    Error.captureStackTrace(err)
+          ^
+
+Error: connect EACCES 127.0.0.1:54329
+    at C:\Daily Project Series-Chatgpt\handoff\node_modules\pg-pool\index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async migrate (file:///C:/Daily%20Project%20Series-Chatgpt/handoff/build/packages/db/client.js:12:5)
+    at async file:///C:/Daily%20Project%20Series-Chatgpt/handoff/build/scripts/migrate.js:4:5 {
+  errno: -4092,
+  code: 'EACCES',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 54329
+}
+
+Node.js v24.19.0

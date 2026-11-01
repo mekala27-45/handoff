@@ -1,0 +1,15 @@
+✔ agent role can propose but cannot approve, execute or change balances (1659.313ms)
+✔ approval expiry is checked after a proven business-row lock wait (9189.628ms)
+✔ isolated schema persists across connections and rolls back staged writes (809.0872ms)
+✔ HTTP boundary enforces schemas, scope, CORS, no-store and full workflow (7479.3626ms)
+✔ full effect survives concurrent requests, expiry and independent connection recovery (7326.3735ms)
+✔ approval gates refuse stale order, expired review, missing approval and rejection (17944.5159ms)
+✔ cross-session views, events, review and execute disclose no records (8084.6476ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53273.8916

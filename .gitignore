@@ -14,3 +14,4 @@ playwright-report/
 *.exe
 *.gguf
 .vercel/
+release-assets/

@@ -1,8 +1,10 @@
 # Handoff measured results
 
+This source document preserves the recorded measurements and historical build checklist. The owner's explicit report-publication approval now covers reports/ and apps/site/public/reports/. The authoritative final checklist, exact tested source and hosted verification are generated as RESULTS.md and JSON assets on https://github.com/mekala27-45/handoff/releases/latest. A tag is created only after the fresh CI and hosted gates pass; do not infer completion from this historical checklist.
+
 Source published at https://github.com/mekala27-45/handoff. The API is deployed at https://handoff-blond-one.vercel.app and the Pages workflow targets https://mekala27-45.github.io/handoff/. The hosted API passed an independent HTTP workflow probe and a separate database audit on November 1, 2026. Pages deployment run 41322102512 succeeded. CI run 41322012040 passed types, unit tests, rederivation, build and database integration. Seven of eight browser tests passed; the recorded-model test failed with ENOENT because apps/site/public/reports/index.json is excluded by automatic approval review. The fault matrix was consequently skipped in that CI run. A verified full release tag remains pending.
 
-The owner authorized GitHub source, Vercel deployment and the isolated server database credential destination. Vercel's authenticated user response reports an active Hobby plan. Automatic approval review separately blocked all evaluation report publication, including site diagnostics; those files are excluded from the public repository. The public Evaluation view therefore reports Not evaluated. Original measurements below refer to the preserved local evidence and private review archive. The public source snapshot is remote commit `ea4b363d533aea98e5055e0e44945e02595cb9fb`, transferred from local commit `e5a5617be59157845551c3f8d908560ad55a89c5` with report directories excluded.
+The owner authorized GitHub source, Vercel deployment and the isolated server database credential destination. Vercel's authenticated user response reports an active Hobby plan. An earlier automatic approval review blocked evaluation report publication. The owner subsequently explicitly authorized those artifacts, which are restored in the final candidate. The Evaluation view labels preserved runs as recorded evidence. Original measurements below refer to the preserved local evidence and private review archive. The public source snapshot is remote commit `ea4b363d533aea98e5055e0e44945e02595cb9fb`, transferred from local commit `e5a5617be59157845551c3f8d908560ad55a89c5` with report directories excluded.
 
 The independent hosted probe verified CORS, no-store, forbidden-origin refusal, duplicate intake, proposal, approval, concurrent execution, receipt recovery, a fresh-key repeat and cross-session refusal. SQL then confirmed one approval, one simulated one-cent effect and a matching one-cent capture balance delta. No access-control change was applied; the existing production alias accepted the independent client's ordinary requests without a bypass token.
 
@@ -101,7 +103,7 @@ Early scripted and fault development exposed serializable-snapshot conflicts and
 
 The isolated Neon project reports the Free plan and no new card or upgrade was requested. The connected Vercel account read did not expose its plan; a successful no-card hosted deployment has not been established. Container and Node Function adapters are prepared but unverified on Vercel. Remote CI and Pages have not run. Automatic approval review rejected source/fixture upload and the separate export of the isolated database credential to Vercel. See `docs/RELEASE.md` for the concrete authorized next steps.
 
-## Mandatory checklist
+## Historical implementation checklist
 
 1  done Dependency, model and no-card host probes recorded; evidence: `docs/sources/host-probes.json`, active Hobby account response and successful container deployment.
 2  done Claim renderer rejects missing or invalid evidence; evidence: `tests/unit/claims.test.ts` and final unit report.
@@ -126,4 +128,4 @@ The isolated Neon project reports the Free plan and no new card or upgrade was r
 
 `docs/SKILLS-MATRIX.md` links the implemented capabilities to completed checks. The three repository coding-agent workflows cover support-policy review, failure recovery and evidence publishing; their official validator output is retained. They are repository guidance, not deployed autonomous agents.
 
-No stretch item was started. The unresolved mandatory work is explicit public publication authorization, account-plan verification, actual Vercel deployment, separate-client hosted workflow checks, Pages publication and verification, remote CI, and a verified release tag after all gates pass. No social post or email is authorized by this build.
+No stretch item was started. At the original implementation stage, publication, hosted checks, remote CI and the release tag were unresolved. Later deployment evidence is recorded above; the generated release assets contain the final checklist. No social post or email is authorized by this build.

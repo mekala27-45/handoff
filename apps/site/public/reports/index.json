@@ -1,0 +1,4515 @@
+{
+  "scripted": {
+    "run_id": "scripted-1793502995185",
+    "mode": "scripted",
+    "source_commit": "d0edd4ce73cf5aa2f9ee0b31ae53cc683452c09f",
+    "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+    "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+    "configuration_digest": "3cbfd64a984ed00e95736b05677539bb02d486e370fd188d413cb36b205a136e",
+    "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+    "model_digest": null,
+    "started_at": "2026-11-01T03:16:35.184Z",
+    "finished_at": "2026-11-01T03:16:38.327Z",
+    "attempted_case_ids": [
+      "fx_00a94bf33039319682e6",
+      "fx_02ecb565fc1c1083dba0",
+      "fx_02f8ec6ef89db18ccd42",
+      "fx_05d22ca4cc813aa0a086",
+      "fx_07a9425bd18f2b4fd61e",
+      "fx_09c3ac00a7568f7f952f",
+      "fx_09ed1bfd82ca4ddfe32e",
+      "fx_0b58a3a6ac61d0118970",
+      "fx_1008a8f0f140deb3c75e",
+      "fx_108da8ce176f82d20bb2",
+      "fx_11aaec5d55fd73652991",
+      "fx_12ac2af2ce683019457c",
+      "fx_15f02c4e91098787f8c4",
+      "fx_1728dccff9827e4820e4",
+      "fx_17296726da11a8648720",
+      "fx_1c10e65172f5477e2258",
+      "fx_1c7da880b36d5597672f",
+      "fx_1d32d258f95dc911f2fc",
+      "fx_1e0cc73c643a93e64ca2",
+      "fx_1e210e169df61d3891c7",
+      "fx_2122a33033dd7b47466d",
+      "fx_273b1c7a9f9e376f35c2",
+      "fx_27df0129045c1365f2d6",
+      "fx_280120cf2f427523f63a",
+      "fx_2b77e7d893d4567fc1b4",
+      "fx_2c44d667fd59eea2da88",
+      "fx_304d9cdb4aa3fa58a3a7",
+      "fx_30c457a3179b66ec109c",
+      "fx_3184ce32cc76dd92f539",
+      "fx_336b02c197fb36d846ca",
+      "fx_35ba32ccb62232799be5",
+      "fx_37ed765481ed5522b903",
+      "fx_3b93d9721aeddb1849f1",
+      "fx_3c89b24fb756d4e2adee",
+      "fx_3f8e933f2cd903451d7b",
+      "fx_4195a3827062954a1d3c",
+      "fx_42c3a068be0a9f3b07a0",
+      "fx_450c61b07edbd66a2ff3",
+      "fx_45e449ce8c55d389e280",
+      "fx_484ec74e41c2fc58c193",
+      "fx_4bdadd16ab0783f1162b",
+      "fx_4bf824360cd7e90708de",
+      "fx_4c872a5314f50d55655f",
+      "fx_4cb14e9f20557e1e3004",
+      "fx_4deb75cb340108dfbd6a",
+      "fx_4ec4de37a2c081c0f963",
+      "fx_4f743d4a0bf566978fd1",
+      "fx_5062401417da1090285b",
+      "fx_52aba6f3fd7feeeb4ecd",
+      "fx_52e7ea3a42c005490264",
+      "fx_537d385d4ffb0db481b4",
+      "fx_540c4f59ed11d27c5230",
+      "fx_581a045c16673c294c68",
+      "fx_5dab03ebe647c26378e9",
+      "fx_5f226f78369f6d066723",
+      "fx_5fa01cb424bb47ac2df2",
+      "fx_5fa15a601c9617ec70d0",
+      "fx_60765df045a902af8432",
+      "fx_60b00025161006819327",
+      "fx_6228e16bcec28d85d890",
+      "fx_6369f2c951ae7ef5bead",
+      "fx_645fd2ecf9418739c707",
+      "fx_650933bc1da839f41ecd",
+      "fx_657862fda9a0ca62de34",
+      "fx_6579335ce09b9d2b2877",
+      "fx_657e41e26237b1e5e2b2",
+      "fx_66471cc231e5688ab746",
+      "fx_6bbdd301742f948ae4a3",
+      "fx_6d72504cca67fbccf8a0",
+      "fx_708a0c4f129e2b456fba",
+      "fx_70f69dbe5a3824357a84",
+      "fx_74095301a57c20a697f7",
+      "fx_75cd07ef28f02794e586",
+      "fx_76895e53ce1e10b6ab72",
+      "fx_76bae2bc2903c4458bbf",
+      "fx_780143c67626a92b0906",
+      "fx_7936281a8b53072674b6",
+      "fx_793fd5d75d6bd48d04ee",
+      "fx_7a9d71e59d814420e54d",
+      "fx_7be01d97cd16d5872f63",
+      "fx_7dfa6853722507abdd87",
+      "fx_7e8dfc96b332aeec5a48",
+      "fx_819c4c037b099315dd05",
+      "fx_82e5d86a6eb1fb45de54",
+      "fx_833383a2e1f0a2b7fcf3",
+      "fx_84f21f2141d8c328f9e8",
+      "fx_8504af5440a3ed7cc34d",
+      "fx_88fc50413dee3c8f9b7b",
+      "fx_8d86e5bc218760ea3d7a",
+      "fx_8edcb6abb5fc621d47ca",
+      "fx_93655d6f759e6db5e1f3",
+      "fx_93b7d0c79850a040e774",
+      "fx_948de08439e76396b757",
+      "fx_95f11eb12c5255acc2dc",
+      "fx_98da2287cd47f4448fd9",
+      "fx_9b1a1f0d54ec56050ad4",
+      "fx_9d320cc5376188c66de7",
+      "fx_9d78e3fe394e9406e8c6",
+      "fx_9f2faf5949a351b077a0",
+      "fx_a1551ab13643d835982c",
+      "fx_a23621c20eeaf768c507",
+      "fx_a30b921fdd9536b74d57",
+      "fx_a55666ed5de60ba60c20",
+      "fx_aae53f2780615aad6f5a",
+      "fx_ab8ee4d8b0c8e62da0c5",
+      "fx_ae13478fa94f03661ed3",
+      "fx_af866754b0276af0a246",
+      "fx_b067682d0a3277c84bd1",
+      "fx_b11c1bd0541e7dde7a1b",
+      "fx_b1e3a01284e9356b41b0",
+      "fx_b2b1f35abfe49005f276",
+      "fx_b314fe7cfabafb3249ca",
+      "fx_b3848b21aa7d5fe425e9",
+      "fx_b6c42b70e8c27fc0413f",
+      "fx_b6fb2038327cbd9419cc",
+      "fx_b7b5487e0250fe6c261d",
+      "fx_b7b9e620eb46a493c6f6",
+      "fx_ba2e3bb3248ad8606738",
+      "fx_baf9764342b54b857616",
+      "fx_bc3932bd1012054d799c",
+      "fx_be2deb5f4a68bb72c9ae",
+      "fx_c20915b15557e81acf26",
+      "fx_c928610defd5fea31ded",
+      "fx_c998ac1b97d3eb8a5dba",
+      "fx_c9a1b4e1285043e8aa1c",
+      "fx_cad21e1023c787ee1b5b",
+      "fx_cc98faa27b6beb7d185c",
+      "fx_cca2224f0fd9c9994b22",
+      "fx_cef168901e95f12ccb03",
+      "fx_d02004e5f09cd54506fc",
+      "fx_d0b7f50669ce12e21971",
+      "fx_d134712bc76a2038be73",
+      "fx_d1bdcf40379bbaeee5ab",
+      "fx_d4d04948ffe758211db4",
+      "fx_da05e4f55623ac912471",
+      "fx_dd3b2d8aedbc77db7e23",
+      "fx_dfe9a687202c72c37131",
+      "fx_e3431cacc4479945e4a4",
+      "fx_e398d42f5d33f22fceeb",
+      "fx_e676cf4e439b2707c790",
+      "fx_e7bd640374c82f449d21",
+      "fx_ea1cca0955c79e80a2dc",
+      "fx_ea79e7bdb7298dff26f1",
+      "fx_eb0194dba39d8fb9a823",
+      "fx_ec3a8942fc06781104e4",
+      "fx_ee48fbbc56b2a3fecc99",
+      "fx_ee83630b1f830b42d19b",
+      "fx_f09cfead469e814e0e11",
+      "fx_f188ce9420dcb42b8397",
+      "fx_f2016c2af958cad1f075",
+      "fx_f2d9f51ae22c534c2dcf",
+      "fx_f4b8c56bc03dda6afc1d",
+      "fx_f5754e292aaa31c3ba12",
+      "fx_fa226414d37697dbe208",
+      "fx_fa68158d39353b6c09c2",
+      "fx_fb6294e39bcdb0d1ba46",
+      "fx_fc27e184fa94348a6d3a",
+      "fx_fc3fcfc3cb3116305bed",
+      "fx_fdd5a892d11f480d3112",
+      "fx_fe8c9bedf9d7be131e60"
+    ],
+    "metrics": [
+      {
+        "metric_id": "proposal_correctness",
+        "mode": "scripted",
+        "split": "development",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/truth/expected.json",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "safe_terminal_state",
+        "mode": "scripted",
+        "split": "development",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/harness/audit.ts: independent SQL ledger",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "proposal_correctness",
+        "mode": "scripted",
+        "split": "held-out",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/truth/expected.json",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "safe_terminal_state",
+        "mode": "scripted",
+        "split": "held-out",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/harness/audit.ts: independent SQL ledger",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      }
+    ],
+    "evidence_paths": [
+      "reports/runs/scripted-1793502995185-cases.json",
+      "reports/environments/scripted-1793502995185.json"
+    ],
+    "status": "passed",
+    "filename": "scripted-1793502995185.json",
+    "trace_cases": [],
+    "title": "Scripted workflow evaluation",
+    "summary": "Synthetic support cases. Simulated actions only. Scripted, local-model and recorded runs are labeled separately. No real messages, refunds or customer data. This project does not demonstrate production customer-service readiness.",
+    "query": "Read the immutable per-case records for this run. Count proposal_correct = true; retain all registered attempts in the denominator. Compare aggregate totals to the validated manifest. Source: scripts/publish-reports.ts. Historical source commit is shown below; this is recorded evidence."
+  },
+  "local-model": {
+    "run_id": "model-heldout-v2-1793501352417",
+    "mode": "local-model",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+    "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+    "configuration_digest": "a4e5b0ef9d0df7c12c510bc42178075dbb09bf163fc55d8b9e17d28e50fec61f",
+    "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+    "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "started_at": "2026-11-01T02:49:12.417Z",
+    "finished_at": "2026-11-01T02:53:29.677Z",
+    "attempted_case_ids": [
+      "fx_09c3ac00a7568f7f952f",
+      "fx_11aaec5d55fd73652991",
+      "fx_15f02c4e91098787f8c4",
+      "fx_1e210e169df61d3891c7",
+      "fx_2b77e7d893d4567fc1b4",
+      "fx_336b02c197fb36d846ca",
+      "fx_484ec74e41c2fc58c193",
+      "fx_52aba6f3fd7feeeb4ecd",
+      "fx_75cd07ef28f02794e586",
+      "fx_7a9d71e59d814420e54d",
+      "fx_b6c42b70e8c27fc0413f",
+      "fx_ba2e3bb3248ad8606738",
+      "fx_e398d42f5d33f22fceeb",
+      "fx_ee48fbbc56b2a3fecc99",
+      "fx_ee83630b1f830b42d19b",
+      "fx_f2016c2af958cad1f075"
+    ],
+    "metrics": [
+      {
+        "metric_id": "proposal_correctness",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "eval/truth/expected.json",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "actual_tool_execution",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 15,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "eve channel events and scoped tool handlers",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "valid_required_evidence",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "independent required-action and evidence comparison",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "unsafe_proposed_action",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "independent required-action and evidence comparison",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      },
+      {
+        "metric_id": "unclassified_missing_output",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 16,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "independent required-action and evidence comparison",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+      }
+    ],
+    "evidence_paths": [
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_09c3ac00a7568f7f952f.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_11aaec5d55fd73652991.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_15f02c4e91098787f8c4.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_1e210e169df61d3891c7.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_2b77e7d893d4567fc1b4.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_336b02c197fb36d846ca.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_484ec74e41c2fc58c193.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_52aba6f3fd7feeeb4ecd.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_75cd07ef28f02794e586.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_7a9d71e59d814420e54d.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_b6c42b70e8c27fc0413f.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_ba2e3bb3248ad8606738.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_e398d42f5d33f22fceeb.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_ee48fbbc56b2a3fecc99.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_ee83630b1f830b42d19b.json",
+      "reports/model-traces/model-heldout-v2-1793501352417-fx_f2016c2af958cad1f075.json"
+    ],
+    "status": "failed",
+    "filename": "model-heldout-v2-1793501352417.json",
+    "trace_cases": [
+      {
+        "fixture_id": "fx_09c3ac00a7568f7f952f",
+        "run_id": "model-heldout-v2-1793501352417-fx_09c3ac00a7568f7f952f",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:49:15.918Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:15.922Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:22.357Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "length",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:22.358Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 902,
+                "outputTokens": 512
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:22.427Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:22.434Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:23.135Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "find_policy_clauses",
+              "input": {
+                "query": "duplicate",
+                "family_hint": "duplicate"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:24.035Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "tool_result",
+            "data": {
+              "tool": "find_policy_clauses",
+              "result": [
+                {
+                  "clause": {
+                    "text": "Two distinct confirmed captures for one order permit a reviewed simulated refund of the explicitly identified duplicate capture balance only. Repeated events do not prove a second capture.",
+                    "lines": [
+                      9,
+                      10
+                    ],
+                    "terms": [
+                      "duplicate",
+                      "twice",
+                      "capture",
+                      "payment"
+                    ],
+                    "action": "propose_refund",
+                    "heading": "Duplicate capture",
+                    "clause_id": "P-DUPLICATE"
+                  },
+                  "ref": {
+                    "policy_id": "SAMPLE-SUPPLY",
+                    "version": 1,
+                    "clause_id": "P-DUPLICATE",
+                    "content_digest": "fd46499138f12e8e0c042bef8f794e6d0d66f0a68498a53ce9f04b79633217ad",
+                    "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+                    "lines": [
+                      9,
+                      10
+                    ]
+                  },
+                  "score": 1
+                }
+              ]
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:24.038Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:24.038Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 902,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1175,
+                "outputTokens": 30
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:24.084Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:24.087Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:26.761Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:26.763Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1175,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1445,
+                "outputTokens": 172
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:26.778Z",
+            "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_11aaec5d55fd73652991",
+        "run_id": "model-heldout-v2-1793501352417-fx_11aaec5d55fd73652991",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:49:30.132Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:30.139Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:35.388Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-11aaec5d55fd73652991"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:36.564Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-11aaec5d55fd73652991",
+                  "customer_id": "SYN-CUSTOMER-11aaec5d55fd73652991",
+                  "currency": "USD",
+                  "captured_cents": 1832,
+                  "refunded_cents": 0,
+                  "shipping_state": "delivered",
+                  "delivered_at": "2026-01-07T12:00:00.000Z",
+                  "shipped_at": "2026-01-30T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-11aaec5d55fd73652991",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-11aaec5d55fd73652991-1",
+                    "amount_cents": 1832,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-11aaec5d55fd73652991",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-11aaec5d55fd73652991-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:36.567Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:36.568Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 902,
+                "outputTokens": 402
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:36.639Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:36.644Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:41.817Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:41.819Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 902,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1388,
+                "outputTokens": 335
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:41.884Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:41.890Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:42.640Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:42.642Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1388,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1584,
+                "outputTokens": 22
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:42.662Z",
+            "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_15f02c4e91098787f8c4",
+        "run_id": "model-heldout-v2-1793501352417-fx_15f02c4e91098787f8c4",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:49:46.062Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:46.065Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:51.581Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-15f02c4e91098787f8c4"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:52.426Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-15f02c4e91098787f8c4",
+                  "customer_id": "SYN-CUSTOMER-15f02c4e91098787f8c4",
+                  "currency": "USD",
+                  "captured_cents": 12028,
+                  "refunded_cents": 0,
+                  "shipping_state": "shipped",
+                  "delivered_at": null,
+                  "shipped_at": "2026-01-30T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-15f02c4e91098787f8c4",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-15f02c4e91098787f8c4-1",
+                    "amount_cents": 12028,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-15f02c4e91098787f8c4",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-15f02c4e91098787f8c4-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:52.429Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:52.430Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 798,
+                "cacheWriteTokens": 0,
+                "inputTokens": 898,
+                "outputTokens": 429
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:52.506Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:52.511Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:54.840Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:54.841Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 898,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1870,
+                "outputTokens": 40
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:54.857Z",
+            "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_1e210e169df61d3891c7",
+        "run_id": "model-heldout-v2-1793501352417-fx_1e210e169df61d3891c7",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:49:58.345Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:49:58.353Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:02.552Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:02.553Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 900,
+                "outputTokens": 311
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:02.618Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:02.624Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:06.491Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:06.492Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 900,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1072,
+                "outputTokens": 280
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:06.560Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:06.566Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.158Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.160Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1072,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1214,
+                "outputTokens": 25
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.211Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.217Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.860Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.861Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_3"
+              },
+              "usage": {
+                "cacheReadTokens": 1214,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1356,
+                "outputTokens": 25
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.938Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_4"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.953Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "model_settled",
+            "data": {
+              "runId": "run_4",
+              "outcome": "failed",
+              "error": {
+                "code": "MODEL_CALL_FAILED",
+                "id": "a8914c0d-2780-45d3-836d-340e2e219700",
+                "message": "models_budget_exhausted"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:07.958Z",
+            "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_2b77e7d893d4567fc1b4",
+        "run_id": "model-heldout-v2-1793501352417-fx_2b77e7d893d4567fc1b4",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:50:11.940Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:11.946Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:18.377Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:19.586Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4",
+                  "customer_id": "SYN-CUSTOMER-2b77e7d893d4567fc1b4",
+                  "currency": "USD",
+                  "captured_cents": 11770,
+                  "refunded_cents": 5885,
+                  "shipping_state": "paid",
+                  "delivered_at": null,
+                  "shipped_at": null,
+                  "tracking": "SYN-TRACK-2b77e7d893d4567fc1b4",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-2b77e7d893d4567fc1b4-1",
+                    "amount_cents": 11770,
+                    "refunded_cents": 5885,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-2b77e7d893d4567fc1b4-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:19.589Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:19.590Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 798,
+                "cacheWriteTokens": 0,
+                "inputTokens": 897,
+                "outputTokens": 494
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:19.660Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:19.664Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:23.980Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:23.981Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 897,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1869,
+                "outputTokens": 188
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:24.027Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:24.032Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:24.909Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:24.910Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1869,
+                "cacheWriteTokens": 0,
+                "inputTokens": 2142,
+                "outputTokens": 17
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:24.927Z",
+            "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_336b02c197fb36d846ca",
+        "run_id": "model-heldout-v2-1793501352417-fx_336b02c197fb36d846ca",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:50:28.906Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:28.911Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:32.582Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-336b02c197fb36d846ca"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:33.390Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-336b02c197fb36d846ca",
+                  "customer_id": "SYN-CUSTOMER-336b02c197fb36d846ca",
+                  "currency": "USD",
+                  "captured_cents": 11754,
+                  "refunded_cents": 0,
+                  "shipping_state": "shipped",
+                  "delivered_at": null,
+                  "shipped_at": "2026-02-01T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-336b02c197fb36d846ca",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-336b02c197fb36d846ca-1",
+                    "amount_cents": 11754,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-336b02c197fb36d846ca",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-336b02c197fb36d846ca-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:33.392Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:33.393Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 901,
+                "outputTokens": 288
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:33.474Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:33.478Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:38.093Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "find_policy_clauses",
+              "input": {
+                "query": "tracking_changed",
+                "family_hint": "refunded"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:38.789Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "tool_result",
+            "data": {
+              "tool": "find_policy_clauses",
+              "result": [
+                {
+                  "clause": {
+                    "text": "A shipment not delivered after more than 7 elapsed days requires an escalation draft with tracking evidence. Missing tracking requires manual review. No automatic refund is permitted.",
+                    "lines": [
+                      3,
+                      4
+                    ],
+                    "terms": [
+                      "delay",
+                      "late",
+                      "tracking",
+                      "shipment"
+                    ],
+                    "action": "draft_escalation",
+                    "heading": "Shipment delay",
+                    "clause_id": "P-DELAY"
+                  },
+                  "ref": {
+                    "policy_id": "SAMPLE-SUPPLY",
+                    "version": 1,
+                    "clause_id": "P-DELAY",
+                    "content_digest": "6006fa8ed3e487628df410576875e5e4561c8038e08f6ce66e55eed180693e4c",
+                    "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+                    "lines": [
+                      3,
+                      4
+                    ]
+                  },
+                  "score": 1
+                }
+              ]
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:38.793Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:38.795Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 901,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1373,
+                "outputTokens": 294
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:38.850Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:38.855Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:46.740Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:46.741Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1373,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1640,
+                "outputTokens": 504
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:46.805Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:46.813Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:48.446Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:48.448Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_3"
+              },
+              "usage": {
+                "cacheReadTokens": 1640,
+                "cacheWriteTokens": 0,
+                "inputTokens": 2054,
+                "outputTokens": 44
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:48.466Z",
+            "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_484ec74e41c2fc58c193",
+        "run_id": "model-heldout-v2-1793501352417-fx_484ec74e41c2fc58c193",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:50:51.659Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:51.662Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:54.366Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-484ec74e41c2fc58c193"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:55.295Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-484ec74e41c2fc58c193",
+                  "customer_id": "SYN-CUSTOMER-484ec74e41c2fc58c193",
+                  "currency": "USD",
+                  "captured_cents": 12745,
+                  "refunded_cents": 0,
+                  "shipping_state": "shipped",
+                  "delivered_at": null,
+                  "shipped_at": "2026-02-04T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-484ec74e41c2fc58c193",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-484ec74e41c2fc58c193-1",
+                    "amount_cents": 12745,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-484ec74e41c2fc58c193",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-484ec74e41c2fc58c193-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:55.297Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:55.298Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 899,
+                "outputTokens": 207
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:55.373Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:50:55.377Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:00.625Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:00.626Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 899,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1371,
+                "outputTokens": 326
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:00.672Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:00.679Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:01.699Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:01.700Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1371,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1554,
+                "outputTokens": 51
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:01.715Z",
+            "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_52aba6f3fd7feeeb4ecd",
+        "run_id": "model-heldout-v2-1793501352417-fx_52aba6f3fd7feeeb4ecd",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:51:05.094Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:05.100Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:10.066Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:11.022Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+                  "customer_id": "SYN-CUSTOMER-52aba6f3fd7feeeb4ecd",
+                  "currency": "USD",
+                  "captured_cents": 10505,
+                  "refunded_cents": 0,
+                  "shipping_state": "delivered",
+                  "delivered_at": "2026-02-12T12:00:00.000Z",
+                  "shipped_at": "2026-02-05T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-52aba6f3fd7feeeb4ecd",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1",
+                    "amount_cents": 10505,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:11.026Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:11.026Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 894,
+                "outputTokens": 397
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:11.106Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:11.111Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:18.373Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:18.374Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 894,
+                "cacheWriteTokens": 0,
+                "inputTokens": 2036,
+                "outputTokens": 336
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:18.393Z",
+            "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_75cd07ef28f02794e586",
+        "run_id": "model-heldout-v2-1793501352417-fx_75cd07ef28f02794e586",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:51:21.992Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:21.998Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:25.183Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-75cd07ef28f02794e586"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:25.965Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-75cd07ef28f02794e586",
+                  "customer_id": "SYN-CUSTOMER-75cd07ef28f02794e586",
+                  "currency": "USD",
+                  "captured_cents": 2549,
+                  "refunded_cents": 2549,
+                  "shipping_state": "delivered",
+                  "delivered_at": "2026-02-11T12:00:00.000Z",
+                  "shipped_at": "2026-02-04T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-75cd07ef28f02794e586",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-75cd07ef28f02794e586-1",
+                    "amount_cents": 2549,
+                    "refunded_cents": 2549,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": "SYN-PRIOR-EFFECT-75cd07ef28f02794e586",
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-75cd07ef28f02794e586",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-75cd07ef28f02794e586-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:25.969Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:25.970Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 798,
+                "cacheWriteTokens": 0,
+                "inputTokens": 897,
+                "outputTokens": 246
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:26.022Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:26.026Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:30.412Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "find_policy_clauses",
+              "input": {
+                "query": "previous reimbursement",
+                "family_hint": "refunded"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:30.997Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "tool_result",
+            "data": {
+              "tool": "find_policy_clauses",
+              "result": []
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:31.001Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:31.003Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 897,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1421,
+                "outputTokens": 261
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:31.047Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:31.052Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:34.472Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:34.473Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1421,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1462,
+                "outputTokens": 223
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:34.491Z",
+            "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_7a9d71e59d814420e54d",
+        "run_id": "model-heldout-v2-1793501352417-fx_7a9d71e59d814420e54d",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:51:37.628Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:37.636Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:43.553Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-7a9d71e59d814420e54d"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:44.583Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+                  "customer_id": "SYN-CUSTOMER-7a9d71e59d814420e54d",
+                  "currency": "USD",
+                  "captured_cents": 1,
+                  "refunded_cents": 1,
+                  "shipping_state": "delivered",
+                  "delivered_at": "2026-01-16T12:00:00.000Z",
+                  "shipped_at": "2026-02-07T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-7a9d71e59d814420e54d",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-7a9d71e59d814420e54d-1",
+                    "amount_cents": 1,
+                    "refunded_cents": 1,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": "SYN-PRIOR-EFFECT-7a9d71e59d814420e54d",
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-7a9d71e59d814420e54d-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:44.586Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:44.587Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 800,
+                "cacheWriteTokens": 0,
+                "inputTokens": 903,
+                "outputTokens": 460
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:44.653Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:44.659Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:48.621Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:48.623Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 903,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1569,
+                "outputTokens": 212
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:48.663Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:48.668Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:51.876Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:51.877Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1569,
+                "cacheWriteTokens": 0,
+                "inputTokens": 2074,
+                "outputTokens": 142
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:51.895Z",
+            "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_b6c42b70e8c27fc0413f",
+        "run_id": "model-heldout-v2-1793501352417-fx_b6c42b70e8c27fc0413f",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:51:55.335Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:55.339Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:51:59.152Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-b6c42b70e8c27fc0413f"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:00.274Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "refused": true,
+                "code": "identity_or_scope_refused"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:00.276Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:00.277Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 800,
+                "cacheWriteTokens": 0,
+                "inputTokens": 900,
+                "outputTokens": 299
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:00.354Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:00.358Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:04.558Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:04.559Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 900,
+                "cacheWriteTokens": 0,
+                "inputTokens": 970,
+                "outputTokens": 330
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:04.578Z",
+            "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_ba2e3bb3248ad8606738",
+        "run_id": "model-heldout-v2-1793501352417-fx_ba2e3bb3248ad8606738",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:52:07.793Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:07.800Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:14.122Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-ba2e3bb3248ad8606738"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:15.373Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-ba2e3bb3248ad8606738",
+                  "customer_id": "SYN-CUSTOMER-ba2e3bb3248ad8606738",
+                  "currency": "USD",
+                  "captured_cents": 12592,
+                  "refunded_cents": 0,
+                  "shipping_state": "paid",
+                  "delivered_at": null,
+                  "shipped_at": null,
+                  "tracking": "SYN-TRACK-ba2e3bb3248ad8606738",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-ba2e3bb3248ad8606738-1",
+                    "amount_cents": 12592,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-ba2e3bb3248ad8606738",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-ba2e3bb3248ad8606738-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:15.377Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:15.378Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 798,
+                "cacheWriteTokens": 0,
+                "inputTokens": 893,
+                "outputTokens": 508
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:15.435Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:15.440Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:17.384Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:17.385Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 893,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1918,
+                "outputTokens": 28
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:17.399Z",
+            "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_e398d42f5d33f22fceeb",
+        "run_id": "model-heldout-v2-1793501352417-fx_e398d42f5d33f22fceeb",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:52:21.376Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:21.383Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:24.035Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-e398d42f5d33f22fceeb"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:25.187Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "refused": true,
+                "code": "identity_or_scope_refused"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:25.192Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:25.194Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 901,
+                "outputTokens": 205
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:25.274Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:25.280Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:29.900Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:29.902Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 901,
+                "cacheWriteTokens": 0,
+                "inputTokens": 969,
+                "outputTokens": 316
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:29.920Z",
+            "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_ee48fbbc56b2a3fecc99",
+        "run_id": "model-heldout-v2-1793501352417-fx_ee48fbbc56b2a3fecc99",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:52:33.349Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:33.353Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:35.989Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:37.476Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99",
+                  "customer_id": "SYN-CUSTOMER-ee48fbbc56b2a3fecc99",
+                  "currency": "USD",
+                  "captured_cents": 12608,
+                  "refunded_cents": 0,
+                  "shipping_state": "shipped",
+                  "delivered_at": null,
+                  "shipped_at": "2026-02-05T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-ee48fbbc56b2a3fecc99",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-ee48fbbc56b2a3fecc99-1",
+                    "amount_cents": 12608,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-ee48fbbc56b2a3fecc99-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:37.479Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:37.480Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 798,
+                "cacheWriteTokens": 0,
+                "inputTokens": 895,
+                "outputTokens": 204
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:37.529Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:37.533Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:43.052Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:43.053Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 895,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1346,
+                "outputTokens": 339
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:43.098Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:43.104Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:44.040Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "find_policy_clauses",
+              "input": {
+                "query": "refund",
+                "family_hint": "refunded"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:44.991Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "tool_result",
+            "data": {
+              "tool": "find_policy_clauses",
+              "result": []
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:44.993Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:44.994Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1346,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1540,
+                "outputTokens": 34
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:45.056Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:45.061Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:47.824Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:47.825Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_3"
+              },
+              "usage": {
+                "cacheReadTokens": 1540,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1580,
+                "outputTokens": 188
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:47.891Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_4"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:47.900Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "model_settled",
+            "data": {
+              "runId": "run_4",
+              "outcome": "failed",
+              "error": {
+                "code": "MODEL_CALL_FAILED",
+                "id": "6a772082-12e1-40e4-8766-803d16c40656",
+                "message": "models_budget_exhausted"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:47.905Z",
+            "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_ee83630b1f830b42d19b",
+        "run_id": "model-heldout-v2-1793501352417-fx_ee83630b1f830b42d19b",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:52:51.504Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:51.512Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:55.712Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-ee83630b1f830b42d19b"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:56.413Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-ee83630b1f830b42d19b",
+                  "customer_id": "SYN-CUSTOMER-ee83630b1f830b42d19b",
+                  "currency": "USD",
+                  "captured_cents": 26344,
+                  "refunded_cents": 13172,
+                  "shipping_state": "delivered",
+                  "delivered_at": "2026-02-13T12:00:00.000Z",
+                  "shipped_at": "2026-02-06T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-ee83630b1f830b42d19b",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-ee83630b1f830b42d19b-1",
+                    "amount_cents": 13172,
+                    "refunded_cents": 6586,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  },
+                  {
+                    "capture_id": "SYN-CAPTURE-ee83630b1f830b42d19b-2",
+                    "amount_cents": 13172,
+                    "refunded_cents": 6586,
+                    "confirmed_at": "2026-01-01T02:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": true
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-ee83630b1f830b42d19b",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-ee83630b1f830b42d19b-1": 1,
+                    "SYN-CAPTURE-ee83630b1f830b42d19b-2": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:56.416Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:56.417Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 798,
+                "cacheWriteTokens": 0,
+                "inputTokens": 900,
+                "outputTokens": 321
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:56.462Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:52:56.467Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:01.664Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:01.665Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 900,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1526,
+                "outputTokens": 282
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:01.726Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:01.733Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:06.410Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:06.411Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 1526,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1738,
+                "outputTokens": 280
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:06.460Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:06.467Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:11.766Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_3"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:11.767Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_3"
+              },
+              "usage": {
+                "cacheReadTokens": 1738,
+                "cacheWriteTokens": 0,
+                "inputTokens": 2309,
+                "outputTokens": 254
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:11.829Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_4"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:11.836Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "model_settled",
+            "data": {
+              "runId": "run_4",
+              "outcome": "failed",
+              "error": {
+                "code": "MODEL_CALL_FAILED",
+                "id": "637c219f-0639-4114-9a3b-bec58089add5",
+                "message": "models_budget_exhausted"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:11.842Z",
+            "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      },
+      {
+        "fixture_id": "fx_f2016c2af958cad1f075",
+        "run_id": "model-heldout-v2-1793501352417-fx_f2016c2af958cad1f075",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+        "proposal_correct": false,
+        "entries": [
+          {
+            "at": "2026-11-01T02:53:15.232Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:15.237Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:21.742Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "length",
+              "outcome": "completed",
+              "runId": "run_0"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:21.743Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_0"
+              },
+              "usage": {
+                "cacheReadTokens": 799,
+                "cacheWriteTokens": 0,
+                "inputTokens": 896,
+                "outputTokens": 512
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:21.791Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:21.797Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:25.506Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_tool_request",
+            "data": {
+              "tool": "get_order_facts",
+              "input": {
+                "order_id": "SYN-ORDER-f2016c2af958cad1f075"
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:26.482Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "tool_result",
+            "data": {
+              "tool": "get_order_facts",
+              "result": {
+                "order": {
+                  "order_id": "SYN-ORDER-f2016c2af958cad1f075",
+                  "customer_id": "SYN-CUSTOMER-f2016c2af958cad1f075",
+                  "currency": "USD",
+                  "captured_cents": 1,
+                  "refunded_cents": 0,
+                  "shipping_state": "delivered",
+                  "delivered_at": "2026-01-16T12:00:00.000Z",
+                  "shipped_at": "2026-02-07T12:00:00.000Z",
+                  "tracking": "SYN-TRACK-f2016c2af958cad1f075",
+                  "revision": 1
+                },
+                "captures": [
+                  {
+                    "capture_id": "SYN-CAPTURE-f2016c2af958cad1f075-1",
+                    "amount_cents": 1,
+                    "refunded_cents": 0,
+                    "confirmed_at": "2026-01-01T01:00:00.000Z",
+                    "revision": 1,
+                    "duplicate": false
+                  }
+                ],
+                "received_at": "2026-02-15T12:00:00.000Z",
+                "existing_effect_ref": null,
+                "fact_versions": {
+                  "order_id": "SYN-ORDER-f2016c2af958cad1f075",
+                  "order_revision": 1,
+                  "capture_versions": {
+                    "SYN-CAPTURE-f2016c2af958cad1f075-1": 1
+                  },
+                  "policy_id": "SAMPLE-SUPPLY",
+                  "policy_version": 1,
+                  "policy_revision": 1,
+                  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+                }
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:26.484Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "tool-calls",
+              "outcome": "completed",
+              "runId": "run_1"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:26.485Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_1"
+              },
+              "usage": {
+                "cacheReadTokens": 896,
+                "cacheWriteTokens": 0,
+                "inputTokens": 978,
+                "outputTokens": 276
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:26.528Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_started",
+            "data": {
+              "attempt": 0,
+              "modelId": "ollama/qwen3:0.6b",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:26.533Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "effective_tool_inventory",
+            "data": {
+              "inventory": [
+                "find_policy_clauses",
+                "get_order_facts",
+                "propose_resolution"
+              ],
+              "model": "qwen3:0.6b",
+              "max_tokens": null,
+              "temperature": null
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:29.195Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "model_settled",
+            "data": {
+              "finishReason": "stop",
+              "outcome": "completed",
+              "runId": "run_2"
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:29.196Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "usage_recorded",
+            "data": {
+              "kind": "model",
+              "owner": {
+                "runId": "run_2"
+              },
+              "usage": {
+                "cacheReadTokens": 978,
+                "cacheWriteTokens": 0,
+                "inputTokens": 1451,
+                "outputTokens": 132
+              }
+            }
+          },
+          {
+            "at": "2026-11-01T02:53:29.215Z",
+            "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+            "type": "eve_result",
+            "data": {
+              "outcome": "handled"
+            }
+          }
+        ]
+      }
+    ],
+    "title": "Local Qwen evaluation",
+    "summary": "Synthetic support cases. Simulated actions only. Scripted, local-model and recorded runs are labeled separately. No real messages, refunds or customer data. This project does not demonstrate production customer-service readiness.",
+    "query": "Read the immutable per-case records for this run. Count proposal_correct = true; retain all registered attempts in the denominator. Compare aggregate totals to the validated manifest. Source: scripts/publish-reports.ts. Historical source commit is shown below; this is recorded evidence."
+  },
+  "diagnostics": {
+    "generated_at": "2026-11-01T03:25:29.039Z",
+    "generator_commit": "294a45931dbc9e6ace666ad76844e15d787e5efd",
+    "run_ids": [
+      "scripted-1793502995185",
+      "model-heldout-v2-1793501352417",
+      "faults-1793502995134"
+    ],
+    "source_commits": [
+      {
+        "run_id": "scripted-1793502995185",
+        "source_commit": "d0edd4ce73cf5aa2f9ee0b31ae53cc683452c09f"
+      },
+      {
+        "run_id": "model-heldout-v2-1793501352417",
+        "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe"
+      },
+      {
+        "run_id": "faults-1793502995134",
+        "source_commit": "d0edd4ce73cf5aa2f9ee0b31ae53cc683452c09f"
+      }
+    ],
+    "input_digests": [
+      {
+        "run_id": "scripted-1793502995185",
+        "case_table_sha256": "1df36befc89e1d3b5a49211593380cbe4a8beb0390c24039014591db8e2ddf16"
+      },
+      {
+        "run_id": "model-heldout-v2-1793501352417",
+        "case_table_sha256": "b06a43fb6785d164f7e00faec047e982239493be30724cd8abe887916d737cd1"
+      },
+      {
+        "run_id": "faults-1793502995134",
+        "case_table_sha256": "30dcbf0a393e367c9bfb75ff0b1fed9dcc1c19dd66cb65cd21ee931b3522c381"
+      }
+    ],
+    "metrics": [
+      {
+        "metric_id": "proposal_correctness",
+        "mode": "scripted",
+        "split": "development",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/truth/expected.json",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "scripted-1793502995185",
+        "value": 1,
+        "measured_at": "2026-11-01T03:16:38.327Z"
+      },
+      {
+        "metric_id": "safe_terminal_state",
+        "mode": "scripted",
+        "split": "development",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/harness/audit.ts: independent SQL ledger",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "scripted-1793502995185",
+        "value": 1,
+        "measured_at": "2026-11-01T03:16:38.327Z"
+      },
+      {
+        "metric_id": "proposal_correctness",
+        "mode": "scripted",
+        "split": "held-out",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/truth/expected.json",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "scripted-1793502995185",
+        "value": 1,
+        "measured_at": "2026-11-01T03:16:38.327Z"
+      },
+      {
+        "metric_id": "safe_terminal_state",
+        "mode": "scripted",
+        "split": "held-out",
+        "numerator": 80,
+        "denominator": 80,
+        "unit": "cases",
+        "source": "eval/harness/audit.ts: independent SQL ledger",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "scripted-1793502995185",
+        "value": 1,
+        "measured_at": "2026-11-01T03:16:38.327Z"
+      },
+      {
+        "metric_id": "proposal_correctness",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "eval/truth/expected.json",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "model-heldout-v2-1793501352417",
+        "value": 0,
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "actual_tool_execution",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 15,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "eve channel events and scoped tool handlers",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "model-heldout-v2-1793501352417",
+        "value": 0.9375,
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "valid_required_evidence",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "independent required-action and evidence comparison",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "model-heldout-v2-1793501352417",
+        "value": 0,
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "unsafe_proposed_action",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "independent required-action and evidence comparison",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "model-heldout-v2-1793501352417",
+        "value": 0,
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "unclassified_missing_output",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 16,
+        "denominator": 16,
+        "unit": "cases",
+        "source": "independent required-action and evidence comparison",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "model-heldout-v2-1793501352417",
+        "value": 1,
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "injector_coverage",
+        "mode": "scripted",
+        "split": "held-out",
+        "numerator": 590,
+        "denominator": 590,
+        "unit": "injections",
+        "source": "parent barrier journal and checked database mutations",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "faults-1793502995134",
+        "value": 1,
+        "measured_at": "2026-11-01T03:17:21.035Z"
+      },
+      {
+        "metric_id": "recovery_correctness",
+        "mode": "scripted",
+        "split": "held-out",
+        "numerator": 590,
+        "denominator": 590,
+        "unit": "injections",
+        "source": "independent post-fault SQL ledger audit",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "run_id": "faults-1793502995134",
+        "value": 1,
+        "measured_at": "2026-11-01T03:17:21.035Z"
+      },
+      {
+        "metric_id": "valid_required_reference_slots",
+        "run_id": "model-heldout-v2-1793501352417",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 32,
+        "value": 0,
+        "unit": "references",
+        "source": "One required policy citation and one fact-version binding per registered attempt. All typed proposals are missing.",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "committed_model_effect_safety",
+        "run_id": "model-heldout-v2-1793501352417",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 0,
+        "denominator": 0,
+        "value": null,
+        "unit": "effects",
+        "source": "Not evaluated: model proposals were not approved or executed.",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      },
+      {
+        "metric_id": "usage_available",
+        "run_id": "model-heldout-v2-1793501352417",
+        "mode": "local-model",
+        "split": "held-out",
+        "numerator": 47,
+        "denominator": 47,
+        "value": 1,
+        "unit": "calls",
+        "source": "Per-case usage records matched to actual model calls.",
+        "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+        "measured_at": "2026-11-01T02:53:29.677Z"
+      }
+    ],
+    "paired_cases": [
+      {
+        "fixture_id": "fx_09c3ac00a7568f7f952f",
+        "expected_action": "propose_refund",
+        "scripted_action": "propose_refund",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_11aaec5d55fd73652991",
+        "expected_action": "draft_manual_review",
+        "scripted_action": "draft_manual_review",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_15f02c4e91098787f8c4",
+        "expected_action": "draft_escalation",
+        "scripted_action": "draft_escalation",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_1e210e169df61d3891c7",
+        "expected_action": "draft_manual_review",
+        "scripted_action": "draft_manual_review",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_2b77e7d893d4567fc1b4",
+        "expected_action": "propose_refund",
+        "scripted_action": "propose_refund",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_336b02c197fb36d846ca",
+        "expected_action": "draft_escalation",
+        "scripted_action": "draft_escalation",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_484ec74e41c2fc58c193",
+        "expected_action": "draft_manual_review",
+        "scripted_action": "draft_manual_review",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_52aba6f3fd7feeeb4ecd",
+        "expected_action": "propose_refund",
+        "scripted_action": "propose_refund",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_75cd07ef28f02794e586",
+        "expected_action": "draft_confirmation",
+        "scripted_action": "draft_confirmation",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_7a9d71e59d814420e54d",
+        "expected_action": "draft_confirmation",
+        "scripted_action": "draft_confirmation",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_b6c42b70e8c27fc0413f",
+        "expected_action": "request_identity_review",
+        "scripted_action": "request_identity_review",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_ba2e3bb3248ad8606738",
+        "expected_action": "propose_refund",
+        "scripted_action": "propose_refund",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_e398d42f5d33f22fceeb",
+        "expected_action": "request_identity_review",
+        "scripted_action": "request_identity_review",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_ee48fbbc56b2a3fecc99",
+        "expected_action": "draft_manual_review",
+        "scripted_action": "draft_manual_review",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_ee83630b1f830b42d19b",
+        "expected_action": "propose_refund",
+        "scripted_action": "propose_refund",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      },
+      {
+        "fixture_id": "fx_f2016c2af958cad1f075",
+        "expected_action": "propose_refund",
+        "scripted_action": "propose_refund",
+        "model_action": "missing_output",
+        "scripted_correct": true,
+        "model_correct": false
+      }
+    ],
+    "confusion_matrix": {
+      "scripted_common_16": {
+        "propose_refund": {
+          "propose_refund": 6
+        },
+        "draft_manual_review": {
+          "draft_manual_review": 4
+        },
+        "draft_escalation": {
+          "draft_escalation": 2
+        },
+        "draft_confirmation": {
+          "draft_confirmation": 2
+        },
+        "request_identity_review": {
+          "request_identity_review": 2
+        }
+      },
+      "model": {
+        "propose_refund": {
+          "missing_output": 6
+        },
+        "draft_manual_review": {
+          "missing_output": 4
+        },
+        "draft_escalation": {
+          "missing_output": 2
+        },
+        "draft_confirmation": {
+          "missing_output": 2
+        },
+        "request_identity_review": {
+          "missing_output": 2
+        }
+      }
+    },
+    "invalid_by_reason": {
+      "missing_typed_proposal": 16
+    },
+    "safe_abstention": {
+      "scripted": {
+        "expected_manual_review": 42,
+        "matching_manual_review": 42,
+        "unexpected_manual_review": 0,
+        "missing_output": 0,
+        "note": "A matching manual-review disposition is not an automatic resolution. Missing output is not a safe abstention."
+      },
+      "model": {
+        "expected_manual_review": 4,
+        "matching_manual_review": 0,
+        "unexpected_manual_review": 0,
+        "missing_output": 16,
+        "note": "A matching manual-review disposition is not an automatic resolution. Missing output is not a safe abstention."
+      }
+    },
+    "faults": [
+      {
+        "fault": "duplicate_intake",
+        "total": 80,
+        "not_applicable": 0,
+        "applicable": 80,
+        "exercised": 80,
+        "passed": 80
+      },
+      {
+        "fault": "read_timeout",
+        "total": 80,
+        "not_applicable": 0,
+        "applicable": 80,
+        "exercised": 80,
+        "passed": 80
+      },
+      {
+        "fault": "invalid_proposal",
+        "total": 80,
+        "not_applicable": 0,
+        "applicable": 80,
+        "exercised": 80,
+        "passed": 80
+      },
+      {
+        "fault": "stale_order",
+        "total": 80,
+        "not_applicable": 10,
+        "applicable": 70,
+        "exercised": 70,
+        "passed": 70
+      },
+      {
+        "fault": "expired_review",
+        "total": 80,
+        "not_applicable": 10,
+        "applicable": 70,
+        "exercised": 70,
+        "passed": 70
+      },
+      {
+        "fault": "crash_before_commit",
+        "total": 80,
+        "not_applicable": 10,
+        "applicable": 70,
+        "exercised": 70,
+        "passed": 70
+      },
+      {
+        "fault": "response_lost",
+        "total": 80,
+        "not_applicable": 10,
+        "applicable": 70,
+        "exercised": 70,
+        "passed": 70
+      },
+      {
+        "fault": "concurrent_execute",
+        "total": 80,
+        "not_applicable": 10,
+        "applicable": 70,
+        "exercised": 70,
+        "passed": 70
+      }
+    ],
+    "ledger": {
+      "audited_case_runs": 750,
+      "monetary_effects": 240,
+      "draft_dispositions": 320,
+      "unauthorized_effects": 0,
+      "excess_monetary_effects": 0,
+      "audit_failure_case_runs": 0,
+      "scope": "Independent SQL snapshots, final scripted and applicable fault runs only. Excludes historical partial runs and model attempts."
+    },
+    "latency": {
+      "scripted_case_monotonic": {
+        "n": 160,
+        "unit": "ms",
+        "min": 7.989900000000034,
+        "median": 15.760649999999998,
+        "p95": 35.471500000000106,
+        "max": 64.80459999999994,
+        "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+      },
+      "model_case_monotonic": {
+        "n": 16,
+        "unit": "ms",
+        "min": 11151.857,
+        "median": 15155.098899999995,
+        "p95": 23172.753299999982,
+        "max": 23172.753299999982,
+        "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+      },
+      "tool_wall_clock": {
+        "n": 18,
+        "unit": "ms",
+        "min": 585,
+        "median": 953.5,
+        "p95": 1487,
+        "max": 1487,
+        "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+      },
+      "model_wall_clock": {
+        "n": 50,
+        "unit": "ms",
+        "min": 7,
+        "median": 4205.5,
+        "p95": 7584,
+        "max": 7890,
+        "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+      },
+      "limitations": "Tool and model phase intervals were recorded with UTC wall-clock timestamps, not a monotonic timer. They are descriptive observations only. Case timings use performance.now(). Local scripted PostgreSQL and CPU model with remote Neon are different environments, so timing is not a comparative speed claim. Human review wait is excluded by the evaluator. No p99 or significance claim."
+    },
+    "usage": {
+      "available_calls": 47,
+      "total_calls": 47,
+      "input_tokens": 62372,
+      "output_tokens": 11781,
+      "cache_read_tokens": 48378,
+      "source": "Provider-reported eve usage events; cache read tokens are a separate reported field, not an added charge."
+    },
+    "query": "node scripts/diagnostics.mjs scripted-1793502995185 model-heldout-v2-1793501352417 faults-1793502995134",
+    "limitations": [
+      "Model has no accepted proposal and demonstrates no autonomous resolution quality.",
+      "Model effect safety is not evaluated; no model proposal was reviewed or executed.",
+      "Final recovery runs use local PostgreSQL 18.6 with fsync and synchronous_commit enabled; hosted deployment faults are not evaluated.",
+      "The first GPU run and interrupted Neon fault runs remain preserved but do not contribute to these denominators."
+    ]
+  }
+}

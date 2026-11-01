@@ -1,0 +1,41 @@
+{
+  "source_commit": "294a45931dbc9e6ace666ad76844e15d787e5efd",
+  "started_at": "2026-11-01T15:13:00.633Z",
+  "finished_at": "2026-11-01T15:13:02.612Z",
+  "passed": false,
+  "steps": [
+    {
+      "name": "types",
+      "exit_code": 0
+    },
+    {
+      "name": "agent-types",
+      "exit_code": 0
+    },
+    {
+      "name": "site-types",
+      "exit_code": 0
+    },
+    {
+      "name": "unit",
+      "exit_code": 0
+    },
+    {
+      "name": "rederive",
+      "exit_code": 0
+    },
+    {
+      "name": "site-build",
+      "exit_code": 0
+    },
+    {
+      "name": "migrate",
+      "exit_code": 1
+    },
+    {
+      "name": "verification_error",
+      "error": "migrate_failed"
+    }
+  ],
+  "live_deployment_verified": false
+}

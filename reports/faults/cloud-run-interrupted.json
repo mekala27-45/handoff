@@ -1,0 +1,8 @@
+{
+  "interrupted_at": "2026-11-01T03:16:34.982Z",
+  "status": "interrupted",
+  "checkpoint": "faults-1793500857779-progress.jsonl",
+  "completed_rows": 390,
+  "reason": "Superseded by a complete audit-v2 run that also checks order aggregates and draft dispositions on isolated local PostgreSQL. Partial rows are preserved and are not included in the final recovery denominator.",
+  "task_owned_children_stopped": 0
+}

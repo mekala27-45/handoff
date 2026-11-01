@@ -1,0 +1,15 @@
+[
+  {
+    "fixture_id": "fx_07a9425bd18f2b4fd61e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "error": "could not serialize access due to read/write dependencies among transactions",
+    "tool_requests": 0,
+    "model_calls": 0,
+    "framework_tool_requests": 0,
+    "usage": [],
+    "elapsed_ms": 857.641,
+    "trace": "reports/model-traces/model-development-1793500168358-fx_07a9425bd18f2b4fd61e.json"
+  }
+]

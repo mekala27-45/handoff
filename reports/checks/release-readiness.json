@@ -1,0 +1,15 @@
+{
+  "ready": false,
+  "reasons": [
+    "full_suite_passed: invalid_value",
+    "live_api: invalid_type",
+    "pages: invalid_type",
+    "publication_authorized: invalid_value",
+    "gates.0.done: invalid_value",
+    "gates.8.done: invalid_value",
+    "gates.13.done: invalid_value",
+    "gates.16.done: invalid_value"
+  ],
+  "checked_at": "2026-11-01T15:17:25.253Z",
+  "candidate_commit": "351f01a53890b1530616e76e72b24a082a37152a"
+}

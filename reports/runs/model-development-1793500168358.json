@@ -1,0 +1,41 @@
+{
+  "run_id": "model-development-1793500168358",
+  "mode": "local-model",
+  "source_commit": "3470976d0111492683c37655f74bc22a3189e262",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "configuration_digest": "4fc8c109fafe256c0ead42653d0c95f8d507c1fec03cfeaf85e76043950dd7c4",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "started_at": "2026-11-01T02:29:28.358Z",
+  "finished_at": "2026-11-01T02:29:29.601Z",
+  "attempted_case_ids": [
+    "fx_07a9425bd18f2b4fd61e"
+  ],
+  "metrics": [
+    {
+      "metric_id": "proposal_correctness",
+      "mode": "local-model",
+      "split": "development",
+      "numerator": 0,
+      "denominator": 1,
+      "unit": "cases",
+      "source": "eval/truth/expected.json",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    },
+    {
+      "metric_id": "actual_tool_execution",
+      "mode": "local-model",
+      "split": "development",
+      "numerator": 0,
+      "denominator": 1,
+      "unit": "cases",
+      "source": "eve channel events and scoped tool handlers",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    }
+  ],
+  "evidence_paths": [
+    "reports/model-traces/model-development-1793500168358-fx_07a9425bd18f2b4fd61e.json"
+  ],
+  "status": "failed"
+}

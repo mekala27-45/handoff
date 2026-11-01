@@ -1,0 +1,1062 @@
+[
+  {
+    "fixture_id": "fx_09c3ac00a7568f7f952f",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFSRMTC5RHS16E69ZS4KPQ",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 798,
+          "cacheWriteTokens": 0,
+          "inputTokens": 902,
+          "outputTokens": 512
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 902,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1143,
+          "outputTokens": 252
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1143,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1759,
+          "outputTokens": 172
+        }
+      }
+    ],
+    "elapsed_ms": 6920.5053,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_09c3ac00a7568f7f952f.json"
+  },
+  {
+    "fixture_id": "fx_11aaec5d55fd73652991",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFSZ7XPNK1X1TJB6707GZ6",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 2,
+    "model_calls": 2,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 798,
+          "cacheWriteTokens": 0,
+          "inputTokens": 897,
+          "outputTokens": 436
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 897,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2007,
+          "outputTokens": 41
+        }
+      }
+    ],
+    "elapsed_ms": 11615.7847,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_11aaec5d55fd73652991.json"
+  },
+  {
+    "fixture_id": "fx_15f02c4e91098787f8c4",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFTC53YTJV5P19YB8K05S7",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_escalation",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 798,
+          "cacheWriteTokens": 0,
+          "inputTokens": 903,
+          "outputTokens": 469
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 903,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2000,
+          "outputTokens": 196
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 2000,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2284,
+          "outputTokens": 186
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 2284,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2571,
+          "outputTokens": 152
+        }
+      }
+    ],
+    "elapsed_ms": 7174.924999999999,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_15f02c4e91098787f8c4.json"
+  },
+  {
+    "fixture_id": "fx_1e210e169df61d3891c7",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFTKJBCFJAGZCB7C0XDFAD",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 904,
+          "outputTokens": 476
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 904,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1912,
+          "outputTokens": 130
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1912,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2306,
+          "outputTokens": 115
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 2306,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2700,
+          "outputTokens": 115
+        }
+      }
+    ],
+    "elapsed_ms": 6529.821699999997,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_1e210e169df61d3891c7.json"
+  },
+  {
+    "fixture_id": "fx_2b77e7d893d4567fc1b4",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFTTK9RR20P3FR6EYMYP77",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 0,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 898,
+          "outputTokens": 512
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 898,
+          "cacheWriteTokens": 0,
+          "inputTokens": 983,
+          "outputTokens": 278
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 891,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1200,
+          "outputTokens": 427
+        }
+      }
+    ],
+    "elapsed_ms": 7634.9012,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_2b77e7d893d4567fc1b4.json"
+  },
+  {
+    "fixture_id": "fx_336b02c197fb36d846ca",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFV35DY72CDANP197AWSDM",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_escalation",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 800,
+          "cacheWriteTokens": 0,
+          "inputTokens": 899,
+          "outputTokens": 512
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 899,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1135,
+          "outputTokens": 273
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1135,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1400,
+          "outputTokens": 380
+        }
+      }
+    ],
+    "elapsed_ms": 7213.315200000005,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_336b02c197fb36d846ca.json"
+  },
+  {
+    "fixture_id": "fx_484ec74e41c2fc58c193",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFVBKXVP4CGY2W17ZQ8Q3C",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 3,
+    "model_calls": 4,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 800,
+          "cacheWriteTokens": 0,
+          "inputTokens": 900,
+          "outputTokens": 412
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 893,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1180,
+          "outputTokens": 415
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 893,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1176,
+          "outputTokens": 41
+        }
+      }
+    ],
+    "elapsed_ms": 10333.4375,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_484ec74e41c2fc58c193.json"
+  },
+  {
+    "fixture_id": "fx_52aba6f3fd7feeeb4ecd",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFVQXY27WVGBA82G38XTYF",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 896,
+          "outputTokens": 266
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 896,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1356,
+          "outputTokens": 326
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1356,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1626,
+          "outputTokens": 190
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1626,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2044,
+          "outputTokens": 27
+        }
+      }
+    ],
+    "elapsed_ms": 8464.722400000006,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_52aba6f3fd7feeeb4ecd.json"
+  },
+  {
+    "fixture_id": "fx_75cd07ef28f02794e586",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFW0QMR4GJXR429EVVD4TP",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_confirmation",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 798,
+          "cacheWriteTokens": 0,
+          "inputTokens": 898,
+          "outputTokens": 250
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 891,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1489,
+          "outputTokens": 199
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 891,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1590,
+          "outputTokens": 227
+        }
+      }
+    ],
+    "elapsed_ms": 9590.0285,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_75cd07ef28f02794e586.json"
+  },
+  {
+    "fixture_id": "fx_7a9d71e59d814420e54d",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFWBG31T28B03HR1EDJAMN",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_confirmation",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 902,
+          "outputTokens": 445
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 902,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1568,
+          "outputTokens": 156
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1568,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2023,
+          "outputTokens": 110
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 2023,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2438,
+          "outputTokens": 110
+        }
+      }
+    ],
+    "elapsed_ms": 6997.440399999992,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_7a9d71e59d814420e54d.json"
+  },
+  {
+    "fixture_id": "fx_b6c42b70e8c27fc0413f",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFWJFKQEF0G5PSFFJJ0X5E",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "request_identity_review",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 897,
+          "outputTokens": 475
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 897,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1513,
+          "outputTokens": 132
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1513,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1911,
+          "outputTokens": 117
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1911,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2309,
+          "outputTokens": 117
+        }
+      }
+    ],
+    "elapsed_ms": 6611.3285999999935,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_b6c42b70e8c27fc0413f.json"
+  },
+  {
+    "fixture_id": "fx_ba2e3bb3248ad8606738",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFWSHSSN9SPAPXS5JCHG2W",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 0,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 896,
+          "outputTokens": 512
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 896,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1113,
+          "outputTokens": 26
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1113,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1255,
+          "outputTokens": 25
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1255,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1397,
+          "outputTokens": 25
+        }
+      }
+    ],
+    "elapsed_ms": 4782.096699999995,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_ba2e3bb3248ad8606738.json"
+  },
+  {
+    "fixture_id": "fx_e398d42f5d33f22fceeb",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFWZDF0W9FSRB1CDN2ZGWH",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "request_identity_review",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 0,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 798,
+          "cacheWriteTokens": 0,
+          "inputTokens": 893,
+          "outputTokens": 512
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 893,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1289,
+          "outputTokens": 52
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1289,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1539,
+          "outputTokens": 55
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1539,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2019,
+          "outputTokens": 57
+        }
+      }
+    ],
+    "elapsed_ms": 4763.909,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_e398d42f5d33f22fceeb.json"
+  },
+  {
+    "fixture_id": "fx_ee48fbbc56b2a3fecc99",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFX5N8YYJD4SWFPQ95ZG8D",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 4,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 897,
+          "outputTokens": 486
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 897,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1883,
+          "outputTokens": 147
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1883,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2312,
+          "outputTokens": 132
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 2312,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2741,
+          "outputTokens": 41
+        }
+      }
+    ],
+    "elapsed_ms": 7374.675600000002,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_ee48fbbc56b2a3fecc99.json"
+  },
+  {
+    "fixture_id": "fx_ee83630b1f830b42d19b",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFXDKSMJNNNX35H83MTQSN",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 3,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 899,
+          "outputTokens": 298
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 899,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1525,
+          "outputTokens": 449
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1525,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2044,
+          "outputTokens": 23
+        }
+      }
+    ],
+    "elapsed_ms": 6755.003599999996,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_ee83630b1f830b42d19b.json"
+  },
+  {
+    "fixture_id": "fx_f2016c2af958cad1f075",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "terminal_record": true,
+    "runtime_result": {
+      "session_id": "wrun_01M6AFXMSX9R4ZVTXDT4T9V439",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "action": null,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "tool_requests": 1,
+    "model_calls": 3,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 896,
+          "outputTokens": 413
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 896,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1369,
+          "outputTokens": 260
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1369,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1554,
+          "outputTokens": 27
+        }
+      }
+    ],
+    "elapsed_ms": 6414.593800000002,
+    "trace": "reports/model-traces/model-heldout-1793500960365-fx_f2016c2af958cad1f075.json"
+  }
+]

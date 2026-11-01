@@ -1,0 +1,49 @@
+{
+  "source_commit": "8a679c3fc233e82327a7c7e4200f09e43221791c",
+  "started_at": "2026-11-01T03:02:33.318Z",
+  "finished_at": "2026-11-01T03:04:29.765Z",
+  "passed": true,
+  "steps": [
+    {
+      "name": "types",
+      "exit_code": 0
+    },
+    {
+      "name": "agent-types",
+      "exit_code": 0
+    },
+    {
+      "name": "site-types",
+      "exit_code": 0
+    },
+    {
+      "name": "unit",
+      "exit_code": 0
+    },
+    {
+      "name": "rederive",
+      "exit_code": 0
+    },
+    {
+      "name": "site-build",
+      "exit_code": 0
+    },
+    {
+      "name": "migrate",
+      "exit_code": 0
+    },
+    {
+      "name": "integration",
+      "exit_code": 0
+    },
+    {
+      "name": "browser",
+      "exit_code": 0
+    },
+    {
+      "name": "artifact-scan",
+      "exit_code": 0
+    }
+  ],
+  "live_deployment_verified": false
+}

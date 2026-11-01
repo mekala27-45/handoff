@@ -1,2 +1,2 @@
 import { defineConfig } from 'vite';
-export default defineConfig({base:process.env.SITE_BASE??'./',build:{outDir:'dist',sourcemap:false},server:{host:'127.0.0.1',port:5173,strictPort:true}});
+export default defineConfig({base:process.env.SITE_BASE??'./',plugins:[{name:'handoff-build-provenance',transformIndexHtml(){const commit=process.env.GITHUB_SHA??process.env.SOURCE_COMMIT??'local-development';if(!/^(?:[a-f0-9]{40}|local-development)$/.test(commit))throw Error('invalid_source_commit');return [{tag:'meta',attrs:{name:'handoff-source-commit',content:commit},injectTo:'head'}];}}],build:{outDir:'dist',sourcemap:false},server:{host:'127.0.0.1',port:5173,strictPort:true}});

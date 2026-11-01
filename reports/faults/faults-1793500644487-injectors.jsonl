@@ -1,0 +1,4 @@
+{"fixture_id":"fx_00a94bf33039319682e6","fault":"crash_before_commit","type":"barrier","stage":"writes_staged_before_commit","backend":1007,"at":"2026-11-01T02:37:47.890Z","observed_at":"2026-11-01T02:37:47.890Z","schema":"handoff"}
+{"fixture_id":"fx_00a94bf33039319682e6","fault":"response_lost","type":"barrier","stage":"commit_complete_before_response","backend":null,"at":"2026-11-01T02:37:52.439Z","observed_at":"2026-11-01T02:37:52.439Z","schema":"handoff"}
+{"fixture_id":"fx_09c3ac00a7568f7f952f","fault":"crash_before_commit","type":"barrier","stage":"writes_staged_before_commit","backend":1826,"at":"2026-11-01T02:38:19.335Z","observed_at":"2026-11-01T02:38:19.335Z","schema":"handoff"}
+{"fixture_id":"fx_09c3ac00a7568f7f952f","fault":"response_lost","type":"barrier","stage":"commit_complete_before_response","backend":null,"at":"2026-11-01T02:38:23.813Z","observed_at":"2026-11-01T02:38:23.813Z","schema":"handoff"}

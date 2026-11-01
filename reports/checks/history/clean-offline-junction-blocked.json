@@ -1,0 +1,40 @@
+{
+  "source_commit": "351f01a53890b1530616e76e72b24a082a37152a",
+  "checked_at": "2026-11-01T15:16:39.665Z",
+  "fresh_worktree": true,
+  "dependency_install": "Reused installed dependencies through a junction; fresh npm ci not verified in this restricted environment.",
+  "passed": false,
+  "scope": "Offline source rebuild and deterministic rederivation only; excludes database, browser and hosted checks.",
+  "checks": [
+    {
+      "name": "types",
+      "exit_code": 1,
+      "output": "node:internal/modules/cjs/loader:1520\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Daily Project Series-Chatgpt\\handoff-work\\resume-clean\\node_modules\\typescript\\bin\\tsc'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1294:5)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+    },
+    {
+      "name": "agent-types",
+      "exit_code": 1,
+      "output": "node:internal/modules/cjs/loader:1520\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Daily Project Series-Chatgpt\\handoff-work\\resume-clean\\node_modules\\typescript\\bin\\tsc'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1294:5)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+    },
+    {
+      "name": "site-types",
+      "exit_code": 1,
+      "output": "node:internal/modules/cjs/loader:1520\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Daily Project Series-Chatgpt\\handoff-work\\resume-clean\\node_modules\\typescript\\bin\\tsc'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1294:5)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+    },
+    {
+      "name": "unit",
+      "exit_code": 0,
+      "output": "ℹ tests 0\nℹ suites 0\nℹ pass 0\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 3.6471\n"
+    },
+    {
+      "name": "rederive",
+      "exit_code": 1,
+      "output": "node:internal/errors:985\r\n  const err = new Error(message);\r\n              ^\r\n\r\nError: Command failed: C:\\Program Files\\nodejs\\node.exe build/scripts/generate-fixtures.js\r\nnode:internal/modules/cjs/loader:1520\r\r\n  throw err;\r\r\n  ^\r\r\n\r\r\nError: Cannot find module 'C:\\Daily Project Series-Chatgpt\\handoff-work\\resume-clean\\build\\scripts\\generate-fixtures.js'\r\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)\r\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\r\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\r\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)\r\r\n    at Module._load (node:internal/modules/cjs/loader:1294:5)\r\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\r\n    at node:internal/main/run_main_module:33:47 {\r\r\n  code: 'MODULE_NOT_FOUND',\r\r\n  requireStack: []\r\r\n}\r\r\n\r\r\nNode.js v24.19.0\r\r\n\r\n    at genericNodeError (node:internal/errors:985:15)\r\n    at wrappedFn (node:internal/errors:539:14)\r\n    at checkExecSyncError (node:child_process:942:11)\r\n    at execFileSync (node:child_process:978:15)\r\n    at file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/resume-clean/scripts/rederive.mjs:7:95 {\r\n  status: 1,\r\n  signal: null,\r\n  output: [\r\n    null,\r\n    Buffer(0) [Uint8Array] [],\r\n    Buffer(825) [Uint8Array] [\r\n      110, 111, 100, 101,  58, 105, 110, 116, 101, 114, 110,  97,\r\n      108,  47, 109, 111, 100, 117, 108, 101, 115,  47,  99, 106,\r\n      115,  47, 108, 111,  97, 100, 101, 114,  58,  49,  53,  50,\r\n       48,  13,  10,  32,  32, 116, 104, 114, 111, 119,  32, 101,\r\n      114, 114,  59,  13,  10,  32,  32,  94,  13,  10,  13,  10,\r\n       69, 114, 114, 111, 114,  58,  32,  67,  97, 110, 110, 111,\r\n      116,  32, 102, 105, 110, 100,  32, 109, 111, 100, 117, 108,\r\n      101,  32,  39,  67,  58,  92,  68,  97, 105, 108, 121,  32,\r\n       80, 114, 111, 106,\r\n      ... 725 more items\r\n    ]\r\n  ],\r\n  pid: 53116,\r\n  stdout: Buffer(0) [Uint8Array] [],\r\n  stderr: Buffer(825) [Uint8Array] [\r\n    110, 111, 100, 101,  58, 105, 110, 116, 101, 114, 110,  97,\r\n    108,  47, 109, 111, 100, 117, 108, 101, 115,  47,  99, 106,\r\n    115,  47, 108, 111,  97, 100, 101, 114,  58,  49,  53,  50,\r\n     48,  13,  10,  32,  32, 116, 104, 114, 111, 119,  32, 101,\r\n    114, 114,  59,  13,  10,  32,  32,  94,  13,  10,  13,  10,\r\n     69, 114, 114, 111, 114,  58,  32,  67,  97, 110, 110, 111,\r\n    116,  32, 102, 105, 110, 100,  32, 109, 111, 100, 117, 108,\r\n    101,  32,  39,  67,  58,  92,  68,  97, 105, 108, 121,  32,\r\n     80, 114, 111, 106,\r\n    ... 725 more items\r\n  ]\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+    },
+    {
+      "name": "site-build",
+      "exit_code": 1,
+      "output": "node:internal/modules/cjs/loader:1520\r\n  throw err;\r\n  ^\r\n\r\nError: Cannot find module 'C:\\Daily Project Series-Chatgpt\\handoff-work\\resume-clean\\node_modules\\vite\\bin\\vite.js'\r\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)\r\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\r\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\r\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)\r\n    at Module._load (node:internal/modules/cjs/loader:1294:5)\r\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\r\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\r\n    at node:internal/main/run_main_module:33:47 {\r\n  code: 'MODULE_NOT_FOUND',\r\n  requireStack: []\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+    }
+  ]
+}

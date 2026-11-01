@@ -1,0 +1,535 @@
+{
+  "generated_at": "2026-11-01T03:25:29.039Z",
+  "generator_commit": "294a45931dbc9e6ace666ad76844e15d787e5efd",
+  "run_ids": [
+    "scripted-1793502995185",
+    "model-heldout-v2-1793501352417",
+    "faults-1793502995134"
+  ],
+  "source_commits": [
+    {
+      "run_id": "scripted-1793502995185",
+      "source_commit": "d0edd4ce73cf5aa2f9ee0b31ae53cc683452c09f"
+    },
+    {
+      "run_id": "model-heldout-v2-1793501352417",
+      "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe"
+    },
+    {
+      "run_id": "faults-1793502995134",
+      "source_commit": "d0edd4ce73cf5aa2f9ee0b31ae53cc683452c09f"
+    }
+  ],
+  "input_digests": [
+    {
+      "run_id": "scripted-1793502995185",
+      "case_table_sha256": "1df36befc89e1d3b5a49211593380cbe4a8beb0390c24039014591db8e2ddf16"
+    },
+    {
+      "run_id": "model-heldout-v2-1793501352417",
+      "case_table_sha256": "b06a43fb6785d164f7e00faec047e982239493be30724cd8abe887916d737cd1"
+    },
+    {
+      "run_id": "faults-1793502995134",
+      "case_table_sha256": "30dcbf0a393e367c9bfb75ff0b1fed9dcc1c19dd66cb65cd21ee931b3522c381"
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "proposal_correctness",
+      "mode": "scripted",
+      "split": "development",
+      "numerator": 80,
+      "denominator": 80,
+      "unit": "cases",
+      "source": "eval/truth/expected.json",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "scripted-1793502995185",
+      "value": 1,
+      "measured_at": "2026-11-01T03:16:38.327Z"
+    },
+    {
+      "metric_id": "safe_terminal_state",
+      "mode": "scripted",
+      "split": "development",
+      "numerator": 80,
+      "denominator": 80,
+      "unit": "cases",
+      "source": "eval/harness/audit.ts: independent SQL ledger",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "scripted-1793502995185",
+      "value": 1,
+      "measured_at": "2026-11-01T03:16:38.327Z"
+    },
+    {
+      "metric_id": "proposal_correctness",
+      "mode": "scripted",
+      "split": "held-out",
+      "numerator": 80,
+      "denominator": 80,
+      "unit": "cases",
+      "source": "eval/truth/expected.json",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "scripted-1793502995185",
+      "value": 1,
+      "measured_at": "2026-11-01T03:16:38.327Z"
+    },
+    {
+      "metric_id": "safe_terminal_state",
+      "mode": "scripted",
+      "split": "held-out",
+      "numerator": 80,
+      "denominator": 80,
+      "unit": "cases",
+      "source": "eval/harness/audit.ts: independent SQL ledger",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "scripted-1793502995185",
+      "value": 1,
+      "measured_at": "2026-11-01T03:16:38.327Z"
+    },
+    {
+      "metric_id": "proposal_correctness",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "eval/truth/expected.json",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "model-heldout-v2-1793501352417",
+      "value": 0,
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "actual_tool_execution",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 15,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "eve channel events and scoped tool handlers",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "model-heldout-v2-1793501352417",
+      "value": 0.9375,
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "valid_required_evidence",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "independent required-action and evidence comparison",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "model-heldout-v2-1793501352417",
+      "value": 0,
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "unsafe_proposed_action",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "independent required-action and evidence comparison",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "model-heldout-v2-1793501352417",
+      "value": 0,
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "unclassified_missing_output",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 16,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "independent required-action and evidence comparison",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "model-heldout-v2-1793501352417",
+      "value": 1,
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "injector_coverage",
+      "mode": "scripted",
+      "split": "held-out",
+      "numerator": 590,
+      "denominator": 590,
+      "unit": "injections",
+      "source": "parent barrier journal and checked database mutations",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "faults-1793502995134",
+      "value": 1,
+      "measured_at": "2026-11-01T03:17:21.035Z"
+    },
+    {
+      "metric_id": "recovery_correctness",
+      "mode": "scripted",
+      "split": "held-out",
+      "numerator": 590,
+      "denominator": 590,
+      "unit": "injections",
+      "source": "independent post-fault SQL ledger audit",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "run_id": "faults-1793502995134",
+      "value": 1,
+      "measured_at": "2026-11-01T03:17:21.035Z"
+    },
+    {
+      "metric_id": "valid_required_reference_slots",
+      "run_id": "model-heldout-v2-1793501352417",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 32,
+      "value": 0,
+      "unit": "references",
+      "source": "One required policy citation and one fact-version binding per registered attempt. All typed proposals are missing.",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "committed_model_effect_safety",
+      "run_id": "model-heldout-v2-1793501352417",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "unit": "effects",
+      "source": "Not evaluated: model proposals were not approved or executed.",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    },
+    {
+      "metric_id": "usage_available",
+      "run_id": "model-heldout-v2-1793501352417",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 47,
+      "denominator": 47,
+      "value": 1,
+      "unit": "calls",
+      "source": "Per-case usage records matched to actual model calls.",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+      "measured_at": "2026-11-01T02:53:29.677Z"
+    }
+  ],
+  "paired_cases": [
+    {
+      "fixture_id": "fx_09c3ac00a7568f7f952f",
+      "expected_action": "propose_refund",
+      "scripted_action": "propose_refund",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_11aaec5d55fd73652991",
+      "expected_action": "draft_manual_review",
+      "scripted_action": "draft_manual_review",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_15f02c4e91098787f8c4",
+      "expected_action": "draft_escalation",
+      "scripted_action": "draft_escalation",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_1e210e169df61d3891c7",
+      "expected_action": "draft_manual_review",
+      "scripted_action": "draft_manual_review",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_2b77e7d893d4567fc1b4",
+      "expected_action": "propose_refund",
+      "scripted_action": "propose_refund",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_336b02c197fb36d846ca",
+      "expected_action": "draft_escalation",
+      "scripted_action": "draft_escalation",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_484ec74e41c2fc58c193",
+      "expected_action": "draft_manual_review",
+      "scripted_action": "draft_manual_review",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_52aba6f3fd7feeeb4ecd",
+      "expected_action": "propose_refund",
+      "scripted_action": "propose_refund",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_75cd07ef28f02794e586",
+      "expected_action": "draft_confirmation",
+      "scripted_action": "draft_confirmation",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_7a9d71e59d814420e54d",
+      "expected_action": "draft_confirmation",
+      "scripted_action": "draft_confirmation",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_b6c42b70e8c27fc0413f",
+      "expected_action": "request_identity_review",
+      "scripted_action": "request_identity_review",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_ba2e3bb3248ad8606738",
+      "expected_action": "propose_refund",
+      "scripted_action": "propose_refund",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_e398d42f5d33f22fceeb",
+      "expected_action": "request_identity_review",
+      "scripted_action": "request_identity_review",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_ee48fbbc56b2a3fecc99",
+      "expected_action": "draft_manual_review",
+      "scripted_action": "draft_manual_review",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_ee83630b1f830b42d19b",
+      "expected_action": "propose_refund",
+      "scripted_action": "propose_refund",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    },
+    {
+      "fixture_id": "fx_f2016c2af958cad1f075",
+      "expected_action": "propose_refund",
+      "scripted_action": "propose_refund",
+      "model_action": "missing_output",
+      "scripted_correct": true,
+      "model_correct": false
+    }
+  ],
+  "confusion_matrix": {
+    "scripted_common_16": {
+      "propose_refund": {
+        "propose_refund": 6
+      },
+      "draft_manual_review": {
+        "draft_manual_review": 4
+      },
+      "draft_escalation": {
+        "draft_escalation": 2
+      },
+      "draft_confirmation": {
+        "draft_confirmation": 2
+      },
+      "request_identity_review": {
+        "request_identity_review": 2
+      }
+    },
+    "model": {
+      "propose_refund": {
+        "missing_output": 6
+      },
+      "draft_manual_review": {
+        "missing_output": 4
+      },
+      "draft_escalation": {
+        "missing_output": 2
+      },
+      "draft_confirmation": {
+        "missing_output": 2
+      },
+      "request_identity_review": {
+        "missing_output": 2
+      }
+    }
+  },
+  "invalid_by_reason": {
+    "missing_typed_proposal": 16
+  },
+  "safe_abstention": {
+    "scripted": {
+      "expected_manual_review": 42,
+      "matching_manual_review": 42,
+      "unexpected_manual_review": 0,
+      "missing_output": 0,
+      "note": "A matching manual-review disposition is not an automatic resolution. Missing output is not a safe abstention."
+    },
+    "model": {
+      "expected_manual_review": 4,
+      "matching_manual_review": 0,
+      "unexpected_manual_review": 0,
+      "missing_output": 16,
+      "note": "A matching manual-review disposition is not an automatic resolution. Missing output is not a safe abstention."
+    }
+  },
+  "faults": [
+    {
+      "fault": "duplicate_intake",
+      "total": 80,
+      "not_applicable": 0,
+      "applicable": 80,
+      "exercised": 80,
+      "passed": 80
+    },
+    {
+      "fault": "read_timeout",
+      "total": 80,
+      "not_applicable": 0,
+      "applicable": 80,
+      "exercised": 80,
+      "passed": 80
+    },
+    {
+      "fault": "invalid_proposal",
+      "total": 80,
+      "not_applicable": 0,
+      "applicable": 80,
+      "exercised": 80,
+      "passed": 80
+    },
+    {
+      "fault": "stale_order",
+      "total": 80,
+      "not_applicable": 10,
+      "applicable": 70,
+      "exercised": 70,
+      "passed": 70
+    },
+    {
+      "fault": "expired_review",
+      "total": 80,
+      "not_applicable": 10,
+      "applicable": 70,
+      "exercised": 70,
+      "passed": 70
+    },
+    {
+      "fault": "crash_before_commit",
+      "total": 80,
+      "not_applicable": 10,
+      "applicable": 70,
+      "exercised": 70,
+      "passed": 70
+    },
+    {
+      "fault": "response_lost",
+      "total": 80,
+      "not_applicable": 10,
+      "applicable": 70,
+      "exercised": 70,
+      "passed": 70
+    },
+    {
+      "fault": "concurrent_execute",
+      "total": 80,
+      "not_applicable": 10,
+      "applicable": 70,
+      "exercised": 70,
+      "passed": 70
+    }
+  ],
+  "ledger": {
+    "audited_case_runs": 750,
+    "monetary_effects": 240,
+    "draft_dispositions": 320,
+    "unauthorized_effects": 0,
+    "excess_monetary_effects": 0,
+    "audit_failure_case_runs": 0,
+    "scope": "Independent SQL snapshots, final scripted and applicable fault runs only. Excludes historical partial runs and model attempts."
+  },
+  "latency": {
+    "scripted_case_monotonic": {
+      "n": 160,
+      "unit": "ms",
+      "min": 7.989900000000034,
+      "median": 15.760649999999998,
+      "p95": 35.471500000000106,
+      "max": 64.80459999999994,
+      "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+    },
+    "model_case_monotonic": {
+      "n": 16,
+      "unit": "ms",
+      "min": 11151.857,
+      "median": 15155.098899999995,
+      "p95": 23172.753299999982,
+      "max": 23172.753299999982,
+      "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+    },
+    "tool_wall_clock": {
+      "n": 18,
+      "unit": "ms",
+      "min": 585,
+      "median": 953.5,
+      "p95": 1487,
+      "max": 1487,
+      "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+    },
+    "model_wall_clock": {
+      "n": 50,
+      "unit": "ms",
+      "min": 7,
+      "median": 4205.5,
+      "p95": 7584,
+      "max": 7890,
+      "definition": "Median averages the two middle observations for even n. p95 is the nearest-rank order statistic at ceil(0.95*n), not a population-tail estimate."
+    },
+    "limitations": "Tool and model phase intervals were recorded with UTC wall-clock timestamps, not a monotonic timer. They are descriptive observations only. Case timings use performance.now(). Local scripted PostgreSQL and CPU model with remote Neon are different environments, so timing is not a comparative speed claim. Human review wait is excluded by the evaluator. No p99 or significance claim."
+  },
+  "usage": {
+    "available_calls": 47,
+    "total_calls": 47,
+    "input_tokens": 62372,
+    "output_tokens": 11781,
+    "cache_read_tokens": 48378,
+    "source": "Provider-reported eve usage events; cache read tokens are a separate reported field, not an added charge."
+  },
+  "query": "node scripts/diagnostics.mjs scripted-1793502995185 model-heldout-v2-1793501352417 faults-1793502995134",
+  "limitations": [
+    "Model has no accepted proposal and demonstrates no autonomous resolution quality.",
+    "Model effect safety is not evaluated; no model proposal was reviewed or executed.",
+    "Final recovery runs use local PostgreSQL 18.6 with fsync and synchronous_commit enabled; hosted deployment faults are not evaluated.",
+    "The first GPU run and interrupted Neon fault runs remain preserved but do not contribute to these denominators."
+  ]
+}

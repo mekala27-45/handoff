@@ -1,0 +1,6 @@
+Synthetic support cases. Simulated actions only. Scripted, local-model and recorded runs are labeled separately. No real messages, refunds or customer data. This project does not demonstrate production customer-service readiness.
+
+Run faults-1793502995134. Mode scripted. Source d0edd4ce73cf5aa2f9ee0b31ae53cc683452c09f.
+
+injector_coverage: 590 / 590 injections. Source parent barrier journal and checked database mutations.
+recovery_correctness: 590 / 590 injections. Source independent post-fault SQL ledger audit.

@@ -1,0 +1,13 @@
+{
+  "controller": "scripted-v1",
+  "plan_digest": "92afabe7dc98c494312322a3051677ccc78f7e632890ca7804d539e9961f344d",
+  "audit_version": 2,
+  "environment": {
+    "kind": "isolated-loopback-postgres",
+    "database": {
+      "version": "PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+      "database": "handoff"
+    },
+    "schema": "handoff"
+  }
+}

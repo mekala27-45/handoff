@@ -1,0 +1,379 @@
+{
+  "run_id": "model-heldout-1793500960365-fx_7a9d71e59d814420e54d",
+  "mode": "local-model",
+  "source_commit": "14174e111c481070d738900689bb1d7bac998a10",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "configuration_digest": "651dc61270f219d4eb46c5dca560f73b5ce646279c823abfadb8deb81fa39144",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "trace": [
+    {
+      "at": "2026-11-01T02:44:08.331Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "eve_delivery",
+      "data": {
+        "session_id": "wrun_01M6AFWBG31T28B03HR1EDJAMN"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:08.485Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:08.491Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 0
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:08.492Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": null,
+        "temperature": null
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:09.882Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_ed39l2vm",
+        "capability": {
+          "kind": "tool",
+          "name": "get_order_facts"
+        },
+        "input": {
+          "order_id": "SYN-ORDER-7a9d71e59d814420e54d"
+        },
+        "owner": {
+          "runId": "run_0"
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:09.889Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:09.890Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "get_order_facts",
+        "input": {
+          "order_id": "SYN-ORDER-7a9d71e59d814420e54d"
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:10.497Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "tool_result",
+      "data": {
+        "tool": "get_order_facts",
+        "result": {
+          "order": {
+            "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+            "customer_id": "SYN-CUSTOMER-7a9d71e59d814420e54d",
+            "currency": "USD",
+            "captured_cents": 1,
+            "refunded_cents": 1,
+            "shipping_state": "delivered",
+            "delivered_at": "2026-01-16T12:00:00.000Z",
+            "shipped_at": "2026-02-07T12:00:00.000Z",
+            "tracking": "SYN-TRACK-7a9d71e59d814420e54d",
+            "revision": 1
+          },
+          "captures": [
+            {
+              "capture_id": "SYN-CAPTURE-7a9d71e59d814420e54d-1",
+              "amount_cents": 1,
+              "refunded_cents": 1,
+              "confirmed_at": "2026-01-01T01:00:00.000Z",
+              "revision": 1,
+              "duplicate": false
+            }
+          ],
+          "received_at": "2026-02-15T12:00:00.000Z",
+          "existing_effect_ref": "SYN-PRIOR-EFFECT-7a9d71e59d814420e54d",
+          "fact_versions": {
+            "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+            "order_revision": 1,
+            "capture_versions": {
+              "SYN-CAPTURE-7a9d71e59d814420e54d-1": 1
+            },
+            "policy_id": "SAMPLE-SUPPLY",
+            "policy_version": 1,
+            "policy_revision": 1,
+            "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:10.500Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:10.501Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 902,
+          "outputTokens": 445
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:10.578Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:10.582Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:10.583Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": null,
+        "temperature": null
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.141Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.142Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 902,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1568,
+          "outputTokens": 156
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.180Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.184Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "budget",
+      "data": {
+        "models": 3,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.184Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": null,
+        "temperature": null
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.563Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.564Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1568,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2023,
+          "outputTokens": 110
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.611Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_3"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.615Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "budget",
+      "data": {
+        "models": 4,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.616Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": null,
+        "temperature": null
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.990Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_3"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:11.992Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 2023,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2438,
+          "outputTokens": 110
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:12.044Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_4"
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:12.051Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "model_settled",
+      "data": {
+        "runId": "run_4",
+        "outcome": "failed",
+        "error": {
+          "code": "MODEL_CALL_FAILED",
+          "id": "8166b56b-2a63-4667-b91d-8c8831d76580",
+          "message": "models_budget_exhausted"
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:44:12.054Z",
+      "case_id": "case_5094aa38-f229-4b23-b61f-0f80771577fa",
+      "type": "eve_result",
+      "data": {
+        "outcome": "handled"
+      }
+    }
+  ]
+}

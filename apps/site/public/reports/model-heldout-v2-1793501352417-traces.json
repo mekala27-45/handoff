@@ -1,0 +1,3647 @@
+[
+  {
+    "fixture_id": "fx_09c3ac00a7568f7f952f",
+    "run_id": "model-heldout-v2-1793501352417-fx_09c3ac00a7568f7f952f",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:49:15.918Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:15.922Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:22.357Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "length",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:22.358Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 902,
+            "outputTokens": 512
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:22.427Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:22.434Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:23.135Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "find_policy_clauses",
+          "input": {
+            "query": "duplicate",
+            "family_hint": "duplicate"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:24.035Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "tool_result",
+        "data": {
+          "tool": "find_policy_clauses",
+          "result": [
+            {
+              "clause": {
+                "text": "Two distinct confirmed captures for one order permit a reviewed simulated refund of the explicitly identified duplicate capture balance only. Repeated events do not prove a second capture.",
+                "lines": [
+                  9,
+                  10
+                ],
+                "terms": [
+                  "duplicate",
+                  "twice",
+                  "capture",
+                  "payment"
+                ],
+                "action": "propose_refund",
+                "heading": "Duplicate capture",
+                "clause_id": "P-DUPLICATE"
+              },
+              "ref": {
+                "policy_id": "SAMPLE-SUPPLY",
+                "version": 1,
+                "clause_id": "P-DUPLICATE",
+                "content_digest": "fd46499138f12e8e0c042bef8f794e6d0d66f0a68498a53ce9f04b79633217ad",
+                "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+                "lines": [
+                  9,
+                  10
+                ]
+              },
+              "score": 1
+            }
+          ]
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:24.038Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:24.038Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 902,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1175,
+            "outputTokens": 30
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:24.084Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:24.087Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:26.761Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:26.763Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1175,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1445,
+            "outputTokens": 172
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:26.778Z",
+        "case_id": "case_56949af5-cab2-41e6-b67e-770a6e23db9f",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_11aaec5d55fd73652991",
+    "run_id": "model-heldout-v2-1793501352417-fx_11aaec5d55fd73652991",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:49:30.132Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:30.139Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:35.388Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-11aaec5d55fd73652991"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:36.564Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-11aaec5d55fd73652991",
+              "customer_id": "SYN-CUSTOMER-11aaec5d55fd73652991",
+              "currency": "USD",
+              "captured_cents": 1832,
+              "refunded_cents": 0,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-01-07T12:00:00.000Z",
+              "shipped_at": "2026-01-30T12:00:00.000Z",
+              "tracking": "SYN-TRACK-11aaec5d55fd73652991",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-11aaec5d55fd73652991-1",
+                "amount_cents": 1832,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-11aaec5d55fd73652991",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-11aaec5d55fd73652991-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:36.567Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:36.568Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 902,
+            "outputTokens": 402
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:36.639Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:36.644Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:41.817Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:41.819Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 902,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1388,
+            "outputTokens": 335
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:41.884Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:41.890Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:42.640Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:42.642Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1388,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1584,
+            "outputTokens": 22
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:42.662Z",
+        "case_id": "case_7db960ae-4b90-43de-9560-68b664179930",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_15f02c4e91098787f8c4",
+    "run_id": "model-heldout-v2-1793501352417-fx_15f02c4e91098787f8c4",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:49:46.062Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:46.065Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:51.581Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-15f02c4e91098787f8c4"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:52.426Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-15f02c4e91098787f8c4",
+              "customer_id": "SYN-CUSTOMER-15f02c4e91098787f8c4",
+              "currency": "USD",
+              "captured_cents": 12028,
+              "refunded_cents": 0,
+              "shipping_state": "shipped",
+              "delivered_at": null,
+              "shipped_at": "2026-01-30T12:00:00.000Z",
+              "tracking": "SYN-TRACK-15f02c4e91098787f8c4",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-15f02c4e91098787f8c4-1",
+                "amount_cents": 12028,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-15f02c4e91098787f8c4",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-15f02c4e91098787f8c4-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:52.429Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:52.430Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 798,
+            "cacheWriteTokens": 0,
+            "inputTokens": 898,
+            "outputTokens": 429
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:52.506Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:52.511Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:54.840Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:54.841Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 898,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1870,
+            "outputTokens": 40
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:54.857Z",
+        "case_id": "case_d5afd288-b8d3-44ec-a444-4c842bdb56dc",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_1e210e169df61d3891c7",
+    "run_id": "model-heldout-v2-1793501352417-fx_1e210e169df61d3891c7",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:49:58.345Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:49:58.353Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:02.552Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:02.553Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 900,
+            "outputTokens": 311
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:02.618Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:02.624Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:06.491Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:06.492Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 900,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1072,
+            "outputTokens": 280
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:06.560Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:06.566Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.158Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.160Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1072,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1214,
+            "outputTokens": 25
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.211Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.217Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.860Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.861Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_3"
+          },
+          "usage": {
+            "cacheReadTokens": 1214,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1356,
+            "outputTokens": 25
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.938Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_4"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.953Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_4",
+          "outcome": "failed",
+          "error": {
+            "code": "MODEL_CALL_FAILED",
+            "id": "a8914c0d-2780-45d3-836d-340e2e219700",
+            "message": "models_budget_exhausted"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:07.958Z",
+        "case_id": "case_8599c5c1-17ca-4dea-a972-b5bbe0702171",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_2b77e7d893d4567fc1b4",
+    "run_id": "model-heldout-v2-1793501352417-fx_2b77e7d893d4567fc1b4",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:50:11.940Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:11.946Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:18.377Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:19.586Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4",
+              "customer_id": "SYN-CUSTOMER-2b77e7d893d4567fc1b4",
+              "currency": "USD",
+              "captured_cents": 11770,
+              "refunded_cents": 5885,
+              "shipping_state": "paid",
+              "delivered_at": null,
+              "shipped_at": null,
+              "tracking": "SYN-TRACK-2b77e7d893d4567fc1b4",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-2b77e7d893d4567fc1b4-1",
+                "amount_cents": 11770,
+                "refunded_cents": 5885,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-2b77e7d893d4567fc1b4",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-2b77e7d893d4567fc1b4-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:19.589Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:19.590Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 798,
+            "cacheWriteTokens": 0,
+            "inputTokens": 897,
+            "outputTokens": 494
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:19.660Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:19.664Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:23.980Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:23.981Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 897,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1869,
+            "outputTokens": 188
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:24.027Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:24.032Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:24.909Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:24.910Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1869,
+            "cacheWriteTokens": 0,
+            "inputTokens": 2142,
+            "outputTokens": 17
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:24.927Z",
+        "case_id": "case_ded455f8-b2de-4c30-a8a6-fd13b3509349",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_336b02c197fb36d846ca",
+    "run_id": "model-heldout-v2-1793501352417-fx_336b02c197fb36d846ca",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:50:28.906Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:28.911Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:32.582Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-336b02c197fb36d846ca"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:33.390Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-336b02c197fb36d846ca",
+              "customer_id": "SYN-CUSTOMER-336b02c197fb36d846ca",
+              "currency": "USD",
+              "captured_cents": 11754,
+              "refunded_cents": 0,
+              "shipping_state": "shipped",
+              "delivered_at": null,
+              "shipped_at": "2026-02-01T12:00:00.000Z",
+              "tracking": "SYN-TRACK-336b02c197fb36d846ca",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-336b02c197fb36d846ca-1",
+                "amount_cents": 11754,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-336b02c197fb36d846ca",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-336b02c197fb36d846ca-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:33.392Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:33.393Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 901,
+            "outputTokens": 288
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:33.474Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:33.478Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:38.093Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "find_policy_clauses",
+          "input": {
+            "query": "tracking_changed",
+            "family_hint": "refunded"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:38.789Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "tool_result",
+        "data": {
+          "tool": "find_policy_clauses",
+          "result": [
+            {
+              "clause": {
+                "text": "A shipment not delivered after more than 7 elapsed days requires an escalation draft with tracking evidence. Missing tracking requires manual review. No automatic refund is permitted.",
+                "lines": [
+                  3,
+                  4
+                ],
+                "terms": [
+                  "delay",
+                  "late",
+                  "tracking",
+                  "shipment"
+                ],
+                "action": "draft_escalation",
+                "heading": "Shipment delay",
+                "clause_id": "P-DELAY"
+              },
+              "ref": {
+                "policy_id": "SAMPLE-SUPPLY",
+                "version": 1,
+                "clause_id": "P-DELAY",
+                "content_digest": "6006fa8ed3e487628df410576875e5e4561c8038e08f6ce66e55eed180693e4c",
+                "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+                "lines": [
+                  3,
+                  4
+                ]
+              },
+              "score": 1
+            }
+          ]
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:38.793Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:38.795Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 901,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1373,
+            "outputTokens": 294
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:38.850Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:38.855Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:46.740Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:46.741Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1373,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1640,
+            "outputTokens": 504
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:46.805Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:46.813Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:48.446Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:48.448Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_3"
+          },
+          "usage": {
+            "cacheReadTokens": 1640,
+            "cacheWriteTokens": 0,
+            "inputTokens": 2054,
+            "outputTokens": 44
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:48.466Z",
+        "case_id": "case_5b4683c1-bf1f-47fb-9c88-e765c8c49fe5",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_484ec74e41c2fc58c193",
+    "run_id": "model-heldout-v2-1793501352417-fx_484ec74e41c2fc58c193",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:50:51.659Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:51.662Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:54.366Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-484ec74e41c2fc58c193"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:55.295Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-484ec74e41c2fc58c193",
+              "customer_id": "SYN-CUSTOMER-484ec74e41c2fc58c193",
+              "currency": "USD",
+              "captured_cents": 12745,
+              "refunded_cents": 0,
+              "shipping_state": "shipped",
+              "delivered_at": null,
+              "shipped_at": "2026-02-04T12:00:00.000Z",
+              "tracking": "SYN-TRACK-484ec74e41c2fc58c193",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-484ec74e41c2fc58c193-1",
+                "amount_cents": 12745,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-484ec74e41c2fc58c193",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-484ec74e41c2fc58c193-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:55.297Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:55.298Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 899,
+            "outputTokens": 207
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:55.373Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:50:55.377Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:00.625Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:00.626Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 899,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1371,
+            "outputTokens": 326
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:00.672Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:00.679Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:01.699Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:01.700Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1371,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1554,
+            "outputTokens": 51
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:01.715Z",
+        "case_id": "case_9e8a0b20-ef94-4399-ab40-c2047369a5bd",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_52aba6f3fd7feeeb4ecd",
+    "run_id": "model-heldout-v2-1793501352417-fx_52aba6f3fd7feeeb4ecd",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:51:05.094Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:05.100Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:10.066Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:11.022Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+              "customer_id": "SYN-CUSTOMER-52aba6f3fd7feeeb4ecd",
+              "currency": "USD",
+              "captured_cents": 10505,
+              "refunded_cents": 0,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-02-12T12:00:00.000Z",
+              "shipped_at": "2026-02-05T12:00:00.000Z",
+              "tracking": "SYN-TRACK-52aba6f3fd7feeeb4ecd",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1",
+                "amount_cents": 10505,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:11.026Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:11.026Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 894,
+            "outputTokens": 397
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:11.106Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:11.111Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:18.373Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:18.374Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 894,
+            "cacheWriteTokens": 0,
+            "inputTokens": 2036,
+            "outputTokens": 336
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:18.393Z",
+        "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_75cd07ef28f02794e586",
+    "run_id": "model-heldout-v2-1793501352417-fx_75cd07ef28f02794e586",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:51:21.992Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:21.998Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:25.183Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-75cd07ef28f02794e586"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:25.965Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-75cd07ef28f02794e586",
+              "customer_id": "SYN-CUSTOMER-75cd07ef28f02794e586",
+              "currency": "USD",
+              "captured_cents": 2549,
+              "refunded_cents": 2549,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-02-11T12:00:00.000Z",
+              "shipped_at": "2026-02-04T12:00:00.000Z",
+              "tracking": "SYN-TRACK-75cd07ef28f02794e586",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-75cd07ef28f02794e586-1",
+                "amount_cents": 2549,
+                "refunded_cents": 2549,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": "SYN-PRIOR-EFFECT-75cd07ef28f02794e586",
+            "fact_versions": {
+              "order_id": "SYN-ORDER-75cd07ef28f02794e586",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-75cd07ef28f02794e586-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:25.969Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:25.970Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 798,
+            "cacheWriteTokens": 0,
+            "inputTokens": 897,
+            "outputTokens": 246
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:26.022Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:26.026Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:30.412Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "find_policy_clauses",
+          "input": {
+            "query": "previous reimbursement",
+            "family_hint": "refunded"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:30.997Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "tool_result",
+        "data": {
+          "tool": "find_policy_clauses",
+          "result": []
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:31.001Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:31.003Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 897,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1421,
+            "outputTokens": 261
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:31.047Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:31.052Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:34.472Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:34.473Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1421,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1462,
+            "outputTokens": 223
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:34.491Z",
+        "case_id": "case_f9de0bbf-081d-4b26-bd25-9ab75566cdb0",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_7a9d71e59d814420e54d",
+    "run_id": "model-heldout-v2-1793501352417-fx_7a9d71e59d814420e54d",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:51:37.628Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:37.636Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:43.553Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-7a9d71e59d814420e54d"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:44.583Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+              "customer_id": "SYN-CUSTOMER-7a9d71e59d814420e54d",
+              "currency": "USD",
+              "captured_cents": 1,
+              "refunded_cents": 1,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-01-16T12:00:00.000Z",
+              "shipped_at": "2026-02-07T12:00:00.000Z",
+              "tracking": "SYN-TRACK-7a9d71e59d814420e54d",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-7a9d71e59d814420e54d-1",
+                "amount_cents": 1,
+                "refunded_cents": 1,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": "SYN-PRIOR-EFFECT-7a9d71e59d814420e54d",
+            "fact_versions": {
+              "order_id": "SYN-ORDER-7a9d71e59d814420e54d",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-7a9d71e59d814420e54d-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:44.586Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:44.587Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 800,
+            "cacheWriteTokens": 0,
+            "inputTokens": 903,
+            "outputTokens": 460
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:44.653Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:44.659Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:48.621Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:48.623Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 903,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1569,
+            "outputTokens": 212
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:48.663Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:48.668Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:51.876Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:51.877Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1569,
+            "cacheWriteTokens": 0,
+            "inputTokens": 2074,
+            "outputTokens": 142
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:51.895Z",
+        "case_id": "case_970e7c2a-5972-40e1-a003-d4b44ff38a07",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_b6c42b70e8c27fc0413f",
+    "run_id": "model-heldout-v2-1793501352417-fx_b6c42b70e8c27fc0413f",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:51:55.335Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:55.339Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:51:59.152Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-b6c42b70e8c27fc0413f"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:00.274Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "refused": true,
+            "code": "identity_or_scope_refused"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:00.276Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:00.277Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 800,
+            "cacheWriteTokens": 0,
+            "inputTokens": 900,
+            "outputTokens": 299
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:00.354Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:00.358Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:04.558Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:04.559Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 900,
+            "cacheWriteTokens": 0,
+            "inputTokens": 970,
+            "outputTokens": 330
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:04.578Z",
+        "case_id": "case_d51fbf60-af76-44a4-a3a6-88b9a29a29d2",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_ba2e3bb3248ad8606738",
+    "run_id": "model-heldout-v2-1793501352417-fx_ba2e3bb3248ad8606738",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:52:07.793Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:07.800Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:14.122Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-ba2e3bb3248ad8606738"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:15.373Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-ba2e3bb3248ad8606738",
+              "customer_id": "SYN-CUSTOMER-ba2e3bb3248ad8606738",
+              "currency": "USD",
+              "captured_cents": 12592,
+              "refunded_cents": 0,
+              "shipping_state": "paid",
+              "delivered_at": null,
+              "shipped_at": null,
+              "tracking": "SYN-TRACK-ba2e3bb3248ad8606738",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-ba2e3bb3248ad8606738-1",
+                "amount_cents": 12592,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-ba2e3bb3248ad8606738",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-ba2e3bb3248ad8606738-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:15.377Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:15.378Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 798,
+            "cacheWriteTokens": 0,
+            "inputTokens": 893,
+            "outputTokens": 508
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:15.435Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:15.440Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:17.384Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:17.385Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 893,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1918,
+            "outputTokens": 28
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:17.399Z",
+        "case_id": "case_abecc31d-3a8f-41b1-be82-421cbc7630da",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_e398d42f5d33f22fceeb",
+    "run_id": "model-heldout-v2-1793501352417-fx_e398d42f5d33f22fceeb",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:52:21.376Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:21.383Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:24.035Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-e398d42f5d33f22fceeb"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:25.187Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "refused": true,
+            "code": "identity_or_scope_refused"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:25.192Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:25.194Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 901,
+            "outputTokens": 205
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:25.274Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:25.280Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:29.900Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:29.902Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 901,
+            "cacheWriteTokens": 0,
+            "inputTokens": 969,
+            "outputTokens": 316
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:29.920Z",
+        "case_id": "case_034d58f9-409c-418c-b03c-180976a93a5c",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_ee48fbbc56b2a3fecc99",
+    "run_id": "model-heldout-v2-1793501352417-fx_ee48fbbc56b2a3fecc99",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:52:33.349Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:33.353Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:35.989Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:37.476Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99",
+              "customer_id": "SYN-CUSTOMER-ee48fbbc56b2a3fecc99",
+              "currency": "USD",
+              "captured_cents": 12608,
+              "refunded_cents": 0,
+              "shipping_state": "shipped",
+              "delivered_at": null,
+              "shipped_at": "2026-02-05T12:00:00.000Z",
+              "tracking": "SYN-TRACK-ee48fbbc56b2a3fecc99",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-ee48fbbc56b2a3fecc99-1",
+                "amount_cents": 12608,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-ee48fbbc56b2a3fecc99",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-ee48fbbc56b2a3fecc99-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:37.479Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:37.480Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 798,
+            "cacheWriteTokens": 0,
+            "inputTokens": 895,
+            "outputTokens": 204
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:37.529Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:37.533Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:43.052Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:43.053Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 895,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1346,
+            "outputTokens": 339
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:43.098Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:43.104Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:44.040Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "find_policy_clauses",
+          "input": {
+            "query": "refund",
+            "family_hint": "refunded"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:44.991Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "tool_result",
+        "data": {
+          "tool": "find_policy_clauses",
+          "result": []
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:44.993Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:44.994Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1346,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1540,
+            "outputTokens": 34
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:45.056Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:45.061Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:47.824Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:47.825Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_3"
+          },
+          "usage": {
+            "cacheReadTokens": 1540,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1580,
+            "outputTokens": 188
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:47.891Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_4"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:47.900Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_4",
+          "outcome": "failed",
+          "error": {
+            "code": "MODEL_CALL_FAILED",
+            "id": "6a772082-12e1-40e4-8766-803d16c40656",
+            "message": "models_budget_exhausted"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:47.905Z",
+        "case_id": "case_d29ba7fa-e0a5-4d81-9a6d-c7ac8b45437b",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_ee83630b1f830b42d19b",
+    "run_id": "model-heldout-v2-1793501352417-fx_ee83630b1f830b42d19b",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:52:51.504Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:51.512Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:55.712Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-ee83630b1f830b42d19b"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:56.413Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-ee83630b1f830b42d19b",
+              "customer_id": "SYN-CUSTOMER-ee83630b1f830b42d19b",
+              "currency": "USD",
+              "captured_cents": 26344,
+              "refunded_cents": 13172,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-02-13T12:00:00.000Z",
+              "shipped_at": "2026-02-06T12:00:00.000Z",
+              "tracking": "SYN-TRACK-ee83630b1f830b42d19b",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-ee83630b1f830b42d19b-1",
+                "amount_cents": 13172,
+                "refunded_cents": 6586,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              },
+              {
+                "capture_id": "SYN-CAPTURE-ee83630b1f830b42d19b-2",
+                "amount_cents": 13172,
+                "refunded_cents": 6586,
+                "confirmed_at": "2026-01-01T02:00:00.000Z",
+                "revision": 1,
+                "duplicate": true
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-ee83630b1f830b42d19b",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-ee83630b1f830b42d19b-1": 1,
+                "SYN-CAPTURE-ee83630b1f830b42d19b-2": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:56.416Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:56.417Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 798,
+            "cacheWriteTokens": 0,
+            "inputTokens": 900,
+            "outputTokens": 321
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:56.462Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:52:56.467Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:01.664Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:01.665Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 900,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1526,
+            "outputTokens": 282
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:01.726Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:01.733Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:06.410Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:06.411Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 1526,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1738,
+            "outputTokens": 280
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:06.460Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:06.467Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:11.766Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_3"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:11.767Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_3"
+          },
+          "usage": {
+            "cacheReadTokens": 1738,
+            "cacheWriteTokens": 0,
+            "inputTokens": 2309,
+            "outputTokens": 254
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:11.829Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_4"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:11.836Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "model_settled",
+        "data": {
+          "runId": "run_4",
+          "outcome": "failed",
+          "error": {
+            "code": "MODEL_CALL_FAILED",
+            "id": "637c219f-0639-4114-9a3b-bec58089add5",
+            "message": "models_budget_exhausted"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:11.842Z",
+        "case_id": "case_497df9f3-d8fc-4b55-94c8-cf5cb5fb0fe3",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  },
+  {
+    "fixture_id": "fx_f2016c2af958cad1f075",
+    "run_id": "model-heldout-v2-1793501352417-fx_f2016c2af958cad1f075",
+    "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+    "proposal_correct": false,
+    "entries": [
+      {
+        "at": "2026-11-01T02:53:15.232Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:15.237Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:21.742Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "length",
+          "outcome": "completed",
+          "runId": "run_0"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:21.743Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_0"
+          },
+          "usage": {
+            "cacheReadTokens": 799,
+            "cacheWriteTokens": 0,
+            "inputTokens": 896,
+            "outputTokens": 512
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:21.791Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:21.797Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:25.506Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_tool_request",
+        "data": {
+          "tool": "get_order_facts",
+          "input": {
+            "order_id": "SYN-ORDER-f2016c2af958cad1f075"
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:26.482Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "tool_result",
+        "data": {
+          "tool": "get_order_facts",
+          "result": {
+            "order": {
+              "order_id": "SYN-ORDER-f2016c2af958cad1f075",
+              "customer_id": "SYN-CUSTOMER-f2016c2af958cad1f075",
+              "currency": "USD",
+              "captured_cents": 1,
+              "refunded_cents": 0,
+              "shipping_state": "delivered",
+              "delivered_at": "2026-01-16T12:00:00.000Z",
+              "shipped_at": "2026-02-07T12:00:00.000Z",
+              "tracking": "SYN-TRACK-f2016c2af958cad1f075",
+              "revision": 1
+            },
+            "captures": [
+              {
+                "capture_id": "SYN-CAPTURE-f2016c2af958cad1f075-1",
+                "amount_cents": 1,
+                "refunded_cents": 0,
+                "confirmed_at": "2026-01-01T01:00:00.000Z",
+                "revision": 1,
+                "duplicate": false
+              }
+            ],
+            "received_at": "2026-02-15T12:00:00.000Z",
+            "existing_effect_ref": null,
+            "fact_versions": {
+              "order_id": "SYN-ORDER-f2016c2af958cad1f075",
+              "order_revision": 1,
+              "capture_versions": {
+                "SYN-CAPTURE-f2016c2af958cad1f075-1": 1
+              },
+              "policy_id": "SAMPLE-SUPPLY",
+              "policy_version": 1,
+              "policy_revision": 1,
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+            }
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:26.484Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "tool-calls",
+          "outcome": "completed",
+          "runId": "run_1"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:26.485Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_1"
+          },
+          "usage": {
+            "cacheReadTokens": 896,
+            "cacheWriteTokens": 0,
+            "inputTokens": 978,
+            "outputTokens": 276
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:26.528Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_started",
+        "data": {
+          "attempt": 0,
+          "modelId": "ollama/qwen3:0.6b",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:26.533Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "effective_tool_inventory",
+        "data": {
+          "inventory": [
+            "find_policy_clauses",
+            "get_order_facts",
+            "propose_resolution"
+          ],
+          "model": "qwen3:0.6b",
+          "max_tokens": null,
+          "temperature": null
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:29.195Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "model_settled",
+        "data": {
+          "finishReason": "stop",
+          "outcome": "completed",
+          "runId": "run_2"
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:29.196Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "usage_recorded",
+        "data": {
+          "kind": "model",
+          "owner": {
+            "runId": "run_2"
+          },
+          "usage": {
+            "cacheReadTokens": 978,
+            "cacheWriteTokens": 0,
+            "inputTokens": 1451,
+            "outputTokens": 132
+          }
+        }
+      },
+      {
+        "at": "2026-11-01T02:53:29.215Z",
+        "case_id": "case_71b0ed49-ee00-4478-b173-cc5dbbf22542",
+        "type": "eve_result",
+        "data": {
+          "outcome": "handled"
+        }
+      }
+    ]
+  }
+]

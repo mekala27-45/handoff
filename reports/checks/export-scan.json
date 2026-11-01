@@ -1,0 +1,9 @@
+{
+  "source_commit": "42514f006b9bd827c0b306b5307373e14181a5b1",
+  "checked_at": "2026-11-01T15:55:07.495Z",
+  "source_and_untracked_files": 259,
+  "commit_diffs_checked": 55,
+  "passed": true,
+  "findings": [],
+  "scope": "Export candidates and every commit diff; credential pattern scan, not proof of absence of every secret."
+}

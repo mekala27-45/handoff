@@ -1,0 +1,101 @@
+{
+  "run_id": "model-heldout-1793500960365",
+  "mode": "local-model",
+  "source_commit": "14174e111c481070d738900689bb1d7bac998a10",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "configuration_digest": "651dc61270f219d4eb46c5dca560f73b5ce646279c823abfadb8deb81fa39144",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "started_at": "2026-11-01T02:42:40.365Z",
+  "finished_at": "2026-11-01T02:44:54.214Z",
+  "attempted_case_ids": [
+    "fx_09c3ac00a7568f7f952f",
+    "fx_11aaec5d55fd73652991",
+    "fx_15f02c4e91098787f8c4",
+    "fx_1e210e169df61d3891c7",
+    "fx_2b77e7d893d4567fc1b4",
+    "fx_336b02c197fb36d846ca",
+    "fx_484ec74e41c2fc58c193",
+    "fx_52aba6f3fd7feeeb4ecd",
+    "fx_75cd07ef28f02794e586",
+    "fx_7a9d71e59d814420e54d",
+    "fx_b6c42b70e8c27fc0413f",
+    "fx_ba2e3bb3248ad8606738",
+    "fx_e398d42f5d33f22fceeb",
+    "fx_ee48fbbc56b2a3fecc99",
+    "fx_ee83630b1f830b42d19b",
+    "fx_f2016c2af958cad1f075"
+  ],
+  "metrics": [
+    {
+      "metric_id": "proposal_correctness",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "eval/truth/expected.json",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    },
+    {
+      "metric_id": "actual_tool_execution",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 13,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "eve channel events and scoped tool handlers",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    },
+    {
+      "metric_id": "valid_required_evidence",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "independent required-action and evidence comparison",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    },
+    {
+      "metric_id": "unsafe_proposed_action",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 0,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "independent required-action and evidence comparison",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    },
+    {
+      "metric_id": "unclassified_missing_output",
+      "mode": "local-model",
+      "split": "held-out",
+      "numerator": 16,
+      "denominator": 16,
+      "unit": "cases",
+      "source": "independent required-action and evidence comparison",
+      "input_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834"
+    }
+  ],
+  "evidence_paths": [
+    "reports/model-traces/model-heldout-1793500960365-fx_09c3ac00a7568f7f952f.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_11aaec5d55fd73652991.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_15f02c4e91098787f8c4.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_1e210e169df61d3891c7.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_2b77e7d893d4567fc1b4.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_336b02c197fb36d846ca.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_484ec74e41c2fc58c193.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_52aba6f3fd7feeeb4ecd.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_75cd07ef28f02794e586.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_7a9d71e59d814420e54d.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_b6c42b70e8c27fc0413f.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_ba2e3bb3248ad8606738.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_e398d42f5d33f22fceeb.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_ee48fbbc56b2a3fecc99.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_ee83630b1f830b42d19b.json",
+    "reports/model-traces/model-heldout-1793500960365-fx_f2016c2af958cad1f075.json"
+  ],
+  "status": "failed"
+}

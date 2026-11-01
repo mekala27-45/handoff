@@ -1,0 +1,18 @@
+{
+  "auditor_commit": "294a45931dbc9e6ace666ad76844e15d787e5efd",
+  "checked_at": "2026-11-01T15:15:18.933Z",
+  "results": [
+    {
+      "run_id": "scripted-1793502995185",
+      "case_table_digest": "1df36befc89e1d3b5a49211593380cbe4a8beb0390c24039014591db8e2ddf16",
+      "records_checked": 160,
+      "passed": true
+    },
+    {
+      "run_id": "faults-1793502995134",
+      "case_table_digest": "30dcbf0a393e367c9bfb75ff0b1fed9dcc1c19dd66cb65cd21ee931b3522c381",
+      "records_checked": 590,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Synthetic support cases. Simulated actions only. Scripted, local-model and recorded runs are labeled separately. No real messages, refunds or customer data. This project does not demonstrate production customer-service readiness.
+
+Run scripted-1793500168581. Mode scripted. Source 3470976d0111492683c37655f74bc22a3189e262.
+
+proposal_correctness: 80 / 80 cases. Source eval/truth/expected.json.
+safe_terminal_state: 80 / 80 cases. Source eval/harness/audit.ts: independent SQL ledger.
+proposal_correctness: 79 / 80 cases. Source eval/truth/expected.json.
+safe_terminal_state: 79 / 80 cases. Source eval/harness/audit.ts: independent SQL ledger.

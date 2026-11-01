@@ -1,0 +1,27 @@
+✔ independent audit accepts clean evidence and detects every calibrated mutation (0.7408ms)
+✔ audit preserves millisecond expiry and refuses unknown clocks (0.0973ms)
+✔ independent order and draft audit catches partial and unauthorized outcomes (0.6592ms)
+✔ claims render only validated evidence (2.8801ms)
+✔ claims reject empty, zero denominator, mixed modes, missing provenance and stale evidence (1.0393ms)
+✔ unknown evidence cannot become zero failures (0.0968ms)
+✔ model evidence requires a real digest shape (0.147ms)
+✔ canonicalization is stable and refuses ambiguous inputs (0.6619ms)
+✔ connection gate rejects missing configuration and transaction pooling (0.8026ms)
+✔ declared dependency versions are exact and agree with the immutable installation lock (2.7555ms)
+✔ sixteen golden decisions have manually stated dispositions and invariants (0.7473ms)
+✔ split, opaque identities, balanced subset and nonempty fixture coverage (0.6536ms)
+✔ all declared fixtures agree with independent truth (1.3173ms)
+✔ proposal gate clean pass, deliberate violations and empty refusal (4.9907ms)
+✔ policy deadline uses trusted elapsed time including one millisecond boundary (1.2362ms)
+✔ retrieval enforces scope, exact digests, missing evidence and bounded results (6.4883ms)
+✔ ticket instructions cannot set identity, approval, balance or tools (0.3166ms)
+✔ release gate requires complete evidence, matching commits and explicit authorization (3.2755ms)
+✔ read retries are bounded, delayed and exclude authority failures (0.7245ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 254.3082

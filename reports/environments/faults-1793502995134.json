@@ -1,0 +1,23 @@
+{
+  "faults": [
+    "duplicate_intake",
+    "read_timeout",
+    "invalid_proposal",
+    "stale_order",
+    "expired_review",
+    "crash_before_commit",
+    "response_lost",
+    "concurrent_execute"
+  ],
+  "version": 2,
+  "audit_version": 2,
+  "parallelism": 1,
+  "environment": {
+    "kind": "isolated-loopback-postgres",
+    "database": {
+      "version": "PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+      "database": "handoff"
+    },
+    "schema": "handoff"
+  }
+}

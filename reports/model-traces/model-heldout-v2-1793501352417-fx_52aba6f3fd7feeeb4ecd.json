@@ -1,0 +1,233 @@
+{
+  "run_id": "model-heldout-v2-1793501352417-fx_52aba6f3fd7feeeb4ecd",
+  "mode": "local-model",
+  "source_commit": "eb49a2d5a05ab62d1223dddd5e6636bdca57d9fe",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "configuration_digest": "a4e5b0ef9d0df7c12c510bc42178075dbb09bf163fc55d8b9e17d28e50fec61f",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "trace": [
+    {
+      "at": "2026-11-01T02:51:04.959Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "eve_delivery",
+      "data": {
+        "session_id": "wrun_01M6AG92BQSWNAC4Z57QWC62BY"
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:05.094Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:05.099Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 0
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:05.100Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": null,
+        "temperature": null
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:10.060Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_j1xd2k5f",
+        "capability": {
+          "kind": "tool",
+          "name": "get_order_facts"
+        },
+        "input": {
+          "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd"
+        },
+        "owner": {
+          "runId": "run_0"
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:10.065Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:10.066Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "get_order_facts",
+        "input": {
+          "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd"
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:11.022Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "tool_result",
+      "data": {
+        "tool": "get_order_facts",
+        "result": {
+          "order": {
+            "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+            "customer_id": "SYN-CUSTOMER-52aba6f3fd7feeeb4ecd",
+            "currency": "USD",
+            "captured_cents": 10505,
+            "refunded_cents": 0,
+            "shipping_state": "delivered",
+            "delivered_at": "2026-02-12T12:00:00.000Z",
+            "shipped_at": "2026-02-05T12:00:00.000Z",
+            "tracking": "SYN-TRACK-52aba6f3fd7feeeb4ecd",
+            "revision": 1
+          },
+          "captures": [
+            {
+              "capture_id": "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1",
+              "amount_cents": 10505,
+              "refunded_cents": 0,
+              "confirmed_at": "2026-01-01T01:00:00.000Z",
+              "revision": 1,
+              "duplicate": false
+            }
+          ],
+          "received_at": "2026-02-15T12:00:00.000Z",
+          "existing_effect_ref": null,
+          "fact_versions": {
+            "order_id": "SYN-ORDER-52aba6f3fd7feeeb4ecd",
+            "order_revision": 1,
+            "capture_versions": {
+              "SYN-CAPTURE-52aba6f3fd7feeeb4ecd-1": 1
+            },
+            "policy_id": "SAMPLE-SUPPLY",
+            "policy_version": 1,
+            "policy_revision": 1,
+            "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+          }
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:11.026Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:11.026Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 799,
+          "cacheWriteTokens": 0,
+          "inputTokens": 894,
+          "outputTokens": 397
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:11.106Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:11.110Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:11.111Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": null,
+        "temperature": null
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:18.373Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "stop",
+        "outcome": "completed",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:18.374Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 894,
+          "cacheWriteTokens": 0,
+          "inputTokens": 2036,
+          "outputTokens": 336
+        }
+      }
+    },
+    {
+      "at": "2026-11-01T02:51:18.393Z",
+      "case_id": "case_4bc5ebb2-07cd-436a-863c-64b0df957283",
+      "type": "eve_result",
+      "data": {
+        "outcome": "handled"
+      }
+    }
+  ]
+}

@@ -1,3 +1,9 @@
 # Handoff publication
 
-Owner authorized source, synthetic fixtures, GitHub and Vercel publication on November 1, 2026. Local source snapshot: e5a5617be59157845551c3f8d908560ad55a89c5. The connector creates a new remote commit. All report files, including workbench recorded data, are excluded pending artifact-specific authorization required by automatic approval review. Historical measured results remain documented in RESULTS.md and the private review archive. Hosted verification and release remain pending.
+The owner authorized GitHub source publication, Vercel deployment and the isolated database credential's sensitive Vercel server destination on November 1, 2026. The owner then explicitly authorized public evaluation reports, model traces and fault diagnostics under reports/ and apps/site/public/reports/.
+
+The connected GitHub transfer preserves the original recorded run provenance. Historical local source commit IDs in those reports identify the code that produced each measurement; the final release has its own immutable remote commit and fresh CI/hosted verification. No model inference is rerun or silently relabeled by publication.
+
+All support data and business actions are synthetic. No real messages or refunds are performed. Credentials, session capabilities, private runtime directories and model weights are excluded from publication.
+
+The generated RESULTS.md and JSON assets attached to the verified release are the authoritative final checklist. Source RESULTS.md retains the historical implementation checklist and recorded measurement discussion.

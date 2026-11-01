@@ -1,0 +1,34 @@
+{
+  "source_commit": "3cf6e87dd68d5b79d4eb36e21d13a81ebe89aa33",
+  "checked_at": "2026-11-01T02:59:32.594Z",
+  "fresh_worktree": true,
+  "dependency_install": "npm ci from exact lockfile",
+  "passed": false,
+  "checks": [
+    {
+      "name": "compile",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "agent-types",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "unit",
+      "exit_code": 0,
+      "output": "✔ independent audit accepts clean evidence and detects every calibrated mutation (0.8777ms)\n✔ claims render only validated evidence (2.8932ms)\n✔ claims reject empty, zero denominator, mixed modes, missing provenance and stale evidence (0.9931ms)\n✔ unknown evidence cannot become zero failures (0.0943ms)\n✔ canonicalization is stable and refuses ambiguous inputs (0.4077ms)\n✔ connection gate rejects missing configuration and transaction pooling (0.7746ms)\n✔ sixteen golden decisions have manually stated dispositions and invariants (0.7161ms)\n✔ split, opaque identities, balanced subset and nonempty fixture coverage (1.0399ms)\n✔ all declared fixtures agree with independent truth (0.9649ms)\n✔ proposal gate clean pass, deliberate violations and empty refusal (3.8616ms)\n✔ policy deadline uses trusted elapsed time including one millisecond boundary (0.996ms)\n✔ retrieval enforces scope, exact digests, missing evidence and bounded results (5.7299ms)\n✔ ticket instructions cannot set identity, approval, balance or tools (0.2114ms)\n✔ read retries are bounded, delayed and exclude authority failures (0.8845ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 185.3611\n"
+    },
+    {
+      "name": "rederivation",
+      "exit_code": 0,
+      "output": "{\"passed\":true,\"files\":5,\"seeds\":[\"17\",\"991\"]}\n"
+    },
+    {
+      "name": "site",
+      "exit_code": 1,
+      "output": "\u001b[36mvite v8.3.5 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 3 modules transformed.\n\u001b[31m✗\u001b[39m Build failed in 20ms\n\u001b[31merror during build:\n\u001b[31mBuild failed with 1 error:\n\n\u001b[31m[builtin:vite-transform] \u001b[0mExpected `,` or `)` but found `:`\n - `,` or `)` expected in src/main.ts at 18861..18862\n - Opened here in src/main.ts at 17835..17836\n\u001b[31m\n    at aggregateBindingErrorsIntoJsError (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/rolldown/dist/shared/error-BJ9uQLIS.mjs:50:18)\n    at unwrapBindingResult (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/rolldown/dist/shared/error-BJ9uQLIS.mjs:20:128)\n    at #build (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/rolldown/dist/shared/rolldown-DWd2aEL4.mjs:146:34)\n    at async buildEnvironment (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/vite/dist/node/chunks/node.js:34849:66)\n    at async Object.build (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/vite/dist/node/chunks/node.js:35270:19)\n    at async Object.buildApp (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/vite/dist/node/chunks/node.js:35267:153)\n    at async CAC.<anonymous> (file:///C:/Daily%20Project%20Series-Chatgpt/handoff-work/clean-checkout/node_modules/vite/dist/node/cli.js:790:3) {\n  errors: [Getter/Setter]\n}\u001b[39m\n"
+    }
+  ]
+}

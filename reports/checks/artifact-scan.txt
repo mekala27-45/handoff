@@ -1,0 +1,1 @@
+{"source_commit":"8a679c3fc233e82327a7c7e4200f09e43221791c","checked_at":"2026-11-01T03:04:29.755Z","source_files":124,"runtime_files":35,"findings":[],"passed":true,"scope":"Tracked source and explicit site/API artifact trees. Pattern scan, not proof of absence of every secret."}

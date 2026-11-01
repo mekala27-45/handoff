@@ -1,0 +1,12 @@
+
+Running 7 tests using 1 worker
+
+  ok 1 [desktop] › tests\browser\workbench.spec.ts:6:1 › review dialog, response discard, recovery and duplicate execution (18.2s)
+  ok 2 [desktop] › tests\browser\workbench.spec.ts:17:1 › rejection, explicit revision and empty filters are honest (12.9s)
+  ok 3 [desktop] › tests\browser\workbench.spec.ts:21:1 › unavailable API cannot display a fake live table (293ms)
+  ok 4 [desktop] › tests\browser\workbench.spec.ts:24:1 › evaluation modes and missing manifests stay separate (326ms)
+  ok 5 [desktop] › tests\browser\workbench.spec.ts:27:1 › mobile, dark theme, reduced motion and zoom retain readable controls (410ms)
+  ok 6 [desktop] › tests\browser\workbench.spec.ts:32:40 › review screen explains expired authority without an effect (14.5s)
+  ok 7 [desktop] › tests\browser\workbench.spec.ts:32:40 › review screen explains stale authority without an effect (12.5s)
+
+  7 passed (59.9s)

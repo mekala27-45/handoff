@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-01T15:35:09.005Z",
+  "source_commit": "e5a5617be59157845551c3f8d908560ad55a89c5",
+  "api_url": "https://handoff-blond-one.vercel.app",
+  "deployment_id": "dpl_GNqRCE3Ya8U36VcPq5W9YESNRar4",
+  "client": "Independent Node fetch in ephemeral Vercel sandbox; no share token or authentication bypass",
+  "passed": true,
+  "checks": ["readiness", "no-store", "allowed_origin", "forbidden_origin", "duplicate_intake", "proposal", "approval", "concurrent_execution", "one_stored_result", "receipt_recovery", "fresh_key_same_effect", "cross_session_refusal"],
+  "case_id": "case_d8fb2f7d-135c-4c8d-bdea-1df0d8f828eb",
+  "independent_database_read": {"state": "completed", "effects": 1, "effect_cents": 1, "capture_delta_cents": 1, "approvals": 1},
+  "simulated": true,
+  "initial_attempts": ["Container failed safely on pooled URL; corrected server setting to direct endpoint", "First HTTP probe omitted intake revision; corrected probe to GET authoritative view before step"],
+  "publication_limits": ["Raw and site report files excluded from GitHub by automatic approval review", "SSO protection change rejected and not applied; public production alias was already accessible without a bypass"]
+}

@@ -1,0 +1,40 @@
+{
+  "source_commit": "351f01a53890b1530616e76e72b24a082a37152a",
+  "checked_at": "2026-11-01T15:16:57.628Z",
+  "fresh_worktree": true,
+  "dependency_install": "Copied existing installed dependencies; fresh npm ci not verified in this restricted environment.",
+  "passed": true,
+  "scope": "Offline source rebuild and deterministic rederivation only; excludes database, browser and hosted checks.",
+  "checks": [
+    {
+      "name": "types",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "agent-types",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "site-types",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "unit",
+      "exit_code": 0,
+      "output": "✔ independent audit accepts clean evidence and detects every calibrated mutation (0.7478ms)\n✔ audit preserves millisecond expiry and refuses unknown clocks (0.0955ms)\n✔ independent order and draft audit catches partial and unauthorized outcomes (0.9915ms)\n✔ claims render only validated evidence (2.8383ms)\n✔ claims reject empty, zero denominator, mixed modes, missing provenance and stale evidence (0.9817ms)\n✔ unknown evidence cannot become zero failures (0.1019ms)\n✔ model evidence requires a real digest shape (0.1606ms)\n✔ canonicalization is stable and refuses ambiguous inputs (0.4438ms)\n✔ connection gate rejects missing configuration and transaction pooling (0.773ms)\n✔ declared dependency versions are exact and agree with the immutable installation lock (1.9275ms)\n✔ sixteen golden decisions have manually stated dispositions and invariants (0.6926ms)\n✔ split, opaque identities, balanced subset and nonempty fixture coverage (0.6363ms)\n✔ all declared fixtures agree with independent truth (1.4334ms)\n✔ proposal gate clean pass, deliberate violations and empty refusal (3.7471ms)\n✔ policy deadline uses trusted elapsed time including one millisecond boundary (1.1812ms)\n✔ retrieval enforces scope, exact digests, missing evidence and bounded results (5.7109ms)\n✔ ticket instructions cannot set identity, approval, balance or tools (0.2038ms)\n✔ release gate requires complete evidence, matching commits and explicit authorization (3.1862ms)\n✔ read retries are bounded, delayed and exclude authority failures (0.6562ms)\nℹ tests 19\nℹ suites 0\nℹ pass 19\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 231.8062\n"
+    },
+    {
+      "name": "rederive",
+      "exit_code": 0,
+      "output": "{\"passed\":true,\"files\":5,\"seeds\":[\"17\",\"991\"]}\n"
+    },
+    {
+      "name": "site-build",
+      "exit_code": 0,
+      "output": "vite v8.3.5 building client environment for production...\ntransforming...\n✓ 10 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                                0.61 kB │ gzip: 0.39 kB\ndist/assets/ubuntu-sans-mono-latin-400-normal-IIoRDLCI.woff2  12.22 kB\ndist/assets/ubuntu-sans-mono-latin-400-normal-CzZhUJOI.woff   15.10 kB\ndist/assets/asap-latin-400-normal-DnZ1MOsG.woff2              15.47 kB\ndist/assets/asap-latin-500-normal-BV0YyUkW.woff2              15.82 kB\ndist/assets/asap-latin-600-normal-X_vucpe6.woff2              15.97 kB\ndist/assets/asap-latin-400-normal-Dc37g3Il.woff               19.90 kB\ndist/assets/asap-latin-500-normal-D9riL-fH.woff               20.12 kB\ndist/assets/asap-latin-600-normal-DO-saq7B.woff               20.31 kB\ndist/assets/zilla-slab-latin-600-normal-iLPAhCz6.woff         21.92 kB\ndist/assets/zilla-slab-latin-600-normal-BRgn6X7z.woff2        26.47 kB\ndist/assets/index-DjvogKc9.css                                21.18 kB │ gzip: 5.22 kB\ndist/assets/index-CpRwcZJm.js                                 28.01 kB │ gzip: 9.94 kB\n\n✓ built in 177ms\n"
+    }
+  ]
+}

@@ -35,7 +35,7 @@
     "repository_url": "https://github.com/mekala27-45/handoff",
     "pages_url": "https://mekala27-45.github.io/handoff/",
     "pages_run": 41322102512,
-    "diagnostics_publication": "blocked by automatic approval review; all report files excluded"
+    "diagnostics_publication": "Explicitly authorized by owner; reports restored in final candidate"
   },
   "sources": [
     "Neon describe_project and list_branches responses",
@@ -45,5 +45,5 @@
     "docs/sources/ollama-release.json",
     "docs/sources/model-lock.json"
   ],
-  "limits": "Recorded allowances and successful deployment do not guarantee future prices. Full release awaits CI, browser verification and permitted report publication."
+  "limits": "Recorded allowances do not guarantee future prices. Authoritative final verification and exact source are in latest release assets."
 }

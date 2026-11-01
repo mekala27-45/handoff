@@ -2,7 +2,7 @@
 
 ## Boundaries and resources
 
-All domain data is synthetic. No payments, messages or refunds leave this application. Operate only the isolated Handoff database and task-owned local processes. The created Neon project is `royal-hall-19630471`, branch `br-withered-tooth-b4xpw9kb`, database and schema `handoff`. The Vercel project is named `handoff`; no deployment or server secret has been successfully uploaded.
+All domain data is synthetic. No payments, messages or refunds leave this application. Operate only the isolated Handoff database and task-owned local processes. The created Neon project is `royal-hall-19630471`, branch `br-withered-tooth-b4xpw9kb`, database and schema `handoff`. The Vercel project is named `handoff`; its production API is https://handoff-blond-one.vercel.app and its direct database URL is stored only as a sensitive server variable.
 
 The server requires a direct PostgreSQL connection. A transaction-pooled connection is incompatible with its session-scoped advisory guard. Keep the pool small. The guard serializes domain transactions across instances and is an explicit throughput limitation, not a scalable architecture claim.
 

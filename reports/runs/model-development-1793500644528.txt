@@ -1,0 +1,6 @@
+Synthetic support cases. Simulated actions only. Scripted, local-model and recorded runs are labeled separately. No real messages, refunds or customer data. This project does not demonstrate production customer-service readiness.
+
+Run model-development-1793500644528. Mode local-model. Source c4fe9ce8084b7639128e7ea1591be274e86735aa.
+
+proposal_correctness: 0 / 1 cases. Source eval/truth/expected.json.
+actual_tool_execution: 0 / 1 cases. Source eve channel events and scoped tool handlers.
