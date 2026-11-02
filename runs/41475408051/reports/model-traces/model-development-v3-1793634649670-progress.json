@@ -1,0 +1,1268 @@
+[
+  {
+    "fixture_id": "fx_02ecb565fc1c1083dba0",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "draft_manual_review",
+    "stored_proposal": {
+      "proposal_id": "proposal_708b05ac-39ab-4a81-bfa4-de834905861b",
+      "action_code": "draft_manual_review",
+      "amount_cents": 0,
+      "evidence_refs": [
+        {
+          "lines": [
+            11,
+            12
+          ],
+          "version": 1,
+          "clause_id": "P-WINDOW",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "23913062acc0264704089c9bd5c1ab2d8732960abf92e8669d2b509217806008"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "draft_manual_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EF9HPS4P6QNWMP43KZM45P",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 1,
+          "cacheWriteTokens": 0,
+          "inputTokens": 766,
+          "outputTokens": 43
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 753,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1139,
+          "outputTokens": 198
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1126,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1507,
+          "outputTokens": 85
+        }
+      }
+    ],
+    "elapsed_ms": 21603.699858,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_02ecb565fc1c1083dba0.json"
+  },
+  {
+    "fixture_id": "fx_273b1c7a9f9e376f35c2",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "draft_manual_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFA6PYGSH74QK1T68CZQ0G",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 2,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 771,
+          "outputTokens": 47
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 758,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1164,
+          "outputTokens": 157
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1151,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1528,
+          "outputTokens": 63
+        }
+      }
+    ],
+    "elapsed_ms": 15475.41723,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_273b1c7a9f9e376f35c2.json"
+  },
+  {
+    "fixture_id": "fx_02f8ec6ef89db18ccd42",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "draft_confirmation",
+    "stored_proposal": {
+      "proposal_id": "proposal_d82bf708-bac7-4d9c-8ed5-55d5503a22e8",
+      "action_code": "draft_confirmation",
+      "amount_cents": 0,
+      "evidence_refs": [
+        {
+          "lines": [
+            15,
+            16
+          ],
+          "version": 1,
+          "clause_id": "P-REFUNDED",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "593866f536afab026cd95496f936cfa6b68f4efbf93936b4a347a4b3835802fe"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "draft_confirmation",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFANTV4MTWHR4PXKWNM2V7",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 761,
+          "outputTokens": 42
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 748,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1157,
+          "outputTokens": 43
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1144,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1506,
+          "outputTokens": 86
+        }
+      }
+    ],
+    "elapsed_ms": 11829.848613000002,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_02f8ec6ef89db18ccd42.json"
+  },
+  {
+    "fixture_id": "fx_1c10e65172f5477e2258",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "draft_confirmation",
+    "stored_proposal": {
+      "proposal_id": "proposal_64a07659-744a-407a-b79d-e292dabb262e",
+      "action_code": "draft_confirmation",
+      "amount_cents": 0,
+      "evidence_refs": [
+        {
+          "lines": [
+            15,
+            16
+          ],
+          "version": 1,
+          "clause_id": "P-REFUNDED",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "593866f536afab026cd95496f936cfa6b68f4efbf93936b4a347a4b3835802fe"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "draft_confirmation",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFB1H1PCADRFMWRQS4WPSN",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 667,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 47
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 754,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1193,
+          "outputTokens": 27
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1180,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1547,
+          "outputTokens": 70
+        }
+      }
+    ],
+    "elapsed_ms": 11026.105172000003,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_1c10e65172f5477e2258.json"
+  },
+  {
+    "fixture_id": "fx_05d22ca4cc813aa0a086",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "draft_manual_review",
+    "stored_proposal": {
+      "proposal_id": "proposal_88c7c6fb-a897-4896-b1ee-ebd85576cdb3",
+      "action_code": "draft_manual_review",
+      "amount_cents": 0,
+      "evidence_refs": [
+        {
+          "lines": [
+            7,
+            8
+          ],
+          "version": 1,
+          "clause_id": "P-CANCEL-AFTER",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "b32f60d4cb032e56d66fcc845f6c6ad81139b46505b518bf2f330b1c1f524a52"
+        },
+        {
+          "lines": [
+            5,
+            6
+          ],
+          "version": 1,
+          "clause_id": "P-CANCEL-BEFORE",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "8f939d18935cf55af4347c759c3ece2094af8a2647c660118404f98fc164a0e8"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "draft_manual_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFBCA0AYDVAEN8NSC7PSKJ",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 765,
+          "outputTokens": 44
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 752,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1122,
+          "outputTokens": 27
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1109,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1683,
+          "outputTokens": 87
+        }
+      }
+    ],
+    "elapsed_ms": 12384.661098999997,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_05d22ca4cc813aa0a086.json"
+  },
+  {
+    "fixture_id": "fx_0b58a3a6ac61d0118970",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "draft_manual_review",
+    "stored_proposal": {
+      "proposal_id": "proposal_4b434b22-aeab-4937-851d-79caeec944a2",
+      "action_code": "draft_manual_review",
+      "amount_cents": 0,
+      "evidence_refs": [
+        {
+          "lines": [
+            7,
+            8
+          ],
+          "version": 1,
+          "clause_id": "P-CANCEL-AFTER",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "b32f60d4cb032e56d66fcc845f6c6ad81139b46505b518bf2f330b1c1f524a52"
+        },
+        {
+          "lines": [
+            5,
+            6
+          ],
+          "version": 1,
+          "clause_id": "P-CANCEL-BEFORE",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "8f939d18935cf55af4347c759c3ece2094af8a2647c660118404f98fc164a0e8"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "draft_manual_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFBRDD0E1E3HT8154R1RV5",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 765,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 752,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1138,
+          "outputTokens": 27
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1125,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1699,
+          "outputTokens": 80
+        }
+      }
+    ],
+    "elapsed_ms": 12533.891594999994,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_0b58a3a6ac61d0118970.json"
+  },
+  {
+    "fixture_id": "fx_07a9425bd18f2b4fd61e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFC4NKMV19QCT4VTXJW6RK",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 2,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 762,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 749,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1147,
+          "outputTokens": 207
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1134,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1503,
+          "outputTokens": 63
+        }
+      }
+    ],
+    "elapsed_ms": 17247.348568,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_07a9425bd18f2b4fd61e.json"
+  },
+  {
+    "fixture_id": "fx_09ed1bfd82ca4ddfe32e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFCNGV0PJQ65NGTX6WDAHM",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 757,
+          "outputTokens": 41
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 744,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1128,
+          "outputTokens": 191
+        }
+      }
+    ],
+    "elapsed_ms": 11152.014668000003,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_09ed1bfd82ca4ddfe32e.json"
+  },
+  {
+    "fixture_id": "fx_1008a8f0f140deb3c75e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "request_identity_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFD0E0G4807SARY7PTSTPJ",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 2,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 768,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 755,
+          "cacheWriteTokens": 0,
+          "inputTokens": 882,
+          "outputTokens": 28
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 878,
+          "cacheWriteTokens": 0,
+          "inputTokens": 923,
+          "outputTokens": 9
+        }
+      }
+    ],
+    "elapsed_ms": 4532.786813000013,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_1008a8f0f140deb3c75e.json"
+  },
+  {
+    "fixture_id": "fx_4cb14e9f20557e1e3004",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "request_identity_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFD4VHGH1Q30J7BDEZBTVA",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 4,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 765,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 752,
+          "cacheWriteTokens": 0,
+          "inputTokens": 880,
+          "outputTokens": 26
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 867,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1229,
+          "outputTokens": 89
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1225,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1328,
+          "outputTokens": 51
+        }
+      }
+    ],
+    "elapsed_ms": 11956.085013999997,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_4cb14e9f20557e1e3004.json"
+  },
+  {
+    "fixture_id": "fx_1c7da880b36d5597672f",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFDGJ4AJ87HZTWCT3CP71C",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 2,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 754,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1241,
+          "outputTokens": 206
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1237,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1276,
+          "outputTokens": 13
+        }
+      }
+    ],
+    "elapsed_ms": 14395.769982999991,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_1c7da880b36d5597672f.json"
+  },
+  {
+    "fixture_id": "fx_2122a33033dd7b47466d",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFDYKPZ47YSBWXREZJPA0N",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 2,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 766,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 753,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1240,
+          "outputTokens": 205
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1236,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1275,
+          "outputTokens": 13
+        }
+      }
+    ],
+    "elapsed_ms": 14224.018987999996,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_2122a33033dd7b47466d.json"
+  },
+  {
+    "fixture_id": "fx_1e0cc73c643a93e64ca2",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "draft_escalation",
+    "stored_proposal": {
+      "proposal_id": "proposal_8996ea02-a4bd-40a6-b674-6ab54997c946",
+      "action_code": "draft_escalation",
+      "amount_cents": 0,
+      "evidence_refs": [
+        {
+          "lines": [
+            3,
+            4
+          ],
+          "version": 1,
+          "clause_id": "P-DELAY",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "6006fa8ed3e487628df410576875e5e4561c8038e08f6ce66e55eed180693e4c"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "draft_escalation",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFECG9SDAN34418CG525S9",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 754,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1129,
+          "outputTokens": 173
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1116,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1478,
+          "outputTokens": 75
+        }
+      }
+    ],
+    "elapsed_ms": 15912.726534999994,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_1e0cc73c643a93e64ca2.json"
+  },
+  {
+    "fixture_id": "fx_45e449ce8c55d389e280",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "draft_manual_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFEW1WG2PJWH7GW4V77P4H",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 769,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 756,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1113,
+          "outputTokens": 153
+        }
+      }
+    ],
+    "elapsed_ms": 9802.355799000012,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_45e449ce8c55d389e280.json"
+  },
+  {
+    "fixture_id": "fx_35ba32ccb62232799be5",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "propose_refund",
+    "stored_proposal": {
+      "proposal_id": "proposal_74563e8b-c301-47f5-bb95-5113553046bd",
+      "action_code": "propose_refund",
+      "amount_cents": 1,
+      "evidence_refs": [
+        {
+          "lines": [
+            5,
+            6
+          ],
+          "version": 1,
+          "clause_id": "P-CANCEL-BEFORE",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "8f939d18935cf55af4347c759c3ece2094af8a2647c660118404f98fc164a0e8"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFF5MAT804Q7BPGG49DMND",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 761,
+          "outputTokens": 43
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 748,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1081,
+          "outputTokens": 28
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1068,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1642,
+          "outputTokens": 89
+        }
+      }
+    ],
+    "elapsed_ms": 12253.753480000014,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_35ba32ccb62232799be5.json"
+  },
+  {
+    "fixture_id": "fx_4ec4de37a2c081c0f963",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "propose_refund",
+    "stored_proposal": {
+      "proposal_id": "proposal_13086f56-6b0e-4654-a156-0a1b4c640991",
+      "action_code": "propose_refund",
+      "amount_cents": 12592,
+      "evidence_refs": [
+        {
+          "lines": [
+            5,
+            6
+          ],
+          "version": 1,
+          "clause_id": "P-CANCEL-BEFORE",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "8f939d18935cf55af4347c759c3ece2094af8a2647c660118404f98fc164a0e8"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EFFHKS9ZJ2XF1GSXKZP6BS",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 666,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 754,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1105,
+          "outputTokens": 155
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1092,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1666,
+          "outputTokens": 94
+        }
+      }
+    ],
+    "elapsed_ms": 17764.726695999998,
+    "trace": "reports/model-traces/model-development-v3-1793634649670-fx_4ec4de37a2c081c0f963.json"
+  }
+]

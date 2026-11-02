@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-02T15:50:44.398Z",
+  "source_commit": "d56531637c7b3c38b2326dcfe78263b417f7ec5d",
+  "platform": "linux",
+  "node": "v24.19.0",
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "cpu_count": 4,
+  "memory_bytes": 16760344576,
+  "ollama_version": "0.40.13",
+  "model": {
+    "name": "qwen3:0.6b",
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "size": 1532367993,
+    "size_vram": 0,
+    "context_length": 8192
+  },
+  "execution": "CPU",
+  "split": "development",
+  "note": "Actual model warm-up is excluded from graded attempts."
+}
