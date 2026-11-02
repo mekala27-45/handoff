@@ -5,22 +5,8 @@
   "model": "qwen3:0.6b",
   "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
   "development_case_ids": [
-    "fx_02ecb565fc1c1083dba0",
-    "fx_273b1c7a9f9e376f35c2",
-    "fx_02f8ec6ef89db18ccd42",
-    "fx_1c10e65172f5477e2258",
-    "fx_05d22ca4cc813aa0a086",
-    "fx_0b58a3a6ac61d0118970",
     "fx_07a9425bd18f2b4fd61e",
-    "fx_09ed1bfd82ca4ddfe32e",
-    "fx_1008a8f0f140deb3c75e",
-    "fx_4cb14e9f20557e1e3004",
-    "fx_1c7da880b36d5597672f",
-    "fx_2122a33033dd7b47466d",
-    "fx_1e0cc73c643a93e64ca2",
-    "fx_45e449ce8c55d389e280",
-    "fx_35ba32ccb62232799be5",
-    "fx_4ec4de37a2c081c0f963"
+    "fx_1008a8f0f140deb3c75e"
   ],
   "held_out_case_ids": [
     "fx_00a94bf33039319682e6",
@@ -42,8 +28,8 @@
   ],
   "held_out_selection_rule": "Within each registered held-out family exclude the original model_subset, rank by SHA256 UTF-8 of handoff-v3-balanced16-v1 plus NUL plus held-out plus NUL plus family plus NUL plus fixture_id, tie-break fixture_id ordinally, take two, then sort final IDs.",
   "held_out_ids_digest": "39d4d4c5cbe9abbe9b4dc8ff13d39c66beb033883bb4f50859d4418d3500023d",
-  "operating_point": "phase-guided-observed-snapshot",
-  "development_selection_rule": "First two opaque fixture IDs sorted within each of the eight registered development families, selected without consulting truth or model outcomes.",
+  "operating_point": "field-explicit-observed-snapshot",
+  "development_selection_rule": "Two previously selected development cases (damage and identity) isolate tool serialization. Diagnostic pilot only. Restore the preregistered balanced sixteen before freeze.",
   "prior_attempts": [
     {
       "operating_point": "reasoning-off-only",
@@ -84,9 +70,36 @@
       ],
       "acceptable_proposals": 0,
       "attempted": 16
+    },
+    {
+      "operating_point": "phase-guided-observed-snapshot",
+      "source_commit": "421f04b3aa23f56083286c981f53795b1e4cc21e",
+      "workflow_run_id": 41472317459,
+      "run_id": "model-development-v3-1793633517238",
+      "configuration_digest": "1caabfb4af5801c84bab027fc4a9a58b36baf52f37f309389844d801de9faac1",
+      "case_ids": [
+        "fx_02ecb565fc1c1083dba0",
+        "fx_273b1c7a9f9e376f35c2",
+        "fx_02f8ec6ef89db18ccd42",
+        "fx_1c10e65172f5477e2258",
+        "fx_05d22ca4cc813aa0a086",
+        "fx_0b58a3a6ac61d0118970",
+        "fx_07a9425bd18f2b4fd61e",
+        "fx_09ed1bfd82ca4ddfe32e",
+        "fx_1008a8f0f140deb3c75e",
+        "fx_4cb14e9f20557e1e3004",
+        "fx_1c7da880b36d5597672f",
+        "fx_2122a33033dd7b47466d",
+        "fx_1e0cc73c643a93e64ca2",
+        "fx_45e449ce8c55d389e280",
+        "fx_35ba32ccb62232799be5",
+        "fx_4ec4de37a2c081c0f963"
+      ],
+      "acceptable_proposals": 0,
+      "attempted": 16
     }
   ],
-  "hypothesis": "Trusted dynamic workflow-phase reminders will prevent early stopping, and a smaller proposal schema will reduce invalid tool inputs. The model still chooses the action, retrieved clause IDs and rationale. Safe transport summaries expose pre-handler schema failures without collecting model prose or reasoning.",
+  "hypothesis": "Strip irrelevant policy-search keys before the handler and name all required proposal fields and enum values in trusted progress guidance; the model still chooses action and citations.",
   "changes": [
     "reasoning_effort:none with reasoning field removed",
     "safe settled-call diagnostics",
@@ -97,7 +110,10 @@
     "optional suggested amount removed from model input; validator still derives and checks amounts",
     "safe bounded SSE tool-call admission summaries with no model prose or reasoning",
     "CPU Linux and disposable local PostgreSQL instead of prior Windows CPU with direct Neon; device and database differences are disclosed",
-    "independent SQL proposal identity, actual cents, evidence and validation retained; lost responses graded from stored proposal"
+    "independent SQL proposal identity, actual cents, evidence and validation retained; lost responses graded from stored proposal",
+    "policy query strips irrelevant fields before handler; proposal remains strict",
+    "proposal progress note explicitly names all required fields and action enum values",
+    "wire-schema property and required-field summaries verify the effective model contract"
   ],
   "unchanged": [
     "model digest",
@@ -119,5 +135,23 @@
       "status": "failed-before-inference",
       "note": "Original private child logs were not exported; the opaque failure caused a diagnostic improvement, not a model-quality score."
     }
+  ],
+  "balanced_development_case_ids": [
+    "fx_02ecb565fc1c1083dba0",
+    "fx_273b1c7a9f9e376f35c2",
+    "fx_02f8ec6ef89db18ccd42",
+    "fx_1c10e65172f5477e2258",
+    "fx_05d22ca4cc813aa0a086",
+    "fx_0b58a3a6ac61d0118970",
+    "fx_07a9425bd18f2b4fd61e",
+    "fx_09ed1bfd82ca4ddfe32e",
+    "fx_1008a8f0f140deb3c75e",
+    "fx_4cb14e9f20557e1e3004",
+    "fx_1c7da880b36d5597672f",
+    "fx_2122a33033dd7b47466d",
+    "fx_1e0cc73c643a93e64ca2",
+    "fx_45e449ce8c55d389e280",
+    "fx_35ba32ccb62232799be5",
+    "fx_4ec4de37a2c081c0f963"
   ]
 }

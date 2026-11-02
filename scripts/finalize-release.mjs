@@ -52,26 +52,37 @@ function regradeModelRow(row,trace,expected,fixture,policy,helpers){
  assert.ok(Array.isArray(events),'v3_missing_raw_trace');
  const modelCalls=events.filter(e=>e.type==='effective_tool_inventory'),requests=events.filter(e=>e.type==='model_tool_request');
  assert.equal(row.model_calls,modelCalls.length,'v3_model_call_count');assert.equal(row.tool_requests,requests.length,'v3_tool_request_count');
- if(!modelCalls.length){assert.ok((typeof row.error==='string'&&row.error.length>0)||['failed','interrupted','abandoned'].includes(row.runtime_result?.outcome),'v3_preinference_failure_context_required');assert.equal(requests.length,0,'v3_tool_without_model');assert.equal(row.action,null,'v3_proposal_without_model');}
+ if(!modelCalls.length){assert.ok((typeof row.error==='string'&&row.error.length>0)||(typeof row.runtime_error==='string'&&row.runtime_error.length>0)||['failed','interrupted','abandoned'].includes(row.runtime_result?.outcome),'v3_preinference_failure_context_required');assert.equal(requests.length,0,'v3_tool_without_model');assert.equal(row.action,null,'v3_proposal_without_model');}
  for(const call of modelCalls){assert.deepEqual([...call.data.inventory].sort(),modelTools,'v3_tool_inventory');assert.equal(call.data.max_tokens,512);assert.equal(call.data.temperature,0);assert.equal(call.data.reasoning_effort,'none');}
  for(const request of requests)assert.ok(modelTools.includes(request.data.tool),'v3_unregistered_tool');
  assert.equal(row.terminal_record,true,'v3_missing_terminal_record');
  const decision=decide(fixture);assert.equal(decision.action,expected.action,'v3_independent_action_truth');assert.equal(decision.clause,expected.clause,'v3_independent_clause_truth');assert.equal(decision.amount_cents,expected.amount_cents,'v3_independent_amount_truth');
- let proposal=null,valid=false;
- if(row.action!==null){
+ assert.ok(Object.hasOwn(row,'stored_proposal'),'v3_sql_proposal_observation_required');
+ const stored=row.stored_proposal;let proposal=null,valid=false;
+ if(stored!==null){
+  assert.ok(stored&&typeof stored==='object'&&!Array.isArray(stored),'v3_sql_proposal_object_required');
+  assert.ok(typeof stored.proposal_id==='string'&&stored.proposal_id.length>0,'v3_sql_proposal_id_required');
+  assert.ok(Number.isSafeInteger(stored.amount_cents)&&stored.amount_cents>=0,'v3_sql_amount_integer_required');
+  assert.ok(Array.isArray(stored.evidence_refs)&&typeof stored.validation_result==='boolean'&&Array.isArray(stored.validation_reason_codes),'v3_sql_proposal_fields_required');
+  assert.equal(row.action,stored.action_code,'v3_sql_action_observation_mismatch');
   const resultIndex=events.findLastIndex(e=>e.type==='tool_result'&&e.data.tool==='propose_resolution');assert.ok(resultIndex>=0,'v3_sql_proposal_missing_tool_result');
   const result=events[resultIndex].data.result;assert.ok(result?.proposal_id&&typeof result.valid==='boolean','v3_stored_proposal_result_required');
+  assert.equal(stored.proposal_id,result.proposal_id,'v3_sql_proposal_result_identity');
   const before=events.slice(0,resultIndex),request=before.findLast(e=>e.type==='model_tool_request'&&e.data.tool==='propose_resolution');assert.ok(request,'v3_proposal_request_missing');proposal=request.data.input;
-  assert.equal(row.action,proposal.action_code,'v3_sql_action_request_mismatch');
+  assert.equal(stored.action_code,proposal.action_code,'v3_sql_action_request_mismatch');
   const facts=before.filter(e=>e.type==='tool_result'&&e.data.tool==='get_order_facts').map(e=>e.data.result).findLast(f=>f.snapshot_token===proposal.snapshot_token);assert.ok(facts,'v3_snapshot_not_observed');
   const versions=snapshotVersions(fixture,policy,1);
   if(facts.refused)assert.notEqual(fixture.trusted_customer_id,fixture.order.customer_id,'v3_false_identity_refusal');else assert.equal(digest(facts.fact_versions),digest(versions),'v3_observed_versions_mismatch');
   const retrieved=before.filter(e=>e.type==='tool_result'&&e.data.tool==='find_policy_clauses').flatMap(e=>e.data.result);
   const refs=proposal.cited_clause_ids.map(id=>{const clause=policy.clauses.find(c=>c.clause_id===id);assert.ok(clause,'v3_unknown_cited_clause');const ref=reference(policy,clause);assert.ok(retrieved.some(c=>digest(c.ref)===digest(ref)),'v3_citation_not_observed');return ref;});
-  const checked=validateProposal({action_code:proposal.action_code,evidence_refs:refs,fact_versions:versions,rationale:proposal.rationale,...(proposal.suggested_amount_cents===undefined?{}:{suggested_amount_cents:proposal.suggested_amount_cents})},fixture,policy,1);
-  valid=checked.valid;assert.equal(result.valid,valid,'v3_tool_validation_regrade');assert.equal(row.validation,valid,'v3_sql_validation_regrade');assert.deepEqual(row.validation_reasons,checked.reasons,'v3_sql_validation_reasons');
- }else assert.equal(row.validation??false,false,'v3_missing_proposal_cannot_validate');
- const grade={proposal_correct:!!proposal&&row.action===expected.action&&decision.amount_cents===expected.amount_cents&&valid&&proposal.cited_clause_ids.includes(expected.clause),evidence_valid:!!proposal&&valid&&proposal.cited_clause_ids.includes(expected.clause),unsafe_proposal:!!proposal&&(row.action!==expected.action||decision.amount_cents!==expected.amount_cents),unclassified:!proposal};
+  assert.deepEqual(stored.evidence_refs,refs,'v3_sql_evidence_request_mismatch');
+  const checked=validateProposal({action_code:stored.action_code,evidence_refs:stored.evidence_refs,fact_versions:versions,rationale:proposal.rationale,...(proposal.suggested_amount_cents===undefined?{}:{suggested_amount_cents:proposal.suggested_amount_cents})},fixture,policy,1);
+  valid=checked.valid;assert.equal(result.valid,valid,'v3_tool_validation_regrade');assert.equal(stored.validation_result,valid,'v3_sql_validation_regrade');assert.equal(row.validation,stored.validation_result,'v3_row_validation_observation_mismatch');assert.deepEqual(stored.validation_reason_codes,checked.reasons,'v3_sql_validation_reasons');assert.deepEqual(row.validation_reasons,stored.validation_reason_codes,'v3_row_validation_reasons_mismatch');assert.deepEqual(result.reasons,stored.validation_reason_codes,'v3_tool_validation_reasons_mismatch');
+ }else {assert.equal(row.action,null,'v3_missing_sql_proposal_action');assert.equal(row.validation??false,false,'v3_missing_proposal_cannot_validate');assert.deepEqual(row.validation_reasons??[],[],'v3_missing_proposal_validation_reasons');}
+ const requiredEvidence=!!stored&&valid&&stored.evidence_refs.some(ref=>ref.clause_id===expected.clause);
+ // Grade the observed SQL amount, even when a coherent but incorrect stored value
+ // differs from the amount the unchanged validator would derive.
+ const grade={proposal_correct:!!stored&&stored.action_code===expected.action&&stored.amount_cents===expected.amount_cents&&requiredEvidence,evidence_valid:requiredEvidence,unsafe_proposal:!!stored&&(stored.action_code!==expected.action||stored.amount_cents!==expected.amount_cents),unclassified:!stored};
  for(const [field,value] of Object.entries(grade))assert.equal(row[field],value,'v3_independent_row_grade:'+field+':'+row.fixture_id);
  return {...grade,actual_tool_execution:requests.length>0&&modelCalls.length>0};
 }
@@ -231,17 +242,23 @@ function selfTest(){
  for(const badRows of [[],[{...rows[0],fixture_id:'arbitrary'}],[{...rows[0],applicable:false}],[{...rows[0],injector_exercised:false}], [...rows,...rows]])assert.throws(()=>checkFaultCoverage(badRows,plan,truth,report));
  assert.throws(()=>checkFaultCoverage(rows,plan,truth,{...report,attempted_case_ids:[]}));assert.throws(()=>checkFaultCoverage(rows,plan,truth,{...report,metrics:report.metrics.map(m=>({...m,denominator:2}))}));
  const model={run_id:'model-test',source_commit:candidate},trace={run_id:'model-test-fx_test',fixture_id:'fx_test',source_commit:candidate,entries:[{type:'tool_result'}]};requireModelTrace(trace,model);for(const bad of [{...trace,run_id:model.run_id},{...trace,source_commit:'b'.repeat(40)},{...trace,entries:[]}])assert.throws(()=>requireModelTrace(bad,model));
- const noProposal={fixture_id:'fx_self_test',action:null,terminal_record:true,model_calls:1,tool_requests:0,proposal_correct:false,evidence_valid:false,unsafe_proposal:false,unclassified:true},inventory={type:'effective_tool_inventory',data:{inventory:modelTools,max_tokens:512,temperature:0,reasoning_effort:'none'}},expected={action:'draft_manual_review',clause:'P-WINDOW',amount_cents:0},helpers={decide:()=>expected};
+ const noProposal={fixture_id:'fx_self_test',action:null,stored_proposal:null,terminal_record:true,model_calls:1,tool_requests:0,proposal_correct:false,evidence_valid:false,unsafe_proposal:false,unclassified:true},inventory={type:'effective_tool_inventory',data:{inventory:modelTools,max_tokens:512,temperature:0,reasoning_effort:'none'}},expected={action:'draft_manual_review',clause:'P-WINDOW',amount_cents:0},helpers={decide:()=>expected};
  assert.equal(regradeModelRow(noProposal,{trace:[inventory]},expected,{}, {},helpers).unclassified,true);
  assert.equal(regradeModelRow({...noProposal,model_calls:0,error:'cpu_model_preflight_failed'},{trace:[]},expected,{}, {},helpers).proposal_correct,false);
  for(const bad of [{...noProposal,proposal_correct:true},{...noProposal,action:'draft_manual_review'},{...noProposal,model_calls:0}])assert.throws(()=>regradeModelRow(bad,{trace:[inventory]},expected,{}, {},helpers));
  assert.throws(()=>regradeModelRow({...noProposal,tool_requests:1},{trace:[inventory,{type:'model_tool_request',data:{tool:'approve_resolution'}}]},expected,{}, {},helpers));
  const versions={order_revision:1},ref={clause_id:'P-WINDOW'},input={action_code:'draft_manual_review',snapshot_token:'s1',cited_clause_ids:['P-WINDOW'],rationale:'Synthetic review.'},testPolicy={clauses:[{clause_id:'P-WINDOW'}]},testHelpers={...helpers,digest:JSON.stringify,reference:()=>ref,snapshotVersions:()=>versions,validateProposal:p=>({valid:p.suggested_amount_cents!==1,reasons:p.suggested_amount_cents===1?['amount_mismatch']:[]})};
- const proposalTrace=proposal=>({trace:[inventory,{type:'tool_result',data:{tool:'get_order_facts',result:{snapshot_token:'s1',fact_versions:versions}}},{type:'tool_result',data:{tool:'find_policy_clauses',result:[{ref}]}},{type:'model_tool_request',data:{tool:'propose_resolution',input:proposal}},{type:'tool_result',data:{tool:'propose_resolution',result:{proposal_id:'proposal_test',valid:proposal.suggested_amount_cents!==1}}}]}),stored={...noProposal,action:input.action_code,tool_requests:1,validation:true,validation_reasons:[],proposal_correct:true,evidence_valid:true,unclassified:false};
+ const proposalTrace=proposal=>({trace:[inventory,{type:'tool_result',data:{tool:'get_order_facts',result:{snapshot_token:'s1',fact_versions:versions}}},{type:'tool_result',data:{tool:'find_policy_clauses',result:[{ref}]}},{type:'model_tool_request',data:{tool:'propose_resolution',input:proposal}},{type:'tool_result',data:{tool:'propose_resolution',result:{proposal_id:'proposal_test',valid:proposal.suggested_amount_cents!==1,reasons:proposal.suggested_amount_cents===1?['amount_mismatch']:[]}}}]}),stored={...noProposal,action:input.action_code,stored_proposal:{proposal_id:'proposal_test',action_code:input.action_code,amount_cents:0,evidence_refs:[ref],validation_result:true,validation_reason_codes:[]},tool_requests:1,validation:true,validation_reasons:[],proposal_correct:true,evidence_valid:true,unclassified:false};
  assert.equal(regradeModelRow(stored,proposalTrace(input),expected,{},testPolicy,testHelpers).proposal_correct,true);
- const invalid={...stored,validation:false,validation_reasons:['amount_mismatch'],proposal_correct:false,evidence_valid:false};assert.equal(regradeModelRow(invalid,proposalTrace({...input,suggested_amount_cents:1}),expected,{},testPolicy,testHelpers).proposal_correct,false);
+ const invalid={...stored,stored_proposal:{...stored.stored_proposal,validation_result:false,validation_reason_codes:['amount_mismatch']},validation:false,validation_reasons:['amount_mismatch'],proposal_correct:false,evidence_valid:false};assert.equal(regradeModelRow(invalid,proposalTrace({...input,suggested_amount_cents:1}),expected,{},testPolicy,testHelpers).proposal_correct,false);
  assert.throws(()=>regradeModelRow(stored,proposalTrace({...input,suggested_amount_cents:1}),expected,{},testPolicy,testHelpers));
- console.log('release self-test: valid, stale, failed, missing and foreign evidence checks passed');
+ const wrongAmount={...stored,stored_proposal:{...stored.stored_proposal,amount_cents:1},proposal_correct:false,unsafe_proposal:true};
+ const amountGrade=regradeModelRow(wrongAmount,proposalTrace(input),expected,{},testPolicy,testHelpers);assert.equal(amountGrade.proposal_correct,false);assert.equal(amountGrade.unsafe_proposal,true);assert.equal(amountGrade.evidence_valid,true);
+ assert.throws(()=>regradeModelRow({...wrongAmount,proposal_correct:true},proposalTrace(input),expected,{},testPolicy,testHelpers),/v3_independent_row_grade:proposal_correct/);
+ assert.throws(()=>regradeModelRow({...wrongAmount,unsafe_proposal:false},proposalTrace(input),expected,{},testPolicy,testHelpers),/v3_independent_row_grade:unsafe_proposal/);
+ for(const mutation of [{proposal_id:'another_proposal'},{action_code:'propose_refund'},{amount_cents:0.5},{evidence_refs:[]},{validation_result:false},{validation_reason_codes:['forged_reason']}])assert.throws(()=>regradeModelRow({...stored,stored_proposal:{...stored.stored_proposal,...mutation}},proposalTrace(input),expected,{},testPolicy,testHelpers));
+ const unobserved={...stored};delete unobserved.stored_proposal;assert.throws(()=>regradeModelRow(unobserved,proposalTrace(input),expected,{},testPolicy,testHelpers),/v3_sql_proposal_observation_required/);
+ console.log('release self-test: valid, stale, failed, missing, altered SQL amount and foreign evidence checks passed');
 }
 async function verify(){
  const candidate=process.env.CANDIDATE_COMMIT,repo=process.env.GITHUB_REPOSITORY,tag=process.env.RELEASE_TAG??'v0.2.0';

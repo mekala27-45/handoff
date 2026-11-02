@@ -37,7 +37,10 @@ export const modelFetch:typeof fetch=async(input,init)=>{
   delete request.reasoning;
   request.reasoning_effort='none';
  }
- await record('effective_tool_inventory',{inventory,model:request.model,max_tokens:request.max_tokens,temperature:request.temperature,reasoning_effort:request.reasoning_effort??null});
+ const knownFields=new Set(['order_id','query','action_code','cited_clause_ids','snapshot_token','rationale']);
+ const actions=new Set(['propose_refund','draft_escalation','draft_manual_review','draft_confirmation','request_identity_review']);
+ const tool_schema_summary=request.tools.map((tool:any)=>{const p=tool.function.parameters??{},properties=p.properties??{};return {tool:tool.function.name,properties:Object.keys(properties).filter(name=>knownFields.has(name)).sort(),required:(p.required??[]).filter((name:unknown)=>typeof name==='string'&&knownFields.has(name)).sort(),action_values:(properties.action_code?.enum??[]).filter((name:unknown)=>typeof name==='string'&&actions.has(name))};});
+ await record('effective_tool_inventory',{inventory,model:request.model,max_tokens:request.max_tokens,temperature:request.temperature,reasoning_effort:request.reasoning_effort??null,tool_schema_summary});
  const response=await fetch(input,{...init,body:JSON.stringify(request),signal:AbortSignal.any([init?.signal??new AbortController().signal,AbortSignal.timeout(Math.max(1,120000-(Date.now()-currentScope.started_at)))])});
  const diagnostics=createModelResponseDiagnostics();
  if(!response.body){await record('model_tool_admission',diagnostics.finish());return response;}
