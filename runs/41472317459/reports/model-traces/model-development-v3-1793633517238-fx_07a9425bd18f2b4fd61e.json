@@ -1,0 +1,600 @@
+{
+  "run_id": "model-development-v3-1793633517238-fx_07a9425bd18f2b4fd61e",
+  "mode": "local-model",
+  "source_commit": "421f04b3aa23f56083286c981f53795b1e4cc21e",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "configuration_digest": "1caabfb4af5801c84bab027fc4a9a58b36baf52f37f309389844d801de9faac1",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "trace": [
+    {
+      "at": "2026-11-02T15:33:44.424Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "eve_delivery",
+      "data": {
+        "session_id": "wrun_01M6EEA8B1S3DZEQ2D82Z2NFHD"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:44.525Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:44.537Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 0
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:44.537Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.772Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1116,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "get_order_facts",
+            "argument_fields": [
+              "order_id"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.775Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_qxpszplv",
+        "capability": {
+          "kind": "tool",
+          "name": "get_order_facts"
+        },
+        "input": {
+          "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e"
+        },
+        "owner": {
+          "runId": "run_0"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.780Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.781Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "get_order_facts",
+        "input": {
+          "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.794Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "tool_result",
+      "data": {
+        "tool": "get_order_facts",
+        "result": {
+          "order": {
+            "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e",
+            "customer_id": "SYN-CUSTOMER-07a9425bd18f2b4fd61e",
+            "currency": "USD",
+            "captured_cents": 11190,
+            "refunded_cents": 0,
+            "shipping_state": "delivered",
+            "delivered_at": "2026-02-07T12:00:00.000Z",
+            "shipped_at": "2026-01-31T12:00:00.000Z",
+            "tracking": "SYN-TRACK-07a9425bd18f2b4fd61e",
+            "revision": 1
+          },
+          "captures": [
+            {
+              "capture_id": "SYN-CAPTURE-07a9425bd18f2b4fd61e-1",
+              "amount_cents": 11190,
+              "refunded_cents": 0,
+              "confirmed_at": "2026-01-01T01:00:00.000Z",
+              "revision": 1,
+              "duplicate": false
+            }
+          ],
+          "received_at": "2026-02-15T12:00:00.000Z",
+          "existing_effect_ref": null,
+          "fact_versions": {
+            "order_id": "SYN-ORDER-07a9425bd18f2b4fd61e",
+            "order_revision": 1,
+            "capture_versions": {
+              "SYN-CAPTURE-07a9425bd18f2b4fd61e-1": 1
+            },
+            "policy_id": "SAMPLE-SUPPLY",
+            "policy_version": 1,
+            "policy_revision": 1,
+            "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+          },
+          "snapshot_token": "f1"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.796Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_qxpszplv",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.799Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.799Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 763,
+          "outputTokens": 45
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.832Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.837Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:46.838Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:56.443Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1397,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "find_policy_clauses",
+            "argument_fields": [
+              "query"
+            ],
+            "unknown_field_count": 1,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "invalid_schema",
+            "schema_issues": [
+              {
+                "code": "unrecognized_keys",
+                "path": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:56.447Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:56.447Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 750,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1148,
+          "outputTokens": 182
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:56.476Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:56.480Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "budget",
+      "data": {
+        "models": 3,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-02T15:33:56.481Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none"
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.318Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 8662,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "find_policy_clauses",
+            "argument_fields": [
+              "query"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.323Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_q1ps2gxv",
+        "capability": {
+          "kind": "tool",
+          "name": "find_policy_clauses"
+        },
+        "input": {
+          "query": "damaged"
+        },
+        "owner": {
+          "runId": "run_2"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.328Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "budget",
+      "data": {
+        "models": 3,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.328Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "find_policy_clauses",
+        "input": {
+          "query": "damaged"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.341Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "tool_result",
+      "data": {
+        "tool": "find_policy_clauses",
+        "result": [
+          {
+            "clause": {
+              "text": "For matching identity and confirmed payment, damage reported within 30 elapsed days after delivery permits a reviewed simulated refund of the remaining capture balance. Missing delivery time requires manual review.",
+              "lines": [
+                1,
+                2
+              ],
+              "terms": [
+                "damage",
+                "broken",
+                "cracked",
+                "damaged"
+              ],
+              "action": "propose_refund",
+              "heading": "Damaged delivery",
+              "clause_id": "P-DAMAGE"
+            },
+            "ref": {
+              "policy_id": "SAMPLE-SUPPLY",
+              "version": 1,
+              "clause_id": "P-DAMAGE",
+              "content_digest": "43c97160d6e343ca4b5654606c007adbe8569d91cabdb50c8be7bd48820539b3",
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+              "lines": [
+                1,
+                2
+              ]
+            },
+            "score": 1
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.343Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_q1ps2gxv",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.346Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.346Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1144,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1527,
+          "outputTokens": 59
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.374Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_3"
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.380Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "budget",
+      "data": {
+        "models": 4,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:02.380Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none"
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:12.985Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1446,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "propose_resolution",
+            "argument_fields": [
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": 1,
+            "snapshot_token": "f1",
+            "argument_status": "invalid_schema",
+            "schema_issues": [
+              {
+                "code": "invalid_value",
+                "path": [
+                  "action_code"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:12.989Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_3"
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:12.989Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1135,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1851,
+          "outputTokens": 90
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:13.016Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_4"
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:13.051Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "model_settled",
+      "data": {
+        "runId": "run_4",
+        "outcome": "failed",
+        "error": {
+          "code": "MODEL_CALL_FAILED",
+          "id": "01478830-bfe6-47c8-9c42-bb7479c868a9",
+          "message": "models_budget_exhausted"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T15:34:13.056Z",
+      "case_id": "case_afe2f564-5b4f-408b-8f1a-9770bec08d49",
+      "type": "eve_result",
+      "data": {
+        "outcome": "handled"
+      }
+    }
+  ]
+}
