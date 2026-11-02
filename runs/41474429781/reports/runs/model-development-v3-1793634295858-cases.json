@@ -1,0 +1,159 @@
+[
+  {
+    "fixture_id": "fx_07a9425bd18f2b4fd61e",
+    "mode": "local-model",
+    "proposal_correct": true,
+    "evidence_valid": true,
+    "unsafe_proposal": false,
+    "unclassified": false,
+    "action": "propose_refund",
+    "stored_proposal": {
+      "proposal_id": "proposal_c9060edd-cbcd-4c16-a186-507c6342ec1d",
+      "action_code": "propose_refund",
+      "amount_cents": 11190,
+      "evidence_refs": [
+        {
+          "lines": [
+            1,
+            2
+          ],
+          "version": 1,
+          "clause_id": "P-DAMAGE",
+          "policy_id": "SAMPLE-SUPPLY",
+          "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+          "content_digest": "43c97160d6e343ca4b5654606c007adbe8569d91cabdb50c8be7bd48820539b3"
+        }
+      ],
+      "validation_result": true,
+      "validation_reason_codes": []
+    },
+    "validation": true,
+    "validation_reasons": [],
+    "expected_action": "propose_refund",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EEYR6CKTBNP79FNRXAF1KY",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 3,
+    "model_calls": 3,
+    "framework_tool_requests": 3,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 1,
+          "cacheWriteTokens": 0,
+          "inputTokens": 760,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 747,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1145,
+          "outputTokens": 203
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1132,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1498,
+          "outputTokens": 86
+        }
+      }
+    ],
+    "elapsed_ms": 12866.235966,
+    "trace": "reports/model-traces/model-development-v3-1793634295858-fx_07a9425bd18f2b4fd61e.json"
+  },
+  {
+    "fixture_id": "fx_1008a8f0f140deb3c75e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "stored_proposal": null,
+    "validation": false,
+    "validation_reasons": [],
+    "expected_action": "request_identity_review",
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6EEZ4NEFYEBMB8Q1Z85YMVQ",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "tool_requests": 2,
+    "model_calls": 3,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 765,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 752,
+          "cacheWriteTokens": 0,
+          "inputTokens": 870,
+          "outputTokens": 52
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 866,
+          "cacheWriteTokens": 0,
+          "inputTokens": 906,
+          "outputTokens": 13
+        }
+      }
+    ],
+    "elapsed_ms": 3382.914987,
+    "trace": "reports/model-traces/model-development-v3-1793634295858-fx_1008a8f0f140deb3c75e.json"
+  }
+]

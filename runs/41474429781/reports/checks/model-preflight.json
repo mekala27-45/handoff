@@ -1,0 +1,14 @@
+{
+  "observed_at": "2026-11-02T15:44:51.056Z",
+  "version": "0.40.13",
+  "model": {
+    "name": "qwen3:0.6b",
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "size": 1532367993,
+    "size_vram": 0,
+    "context_length": 8192
+  },
+  "passed": true,
+  "failure_code": null,
+  "warmup_http_status": 200
+}
