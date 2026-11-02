@@ -1,11 +1,13 @@
 import { spawn } from 'node:child_process';
 import { createHash, randomBytes } from 'node:crypto';
 import { createWriteStream } from 'node:fs';
+import { finished } from 'node:stream/promises';
 import { copyFile, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { cpus, totalmem } from 'node:os';
 import path from 'node:path';
 import pg from 'pg';
 import { summarizeModelExperiment } from './model-experiment-diagnostics.mjs';
+import { preflightFailureCode } from './model-preflight.mjs';
 
 // This runner starts only task-owned loopback services in an isolated CI job.
 // The evaluation channel key stays in memory and child environments, never artifacts.
@@ -41,7 +43,13 @@ async function stop(item){
 }
 async function command(name,program,args){
  const item=start(name,program,args),code=await new Promise(resolve=>{item.child.once('error',()=>resolve(1));item.child.once('close',code=>resolve(code??1));});
- phases.push({name,exit_code:code});
+ await Promise.all([finished(item.stdout),finished(item.stderr)]);
+ const phase={name,exit_code:code};
+ if(code!==0&&name==='cpu-preflight'){
+  const checked=preflightFailureCode(await readFile(path.join(privateDir,name+'.stderr.log'),'utf8'));
+  if(checked){phase.failure_code=checked;console.error('cpu_preflight_checked_failure:'+checked);}
+ }
+ phases.push(phase);
  if(code!==0)throw Error(name+'_failed');console.log(name+': passed');
 }
 async function ready(name,item,url,headers={}){

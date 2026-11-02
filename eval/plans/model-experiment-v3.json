@@ -96,7 +96,8 @@
     "dynamic user-role workflow-step reminders based only on completed scoped tool observations",
     "optional suggested amount removed from model input; validator still derives and checks amounts",
     "safe bounded SSE tool-call admission summaries with no model prose or reasoning",
-    "CPU Linux and disposable local PostgreSQL instead of prior Windows CPU with direct Neon; device and database differences are disclosed"
+    "CPU Linux and disposable local PostgreSQL instead of prior Windows CPU with direct Neon; device and database differences are disclosed",
+    "independent SQL proposal identity, actual cents, evidence and validation retained; lost responses graded from stored proposal"
   ],
   "unchanged": [
     "model digest",
@@ -107,5 +108,16 @@
     "512 output tokens per call",
     "120-second case deadline"
   ],
-  "held_out_rule": "No held-out inference until operating point and declared case IDs are committed and frozen. Preserve every development and original version-two outcome."
+  "held_out_rule": "No held-out inference until operating point and declared case IDs are committed and frozen. Preserve every development and original version-two outcome.",
+  "infrastructure_attempts": [
+    {
+      "source_commit": "c1f6a84b4ef1dd93acb80b4630a619586340f89a",
+      "workflow_run_id": 41329540492,
+      "artifact_id": 13092014085,
+      "stage": "cpu-preflight",
+      "graded_cases": 0,
+      "status": "failed-before-inference",
+      "note": "Original private child logs were not exported; the opaque failure caused a diagnostic improvement, not a model-quality score."
+    }
+  ]
 }

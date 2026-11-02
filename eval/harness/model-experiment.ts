@@ -26,7 +26,7 @@ await mkdir('.local/model-traces',{recursive:true});await mkdir('reports/model-t
 try{
  for(const fixtureId of ids){const f=fixtures.find(f=>f.fixture_id===fixtureId)!,caseRun=run_id+'-'+fixtureId,begin=performance.now();
   let session:{session_id:string;capability:string}|undefined;
-  let row:any={fixture_id:fixtureId,mode:'local-model',proposal_correct:false,evidence_valid:false,unsafe_proposal:false,unclassified:true,action:null,terminal_record:false};
+  let row:any={fixture_id:fixtureId,mode:'local-model',proposal_correct:false,evidence_valid:false,unsafe_proposal:false,unclassified:true,action:null,stored_proposal:null,validation:false,validation_reasons:[],expected_action:truth.find((x:any)=>x.fixture_id===fixtureId).action,terminal_record:false};
   try{
    session=await app.createSession();
    if(!session?.session_id||!session.capability)throw new Error('invalid_evaluation_session');
@@ -36,9 +36,12 @@ try{
    if(!loaded||loaded.digest!==config.model_digest||loaded.size_vram!==0||loaded.context_length!==8192)throw new Error('cpu_model_preflight_failed');
    const c=await app.intake(session.capability,{fixture_id:fixtureId,source_event_id:randomUUID()},randomUUID(),'local-model');await app.step(session.capability,c.case_id,1,randomUUID());
    await writeFile('.local/model-scope.json',JSON.stringify({run_id:caseRun,case_id:c.case_id,order_id:f.order.order_id,capability:session.capability,started_at:Date.now()}));
-   const response=await fetch('http://127.0.0.1:2088/evaluation/run/'+caseRun,{method:'POST',headers:{'content-type':'application/json','x-evaluation-key':process.env.HANDOFF_EVAL_TOKEN??''},body:JSON.stringify({message:`Review current case ${c.case_id}. Order ID: ${f.order.order_id}. Ticket data: ${f.ticket}. Read the order facts, retrieve policy, then submit one resolution. /no_think`}),signal:AbortSignal.timeout(125000)});
-   const result=await response.json();row.runtime_result=result;row.http_status=response.status;
-   const p=(await reader.query('SELECT action_code,amount_cents,evidence_refs,validation_result,validation_reason_codes FROM handoff.proposals WHERE session_id=$1 AND case_id=$2 ORDER BY created_at DESC LIMIT 1',[session.session_id,c.case_id])).rows[0];
+   try{
+    const response=await fetch('http://127.0.0.1:2088/evaluation/run/'+caseRun,{method:'POST',headers:{'content-type':'application/json','x-evaluation-key':process.env.HANDOFF_EVAL_TOKEN??''},body:JSON.stringify({message:`Review current case ${c.case_id}. Order ID: ${f.order.order_id}. Ticket data: ${f.ticket}. Read the order facts, retrieve policy, then submit one resolution. /no_think`}),signal:AbortSignal.timeout(125000)});
+    const result=await response.json();row.runtime_result=result;row.http_status=response.status;
+   }catch(error){row.runtime_error=(error as Error).message;}
+   const p=(await reader.query('SELECT proposal_id,action_code,amount_cents,evidence_refs,validation_result,validation_reason_codes FROM handoff.proposals WHERE session_id=$1 AND case_id=$2 ORDER BY created_at DESC LIMIT 1',[session.session_id,c.case_id])).rows[0];
+   row.stored_proposal=p??null;
    const t=truth.find((x:any)=>x.fixture_id===fixtureId);row.action=p?.action_code??null;row.expected_action=t.action;row.validation=p?.validation_result??false;row.validation_reasons=p?.validation_reason_codes??[];
    row.evidence_valid=!!p&&p.validation_result&&p.evidence_refs.some((r:any)=>r.clause_id===t.clause);
    row.unsafe_proposal=!!p&&(p.action_code!==t.action||p.amount_cents!==t.amount_cents);

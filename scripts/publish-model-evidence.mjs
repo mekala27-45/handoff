@@ -8,10 +8,22 @@ import { summarizeModelExperiment } from './model-experiment-diagnostics.mjs';
 
 // Runs only in the isolated publication job. Never checks out or writes source branches.
 const repository='mekala27-45/handoff',branch='model-evidence-v3';
-const first={run:'41326684887',artifact:'13092085189',source:'e55d3b9df58a20837e6e19b9630f8e4003868815',name:'model-development-v3-e55d3b9df58a20837e6e19b9630f8e4003868815'};
+const bootstrap=[
+ {run:'41326684887',artifact:'13092085189',source:'e55d3b9df58a20837e6e19b9630f8e4003868815',name:'model-development-v3-e55d3b9df58a20837e6e19b9630f8e4003868815',digest:'sha256:91011f1737dc8eb862a0827118047777468fe94e85faa5d38f6d32881296a777',directory:'evidence-first'},
+ {run:'41329540492',artifact:'13092014085',source:'c1f6a84b4ef1dd93acb80b4630a619586340f89a',name:'model-experiment-v3-c1f6a84b4ef1dd93acb80b4630a619586340f89a',digest:'sha256:b412aad1df2bab3a76131f4ec52ab15dcef3344f6e65bdd0e30fb0b6f289fb67',directory:'evidence-preflight-failed'}
+];
 const hash=text=>createHash('sha256').update(text).digest('hex');
 const fail=code=>{throw Error(code);};
 const safePath=file=>typeof file==='string'&&/^reports\/(runs|model-traces|environments|checks)\/[A-Za-z0-9_./-]+\.(json|jsonl|txt)$/.test(file)&&file.split('/').every(p=>p!=='.'&&p!=='..'&&p!=='');
+function safeEvidenceTreeEntry(entry){
+ const file=entry?.path;
+ if(typeof file!=='string'||file.split('/').some(p=>p==='.'||p==='..'||p===''))return false;
+ if(entry.type==='tree'&&entry.mode==='040000')return file==='runs'||/^runs\/\d+(?:\/reports(?:\/(?:runs|model-traces|environments|checks)(?:\/[A-Za-z0-9_.-]+)*)?)?$/.test(file);
+ if(entry.type!=='blob'||entry.mode!=='100644')return false;
+ if(['README.md','index.json'].includes(file))return true;
+ const match=file.match(/^runs\/\d+\/(.+)$/);
+ return !!match&&(['export-manifest.json','diagnostics.json','publication.json'].includes(match[1])||safePath(match[1]));
+}
 function validateText(text){
  if(/"capability"\s*:\s*"[A-Za-z0-9_-]{32,}"/.test(text)||/postgres(?:ql)?:\/\/[^\s/"']+:[^\s@"']+@(?!localhost(?=[:/])|127\.0\.0\.1(?=[:/]))/i.test(text))fail('private_value_in_evidence');
  for(const name of ['GH_TOKEN','GITHUB_TOKEN','HANDOFF_EVAL_TOKEN']){const value=process.env[name];if(value&&value.length>=16&&text.includes(value))fail('private_value_in_evidence');}
@@ -50,15 +62,15 @@ async function main(){
  const ref=await api('git/ref/heads/'+branch,{optional:true});
  let parent=null,baseTree=null,existing=[];
  if(ref){parent=ref.object.sha;const commit=await api('git/commits/'+parent);baseTree=commit.tree.sha;const tree=await api('git/trees/'+baseTree+'?recursive=1');if(tree.truncated)fail('evidence_tree_truncated');existing=tree.tree;
-  if(existing.some(e=>!['README.md','index.json'].includes(e.path)&&!/^runs\/\d+(?:\/|$)/.test(e.path)))fail('unexpected_evidence_branch_content');
+  if(existing.some(e=>!safeEvidenceTreeEntry(e)))fail('unexpected_evidence_branch_content');
  }
  const hasRun=id=>existing.some(e=>e.path==='runs/'+id+'/export-manifest.json');
  const exports=[];
- if(!hasRun(first.run)){
-  await verifyRun(first.run,first.source);
-  const artifact=await api('actions/artifacts/'+first.artifact);
-  if(artifact.name!==first.name||artifact.workflow_run?.id!==Number(first.run)||artifact.digest!=='sha256:91011f1737dc8eb862a0827118047777468fe94e85faa5d38f6d32881296a777')fail('unexpected_first_artifact');
-  exports.push({run:first.run,artifact:first.artifact,...await readExport(path.join(process.env.RUNNER_TEMP,'evidence-first'),first.source)});
+ for(const prior of bootstrap)if(!hasRun(prior.run)){
+  await verifyRun(prior.run,prior.source);
+  const artifact=await api('actions/artifacts/'+prior.artifact);
+  if(artifact.name!==prior.name||artifact.workflow_run?.id!==Number(prior.run)||artifact.digest!==prior.digest)fail('unexpected_bootstrap_artifact');
+  exports.push({run:prior.run,artifact:prior.artifact,...await readExport(path.join(process.env.RUNNER_TEMP,prior.directory),prior.source)});
  }
  if(!hasRun(run)){
   const currentDir=path.join(process.env.RUNNER_TEMP,'evidence-current');
@@ -76,7 +88,7 @@ async function main(){
   item.files.set('publication.json',JSON.stringify({workflow_run_id:item.run,artifact_id:item.artifact,source_commit:item.manifest.source_commit,split:item.manifest.split,raw_exports_preserved:true,private_logs_exported:false},null,2)+'\n');
   for(const [file,content] of item.files){const blob=await api('git/blobs',{method:'POST',body:{content:Buffer.from(content).toString('base64'),encoding:'base64'}});changes.push({path:'runs/'+item.run+'/'+file,mode:'100644',type:'blob',sha:blob.sha});}
  }
- const readme='# Handoff model v3 evidence\n\nSynthetic actual-model exports from the original GitHub Actions workflow. Each run retains its original export manifest and report bytes, plus bounded diagnostics. Runner completion does not mean model correctness. The failed initial development attempt is retained. Source and release branches are never changed by this publisher.\n';
+ const readme='# Handoff model v3 evidence\n\nSynthetic model-experiment exports from the original GitHub Actions workflow, including infrastructure-only failures before inference. Each run retains its original export manifest and report bytes, plus bounded diagnostics. Runner completion does not mean model correctness. Failed development and startup attempts are retained. Source and release branches are never changed by this publisher.\n';
  changes.push({path:'README.md',mode:'100644',type:'blob',content:readme});
  const tree=await api('git/trees',{method:'POST',body:{...(baseTree?{base_tree:baseTree}:{}),tree:changes}});
  const commit=await api('git/commits',{method:'POST',body:{message:'Preserve model experiment evidence: '+exports.map(e=>e.run).join(', '),tree:tree.sha,parents:parent?[parent]:[]}});
@@ -88,11 +100,15 @@ async function main(){
 async function selfTest(){
  const dir=await mkdtemp(path.join(tmpdir(),'handoff-evidence-test-'));
  try{
-  const file='reports/checks/synthetic.json',text='{"synthetic":true}\n',source='a'.repeat(40);
+  const file='reports/checks/model-experiment-runner.json',text='{"runner_succeeded":false,"phases":[{"name":"cpu-preflight","exit_code":1}]}\n',source='a'.repeat(40);
   await mkdir(path.join(dir,'reports/checks'),{recursive:true});await writeFile(path.join(dir,file),text);
   const manifest={source_commit:source,split:'development',private_logs_exported:false,exported:[{file,sha256:hash(text)}]};
   await writeFile(path.join(dir,'export-manifest.json'),JSON.stringify(manifest));
-  assert.equal((await readExport(dir,source)).files.get(file),text);
+  const infrastructureOnly=await readExport(dir,source);
+  assert.equal(infrastructureOnly.files.get(file),text);assert.equal(infrastructureOnly.diagnostics.case_count,0);
+  const validTree=[{path:'runs',type:'tree',mode:'040000'},{path:'runs/123',type:'tree',mode:'040000'},{path:'runs/123/reports',type:'tree',mode:'040000'},{path:'runs/123/reports/checks',type:'tree',mode:'040000'},{path:'runs/123/'+file,type:'blob',mode:'100644'},{path:'runs/123/publication.json',type:'blob',mode:'100644'},{path:'README.md',type:'blob',mode:'100644'}];
+  assert.ok(validTree.every(safeEvidenceTreeEntry));
+  for(const entry of [{path:'agent',type:'tree',mode:'040000'},{path:'.github/workflows/run.yml',type:'blob',mode:'100644'},{path:'README.md',type:'blob',mode:'120000'},{path:'runs/123/secrets.json',type:'blob',mode:'100644'},{path:'runs/123/reports/../private',type:'tree',mode:'040000'},{path:'runs/123/reports/checks/submodule',type:'commit',mode:'160000'}])assert.equal(safeEvidenceTreeEntry(entry),false);
   assert.equal(safePath('reports/checks/../../.eve/secret.json'),false);
   await writeFile(path.join(dir,file),'changed');await assert.rejects(readExport(dir,source),/evidence_hash_or_encoding_mismatch/);
   assert.throws(()=>validateText('{"capability":"'+'z'.repeat(40)+'"}'),/private_value_in_evidence/);

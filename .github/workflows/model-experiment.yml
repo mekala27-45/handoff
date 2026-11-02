@@ -91,7 +91,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           HANDOFF_EVIDENCE_ARTIFACT_NAME: model-experiment-v3-${{ github.sha }}
         run: |
-          mkdir -p "$RUNNER_TEMP/evidence-current" "$RUNNER_TEMP/evidence-first"
+          mkdir -p "$RUNNER_TEMP/evidence-current" "$RUNNER_TEMP/evidence-first" "$RUNNER_TEMP/evidence-preflight-failed"
           if ! gh run download "$GITHUB_RUN_ID" --repo "$GITHUB_REPOSITORY" --name "$HANDOFF_EVIDENCE_ARTIFACT_NAME" --dir "$RUNNER_TEMP/evidence-current"; then
             echo 'Current experiment export is unavailable; preserve earlier evidence if needed.'
           fi
@@ -99,6 +99,11 @@ jobs:
             gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/13092085189/zip" > "$RUNNER_TEMP/evidence-first.zip"
             printf '%s  %s\n' 91011f1737dc8eb862a0827118047777468fe94e85faa5d38f6d32881296a777 "$RUNNER_TEMP/evidence-first.zip" | sha256sum --check --status
             unzip -q "$RUNNER_TEMP/evidence-first.zip" -d "$RUNNER_TEMP/evidence-first"
+          fi
+          if ! gh api "repos/$GITHUB_REPOSITORY/contents/runs/41329540492/export-manifest.json?ref=model-evidence-v3" > /dev/null 2>&1; then
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/13092014085/zip" > "$RUNNER_TEMP/evidence-preflight-failed.zip"
+            printf '%s  %s\n' b412aad1df2bab3a76131f4ec52ab15dcef3344f6e65bdd0e30fb0b6f289fb67 "$RUNNER_TEMP/evidence-preflight-failed.zip" | sha256sum --check --status
+            unzip -q "$RUNNER_TEMP/evidence-preflight-failed.zip" -d "$RUNNER_TEMP/evidence-preflight-failed"
           fi
       - name: Preserve exports on the dedicated GitHub evidence branch
         env:
