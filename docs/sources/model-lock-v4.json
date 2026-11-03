@@ -17,5 +17,21 @@
   },
   "execution": "CPU",
   "context_tokens": 8192,
-  "license": "Apache-2.0; actual downloaded metadata must confirm preflight."
+  "license": "Apache-2.0",
+  "verified_download": {
+    "workflow_run_id": 41666731248,
+    "source_commit": "75442ec64a55d531ab312e200ef7d4d732923669",
+    "observed_at": "2026-11-03T15:44:11.172Z",
+    "model_digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+    "model_family": "qwen3",
+    "parameter_size": "4.0B",
+    "quantization": "Q4_K_M",
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ],
+    "cpu_context": 8192,
+    "size_vram": 0
+  }
 }

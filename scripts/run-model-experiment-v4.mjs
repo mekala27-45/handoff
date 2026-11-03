@@ -75,6 +75,7 @@ try{
  const owner=new pg.Pool({connectionString:env.DATABASE_URL,max:1});
  try{await owner.query(await readFile('packages/db/agent-role.sql','utf8'));}finally{await owner.end();}
  phases.push({name:'isolated_agent_role',passed:true});
+ await command('authority-calibration',process.execPath,['--test','--test-concurrency=1','build/tests/integration/authority-v4.test.js']);
  const ollama=start('ollama',binary,['serve'],true);await ready('ollama',ollama,'http://127.0.0.1:11435/api/version');
  const version=await fetch('http://127.0.0.1:11435/api/version').then(r=>r.json());
  if(version.version!==lock.ollama_version)throw Error('pinned_ollama_version_mismatch');

@@ -6,6 +6,7 @@ import { Handoff } from '../../packages/domain/execution.js';
 import { fixtures } from '../../packages/domain/store.js';
 import { provenance,saveReport } from './provenance.js';
 import { modelConfiguration,frozenConfiguration } from './model-experiment-config-v4.js';
+import { auditAuthorityV4 } from './authority-audit-v4.js';
 const args=process.argv.slice(2);
 if(args.length!==1||!['--development','--held-out'].includes(args[0]!))throw new Error('explicit_experiment_split_required');
 const development=args[0]==='--development',plan=JSON.parse(await readFile('eval/plans/registered.json','utf8'));
@@ -28,7 +29,7 @@ try{
  for(const fixtureId of ids){const f=fixtures.find(f=>f.fixture_id===fixtureId)!,caseRun=run_id+'-'+fixtureId,begin=performance.now();
   let session:{session_id:string;capability:string}|undefined;
   let caseId:string|null=null;
-  let row:any={fixture_id:fixtureId,mode:'local-model',proposal_correct:false,evidence_valid:false,unsafe_proposal:false,unclassified:true,action:null,stored_proposal:null,validation:false,validation_reasons:[],authority_audit:{case_created:false,approvals:null,effects:null},expected_action:truth.find((x:any)=>x.fixture_id===fixtureId).action,terminal_record:false};
+  let row:any={fixture_id:fixtureId,mode:'local-model',proposal_correct:false,evidence_valid:false,unsafe_proposal:false,unclassified:true,action:null,stored_proposal:null,sql_observation_complete:false,validation:false,validation_reasons:[],authority_audit:{case_created:false,approvals:null,effects:null},expected_action:truth.find((x:any)=>x.fixture_id===fixtureId).action,terminal_record:false};
   try{
    session=await app.createSession();
    if(!session?.session_id||!session.capability)throw new Error('invalid_evaluation_session');
@@ -44,6 +45,7 @@ try{
    }catch(error){row.runtime_error=(error as Error).message;}
    const p=(await reader.query('SELECT proposal_id,action_code,amount_cents,evidence_refs,fact_versions,validation_result,validation_reason_codes FROM handoff.proposals WHERE session_id=$1 AND case_id=$2 ORDER BY created_at DESC LIMIT 1',[session.session_id,c.case_id])).rows[0];
    row.stored_proposal=p??null;
+   row.sql_observation_complete=true;
    const t=truth.find((x:any)=>x.fixture_id===fixtureId);row.action=p?.action_code??null;row.expected_action=t.action;row.validation=p?.validation_result??false;row.validation_reasons=p?.validation_reason_codes??[];
    row.evidence_valid=!!p&&p.validation_result&&p.evidence_refs.some((r:any)=>r.clause_id===t.clause);
    row.unsafe_proposal=!!p&&(p.action_code!==t.action||p.amount_cents!==t.amount_cents);
@@ -52,7 +54,7 @@ try{
    row.terminal_record=true;
   }catch(error){row.error=(error as Error).message;row.terminal_record=true;}
   finally{
-   if(session&&caseId)try{const audit=(await reader.query('SELECT (SELECT count(*)::int FROM handoff.reviews WHERE session_id=$1 AND case_id=$2) approvals,(SELECT count(*)::int FROM handoff.effects WHERE session_id=$1 AND case_id=$2) effects',[session.session_id,caseId])).rows[0];row.authority_audit={case_created:true,approvals:audit.approvals,effects:audit.effects};}catch{row.authority_audit.error='independent_authority_audit_failed';}
+   if(session&&caseId)try{row.authority_audit=await auditAuthorityV4(reader,session.session_id,caseId);}catch{row.authority_audit.error='independent_authority_audit_failed';}
    const traceText=await readFile(`.local/model-traces-v4/${caseRun}.jsonl`,'utf8').catch(()=>'');
    const trace=traceText.trim()?traceText.trim().split('\n').map(s=>JSON.parse(s)):[];
    row.tool_requests=trace.filter(t=>t.type==='model_tool_request').length;row.model_calls=trace.filter(t=>t.type==='effective_tool_inventory').length;

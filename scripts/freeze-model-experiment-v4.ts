@@ -2,6 +2,7 @@ import { readFile,writeFile } from 'node:fs/promises';
 import { modelConfiguration } from '../eval/harness/model-experiment-config-v4.js';
 import { digest } from '../packages/domain/canonical.js';
 import { reportSchema } from '../packages/domain/claims.js';
+import { verifyRecordedV4 } from '../eval/harness/verify-recorded-v4.js';
 const path='eval/plans/model-config-v4.json',runId=process.argv[2];
 if(!/^model-development-v4-\d+$/.test(runId??''))throw new Error('explicit_v4_development_run_required');
 if(await readFile(path,'utf8').catch(()=>null))throw new Error('v4_already_frozen');
@@ -18,6 +19,9 @@ const correct=rows.filter((r:any)=>r.proposal_correct).length,validatedWrong=row
 const metric=report.metrics.find(m=>m.metric_id==='proposal_correctness');
 if(!metric||metric.numerator!==correct||metric.denominator!==16||metric.split!=='development')throw new Error('v4_metric_mismatch');
 if(correct<14||validatedWrong!==0)throw new Error('v4_development_quality_gate_failed');
-if(rows.some((r:any)=>r.authority_audit?.case_created!==true||r.authority_audit.approvals!==0||r.authority_audit.effects!==0))throw new Error('v4_authority_audit_required');
+const fixtures=JSON.parse(await readFile('packages/fixtures/data/cases.json','utf8')),policy=JSON.parse(await readFile('packages/fixtures/data/policy.json','utf8')),truth=JSON.parse(await readFile('eval/truth/expected.json','utf8'));
+const traces=await Promise.all(rows.map(async(r:any)=>JSON.parse(await readFile(r.trace,'utf8'))));
+const checked=verifyRecordedV4({report,rows,traces,fixtures,policy,truth,expectedCaseIds:ids,split:'development',configurationDigest:configuration_digest,modelDigest:configuration.model_digest,datasetDigest:registered.dataset_digest,policyDigest:registered.policy_digest,sourceCommit:report.source_commit,modelName:configuration.model});
+if(!checked.counts.sql_complete||!checked.counts.authority_complete||checked.counts.approvals!==0||checked.counts.effects!==0||checked.counts.validated_wrong_actions!==0||rows.some((r:any)=>r.authority_audit.review_records!==0))throw new Error('v4_independent_sql_and_authority_gate_failed');
 await writeFile(path,JSON.stringify({frozen_at:new Date().toISOString(),development_run_id:runId,development_source_commit:report.source_commit,configuration_digest,configuration},null,2)+'\n',{flag:'wx'});
 console.log(JSON.stringify({configuration_digest,development_run_id:runId,correct,attempted:rows.length,validated_wrong_actions:validatedWrong}));
