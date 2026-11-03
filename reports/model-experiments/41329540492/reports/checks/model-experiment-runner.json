@@ -1,0 +1,35 @@
+{
+  "source_commit": "c1f6a84b4ef1dd93acb80b4630a619586340f89a",
+  "started_at": "2026-11-01T17:05:06.386Z",
+  "finished_at": "2026-11-01T17:05:23.466Z",
+  "elapsed_ms": 17080,
+  "split": "development",
+  "runner_succeeded": false,
+  "model_quality": "Read the actual experiment run manifest; runner success is not proposal correctness.",
+  "phases": [
+    {
+      "name": "migrate",
+      "exit_code": 0
+    },
+    {
+      "name": "isolated_agent_role",
+      "passed": true
+    },
+    {
+      "name": "ollama",
+      "ready": true
+    },
+    {
+      "name": "pull-pinned-model",
+      "exit_code": 0
+    },
+    {
+      "name": "cpu-preflight",
+      "exit_code": 1
+    },
+    {
+      "name": "runner_error",
+      "reason": "cpu-preflight_failed"
+    }
+  ]
+}

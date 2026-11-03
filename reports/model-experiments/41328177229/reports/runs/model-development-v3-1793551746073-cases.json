@@ -1,0 +1,1018 @@
+[
+  {
+    "fixture_id": "fx_02ecb565fc1c1083dba0",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C07H6SW1XMKKD2PJZTK5Z6",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 1,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 43
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 763,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1111,
+          "outputTokens": 37
+        }
+      }
+    ],
+    "elapsed_ms": 11001.351843,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_02ecb565fc1c1083dba0.json"
+  },
+  {
+    "fixture_id": "fx_273b1c7a9f9e376f35c2",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C07VTNMBWGJTXEXPTZQ54F",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 771,
+          "outputTokens": 47
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 767,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1135,
+          "outputTokens": 28
+        }
+      }
+    ],
+    "elapsed_ms": 6317.916126000002,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_273b1c7a9f9e376f35c2.json"
+  },
+  {
+    "fixture_id": "fx_02f8ec6ef89db18ccd42",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C081ZZKKW7Z1MTRGA23T20",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_confirmation",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 765,
+          "outputTokens": 42
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 761,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1132,
+          "outputTokens": 20
+        }
+      }
+    ],
+    "elapsed_ms": 5822.848446,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_02f8ec6ef89db18ccd42.json"
+  },
+  {
+    "fixture_id": "fx_1c10e65172f5477e2258",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C087Q3RH5GZXZ7Y8THYVZX",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_confirmation",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 769,
+          "outputTokens": 47
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 765,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1166,
+          "outputTokens": 13
+        }
+      }
+    ],
+    "elapsed_ms": 6067.683021999997,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_1c10e65172f5477e2258.json"
+  },
+  {
+    "fixture_id": "fx_05d22ca4cc813aa0a086",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C08DM3A0SMXV015T43G2DK",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 44
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 763,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1095,
+          "outputTokens": 67
+        }
+      }
+    ],
+    "elapsed_ms": 7448.665559000001,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_05d22ca4cc813aa0a086.json"
+  },
+  {
+    "fixture_id": "fx_0b58a3a6ac61d0118970",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C08MWXM6VTN13TTZVDXNE9",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 768,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 764,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1112,
+          "outputTokens": 41
+        }
+      }
+    ],
+    "elapsed_ms": 6648.668994000007,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_0b58a3a6ac61d0118970.json"
+  },
+  {
+    "fixture_id": "fx_07a9425bd18f2b4fd61e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C08VD1PY9H7WJ1GEH5C1G2",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 766,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 762,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1122,
+          "outputTokens": 28
+        }
+      }
+    ],
+    "elapsed_ms": 6078.001597000002,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_07a9425bd18f2b4fd61e.json"
+  },
+  {
+    "fixture_id": "fx_09ed1bfd82ca4ddfe32e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C091B0F20NSPCWRM9SBW20",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 760,
+          "outputTokens": 41
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 756,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1102,
+          "outputTokens": 23
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1098,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1367,
+          "outputTokens": 72
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1363,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1604,
+          "outputTokens": 20
+        }
+      }
+    ],
+    "elapsed_ms": 13814.723621999998,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_09ed1bfd82ca4ddfe32e.json"
+  },
+  {
+    "fixture_id": "fx_1008a8f0f140deb3c75e",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C09EVB6FY6GQM6VZPRQ4TD",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "request_identity_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 769,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 765,
+          "cacheWriteTokens": 0,
+          "inputTokens": 845,
+          "outputTokens": 19
+        }
+      }
+    ],
+    "elapsed_ms": 3685.955431000002,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_1008a8f0f140deb3c75e.json"
+  },
+  {
+    "fixture_id": "fx_4cb14e9f20557e1e3004",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C09JEHZ9CAJX8Y2AK9WQNV",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "request_identity_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 764,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 760,
+          "cacheWriteTokens": 0,
+          "inputTokens": 841,
+          "outputTokens": 19
+        }
+      }
+    ],
+    "elapsed_ms": 3607.788579,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_4cb14e9f20557e1e3004.json"
+  },
+  {
+    "fixture_id": "fx_1c7da880b36d5597672f",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C09NZHM5QWXVKGASHMAGJ8",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 768,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 764,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1213,
+          "outputTokens": 65
+        }
+      }
+    ],
+    "elapsed_ms": 8142.053037999998,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_1c7da880b36d5597672f.json"
+  },
+  {
+    "fixture_id": "fx_2122a33033dd7b47466d",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C09XY6WX36EQM8VY0NXJFX",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 769,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 765,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1214,
+          "outputTokens": 22
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1210,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1479,
+          "outputTokens": 91
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1475,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1754,
+          "outputTokens": 46
+        }
+      }
+    ],
+    "elapsed_ms": 17252.401202999987,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_2122a33033dd7b47466d.json"
+  },
+  {
+    "fixture_id": "fx_1e0cc73c643a93e64ca2",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C0AEST6DFZD8ZBB4MD2RKF",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_escalation",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 772,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 768,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1105,
+          "outputTokens": 23
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1101,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1366,
+          "outputTokens": 56
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1362,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1571,
+          "outputTokens": 56
+        }
+      }
+    ],
+    "elapsed_ms": 14816.29155200001,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_1e0cc73c643a93e64ca2.json"
+  },
+  {
+    "fixture_id": "fx_45e449ce8c55d389e280",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C0AX9D6DT99JQ150R6DGRX",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "draft_manual_review",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 1,
+    "model_calls": 2,
+    "framework_tool_requests": 1,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 669,
+          "cacheWriteTokens": 0,
+          "inputTokens": 773,
+          "outputTokens": 46
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 769,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1088,
+          "outputTokens": 51
+        }
+      }
+    ],
+    "elapsed_ms": 6698.317764000007,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_45e449ce8c55d389e280.json"
+  },
+  {
+    "fixture_id": "fx_35ba32ccb62232799be5",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C0B3TV8K5B91Z98M15CRQ4",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 764,
+          "outputTokens": 43
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 760,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1055,
+          "outputTokens": 28
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1051,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1528,
+          "outputTokens": 70
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1524,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1761,
+          "outputTokens": 19
+        }
+      }
+    ],
+    "elapsed_ms": 15540.776012999995,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_35ba32ccb62232799be5.json"
+  },
+  {
+    "fixture_id": "fx_4ec4de37a2c081c0f963",
+    "mode": "local-model",
+    "proposal_correct": false,
+    "evidence_valid": false,
+    "unsafe_proposal": false,
+    "unclassified": true,
+    "action": null,
+    "terminal_record": true,
+    "hardware": {
+      "name": "qwen3:0.6b",
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "size": 1532367993,
+      "size_vram": 0,
+      "context_length": 8192
+    },
+    "runtime_result": {
+      "session_id": "wrun_01M6C0BK117SZWY4CP0C1QF3B2",
+      "outcome": "handled"
+    },
+    "http_status": 200,
+    "expected_action": "propose_refund",
+    "validation": false,
+    "validation_reasons": [],
+    "tool_requests": 2,
+    "model_calls": 4,
+    "framework_tool_requests": 2,
+    "usage": [
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 668,
+          "cacheWriteTokens": 0,
+          "inputTokens": 767,
+          "outputTokens": 45
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 763,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1076,
+          "outputTokens": 28
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1072,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1549,
+          "outputTokens": 71
+        }
+      },
+      {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1545,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1784,
+          "outputTokens": 21
+        }
+      }
+    ],
+    "elapsed_ms": 16278.412958,
+    "trace": "reports/model-traces/model-development-v3-1793551746073-fx_4ec4de37a2c081c0f963.json"
+  }
+]

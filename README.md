@@ -35,7 +35,13 @@ npm run eval:faults
 
 The full fault matrix is intentionally larger than a unit suite. It runs eight overlays for each of 80 held-out cases, writes incremental evidence and excludes explicitly non-applicable execution boundaries. Run it against an isolated database. It creates and terminates only its own API workers.
 
-For actual model inference, follow [the runbook](docs/RUNBOOK.md). The public browser does not run a hosted model. The first held-out model version used Vulkan unexpectedly; the preserved CPU revision checks zero VRAM before every attempt. Read the resulting report rather than assuming model correctness from a successful tool call.
+For actual model inference, follow [the v3 runbook](docs/RUNBOOK.md#model-evaluation), [experiment notes](docs/MODEL-IMPROVEMENT-V3.md), [registered plan](eval/plans/model-experiment-v3.json) and [frozen configuration](eval/plans/model-config-v3.json). The current runner uses pinned Ollama and Qwen on a Linux CPU with disposable local PostgreSQL. It requires `HANDOFF_MODEL_EXPERIMENT=v3` and an explicit split argument. The legacy `npm run eval:model` command belongs to v2 and must be used from a separate clean v0.1.0 checkout.
+
+The frozen v3 operating point produced 8 acceptable proposals from the same 16 development cases on which an earlier v3 configuration produced zero. This is development evidence. The frozen held-out run produced 2 acceptable proposals from 16 fresh cases, with 2 incorrect proposals rejected by validation and 12 missing proposals. Repeating it does not create a fresh held-out score. The original v2 CPU result remains 0/16 on its original case subset; the earlier version-one Vulkan run is also preserved separately.
+
+Model quality remains limited. No model proposal was approved or executed. The v3 held-out subset differs from v2, so its score is not a paired before/after comparison.
+
+The public browser displays recorded model results and runs a live scripted workflow. It does not run a hosted model. Read the stored proposal grades and full denominator rather than assuming model correctness from a successful tool call or runner exit.
 
 ## Architecture
 

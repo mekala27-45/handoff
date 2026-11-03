@@ -22,31 +22,36 @@ The executor returns an existing effect even after its original approval expires
 
 ## Model evaluation
 
-The pinned Windows portable Ollama asset, URL and SHA-256 are in `docs/sources/ollama-release.json`. Download that exact asset, verify the digest and extract it under `.local/model-runtime/ollama`. Other operating systems must use the same Ollama version and verify the model digest. No model weights are part of the repository.
+### Current v3 protocol
+
+The current agent uses the [v3 plan](../eval/plans/model-experiment-v3.json), [frozen configuration](../eval/plans/model-config-v3.json) and [experiment history](MODEL-IMPROVEMENT-V3.md). The configuration records the exact agent, harness, runner and workflow hashes. Source hashes normalize line endings to LF. `HANDOFF_MODEL_EXPERIMENT=v3` must be present in both the Eve process and the model harness environment. Use `build/eval/harness/model-experiment.js` for v3; `npm run eval:model` still invokes the historical v2 harness.
+
+The [model workflow](../.github/workflows/model-experiment.yml) runs actual CPU inference on Linux with a disposable PostgreSQL 18 service. It downloads the official Ollama archive pinned in [the Linux runtime lock](sources/ollama-linux-release.json), checks its SHA-256 and verifies the exact Qwen digest in [the model lock](sources/model-lock.json). CPU preflight requires zero VRAM and an 8192-token context; its one-token warm-up is excluded from graded attempts. No model weights are committed.
+
+For an explicit development replay on a Linux host, first install the locked dependencies as described in README. Prepare a private `.env.evaluation` containing the direct connection to a disposable local database named `handoff`. Verify and extract the pinned Linux Ollama binary, then supply its absolute path:
 
 ```sh
-node scripts/model-server.mjs
+export HANDOFF_MODEL_EXPERIMENT=v3
+export HANDOFF_OLLAMA_BINARY=/absolute/path/to/verified/ollama
+npm run compile
+node --env-file=.env.evaluation scripts/run-model-experiment.mjs --development
 ```
 
-In a second terminal, pull `qwen3:0.6b` through the loopback server. On Windows, set `OLLAMA_HOST` to `127.0.0.1:11435` for the portable CLI before running `ollama.exe pull qwen3:0.6b`. Run the checked preflight:
+This runner accepts only a loopback database connection, migrates that disposable database, applies the restricted agent role and starts only its own Ollama and Eve processes. It generates the private evaluation channel key in memory and passes the v3 environment to both Eve and the harness. It exports sanitized reports and stops its own services. A hosted Neon connection or an arbitrary Ollama executable is not a substitute for this recorded environment.
 
-```sh
-node scripts/model-preflight.mjs
-```
+The frozen development run, [model-development-v3-1793634649670](../reports/runs/model-development-v3-1793634649670.json), produced 8 acceptable proposals from the complete balanced sixteen-case development suite. Earlier configurations and failed startup attempts remain in the experiment history. A new development replay is another recorded attempt, not new held-out evidence.
 
-The preflight checks Ollama and model versions, warms one token, and requires `size_vram: 0` and an 8192-token context. A warm-up is not an evaluated model attempt. The recorded version-one run used Vulkan and must not be presented as CPU evidence.
+The reserved v3 evaluation uses the explicit `--held-out` split and requires the committed frozen configuration. It selects two cases per family within the existing held-out split, excluding the original sixteen model cases. That reservation is already in use; repeating it must be labeled a repeated evaluation and cannot become a fresh score. Do not tune the frozen agent from its held-out outcomes. A later operating point needs a new versioned plan and untouched evaluation scope.
 
-Set a random private `HANDOFF_EVAL_TOKEN` in `.env`. Apply `packages/db/agent-role.sql` once using the database owner. Start eve:
+Four model calls, six tool calls, 512 output tokens per call and a 120-second case deadline remain hard bounds. Runner success is infrastructure evidence; only independent grading of an actually stored proposal counts as model correctness. Missing output and failed cases remain in the registered denominator.
 
-```sh
-node --env-file=.env node_modules/eve/bin/eve.js dev --no-ui --no-default-extensions --host 127.0.0.1 --port 2088
-npm run eval:model -- --development
-npm run eval:model
-```
+The three model tools inspect scoped facts, retrieve up to three clauses and submit a typed proposal. A model proposal never grants approval or execution authority. The isolated channel rejects requests without its private header and runs one active case at a time. The public browser continues to display recorded model evidence alongside a live scripted workflow; it does not provide hosted model inference.
 
-The harness checks the frozen version-two configuration. It runs one selected development case or all sixteen registered held-out cases. Four model calls, six tool calls, 512 output tokens per call and a 120-second case deadline are hard bounds. Do not change instructions to improve the same held-out run. Create a new explicitly versioned plan and preserve the earlier one.
+### Historical v2 reproduction
 
-Model calls are actual local inference. The tools can inspect scoped facts, retrieve up to three clauses and submit a typed proposal. A model proposal is never itself an approval or execution instruction. The isolated evaluation channel rejects requests without the private header and runs one active case at a time.
+Reproduce the original CPU protocol from a separate clean checkout of [v0.1.0](https://github.com/mekala27-45/handoff/tree/v0.1.0), using the locked dependencies and [runbook at that tag](https://github.com/mekala27-45/handoff/blob/v0.1.0/docs/RUNBOOK.md). That checkout contains the original agent, `eval/plans/model-config-v2.json` and the legacy `npm run eval:model` commands. Its held-out command checks the original v2 frozen hashes and rejects current v3 sources. Its development mode is also a legacy protocol and must not be presented as v3 evidence.
+
+The historical Windows portable Ollama URL and SHA-256 remain in [the Windows runtime lock](sources/ollama-release.json). The recorded CPU v2 run scored 0/16; its original Windows/direct-Neon environment differs from the Linux/local-PostgreSQL v3 experiment. The version-one run used Vulkan and is not CPU evidence. Replaying either protocol does not guarantee identical model output or create an untouched held-out evaluation.
 
 ## Failure evaluation
 
@@ -89,3 +94,5 @@ Stop only the process handles or PIDs recorded when this task started them. Do n
 | `cpu_model_preflight_failed` | The pinned model is not loaded on CPU with the expected context. Rerun the server preflight. |
 | `models_budget_exhausted` | Retain a failed attempt. Do not extend the same held-out case until it succeeds. |
 | Missing report | Display Not evaluated. Do not replace unknown evidence with zeros. |
+
+The frozen v3 recorded result is 8/16 acceptable proposals on development and 2/16 on the fresh held-out subset. The held-out report retains two validator-rejected incorrect proposals and twelve missing outputs. This is a completed experiment with a failed quality status; it does not establish reliable model decisions or model effect safety.

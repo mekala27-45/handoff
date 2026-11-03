@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-02T15:59:50.212Z",
+  "source_commit": "5443ab46e741489d4b1aa3cda53a22b96be0c9a8",
+  "platform": "linux",
+  "node": "v24.19.0",
+  "cpu_model": "AMD EPYC 9V45 96-Core Processor",
+  "cpu_count": 4,
+  "memory_bytes": 16760344576,
+  "ollama_version": "0.40.13",
+  "model": {
+    "name": "qwen3:0.6b",
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "size": 1532367993,
+    "size_vram": 0,
+    "context_length": 8192
+  },
+  "execution": "CPU",
+  "split": "held-out",
+  "note": "Actual model warm-up is excluded from graded attempts."
+}

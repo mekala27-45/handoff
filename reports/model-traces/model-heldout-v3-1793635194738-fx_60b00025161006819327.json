@@ -1,0 +1,684 @@
+{
+  "run_id": "model-heldout-v3-1793635194738-fx_60b00025161006819327",
+  "mode": "local-model",
+  "source_commit": "5443ab46e741489d4b1aa3cda53a22b96be0c9a8",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "configuration_digest": "03f2ace4ad3e2215451c41a30ee56c8b1bcd31e6fff88536cc2aeac4135bfd41",
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "trace": [
+    {
+      "at": "2026-11-02T16:00:44.509Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_delivery",
+      "data": {
+        "session_id": "wrun_01M6EFVPERSAT56DP5S5J012FB"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:44.549Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:44.552Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 0
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:44.554Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.789Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1119,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "get_order_facts",
+            "argument_fields": [
+              "order_id"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.792Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_53o2dv7q",
+        "capability": {
+          "kind": "tool",
+          "name": "get_order_facts"
+        },
+        "input": {
+          "order_id": "SYN-ORDER-60b00025161006819327"
+        },
+        "owner": {
+          "runId": "run_0"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.795Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.795Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "get_order_facts",
+        "input": {
+          "order_id": "SYN-ORDER-60b00025161006819327"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.801Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "tool_result",
+      "data": {
+        "tool": "get_order_facts",
+        "result": {
+          "order": {
+            "order_id": "SYN-ORDER-60b00025161006819327",
+            "customer_id": "SYN-CUSTOMER-60b00025161006819327",
+            "currency": "USD",
+            "captured_cents": 1,
+            "refunded_cents": 0,
+            "shipping_state": "delivered",
+            "delivered_at": "2026-01-16T11:59:59.999Z",
+            "shipped_at": "2026-02-07T12:00:00.000Z",
+            "tracking": "SYN-TRACK-60b00025161006819327",
+            "revision": 1
+          },
+          "captures": [
+            {
+              "capture_id": "SYN-CAPTURE-60b00025161006819327-1",
+              "amount_cents": 1,
+              "refunded_cents": 0,
+              "confirmed_at": "2026-01-01T01:00:00.000Z",
+              "revision": 1,
+              "duplicate": false
+            }
+          ],
+          "received_at": "2026-02-15T12:00:00.000Z",
+          "existing_effect_ref": null,
+          "fact_versions": {
+            "order_id": "SYN-ORDER-60b00025161006819327",
+            "order_revision": 1,
+            "capture_versions": {
+              "SYN-CAPTURE-60b00025161006819327-1": 1
+            },
+            "policy_id": "SAMPLE-SUPPLY",
+            "policy_version": 1,
+            "policy_revision": 1,
+            "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+          },
+          "snapshot_token": "f1"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.802Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_53o2dv7q",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.803Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.803Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 665,
+          "cacheWriteTokens": 0,
+          "inputTokens": 773,
+          "outputTokens": 47
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.827Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.830Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:45.831Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.426Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1130,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "find_policy_clauses",
+            "argument_fields": [
+              "query"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.429Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_4qigo7qa",
+        "capability": {
+          "kind": "tool",
+          "name": "find_policy_clauses"
+        },
+        "input": {
+          "query": "delivery date beyond return deadline"
+        },
+        "owner": {
+          "runId": "run_1"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.431Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.432Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "find_policy_clauses",
+        "input": {
+          "query": "delivery date beyond return deadline"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.435Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "tool_result",
+      "data": {
+        "tool": "find_policy_clauses",
+        "result": [
+          {
+            "clause": {
+              "text": "Damage or return more than 30 elapsed days after delivery, or missing trusted time or required evidence, requires manual review. Do not invent an exception or automatically deny a request.",
+              "lines": [
+                11,
+                12
+              ],
+              "terms": [
+                "return",
+                "window",
+                "review",
+                "outside"
+              ],
+              "action": "draft_manual_review",
+              "heading": "Return window and uncertain facts",
+              "clause_id": "P-WINDOW"
+            },
+            "ref": {
+              "policy_id": "SAMPLE-SUPPLY",
+              "version": 1,
+              "clause_id": "P-WINDOW",
+              "content_digest": "23913062acc0264704089c9bd5c1ab2d8732960abf92e8669d2b509217806008",
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+              "lines": [
+                11,
+                12
+              ]
+            },
+            "score": 1
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.436Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_4qigo7qa",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.437Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.437Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 760,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1160,
+          "outputTokens": 26
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.458Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama/qwen3:0.6b",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.461Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "budget",
+      "data": {
+        "models": 3,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:47.461Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:0.6b",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.250Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1320,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "propose_resolution",
+            "argument_fields": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "unknown_field_count": 0,
+            "action_code": "draft_manual_review",
+            "citation_count": 1,
+            "snapshot_token": "f1",
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.253Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_q03m533o",
+        "capability": {
+          "kind": "tool",
+          "name": "propose_resolution"
+        },
+        "input": {
+          "action_code": "draft_manual_review",
+          "cited_clause_ids": [
+            "P-WINDOW"
+          ],
+          "snapshot_token": "f1",
+          "rationale": "The delivery date is beyond the return window, requiring a manual review to ensure the request is processed correctly."
+        },
+        "owner": {
+          "runId": "run_2"
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.256Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "budget",
+      "data": {
+        "models": 3,
+        "tools": 3
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.256Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "propose_resolution",
+        "input": {
+          "action_code": "draft_manual_review",
+          "cited_clause_ids": [
+            "P-WINDOW"
+          ],
+          "snapshot_token": "f1",
+          "rationale": "The delivery date is beyond the return window, requiring a manual review to ensure the request is processed correctly."
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.264Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "tool_result",
+      "data": {
+        "tool": "propose_resolution",
+        "result": {
+          "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+          "proposal_id": "proposal_dbc06f1b-e6e9-4769-b692-9ed87b4e6256",
+          "proposal_digest": "e21878f2b4c4bf6203bc33cf4ee1c7d042ab9146b14301f54f2a91f611e48e5d",
+          "state": "awaiting_review",
+          "revision": 3,
+          "valid": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.264Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_q03m533o",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.266Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.266Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1147,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1523,
+          "outputTokens": 70
+        }
+      }
+    },
+    {
+      "at": "2026-11-02T16:00:50.278Z",
+      "case_id": "case_e8bdd9b9-bd51-4ea2-b84a-fa6dd32b56a2",
+      "type": "eve_result",
+      "data": {
+        "outcome": "handled"
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@ The owner authorized GitHub publication, Vercel deployment and the isolated Neon
 
 The owner subsequently explicitly approved publishing evaluation reports, model traces and fault diagnostics under reports/ and apps/site/public/reports/ on November 1, 2026. Preserve earlier failed and interrupted attempts along with the final reports. Existing SSO settings need no change; the production alias accepts ordinary independent requests.
 
-The release workflow consumes fresh CI artifacts, a successful Pages run and hosted HTTP/browser checks for one immutable source commit. It emits release-assets/release-candidate.json, release-readiness.json, hosted.json and RESULTS.md outside the source tree, then creates the annotated v0.1.0 tag only after those checks pass. This avoids embedding a future commit SHA in its own source. The tracked docs/release-candidate.json and source RESULTS.md checklist are historical evidence; the release assets are authoritative for the tagged candidate. Validate the downloaded candidate with node build/scripts/check-release.js PATH_TO_RELEASE_CANDIDATE_JSON after compiling.
+The release workflow consumes fresh CI artifacts, a successful Pages run and hosted HTTP/browser checks for one immutable source commit. For v0.2.0 it emits release-assets/release-candidate.json, release-readiness.json, hosted.json, model-experiments.json and RESULTS.md outside the source tree, then creates the annotated tag only after those checks pass. The existing v0.1.0 tag and assets remain immutable. This avoids embedding a future commit SHA in its own source. The tracked docs/release-candidate.json and source RESULTS.md checklist are historical evidence; the release assets are authoritative for the tagged candidate. Validate the downloaded candidate with node build/scripts/check-release.js PATH_TO_RELEASE_CANDIDATE_JSON after compiling.
 
 The prepared scope is a public GitHub repository named `handoff`, a Vercel API project named `handoff`, and a GitHub Pages workbench. The source contains original synthetic fixtures, evaluator truth for reproducibility, sanitized run evidence and three coding-agent workflows. Runtime and site artifacts exclude evaluator truth, private logs, capabilities, credentials and model weights. No social post, email or other public message is included.
 
@@ -12,7 +12,7 @@ The prepared scope is a public GitHub repository named `handoff`, a Vercel API p
 
 1. Run `npm ci` and `npm run verify` on the candidate commit. Read every result in `reports/checks/verification.json` and the artifact scan. A local pass does not imply the hosted path passed.
 2. Complete the registered scripted, model and failure evaluations. Preserve the failed development runs, GPU version one, CPU version two and interrupted fault checkpoints.
-3. Publish only reconciled reports with `node build/scripts/publish-reports.js SCRIPTED_RUN_ID MODEL_RUN_ID`. The command refuses missing case tables and mismatched metrics. Keep original report source commits visible.
+3. The original baseline publisher, `node build/scripts/publish-reports.js SCRIPTED_RUN_ID MODEL_RUN_ID`, rebuilds the original index. Append v3 results with `node build/scripts/publish-model-experiment.js EXPLICIT_RUN_ID...`; this preserves original v2 and diagnostic objects. Import original workflow publication/export manifests and raw case/trace bytes first. The release gate regrades actual SQL observations and verifies frozen hashes, original GitHub artifacts, complete denominators and fresh held-out scope. Failed model quality is reported honestly; it is not a passing quality claim.
 4. Record clean rederivation and the exact tested commit. Review the eighteen mandatory statuses in RESULTS. No full-completion tag can be prepared while a mandatory gate is unresolved.
 5. Obtain explicit authorization for the named source publication and server-secret destination. Do not include the credential in a repository or client artifact.
 
@@ -26,9 +26,9 @@ From a separate client and browser, verify readiness, CORS, no-store responses, 
 
 ## Pages after authorization
 
-The manual Pages workflow uses immutable action SHAs and requires a configured HTTPS API. Configure the repository Pages environment and dispatch only after the API passes the full hosted path. Open the actual Pages URL in a fresh browser, repeat the review flow, check small-screen layout and confirm recorded model labels.
+The Pages workflow builds each main candidate with immutable action SHAs and requires a configured HTTPS API. Configure the repository Pages environment and dispatch only after the API passes the full hosted path. Open the actual Pages URL in a fresh browser, repeat the review flow, check small-screen layout and confirm recorded model labels.
 
-The CI workflow uses an isolated PostgreSQL service, no hosted database secret and no model key. The Pages workflow grants Pages and identity-token permissions only to the deploy job. CI and Pages have not run remotely before repository publication.
+The CI workflow uses an isolated PostgreSQL service, no hosted database secret and no model key. The Pages workflow grants Pages and identity-token permissions only to the deploy job. CI and Pages run remotely for the candidate, and the release gate requires successful runs and the deployed source marker for that exact commit.
 
 ## Tag and archive
 
