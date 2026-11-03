@@ -1,0 +1,13 @@
+{
+  "workflow_run_id": 41669417436,
+  "source_commit": "89f75678d4aeb002f4102089418215b6a85a3bf9",
+  "artifact_id": 13245714708,
+  "artifact_digest": "sha256:e1a22dc4ef71587cf0546c791aee8f047186eee3435f932ef5136622e3feee4a",
+  "classification": "infrastructure-failure-before-model-inference",
+  "failed_phase": "authority-calibration",
+  "graded_model_cases": 0,
+  "model_quality_score": null,
+  "source_runner_report": "reports/model-experiments/41669417436/reports/checks/model-experiment-v4-runner.json",
+  "source_export_manifest": "reports/model-experiments/41669417436/export-manifest.json",
+  "interpretation": "Migration and isolated-role setup passed, then authority calibration failed before model startup. The original export contains no model run manifest or case table. This is not a completed sixteen-case development run and cannot qualify an operating point for freeze."
+}

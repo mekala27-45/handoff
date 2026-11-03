@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-11-03T15:44:11.172Z",
+  "version": "0.40.13",
+  "model": {
+    "name": "qwen3:4b-q4_K_M",
+    "digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+    "size": 4012176833,
+    "size_vram": 0,
+    "context_length": 8192
+  },
+  "model_metadata": {
+    "name": "qwen3:4b-q4_K_M",
+    "details": {
+      "family": "qwen3",
+      "quantization_level": "Q4_K_M",
+      "parameter_size": "4.0B"
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ],
+    "license": "Apache-2.0"
+  },
+  "passed": true,
+  "failure_code": null,
+  "warmup_http_status": 200
+}

@@ -1,0 +1,64 @@
+name: Verify and freeze Handoff model v4
+on:
+  push:
+    branches: [agent-freeze-v4]
+permissions:
+  contents: read
+concurrency:
+  group: handoff-model-v4-freeze
+  cancel-in-progress: false
+jobs:
+  verify-freeze:
+    if: github.repository == 'mekala27-45/handoff' && github.ref == 'refs/heads/agent-freeze-v4'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 24.19.0
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run compile
+      - run: node scripts/finalize-release-v4.mjs self-test
+      - run: node scripts/publish-model-freeze-v4.mjs self-test
+      - name: Read explicit development freeze request
+        id: request
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {readFile,appendFile} from 'node:fs/promises';
+          const request=JSON.parse(await readFile('docs/model-v4-freeze-request.json','utf8'));
+          assert.deepEqual(Object.keys(request).sort(),['development_run_id','version']);
+          assert.equal(request.version,4);
+          assert.match(request.development_run_id,/^model-development-v4-\d+$/);
+          await appendFile(process.env.GITHUB_OUTPUT,'run_id='+request.development_run_id+'\n');
+          JS
+      - name: Authenticate original development evidence before freeze
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEV_RUN_ID: ${{ steps.request.outputs.run_id }}
+        run: node scripts/finalize-release-v4.mjs pre-freeze "$DEV_RUN_ID"
+      - name: Freeze the verified development configuration
+        env:
+          HANDOFF_MODEL_EXPERIMENT: v4
+          DEV_RUN_ID: ${{ steps.request.outputs.run_id }}
+        run: node build/scripts/freeze-model-experiment-v4.js "$DEV_RUN_ID"
+      - name: Preserve the verified freeze on its dedicated evidence branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/publish-model-freeze-v4.mjs
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: model-freeze-v4-${{ github.sha }}
+          path: |
+            eval/plans/model-config-v4.json
+            reports/checks/model-v4-pre-freeze.json
+          if-no-files-found: error
+          retention-days: 90

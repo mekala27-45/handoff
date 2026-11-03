@@ -22,9 +22,35 @@ The executor returns an existing effect even after its original approval expires
 
 ## Model evaluation
 
-### Current v3 protocol
+### Current v4 protocol
 
-The current agent uses the [v3 plan](../eval/plans/model-experiment-v3.json), [frozen configuration](../eval/plans/model-config-v3.json) and [experiment history](MODEL-IMPROVEMENT-V3.md). The configuration records the exact agent, harness, runner and workflow hashes. Source hashes normalize line endings to LF. `HANDOFF_MODEL_EXPERIMENT=v3` must be present in both the Eve process and the model harness environment. Use `build/eval/harness/model-experiment.js` for v3; `npm run eval:model` still invokes the historical v2 harness.
+V4 uses a separate [agent project](../agent-v4/package.json), [registered plan](../eval/plans/model-experiment-v4.json), [verified model lock](sources/model-lock-v4.json) and [experiment history](MODEL-IMPROVEMENT-V4.md). Its current candidate is `qwen3:4b-q4_K_M`, manifest digest `2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0`. The registry response bytes are retained in the lock and the actual Ollama pull must match. The official Ollama 0.40.13 Linux archive remains pinned by SHA-256 in [the runtime lock](sources/ollama-linux-release.json). No model key, hosted model service or committed weights are used.
+
+The [v4 workflow](../.github/workflows/model-experiment-v4.yml) runs the Linux-only driver against a disposable loopback PostgreSQL 18 database named `handoff`. For an explicit development replay on a prepared Linux host, install the locked dependencies from README, configure a private `.env.evaluation` for that disposable database, and supply the absolute path of the verified Ollama binary:
+
+```sh
+export HANDOFF_MODEL_EXPERIMENT=v4
+export HANDOFF_OLLAMA_BINARY=/absolute/path/to/verified/ollama
+npm run compile
+npx tsc -p tsconfig.agent-v4.json
+node --env-file=.env.evaluation scripts/run-model-experiment-v4.mjs --development
+```
+
+The driver starts Eve with `agent-v4` as its working project and passes the required v4 environment to both Eve and the harness. Do not start the root v3 agent when claiming v4 evidence. It creates a private evaluation channel key in memory, binds task-owned services to loopback, and stops only its own process groups. Its warm-up is excluded from graded cases. Each graded attempt checks the locked model digest, zero VRAM and 8192 context. Current hard limits are four model calls, six tool calls, 512 output tokens per call and 120 seconds per case; temperature is zero and reasoning is explicitly disabled.
+
+Before model inference, the driver must pass the real database [authority calibration](../tests/integration/authority-v4.test.ts). The independent auditor joins reviews to cases through proposals using the compound session/proposal key. It counts approved reviews, all review records, monetary effects and draft dispositions. Calibration uses separate scripted synthetic canary sessions: it observes zero, creates known approval/effect records, verifies positive counts, checks repeated execution and cross-session isolation, then cleans only its own sessions. Those deliberate canary operations are not model proposals or graded model cases. A calibration failure stops the model phase.
+
+The [recorded-run verifier](../eval/harness/verify-recorded-v4.ts) replays stored proposal identity, actual integer cents, version snapshots, retrieved references and validator reasons against independent supplied truth. The proposal SELECT and authority queries are recorded independently. Failed or unqueried SQL remains unknown and blocks freeze; it is not a confirmed missing proposal or proof of zero authority use. Missing model output, invalid proposals and timeouts still count as failures in the complete selected-case denominator.
+
+The initial four-case pilot only checks execution and tool mechanics. A candidate must restore the full balanced sixteen-case development scope before running `node build/scripts/freeze-model-experiment-v4.js EXPLICIT_COMPLETE_DEVELOPMENT_RUN_ID` with the v4 environment. Freeze requires at least fourteen correct proposals, zero accepted incorrect action/amount/evidence, complete SQL and authority observations, zero approvals/effects/review records, and matching source/configuration hashes. It writes `eval/plans/model-config-v4.json` once and refuses overwrite. Until that file exists and matches the completed qualifying development run, v4 is not frozen.
+
+The reserved v4 `--held-out` scope contains two cases per family and excludes the original v2 model subset and v3 held-out subset. It must run once after freeze. Do not alter the operating point from held-out outcomes or repeat cases until they pass. A reproduction is another recorded attempt, never a fresh evaluation. This is another subset within the existing held-out template lineages, not a new-template benchmark or a paired comparison with older scores. No qualifying full-development score, freeze or v4 held-out result is asserted in this runbook while development is in progress.
+
+Append reconciled public records using `node build/scripts/publish-model-experiment-v4.js EXPLICIT_RUN_ID...`. The v4 publisher preserves original scripted, v2 and v3 index objects and adds a separate recorded v4 section. Retain original export manifests, raw evidence bytes and failures. The public API/workbench remains a scripted live demo with recorded model results; no model is hosted behind the public workbench.
+
+### Frozen v3 reproduction
+
+The preserved implementation under `agent/` uses the [v3 plan](../eval/plans/model-experiment-v3.json), [frozen configuration](../eval/plans/model-config-v3.json) and [experiment history](MODEL-IMPROVEMENT-V3.md). The configuration records the exact agent, harness, runner and workflow hashes. Source hashes normalize line endings to LF. `HANDOFF_MODEL_EXPERIMENT=v3` must be present in both the Eve process and the model harness environment. Use `build/eval/harness/model-experiment.js` for v3; `npm run eval:model` still invokes the historical v2 harness.
 
 The [model workflow](../.github/workflows/model-experiment.yml) runs actual CPU inference on Linux with a disposable PostgreSQL 18 service. It downloads the official Ollama archive pinned in [the Linux runtime lock](sources/ollama-linux-release.json), checks its SHA-256 and verifies the exact Qwen digest in [the model lock](sources/model-lock.json). CPU preflight requires zero VRAM and an 8192-token context; its one-token warm-up is excluded from graded attempts. No model weights are committed.
 
@@ -41,7 +67,7 @@ This runner accepts only a loopback database connection, migrates that disposabl
 
 The frozen development run, [model-development-v3-1793634649670](../reports/runs/model-development-v3-1793634649670.json), produced 8 acceptable proposals from the complete balanced sixteen-case development suite. Earlier configurations and failed startup attempts remain in the experiment history. A new development replay is another recorded attempt, not new held-out evidence.
 
-The reserved v3 evaluation uses the explicit `--held-out` split and requires the committed frozen configuration. It selects two cases per family within the existing held-out split, excluding the original sixteen model cases. That reservation is already in use; repeating it must be labeled a repeated evaluation and cannot become a fresh score. Do not tune the frozen agent from its held-out outcomes. A later operating point needs a new versioned plan and untouched evaluation scope.
+The historical v3 evaluation uses the explicit `--held-out` split and requires the committed frozen configuration. Reproduce the original v3 operating point from a separate clean [v0.2.0 checkout](https://github.com/mekala27-45/handoff/tree/v0.2.0). It selects two cases per family within the existing held-out split, excluding the original sixteen model cases. That reservation is already in use; repeating it must be labeled a repeated evaluation and cannot become a fresh score. Do not tune the frozen agent from its held-out outcomes. A later operating point needs a new versioned plan and untouched evaluation scope.
 
 Four model calls, six tool calls, 512 output tokens per call and a 120-second case deadline remain hard bounds. Runner success is infrastructure evidence; only independent grading of an actually stored proposal counts as model correctness. Missing output and failed cases remain in the registered denominator.
 
@@ -66,9 +92,9 @@ A run with no observed barrier fails `injector_not_exercised`. Preserve failed a
 
 The final audit-version-two baseline and full fault matrix used isolated loopback PostgreSQL 18.6. The exact binary archive, observed checksum, port, durability settings and environment are recorded in `docs/sources/local-postgres.json` and `reports/environments`. This portable database is task-local and binds only to 127.0.0.1. It is not a machine-wide service. The API integration suite and an earlier 160-case baseline also passed against the isolated direct Neon connection. The remote fault run was explicitly interrupted and superseded by the complete local run after the independent auditor gained order-aggregate and draft-disposition checks. Its checkpoint is preserved and excluded from the final denominator.
 
-Use a disposable local PostgreSQL 18 database for the exhaustive matrix. Keep `fsync` and `synchronous_commit` enabled. For an alternate environment file, use `node --env-file=.env.evaluation build/eval/harness/faults.js`. The harness records its actual database engine and environment. It exits unsuccessfully if any applicable injection fails. CI includes all eight failure types, including actual worker termination and post-commit response loss; the remote CI job remains unverified until the repository is published.
+Use a disposable local PostgreSQL 18 database for the exhaustive matrix. Keep `fsync` and `synchronous_commit` enabled. For an alternate environment file, use `node --env-file=.env.evaluation build/eval/harness/faults.js`. The harness records its actual database engine and environment. It exits unsuccessfully if any applicable injection fails. CI includes all eight failure types, including actual worker termination and post-commit response loss; a candidate still needs fresh successful remote CI and matching hosted checks before release.
 
-Reconcile the recorded site data with `node build/scripts/publish-reports.js SCRIPTED_RUN_ID MODEL_RUN_ID`, then run `node scripts/diagnostics.mjs SCRIPTED_RUN_ID MODEL_RUN_ID FAULT_RUN_ID`. The second command validates the common case IDs and writes paired dispositions, fault denominators, ledger counts, timing and usage to downloadable diagnostics. Do not merge timing samples from different database or device environments.
+When rebuilding the original baseline, reconcile its recorded data with `node build/scripts/publish-reports.js SCRIPTED_RUN_ID MODEL_RUN_ID`, then run `node scripts/diagnostics.mjs SCRIPTED_RUN_ID MODEL_RUN_ID FAULT_RUN_ID`. The second command validates the common case IDs and writes paired dispositions, fault denominators, ledger counts, timing and usage to downloadable diagnostics. Do not merge timing samples from different database or device environments. The baseline publisher rebuilds the index; run the additive v3/v4 publishers afterward to restore their explicitly selected records.
 
 ## Retention and cleanup
 

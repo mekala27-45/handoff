@@ -29,3 +29,18 @@ test('missing v4 evidence does not render a score or placeholder result',async({
  await page.route('**/reports/index.json',route=>route.fulfill({json:index}));await page.goto('/');await page.getByRole('button',{name:'03 Evaluation',exact:true}).click();
  await expect(page.getByRole('heading',{name:'Agent v3 experiments',exact:true})).toBeVisible();await expect(page.locator('[data-model-experiment-version="4"]')).toHaveCount(0);
 });
+
+test('historical v4 pilot states its missing authority audit and freeze ineligibility',async({page})=>{
+ const index=JSON.parse(readFileSync('apps/site/public/reports/index.json','utf8'));
+ const pilot=Object.values(index.model_experiments_v4??{}).find((r:any)=>r.run_id==='model-development-v4-1793720657839') as any;
+ expect(pilot).toBeTruthy();expect(pilot.status).toBe('passed');expect(pilot.authority_audit_complete).toBe(false);expect(pilot.freeze_qualification).toBe('ineligible-historical-pilot');
+ expect(pilot.metrics.find((m:any)=>m.metric_id==='proposal_correctness').numerator).toBe(4);expect(pilot.attempted_case_ids).toHaveLength(4);
+ const note='Independent approval/effect counts were unavailable; this diagnostic pilot did not qualify for freeze.';
+ expect(pilot.evidence_note).toBe(note);
+ for(const dir of ['apps/site/public/reports','reports/public']){const download=JSON.parse(readFileSync(dir+'/'+pilot.filename,'utf8'));expect(download.evidence_note).toBe(note);expect(download.authority_audit_complete).toBe(false);expect(download.freeze_qualification).toBe('ineligible-historical-pilot');}
+ // Injected markup is a browser-only escaping probe; actual recorded grades stay intact.
+ const presented={...pilot,evidence_note:note+' <span data-note-injection>escaped fixture text</span>'};index.model_experiments_v4={[pilot.run_id]:presented};
+ await page.route('**/reports/index.json',route=>route.fulfill({json:index}));await page.goto('/');await page.getByRole('button',{name:'03 Evaluation',exact:true}).click();
+ const entry=page.locator('[data-experiment-v4-run="'+pilot.run_id+'"]');await expect(entry).toContainText('Recorded quality status: passed');await expect(entry.locator('[data-evidence-note]')).toHaveText(presented.evidence_note);await expect(entry.locator('[data-note-injection]')).toHaveCount(0);
+ await expect(page.locator('[data-model-experiment-version="4"]')).toContainText('Read the authority-audit limitations shown for individual runs.');
+});
