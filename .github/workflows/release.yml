@@ -13,7 +13,7 @@ on:
       tag:
         description: Authorized release tag
         required: true
-        default: v0.2.0
+        default: v0.3.0
         type: string
 permissions:
   contents: read
@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 env:
   CANDIDATE_COMMIT: ${{ github.event.workflow_run.head_sha || inputs.candidate_commit }}
-  RELEASE_TAG: ${{ inputs.tag || 'v0.2.0' }}
+  RELEASE_TAG: ${{ inputs.tag || 'v0.3.0' }}
 jobs:
   attest:
     if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
@@ -44,9 +44,9 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run compile
       - run: npx playwright install --with-deps chromium
-      - run: node scripts/finalize-release.mjs self-test
+      - run: node scripts/finalize-release-v4.mjs self-test
       - name: Verify immutable candidate and deployed workflow
-        run: node scripts/finalize-release.mjs verify
+        run: node scripts/finalize-release-v4.mjs verify
         env:
           GH_TOKEN: ${{ github.token }}
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
@@ -74,6 +74,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
       - name: Publish annotated tag and verified assets
-        run: node scripts/finalize-release.mjs publish
+        run: node scripts/finalize-release-v4.mjs publish
         env:
           GH_TOKEN: ${{ github.token }}

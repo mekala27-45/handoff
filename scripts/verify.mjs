@@ -8,6 +8,7 @@ async function run(name,args,options={}){const result=await new Promise(resolve=
 async function ready(url){for(let i=0;i<40;i++){try{if((await fetch(url)).ok)return;}catch{}await new Promise(r=>setTimeout(r,250));}throw Error('service_not_ready');}
 try{
  await run('types',['node_modules/typescript/bin/tsc','-p','tsconfig.json']);await run('agent-types',['node_modules/typescript/bin/tsc','-p','tsconfig.agent.json']);
+ await run('agent-v4-types',['node_modules/typescript/bin/tsc','-p','tsconfig.agent-v4.json']);
  await run('site-types',['node_modules/typescript/bin/tsc','-p','apps/site/tsconfig.json']);
  await run('unit',['--test','build/tests/unit/*.test.js']);await run('rederive',['scripts/rederive.mjs']);
  await run('site-build',['../../node_modules/vite/bin/vite.js','build'],{cwd:'apps/site'});

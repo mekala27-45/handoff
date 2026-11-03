@@ -50,6 +50,13 @@ async function command(name,program,args){
   const checked=preflightFailureCode(await readFile(path.join(privateDir,name+'.stderr.log'),'utf8'));
   if(checked){phase.failure_code=checked;console.error('cpu_preflight_checked_failure:'+checked);}
  }
+ if(code!==0&&name==='authority-calibration'){
+  const output=await readFile(path.join(privateDir,name+'.stdout.log'),'utf8');
+  const allowed=['calibration_fixture_required','calibration_refund_action_required','calibration_draft_action_required','calibration_refund_receipt_required','calibration_draft_receipt_required','calibration_awaiting_review_required','calibration_validation_required','calibration_approved_required'];
+  const checked=allowed.find(value=>output.includes(value));
+  phase.failure_code=checked??'authority_calibration_assertion_failed';
+  console.error('authority_calibration_checked_failure:'+phase.failure_code);
+ }
  phases.push(phase);
  if(code!==0)throw Error(name+'_failed');console.log(name+': passed');
 }

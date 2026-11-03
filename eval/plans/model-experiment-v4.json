@@ -189,7 +189,19 @@
       "note": "All four stored proposals were correct, but a review-table column mismatch prevented independent approval/effect counts. Not eligible for freeze."
     }
   ],
-  "infrastructure_attempts": [],
+  "infrastructure_attempts": [
+    {
+      "workflow_run_id": 41669417436,
+      "source_commit": "89f75678d4aeb002f4102089418215b6a85a3bf9",
+      "failed_phase": "authority-calibration",
+      "inference_cases": 0,
+      "model_quality_score": null,
+      "evidence_path": "reports/model-experiments/41669417436",
+      "artifact_id": 13245714708,
+      "artifact_digest": "sha256:e1a22dc4ef71587cf0546c791aee8f047186eee3435f932ef5136622e3feee4a",
+      "note": "Pre-inference calibration fixture lookup failed. Retained as infrastructure evidence, excluded from model-quality scoring."
+    }
+  ],
   "changes_from_v3": [
     "Larger pinned Qwen3:4b Q4_K_M open CPU model; original 0.6b weights and all v3 sources/results preserved.",
     "Independent agent-v4 project with exact synthetic fixture copies verified against root data.",
