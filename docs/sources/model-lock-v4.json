@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-11-03T15:31:37.512Z",
+  "ollama_version": "0.40.13",
+  "model": {
+    "name": "qwen3:4b-q4_K_M",
+    "digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+    "download_bytes": 2620788260,
+    "quantization": "Q4_K_M"
+  },
+  "source": {
+    "url": "https://registry.ollama.ai/v2/library/qwen3/manifests/4b-q4_K_M",
+    "workflow_run_id": "41664725390",
+    "source_commit": "77c7ae877ae465c2d33770bcda2eb4e182035d84",
+    "docker_content_digest": null,
+    "digest_derivation": "SHA256 of the exact official registry response bytes; Docker-Content-Digest header was absent.",
+    "manifest_base64": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6NWVmZDUyZDZkOWYyNGRiNGEzM2RmMGQ3MDZlZTYwMzdlZGYwMjYwMjcyODFiYjk1NjhiYjA2NmViYzVhNGYzMSIsInNpemUiOjQ4N30sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5tb2RlbCIsImRpZ2VzdCI6InNoYTI1NjoxNjM1NTNhZWExYjFkZTYyZGU3YzVlYjJlZjVhZmI3NTZiNGIzMTMzMzA4ZDlhZTdlNDJlOTUxZDhkNjk2ZWY1Iiwic2l6ZSI6MjYyMDc3NDU5Mn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2xsYW1hLmltYWdlLnRlbXBsYXRlIiwiZGlnZXN0Ijoic2hhMjU2OmFlMzcwZDg4NGYxMDhkMTZlN2NjOGZkNTI1OWViYzU3NzNhMGFmYTZlMDc4YjExZjRlZDdlMzlhMjdlMGRmYzQiLCJzaXplIjoxNzIzfSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vbGxhbWEuaW1hZ2UubGljZW5zZSIsImRpZ2VzdCI6InNoYTI1NjpkMThhNWNjNzFiODRiYzRhZjM5NGEzMTExNmJkMzkzMmI0MjI0MWRlNzBjNzdkMmI3NmQ2OWEzMTRlYzhhYTEyIiwic2l6ZSI6MTEzMzh9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5wYXJhbXMiLCJkaWdlc3QiOiJzaGEyNTY6Y2ZmM2YzOTVlZjM3NTZhYjYzZTU4YjBhZDFiMzJiYjZmODAyOTA1Y2FlMTQ3MmU2YTEyMDM0ZTQyNDZmYmJkYiIsInNpemUiOjEyMH1dfQ=="
+  },
+  "execution": "CPU",
+  "context_tokens": 8192,
+  "license": "Apache-2.0; actual downloaded metadata must confirm preflight."
+}

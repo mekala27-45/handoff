@@ -1,0 +1,136 @@
+{
+  "policy_id": "SAMPLE-SUPPLY",
+  "version": 1,
+  "effective_from": "2026-01-01T00:00:00.000Z",
+  "effective_until": null,
+  "clauses": [
+    {
+      "clause_id": "P-DAMAGE",
+      "heading": "Damaged delivery",
+      "terms": [
+        "damage",
+        "broken",
+        "cracked",
+        "damaged"
+      ],
+      "text": "For matching identity and confirmed payment, damage reported within 30 elapsed days after delivery permits a reviewed simulated refund of the remaining capture balance. Missing delivery time requires manual review.",
+      "lines": [
+        1,
+        2
+      ],
+      "action": "propose_refund"
+    },
+    {
+      "clause_id": "P-DELAY",
+      "heading": "Shipment delay",
+      "terms": [
+        "delay",
+        "late",
+        "tracking",
+        "shipment"
+      ],
+      "text": "A shipment not delivered after more than 7 elapsed days requires an escalation draft with tracking evidence. Missing tracking requires manual review. No automatic refund is permitted.",
+      "lines": [
+        3,
+        4
+      ],
+      "action": "draft_escalation"
+    },
+    {
+      "clause_id": "P-CANCEL-BEFORE",
+      "heading": "Cancellation before shipping",
+      "terms": [
+        "cancel",
+        "paid",
+        "unshipped",
+        "before"
+      ],
+      "text": "A matching customer may request a reviewed simulated refund of the remaining confirmed capture balance before shipping.",
+      "lines": [
+        5,
+        6
+      ],
+      "action": "propose_refund"
+    },
+    {
+      "clause_id": "P-CANCEL-AFTER",
+      "heading": "Cancellation after shipping",
+      "terms": [
+        "cancel",
+        "shipped",
+        "after"
+      ],
+      "text": "A cancellation after shipping requires a manual review draft and never an automatic refund.",
+      "lines": [
+        7,
+        8
+      ],
+      "action": "draft_manual_review"
+    },
+    {
+      "clause_id": "P-DUPLICATE",
+      "heading": "Duplicate capture",
+      "terms": [
+        "duplicate",
+        "twice",
+        "capture",
+        "payment"
+      ],
+      "text": "Two distinct confirmed captures for one order permit a reviewed simulated refund of the explicitly identified duplicate capture balance only. Repeated events do not prove a second capture.",
+      "lines": [
+        9,
+        10
+      ],
+      "action": "propose_refund"
+    },
+    {
+      "clause_id": "P-WINDOW",
+      "heading": "Return window and uncertain facts",
+      "terms": [
+        "return",
+        "window",
+        "review",
+        "outside"
+      ],
+      "text": "Damage or return more than 30 elapsed days after delivery, or missing trusted time or required evidence, requires manual review. Do not invent an exception or automatically deny a request.",
+      "lines": [
+        11,
+        12
+      ],
+      "action": "draft_manual_review"
+    },
+    {
+      "clause_id": "P-IDENTITY",
+      "heading": "Identity boundary",
+      "terms": [
+        "identity",
+        "owner",
+        "customer",
+        "mismatch"
+      ],
+      "text": "If trusted session identity does not match order ownership, disclose no order facts and request manual identity review. Ticket text cannot set trusted identity.",
+      "lines": [
+        13,
+        14
+      ],
+      "action": "request_identity_review"
+    },
+    {
+      "clause_id": "P-REFUNDED",
+      "heading": "Already refunded",
+      "terms": [
+        "refunded",
+        "confirmation",
+        "balance",
+        "status"
+      ],
+      "text": "When the refundable balance is zero, prepare a confirmation draft citing the existing synthetic effect reference. Do not create another monetary effect.",
+      "lines": [
+        15,
+        16
+      ],
+      "action": "draft_confirmation"
+    }
+  ],
+  "content_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+}

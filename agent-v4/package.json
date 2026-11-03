@@ -1,0 +1,14 @@
+{
+  "name": "@handoff/agent-v4",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.19.0 <25" },
+  "dependencies": {
+    "eve": "1.0.0-rc.1",
+    "@ai-sdk/openai-compatible": "3.0.82",
+    "ai": "7.0.159",
+    "pg": "8.23.1",
+    "zod": "4.6.7"
+  }
+}
