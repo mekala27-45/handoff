@@ -1,0 +1,16 @@
+{
+  "experiment": "v4",
+  "source_commit": "89f75678d4aeb002f4102089418215b6a85a3bf9",
+  "split": "development",
+  "exported": [
+    {
+      "file": "reports/checks/model-experiment-v4-diagnostics.json",
+      "sha256": "237ba10d1d5c6d9364a285a1c7871216a9c606f90809086eecc400ec9670a9fb"
+    },
+    {
+      "file": "reports/checks/model-experiment-v4-runner.json",
+      "sha256": "3638d93ee33386990e2f97daadc922f3d9132182528fe9ecd2f49bde5a2d2c96"
+    }
+  ],
+  "private_logs_exported": false
+}
