@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "source_commit": "77c7ae877ae465c2d33770bcda2eb4e182035d84",
+  "workflow_run_id": "41664725390",
+  "observed_at": "2026-11-03T15:31:37.512Z",
+  "purpose": "Read-only official model manifest capture; no model inference or quality result.",
+  "candidates": [
+    {
+      "model": "qwen3:1.7b-q4_K_M",
+      "source_url": "https://registry.ollama.ai/v2/library/qwen3/manifests/1.7b-q4_K_M",
+      "manifest_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "docker_content_digest": null,
+      "manifest_base64": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6NTE3Y2NhZmYwMmZlOWY5OTcxOGFiMmY0NzhlNjExYWEyODEzYzM2MjYzZWVlZDg2YzI0MjdiYzEyMmQxNGFkOCIsInNpemUiOjQ4N30sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5tb2RlbCIsImRpZ2VzdCI6InNoYTI1NjozZDBiNzkwNTM0ZmU0Yjc5NTI1ZmMzNjkyOTUwNDA4ZGNhNDExNzE2NzZlZDdlMjFkYjU3YWY1YzY1ZWY2YWI2Iiwic2l6ZSI6MTM1OTI3OTc3Nn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2xsYW1hLmltYWdlLnRlbXBsYXRlIiwiZGlnZXN0Ijoic2hhMjU2OmFlMzcwZDg4NGYxMDhkMTZlN2NjOGZkNTI1OWViYzU3NzNhMGFmYTZlMDc4YjExZjRlZDdlMzlhMjdlMGRmYzQiLCJzaXplIjoxNzIzfSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vbGxhbWEuaW1hZ2UubGljZW5zZSIsImRpZ2VzdCI6InNoYTI1NjpkMThhNWNjNzFiODRiYzRhZjM5NGEzMTExNmJkMzkzMmI0MjI0MWRlNzBjNzdkMmI3NmQ2OWEzMTRlYzhhYTEyIiwic2l6ZSI6MTEzMzh9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5wYXJhbXMiLCJkaWdlc3QiOiJzaGEyNTY6Y2ZmM2YzOTVlZjM3NTZhYjYzZTU4YjBhZDFiMzJiYjZmODAyOTA1Y2FlMTQ3MmU2YTEyMDM0ZTQyNDZmYmJkYiIsInNpemUiOjEyMH1dfQ==",
+      "download_bytes": 1359293444,
+      "layers": [
+        {
+          "media_type": "application/vnd.ollama.image.model",
+          "digest": "sha256:3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+          "size": 1359279776
+        },
+        {
+          "media_type": "application/vnd.ollama.image.template",
+          "digest": "sha256:ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4",
+          "size": 1723
+        },
+        {
+          "media_type": "application/vnd.ollama.image.license",
+          "digest": "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+          "size": 11338
+        },
+        {
+          "media_type": "application/vnd.ollama.image.params",
+          "digest": "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+          "size": 120
+        }
+      ],
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+        "size": 487
+      }
+    },
+    {
+      "model": "qwen3:4b-q4_K_M",
+      "source_url": "https://registry.ollama.ai/v2/library/qwen3/manifests/4b-q4_K_M",
+      "manifest_digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+      "docker_content_digest": null,
+      "manifest_base64": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJkaWdlc3QiOiJzaGEyNTY6NWVmZDUyZDZkOWYyNGRiNGEzM2RmMGQ3MDZlZTYwMzdlZGYwMjYwMjcyODFiYjk1NjhiYjA2NmViYzVhNGYzMSIsInNpemUiOjQ4N30sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5tb2RlbCIsImRpZ2VzdCI6InNoYTI1NjoxNjM1NTNhZWExYjFkZTYyZGU3YzVlYjJlZjVhZmI3NTZiNGIzMTMzMzA4ZDlhZTdlNDJlOTUxZDhkNjk2ZWY1Iiwic2l6ZSI6MjYyMDc3NDU5Mn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQub2xsYW1hLmltYWdlLnRlbXBsYXRlIiwiZGlnZXN0Ijoic2hhMjU2OmFlMzcwZDg4NGYxMDhkMTZlN2NjOGZkNTI1OWViYzU3NzNhMGFmYTZlMDc4YjExZjRlZDdlMzlhMjdlMGRmYzQiLCJzaXplIjoxNzIzfSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vbGxhbWEuaW1hZ2UubGljZW5zZSIsImRpZ2VzdCI6InNoYTI1NjpkMThhNWNjNzFiODRiYzRhZjM5NGEzMTExNmJkMzkzMmI0MjI0MWRlNzBjNzdkMmI3NmQ2OWEzMTRlYzhhYTEyIiwic2l6ZSI6MTEzMzh9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9sbGFtYS5pbWFnZS5wYXJhbXMiLCJkaWdlc3QiOiJzaGEyNTY6Y2ZmM2YzOTVlZjM3NTZhYjYzZTU4YjBhZDFiMzJiYjZmODAyOTA1Y2FlMTQ3MmU2YTEyMDM0ZTQyNDZmYmJkYiIsInNpemUiOjEyMH1dfQ==",
+      "download_bytes": 2620788260,
+      "layers": [
+        {
+          "media_type": "application/vnd.ollama.image.model",
+          "digest": "sha256:163553aea1b1de62de7c5eb2ef5afb756b4b3133308d9ae7e42e951d8d696ef5",
+          "size": 2620774592
+        },
+        {
+          "media_type": "application/vnd.ollama.image.template",
+          "digest": "sha256:ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4",
+          "size": 1723
+        },
+        {
+          "media_type": "application/vnd.ollama.image.license",
+          "digest": "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+          "size": 11338
+        },
+        {
+          "media_type": "application/vnd.ollama.image.params",
+          "digest": "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb",
+          "size": 120
+        }
+      ],
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:5efd52d6d9f24db4a33df0d706ee6037edf026027281bb9568bb066ebc5a4f31",
+        "size": 487
+      }
+    }
+  ]
+}
