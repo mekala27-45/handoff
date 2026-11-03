@@ -35,13 +35,13 @@ npm run eval:faults
 
 The full fault matrix is intentionally larger than a unit suite. It runs eight overlays for each of 80 held-out cases, writes incremental evidence and excludes explicitly non-applicable execution boundaries. Run it against an isolated database. It creates and terminates only its own API workers.
 
-For actual model inference, follow [the v3 runbook](docs/RUNBOOK.md#model-evaluation), [experiment notes](docs/MODEL-IMPROVEMENT-V3.md), [registered plan](eval/plans/model-experiment-v3.json) and [frozen configuration](eval/plans/model-config-v3.json). The current runner uses pinned Ollama and Qwen on a Linux CPU with disposable local PostgreSQL. It requires `HANDOFF_MODEL_EXPERIMENT=v3` and an explicit split argument. The legacy `npm run eval:model` command belongs to v2 and must be used from a separate clean v0.1.0 checkout.
+For current agent-quality work, follow [the v4 runbook](docs/RUNBOOK.md#current-v4-protocol), [experiment notes](docs/MODEL-IMPROVEMENT-V4.md), [registered plan](eval/plans/model-experiment-v4.json) and [verified model lock](docs/sources/model-lock-v4.json). V4 runs the isolated `agent-v4` project with `qwen3:4b-q4_K_M` on a Linux CPU and disposable local PostgreSQL. It uses the same three bounded proposal tools. The original v3 implementation and frozen source hashes remain preserved.
 
-The frozen v3 operating point produced 8 acceptable proposals from the same 16 development cases on which an earlier v3 configuration produced zero. This is development evidence. The frozen held-out run produced 2 acceptable proposals from 16 fresh cases, with 2 incorrect proposals rejected by validation and 12 missing proposals. Repeating it does not create a fresh held-out score. The original v2 CPU result remains 0/16 on its original case subset; the earlier version-one Vulkan run is also preserved separately.
+V4 is still in development. Before freeze it must complete all sixteen registered development cases, produce at least fourteen independently correct proposals, and show zero accepted incorrect proposals. The independent SQL reads and calibrated authority observations must be complete, with zero model-case approvals, review records or effects. An unknown observation never becomes zero. A diagnostic pilot cannot qualify this gate. No qualifying v4 score, frozen configuration or held-out result is claimed here.
 
-Model quality remains limited. No model proposal was approved or executed. The v3 held-out subset differs from v2, so its score is not a paired before/after comparison.
+The historical v2 CPU result remains 0/16. V3 produced 8/16 on development and 2/16 on its fresh held-out subset, with two incorrect proposals rejected and twelve missing outputs. These records and their failed attempts remain separate. V4 reserves another sixteen held-out cases, excluding both earlier model subsets. Different held-out subsets are not a paired before/after comparison. The earlier version-one Vulkan run is also preserved separately and is not CPU evidence.
 
-The public browser displays recorded model results and runs a live scripted workflow. It does not run a hosted model. Read the stored proposal grades and full denominator rather than assuming model correctness from a successful tool call or runner exit.
+The public browser displays recorded model results alongside a live scripted workflow. It does not run a hosted model. Code validates proposals; the model has no approval or execution tool. Read actual stored-proposal grades and full denominators rather than inferring model quality from a successful tool call or runner exit.
 
 ## Architecture
 
@@ -67,7 +67,8 @@ The agent database role cannot create approvals or effects. Runtime artifacts ex
 | --- | --- |
 | `apps/api` | Native HTTP API and strict request validation |
 | `apps/site` | Four-view workbench and recorded evaluation display |
-| `agent` | One eve agent, local channel and three tools |
+| `agent` | Preserved v3 agent, local channel and three tools |
+| `agent-v4` | Isolated current agent project using the locked 4B CPU model |
 | `packages/domain` | Policy, scope, transitions and execution |
 | `packages/db` | Isolated schema and database role |
 | `packages/fixtures` | Public synthetic data and fictional policy |

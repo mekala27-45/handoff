@@ -1,0 +1,27 @@
+{
+  "source_commit": "89f75678d4aeb002f4102089418215b6a85a3bf9",
+  "started_at": "2026-11-03T16:00:01.300Z",
+  "finished_at": "2026-11-03T16:00:03.239Z",
+  "elapsed_ms": 1938,
+  "split": "development",
+  "runner_succeeded": false,
+  "model_quality": "Read the actual experiment run manifest; runner success is not proposal correctness.",
+  "phases": [
+    {
+      "name": "migrate",
+      "exit_code": 0
+    },
+    {
+      "name": "isolated_agent_role",
+      "passed": true
+    },
+    {
+      "name": "authority-calibration",
+      "exit_code": 1
+    },
+    {
+      "name": "runner_error",
+      "reason": "authority-calibration_failed"
+    }
+  ]
+}

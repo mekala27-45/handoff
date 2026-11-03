@@ -1,0 +1,56 @@
+{
+  "experiment": "v4",
+  "source_commit": "75442ec64a55d531ab312e200ef7d4d732923669",
+  "split": "development",
+  "exported": [
+    {
+      "file": "reports/runs/model-development-v4-1793720657839-cases.json",
+      "sha256": "8c58bb8261efcf95d43b1dfdacefc3a0354282331e24724c0e436a4f17da002a"
+    },
+    {
+      "file": "reports/runs/model-development-v4-1793720657839.json",
+      "sha256": "b598dfba3711323ef36a2e143134a493f5c1ce26e29f34964657baad0dd93cd5"
+    },
+    {
+      "file": "reports/runs/model-development-v4-1793720657839.txt",
+      "sha256": "5b8388ef05049cfc52a2fa06d777de0656bb1f6fdc8eb5799bf7dc2766abc368"
+    },
+    {
+      "file": "reports/model-traces/model-development-v4-1793720657839-fx_07a9425bd18f2b4fd61e.json",
+      "sha256": "2ee0f0d93ea40e69375b407314458a4747843fec05721351adf389f77c044fda"
+    },
+    {
+      "file": "reports/model-traces/model-development-v4-1793720657839-fx_1008a8f0f140deb3c75e.json",
+      "sha256": "b0014b49b26789da245dbf5e800d411e141a39a78cea42bb4fe6bf37399b49bd"
+    },
+    {
+      "file": "reports/model-traces/model-development-v4-1793720657839-fx_1c7da880b36d5597672f.json",
+      "sha256": "bdabdc86cd233a04720da6a99aa37f0d054cd8cbc401462bf7d7ad1448252a5b"
+    },
+    {
+      "file": "reports/model-traces/model-development-v4-1793720657839-fx_1e0cc73c643a93e64ca2.json",
+      "sha256": "c4f7becddf683d774fdf340db5ee67989d8fa2e0efc6cb3b386e39dd0cda9c71"
+    },
+    {
+      "file": "reports/model-traces/model-development-v4-1793720657839-progress.json",
+      "sha256": "8c58bb8261efcf95d43b1dfdacefc3a0354282331e24724c0e436a4f17da002a"
+    },
+    {
+      "file": "reports/environments/model-experiment-v4-ci-1793720651183.json",
+      "sha256": "01c3560efd9f3a5a2ae7a7a1c91d1cbe44c148c79727d5a78929c5790d23cea2"
+    },
+    {
+      "file": "reports/checks/model-experiment-v4-diagnostics.json",
+      "sha256": "7ba0ed47565fb2114773958bccf38422c3a51144c7de6c3504b10b9051da8ff7"
+    },
+    {
+      "file": "reports/checks/model-experiment-v4-runner.json",
+      "sha256": "98665c930334b6ad36d3955ecbfd26d2d834227d482cb9dd653c28c8d29bc788"
+    },
+    {
+      "file": "reports/checks/model-preflight-v4.json",
+      "sha256": "93750691e3cc47ae12073c42eb322ed98b4e4d1184ebb24d7edafddee8034232"
+    }
+  ],
+  "private_logs_exported": false
+}
