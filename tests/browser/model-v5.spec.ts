@@ -7,6 +7,7 @@ test('v5 evidence is additive, honest about missing records and downloadable',as
  const section=page.locator('[data-model-experiment-version="5"]');
  if(!runs.length){await expect(section).toHaveCount(0);return;}
  await expect(section).toBeVisible();await expect(section).toContainText('scores are not paired comparisons');
+ for(const prior of runs[0].prior_attempts??[]){const note=section.locator('[data-v5-prior-attempt="'+prior.run_id+'"]');await expect(note).toContainText(prior.correct+'/'+prior.attempted);await expect(note).toContainText('did not qualify for freeze');await expect(note.getByRole('link')).toHaveAttribute('href',prior.evidence_url);}
  for(const run of runs){
   const article=section.locator('[data-experiment-v5-run="'+run.run_id+'"]');await expect(article).toContainText(run.configuration_digest);await expect(article).toContainText(run.source_commit);
   const quality=run.metrics.find((m:any)=>m.metric_id==='proposal_correctness'),row=article.locator('tbody tr').filter({hasText:/proposal correctness/i});
