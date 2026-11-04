@@ -126,3 +126,17 @@ Stop only the process handles or PIDs recorded when this task started them. Do n
 | Missing report | Display Not evaluated. Do not replace unknown evidence with zeros. |
 
 The frozen v3 recorded result is 8/16 acceptable proposals on development and 2/16 on the fresh held-out subset. The held-out report retains two validator-rejected incorrect proposals and twelve missing outputs. This is a completed experiment with a failed quality status; it does not establish reliable model decisions or model effect safety.
+
+## Current v5 protocol
+
+The [v5 experiment notes](MODEL-IMPROVEMENT-V5.md) and [registered plan](../eval/plans/model-experiment-v5.json) define the current protocol. Preserve the original v3 and v4 source hashes and reports. V5 uses the same pinned 4B CPU model and three tools in the isolated `agent-v5` project.
+
+Development runs on `agent-quality-v5` with the complete 32-case registered scope. A push starts inference; do not push merely to poll status. R1 scored 18/32 and remains retained. R2 scored 32/32, qualifying the preregistered minimum of thirty after independent SQL and authority checks.
+
+Freeze runs through `freeze-model-v5.yml` on `agent-freeze-v5`, using the explicit workflow ID in `docs/model-v5-freeze-request.json`. It downloads the original artifact, authenticates source and hashes, regrades SQL observations, and writes an immutable freeze pair. Both original files must be imported unchanged from one successful `model-freeze-evidence-v5` commit.
+
+The reserved sixteen run once on `agent-heldout-v5`. That branch contains the original freeze pair. Do not tune the frozen configuration or retry failed cases until they pass. A reproduction is a separate recorded attempt, not a fresh evaluation.
+
+After completion, set `docs/model-v5-results-request.json` to the actual held-out workflow ID and push `agent-results-v5`. The results workflow authenticates the original artifact and freeze, independently grades all cases, and writes immutable original and sanitized exports to `model-publication-evidence-v5`. Import its exact blobs; place its root `publication-manifest.json` at `reports/checks/model-v5-publication.json`. The v5 publisher appends entries to the existing index and refuses changed published entries.
+
+The v0.4.0 release wrapper is `scripts/finalize-release-v5.mjs`. It retains the earlier release checks, authenticates and regrades the failed R1 attempt, checks the final result artifacts, and verifies visible scores, prior failures, sanitized traces and all downloads against the exact deployed candidate. A successful runner or release does not change a failed model-quality status.

@@ -20,7 +20,7 @@ Original application code is MIT licensed. Original synthetic fixtures have a se
 
 Qwen3:0.6b is a separate Apache-2.0 model artifact. Its registry digest and license text are preserved in docs/sources/model-lock.json. The portable Ollama release is pinned in docs/sources/ollama-release.json. Weights and executables are excluded from the repository.
 
-Agent v4 evaluates `qwen3:4b-q4_K_M`, also under Apache-2.0. Its official registry manifest bytes and full digest are preserved in [model-lock-v4.json](docs/sources/model-lock-v4.json). Downloaded license, model size and quantization metadata are recorded in the [original CPU preflight](reports/model-experiments/41671605565/reports/checks/model-preflight-v4.json). The Linux Ollama release is pinned in [ollama-linux-release.json](docs/sources/ollama-linux-release.json).
+Agents v4 and v5 evaluate `qwen3:4b-q4_K_M`, also under Apache-2.0. Its official registry manifest bytes and full digest are preserved in [model-lock-v4.json](docs/sources/model-lock-v4.json). Downloaded license, model size and quantization metadata are recorded in the [original CPU preflight](reports/model-experiments/41671605565/reports/checks/model-preflight-v4.json). The Linux Ollama release is pinned in [ollama-linux-release.json](docs/sources/ollama-linux-release.json).
 
 Zilla Slab, Asap and Ubuntu Sans Mono are self-hosted through their pinned Fontsource packages. Full notices are included under apps/site/public/licenses. No Google Fonts network request is needed.
 
