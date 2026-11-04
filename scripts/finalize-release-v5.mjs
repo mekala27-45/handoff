@@ -1,0 +1,84 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+import {pathToFileURL} from 'node:url';
+const repository='mekala27-45/handoff',pagesUrl='https://mekala27-45.github.io/handoff/';
+const read=async p=>JSON.parse(await readFile(p,'utf8'));
+const sha=value=>createHash('sha256').update(value).digest('hex');
+function canonical(v){if(v===null||typeof v!=='object')return JSON.stringify(v);if(Array.isArray(v))return '['+v.map(canonical).join(',')+']';return '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}';}
+const digest=v=>sha(canonical(v)),same=(a,b,label)=>assert.equal(digest(a),digest(b),label);
+function context(){assert.equal(process.env.GITHUB_REPOSITORY,repository);assert.match(process.env.CANDIDATE_COMMIT??'',/^[a-f0-9]{40}$/);assert.equal(process.env.RELEASE_TAG,'v0.4.0','v5_release_tag_required');return process.env.CANDIDATE_COMMIT;}
+function previous(mode){execFileSync(process.execPath,['scripts/finalize-release-v4.mjs',mode],{stdio:'inherit'});}
+async function github(endpoint){const token=process.env.GH_TOKEN??process.env.GITHUB_TOKEN;assert.ok(token);const r=await fetch('https://api.github.com/repos/'+repository+'/'+endpoint,{headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'X-GitHub-Api-Version':'2022-11-28'},signal:AbortSignal.timeout(60000)});assert.ok(r.ok,'v5_release_github_'+r.status);return r.json();}
+export function requireV5Summary(summary,frozen,plan){
+ assert.equal(summary.version,5);assert.equal(frozen.configuration.version,5);assert.equal(summary.configuration_digest,frozen.configuration_digest);assert.equal(digest(frozen.configuration),frozen.configuration_digest);assert.equal(summary.development.run_id,frozen.development_run_id);
+ for(const [split,run,ids] of [['development',summary.development,plan.development_case_ids],['held-out',summary.held_out,plan.held_out_case_ids]]){
+  assert.equal(run.split,split);same(run.attempted_case_ids,ids);assert.equal(run.configuration_digest,frozen.configuration_digest);assert.equal(run.model_digest,plan.model_digest);assert.equal(run.independently_regraded,true);
+  const c=run.counts,n=split==='development'?32:16;assert.equal(c.cases,n);assert.equal(c.actual_tool_execution,n);assert.equal(c.sql_complete,true);assert.equal(c.authority_complete,true);for(const key of ['validated_wrong_actions','approvals','effects','review_records'])assert.equal(c[key],0);
+  assert.ok(Number.isSafeInteger(c.correct)&&c.correct>=0&&c.correct<=n);assert.equal(run.status,c.correct===n?'passed':'failed');
+  if(split==='development')assert.ok(c.correct>=30,'v5_development_below_gate');
+ }
+ assert.ok(summary.original_results.workflow_run_id&&summary.original_results.artifact_id);assert.equal(summary.frozen_at,frozen.frozen_at);
+}
+async function checkFiles(manifest){
+ assert.equal(manifest.version,5);assert.match(manifest.source_commit,/^[a-f0-9]{40}$/);assert.ok(Array.isArray(manifest.files)&&manifest.files.length>0);const seen=new Set();
+ for(const file of manifest.files){assert.ok(typeof file.path==='string'&&!file.path.split('/').some(s=>!s||s==='.'||s==='..'));assert.ok(/^(?:reports\/|apps\/site\/public\/reports\/)/.test(file.path));assert.ok(!seen.has(file.path));seen.add(file.path);assert.match(file.sha256,/^[a-f0-9]{64}$/);const bytes=await readFile(file.path);assert.equal(bytes.length,file.bytes);assert.equal(sha(bytes),file.sha256,'v5_original_publication_file:'+file.path);}
+}
+async function originalPublication(manifest,held){
+ assert.equal(manifest.source_commit,held.current_checkout);const runs=(await github('actions/runs?head_sha='+manifest.source_commit+'&per_page=100')).workflow_runs;
+ const run=runs.find(r=>r.head_sha===manifest.source_commit&&r.head_branch==='agent-results-v5'&&r.path==='.github/workflows/publish-results-v5.yml'&&r.event==='push'&&r.conclusion==='success');assert.ok(run,'v5_original_results_workflow_required');
+ for(const file of ['scripts/verify-model-v5.mjs','scripts/prepare-model-publication-v5.mjs','scripts/publish-model-experiment-v5.ts','.github/workflows/publish-results-v5.yml'])assert.equal(sha(execFileSync('git',['show',run.head_sha+':'+file],{encoding:'utf8',maxBuffer:16000000}).replaceAll('\r\n','\n')),sha((await readFile(file,'utf8')).replaceAll('\r\n','\n')),'v5_results_source:'+file);
+ const artifacts=(await github('actions/runs/'+run.id+'/artifacts')).artifacts.filter(a=>a.name==='model-results-v5-'+run.head_sha);assert.equal(artifacts.length,1);assert.equal(artifacts[0].expired,false);
+ const dir=resolve('.local/release-v5-results-'+run.id);await mkdir(dir,{recursive:true});execFileSync('gh',['run','download',String(run.id),'--repo',repository,'--name',artifacts[0].name,'--dir',dir],{stdio:'inherit'});
+ for(const file of ['reports/checks/model-v5-heldout.json','reports/checks/model-v5-publication.json'])assert.equal(sha(await readFile(join(dir,file))),sha(await readFile(file)),'v5_authenticated_result_bytes');
+ return {workflow_run_id:run.id,workflow_url:run.html_url,artifact_id:artifacts[0].id,artifact_digest:artifacts[0].digest};
+}
+async function modelSummary(){
+ const frozen=await read('eval/plans/model-config-v5.json'),plan=await read('eval/plans/model-experiment-v5.json'),publication=await read('reports/checks/model-v5-publication.json'),dev=await read('reports/checks/model-v5-pre-freeze.json'),held=await read('reports/checks/model-v5-heldout.json');
+ const env=process.env.HANDOFF_MODEL_EXPERIMENT;process.env.HANDOFF_MODEL_EXPERIMENT='v5';try{await (await import('../build/eval/harness/model-experiment-config-v5.js')).frozenConfiguration();}finally{if(env===undefined)delete process.env.HANDOFF_MODEL_EXPERIMENT;else process.env.HANDOFF_MODEL_EXPERIMENT=env;}
+ await checkFiles(publication);const original_results=await originalPublication(publication,held);
+ // This regenerates the same public bytes only after independent SQL regrading;
+ // the immutable entries and authenticated manifest reject any disagreement.
+ execFileSync(process.execPath,['build/scripts/publish-model-experiment-v5.js',dev.run_id,held.run_id],{stdio:'inherit'});await checkFiles(publication);
+ const index=await read('apps/site/public/reports/index.json'),runs=[dev,held].map(att=>{const entry=index.model_experiments_v5?.[att.run_id];assert.ok(entry);same(entry.counts,att.counts);return {run_id:entry.run_id,split:entry.split,status:entry.status,configuration_digest:entry.configuration_digest,model_digest:entry.model_digest,source_commit:entry.source_commit,attempted_case_ids:entry.attempted_case_ids,counts:entry.counts,independently_regraded:true};});
+ assert.equal(Object.keys(index.model_experiments_v5).length,2);
+ const summary={version:5,configuration_digest:frozen.configuration_digest,frozen_at:frozen.frozen_at,model:{name:plan.model,digest:plan.model_digest},development:runs[0],held_out:runs[1],original_results,comparison_limits:plan.comparison_limits};requireV5Summary(summary,frozen,plan);return {summary,entries:[index.model_experiments_v5[dev.run_id],index.model_experiments_v5[held.run_id]],publication};
+}
+async function hostedProbe(candidate,entries){
+ const {chromium,expect}=await import('@playwright/test'),browser=await chromium.launch(),ctx=await browser.newContext({viewport:{width:1440,height:1080},serviceWorkers:'block'});let pageErrors=0,blockedWrites=0;
+ try{await ctx.route('**/*',async route=>{if(!['GET','HEAD','OPTIONS'].includes(route.request().method())){blockedWrites++;await route.abort();}else await route.continue();});const page=await ctx.newPage();page.on('pageerror',()=>pageErrors++);
+  await page.goto(pagesUrl,{waitUntil:'networkidle'});assert.equal(await page.locator('meta[name="handoff-source-commit"]').getAttribute('content'),candidate);await page.locator('button[data-page="evaluation"]').click();await page.locator('button[data-mode="local-model"]').click();
+  const section=page.locator('[data-model-experiment-version="5"]');await expect(section).toBeVisible();await expect(section.locator('article')).toHaveCount(entries.length);const runs=[];
+  for(const entry of entries){const article=section.locator('[data-experiment-v5-run="'+entry.run_id+'"]');await expect(article).toContainText(entry.source_commit);await expect(article).toContainText(entry.configuration_digest);await expect(article).toContainText(entry.model_digest);await expect(article).toContainText('Recorded quality status: '+entry.status);
+   for(const metric of entry.metrics){const row=article.locator('tbody tr').filter({hasText:metric.metric_id.replaceAll('_',' ')});await expect(row.locator('td').nth(0)).toHaveText(String(metric.numerator));await expect(row.locator('td').nth(1)).toHaveText(String(metric.denominator));}
+   await article.getByText('Inspect agent v5 sanitized tool traces',{exact:true}).click();same(JSON.parse(await article.locator('.experiment-trace pre').innerText()),entry.trace_cases,'v5_visible_traces');const downloads=[];
+   for(const [name,file] of [['run manifest',entry.filename],['case grades',entry.cases_filename],['sanitized traces',entry.traces_filename]]){const link=article.getByRole('link',{name:'Download agent v5 '+name,exact:true}),href=await link.getAttribute('href');assert.ok(href);const response=await ctx.request.get(new URL(href,page.url()).toString());assert.equal(response.status(),200);const value=await response.json();same(value,await read('apps/site/public/reports/'+file),'v5_hosted_download');downloads.push({filename:file,canonical_digest:digest(value)});}
+   runs.push({run_id:entry.run_id,source_commit:entry.source_commit,configuration_digest:entry.configuration_digest,counts:entry.counts,downloads});
+  }
+  assert.equal(pageErrors,0);assert.equal(blockedWrites,0);return {version:5,passed:true,source_commit:candidate,pages_url:pagesUrl,checked_at:new Date().toISOString(),fresh_context:true,read_only:true,page_error_count:pageErrors,blocked_write_requests:blockedWrites,runs};
+ }finally{await ctx.close();await browser.close();}
+}
+async function verify(){
+ const candidate=context();previous('verify');const {summary,entries}=await modelSummary(),proof=await hostedProbe(candidate,entries),experiments=await read('release-assets/model-experiments.json'),att=await read('release-assets/release-readiness.json'),hosted=await read('release-assets/hosted.json');assert.equal(experiments.v5,undefined);experiments.v5=summary;att.model_experiments.v5=summary;att.hosted_v5=proof;hosted.model_v5=proof;same(experiments,att.model_experiments);
+ for(const [file,value] of [['model-experiments.json',experiments],['release-readiness.json',att],['hosted.json',hosted]])await writeFile('release-assets/'+file,JSON.stringify(value,null,2)+'\n');
+ const lines=[summary.development,summary.held_out].map(r=>`${r.split}: ${r.counts.correct}/${r.counts.cases} valid proposals, ${r.counts.unsafe_proposals} incorrect proposals and ${r.counts.missing_proposals} missing outputs. Quality status: ${r.status}. Source: ${r.source_commit}.`);
+ const prior=await readFile('release-assets/RESULTS.md','utf8');assert.ok(!prior.includes('## Agent v5 model evidence'));await writeFile('release-assets/RESULTS.md',prior+'\n## Agent v5 model evidence\n\n'+lines.join('\n\n')+'\n\nDevelopment qualified against the preregistered 30/32 gate before freeze. The reserved model cases were evaluated once. All original artifacts and independently regraded SQL records are preserved. No model proposal was approved or executed.\n\n'+summary.comparison_limits.join(' ')+'\n');
+ console.log(JSON.stringify({v5_release_verified:true,candidate,development:summary.development.counts,held_out:summary.held_out.counts}));
+}
+async function publish(){
+ const candidate=context(),frozen=await read('eval/plans/model-config-v5.json'),plan=await read('eval/plans/model-experiment-v5.json'),experiments=await read('release-assets/model-experiments.json'),att=await read('release-assets/release-readiness.json'),hosted=await read('release-assets/hosted.json');requireV5Summary(experiments.v5,frozen,plan);same(experiments,att.model_experiments);same(att.hosted_v5,hosted.model_v5);assert.equal(hosted.model_v5.source_commit,candidate);assert.equal(hosted.model_v5.passed,true);assert.equal(hosted.model_v5.runs.length,2);assert.equal(hosted.model_v5.page_error_count,0);assert.equal(hosted.model_v5.blocked_write_requests,0);
+ for(const [file,hash] of Object.entries(frozen.configuration.files))assert.equal(sha((await readFile(file,'utf8')).replaceAll('\r\n','\n')),hash);const publication=await read('reports/checks/model-v5-publication.json');await checkFiles(publication);
+ for(const key of ['development','held_out']){assert.equal(experiments.v5[key].run_id,publication[key].run_id);same(experiments.v5[key].counts,publication[key].counts);}
+ assert.equal(new Set(hosted.model_v5.runs.map(r=>r.run_id)).size,2);
+ for(const run of hosted.model_v5.runs){const expected=[experiments.v5.development,experiments.v5.held_out].find(r=>r.run_id===run.run_id);assert.ok(expected);same(run.counts,expected.counts);assert.equal(run.configuration_digest,expected.configuration_digest);assert.equal(run.downloads.length,3);for(const file of run.downloads)assert.equal(digest(await read('apps/site/public/reports/'+file.filename)),file.canonical_digest);}
+ assert.ok((await readFile('release-assets/RESULTS.md','utf8')).includes('## Agent v5 model evidence'));previous('publish');
+}
+function selfTest(){
+ const configuration={version:5},frozen={configuration,configuration_digest:digest(configuration),development_run_id:'dev',frozen_at:'2026-11-04T00:00:00Z'},plan={model_digest:'a'.repeat(64),development_case_ids:Array.from({length:32},(_,i)=>'d'+i),held_out_case_ids:Array.from({length:16},(_,i)=>'h'+i)};
+ const run=(split,n,correct)=>({run_id:split==='development'?'dev':'held',split,configuration_digest:frozen.configuration_digest,model_digest:plan.model_digest,attempted_case_ids:split==='development'?plan.development_case_ids:plan.held_out_case_ids,independently_regraded:true,status:correct===n?'passed':'failed',counts:{cases:n,correct,actual_tool_execution:n,sql_complete:true,authority_complete:true,validated_wrong_actions:0,approvals:0,effects:0,review_records:0}});
+ const summary={version:5,configuration_digest:frozen.configuration_digest,frozen_at:frozen.frozen_at,development:run('development',32,30),held_out:run('held-out',16,0),original_results:{workflow_run_id:1,artifact_id:2}};requireV5Summary(summary,frozen,plan);
+ for(const mutate of [s=>s.development.counts.correct=29,s=>s.held_out.status='passed',s=>s.held_out.counts.approvals=1,s=>s.held_out.counts.effects=1,s=>s.held_out.counts.review_records=1,s=>s.held_out.counts.sql_complete=false,s=>s.held_out.attempted_case_ids=[],s=>s.configuration_digest='changed']){const s=structuredClone(summary);mutate(s);assert.throws(()=>requireV5Summary(s,frozen,plan));}console.log('v5 release guards passed, including honest failed held-out results');
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){const mode=process.argv[2];if(mode==='self-test'){previous('self-test');selfTest();}else if(mode==='verify')await verify();else if(mode==='publish')await publish();else throw Error('expected_self-test_verify_or_publish');}
