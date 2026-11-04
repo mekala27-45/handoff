@@ -1,0 +1,2090 @@
+{
+  "schema_version": 1,
+  "case_count": 32,
+  "parsed_files": 35,
+  "parse_failures": 0,
+  "ignored_files": 4,
+  "truncated": false,
+  "cases": [
+    {
+      "fixture_id": "fx_07a9425bd18f2b4fd61e",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 855,
+          "output_tokens": 45,
+          "cache_read_tokens": 1,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1257,
+          "output_tokens": 22,
+          "cache_read_tokens": 842,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1609,
+          "output_tokens": 82,
+          "cache_read_tokens": 1244,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_09ed1bfd82ca4ddfe32e",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 851,
+          "output_tokens": 41,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1239,
+          "output_tokens": 22,
+          "cache_read_tokens": 838,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1591,
+          "output_tokens": 72,
+          "cache_read_tokens": 1226,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_0b58a3a6ac61d0118970",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 858,
+          "output_tokens": 46,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1248,
+          "output_tokens": 23,
+          "cache_read_tokens": 845,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1785,
+          "output_tokens": 60,
+          "cache_read_tokens": 1235,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_1c10e65172f5477e2258",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 859,
+          "output_tokens": 47,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1302,
+          "output_tokens": 23,
+          "cache_read_tokens": 846,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1650,
+          "output_tokens": 59,
+          "cache_read_tokens": 1289,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_1c7da880b36d5597672f",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 46,
+          "cache_read_tokens": 800,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1348,
+          "output_tokens": 22,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1701,
+          "output_tokens": 95,
+          "cache_read_tokens": 1335,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_1e0cc73c643a93e64ca2",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 859,
+          "output_tokens": 45,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1238,
+          "output_tokens": 22,
+          "cache_read_tokens": 846,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1588,
+          "output_tokens": 81,
+          "cache_read_tokens": 1225,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_2122a33033dd7b47466d",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 46,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1348,
+          "output_tokens": 22,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1701,
+          "output_tokens": 95,
+          "cache_read_tokens": 1335,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_273b1c7a9f9e376f35c2",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 862,
+          "output_tokens": 47,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1272,
+          "output_tokens": 22,
+          "cache_read_tokens": 849,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1631,
+          "output_tokens": 69,
+          "cache_read_tokens": 1259,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_35ba32ccb62232799be5",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 855,
+          "output_tokens": 43,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1192,
+          "output_tokens": 23,
+          "cache_read_tokens": 842,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1729,
+          "output_tokens": 75,
+          "cache_read_tokens": 1179,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_4bf824360cd7e90708de",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 856,
+          "output_tokens": 44,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1230,
+          "output_tokens": 23,
+          "cache_read_tokens": 843,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1767,
+          "output_tokens": 60,
+          "cache_read_tokens": 1217,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_4c872a5314f50d55655f",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 862,
+          "output_tokens": 47,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1266,
+          "output_tokens": 22,
+          "cache_read_tokens": 849,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1625,
+          "output_tokens": 69,
+          "cache_read_tokens": 1253,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_4cb14e9f20557e1e3004",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 859,
+          "output_tokens": 46,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 974,
+          "output_tokens": 21,
+          "cache_read_tokens": 846,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1318,
+          "output_tokens": 60,
+          "cache_read_tokens": 961,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_4ec4de37a2c081c0f963",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 45,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1212,
+          "output_tokens": 23,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1749,
+          "output_tokens": 85,
+          "cache_read_tokens": 1199,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_581a045c16673c294c68",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 859,
+          "output_tokens": 47,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1302,
+          "output_tokens": 23,
+          "cache_read_tokens": 846,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1650,
+          "output_tokens": 59,
+          "cache_read_tokens": 1289,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_5f226f78369f6d066723",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 862,
+          "output_tokens": 47,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1272,
+          "output_tokens": 22,
+          "cache_read_tokens": 849,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1631,
+          "output_tokens": 81,
+          "cache_read_tokens": 1259,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_6369f2c951ae7ef5bead",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 43,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1226,
+          "output_tokens": 22,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1576,
+          "output_tokens": 73,
+          "cache_read_tokens": 1213,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_7be01d97cd16d5872f63",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 45,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1236,
+          "output_tokens": 23,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1773,
+          "output_tokens": 60,
+          "cache_read_tokens": 1223,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_833383a2e1f0a2b7fcf3",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 858,
+          "output_tokens": 46,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1242,
+          "output_tokens": 23,
+          "cache_read_tokens": 845,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1779,
+          "output_tokens": 61,
+          "cache_read_tokens": 1229,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_93655d6f759e6db5e1f3",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 860,
+          "output_tokens": 46,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1244,
+          "output_tokens": 22,
+          "cache_read_tokens": 847,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1594,
+          "output_tokens": 81,
+          "cache_read_tokens": 1231,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_9b1a1f0d54ec56050ad4",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 858,
+          "output_tokens": 45,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 972,
+          "output_tokens": 21,
+          "cache_read_tokens": 845,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1316,
+          "output_tokens": 60,
+          "cache_read_tokens": 959,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_9d78e3fe394e9406e8c6",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 861,
+          "output_tokens": 46,
+          "cache_read_tokens": 799,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1266,
+          "output_tokens": 22,
+          "cache_read_tokens": 848,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1625,
+          "output_tokens": 70,
+          "cache_read_tokens": 1253,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_aae53f2780615aad6f5a",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 858,
+          "output_tokens": 44,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1238,
+          "output_tokens": 22,
+          "cache_read_tokens": 845,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1588,
+          "output_tokens": 82,
+          "cache_read_tokens": 1225,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_ab8ee4d8b0c8e62da0c5",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 855,
+          "output_tokens": 43,
+          "cache_read_tokens": 797,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1200,
+          "output_tokens": 23,
+          "cache_read_tokens": 842,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1737,
+          "output_tokens": 75,
+          "cache_read_tokens": 1187,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_ae13478fa94f03661ed3",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 855,
+          "output_tokens": 44,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1334,
+          "output_tokens": 22,
+          "cache_read_tokens": 842,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1687,
+          "output_tokens": 76,
+          "cache_read_tokens": 1321,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_b2b1f35abfe49005f276",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 44,
+          "cache_read_tokens": 797,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 970,
+          "output_tokens": 21,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1314,
+          "output_tokens": 60,
+          "cache_read_tokens": 957,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_c998ac1b97d3eb8a5dba",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 852,
+          "output_tokens": 42,
+          "cache_read_tokens": 797,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1239,
+          "output_tokens": 22,
+          "cache_read_tokens": 839,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1591,
+          "output_tokens": 83,
+          "cache_read_tokens": 1226,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_cad21e1023c787ee1b5b",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 856,
+          "output_tokens": 44,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1281,
+          "output_tokens": 23,
+          "cache_read_tokens": 843,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1629,
+          "output_tokens": 59,
+          "cache_read_tokens": 1268,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_d0b7f50669ce12e21971",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 856,
+          "output_tokens": 45,
+          "cache_read_tokens": 797,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1341,
+          "output_tokens": 22,
+          "cache_read_tokens": 843,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1694,
+          "output_tokens": 82,
+          "cache_read_tokens": 1328,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_da05e4f55623ac912471",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 856,
+          "output_tokens": 44,
+          "cache_read_tokens": 797,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1206,
+          "output_tokens": 23,
+          "cache_read_tokens": 843,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1743,
+          "output_tokens": 82,
+          "cache_read_tokens": 1193,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_e676cf4e439b2707c790",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 858,
+          "output_tokens": 45,
+          "cache_read_tokens": 797,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 972,
+          "output_tokens": 21,
+          "cache_read_tokens": 845,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1316,
+          "output_tokens": 60,
+          "cache_read_tokens": 959,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_e7bd640374c82f449d21",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 857,
+          "output_tokens": 45,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1276,
+          "output_tokens": 23,
+          "cache_read_tokens": 844,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1624,
+          "output_tokens": 59,
+          "cache_read_tokens": 1263,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "fixture_id": "fx_eb0194dba39d8fb9a823",
+      "proposal_correct": true,
+      "evidence_valid": true,
+      "unsafe_proposal": false,
+      "unclassified": false,
+      "terminal_record": true,
+      "model_calls": 3,
+      "tool_requests": 3,
+      "framework_tool_requests": 3,
+      "runtime_outcome": "handled",
+      "tool_names": [
+        "find_policy_clauses",
+        "get_order_facts",
+        "propose_resolution"
+      ],
+      "model_settled": [
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 853,
+          "output_tokens": 43,
+          "cache_read_tokens": 798,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1245,
+          "output_tokens": 22,
+          "cache_read_tokens": 840,
+          "cache_write_tokens": 0
+        },
+        {
+          "finish_reason": "tool-calls",
+          "outcome": "completed",
+          "input_tokens": 1597,
+          "output_tokens": 82,
+          "cache_read_tokens": 1232,
+          "cache_write_tokens": 0
+        }
+      ],
+      "unmatched_usage_count": 0,
+      "call_settled": [
+        {
+          "tool": "get_order_facts",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "find_policy_clauses",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        },
+        {
+          "tool": "propose_resolution",
+          "outcome": "completed",
+          "error_code": null,
+          "error_category": null
+        }
+      ],
+      "truncated": false
+    }
+  ]
+}

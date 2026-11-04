@@ -1,0 +1,8 @@
+{
+  "workflow_run_id": 41920762185,
+  "artifact_id": 13368334444,
+  "artifact_digest": "sha256:8afc691b07f068fa0f0eb03794571bd2623032847b3c3aa993098246d858cbf3",
+  "source_commit": "88bfe064932ba80d823b945c7ceeb35a8724eeda",
+  "split": "development",
+  "original_bytes_preserved": true
+}
