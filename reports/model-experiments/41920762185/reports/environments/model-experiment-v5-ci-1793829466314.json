@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-11-04T21:57:46.314Z",
+  "source_commit": "88bfe064932ba80d823b945c7ceeb35a8724eeda",
+  "platform": "linux",
+  "node": "v24.19.0",
+  "cpu_model": "AMD EPYC 7763 64-Core Processor",
+  "cpu_count": 4,
+  "memory_bytes": 16764674048,
+  "ollama_version": "0.40.13",
+  "model": {
+    "name": "qwen3:4b-q4_K_M",
+    "digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+    "size": 4012176833,
+    "size_vram": 0,
+    "context_length": 8192
+  },
+  "execution": "CPU",
+  "split": "development",
+  "note": "Actual model warm-up is excluded from graded attempts."
+}

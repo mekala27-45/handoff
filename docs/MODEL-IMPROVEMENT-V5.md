@@ -24,6 +24,10 @@ The original [frozen configuration](../eval/plans/model-config-v5.json) and [pre
 
 ## Reserved result
 
-The one-time [reserved workflow 41926653086](https://github.com/mekala27-45/handoff/actions/runs/41926653086) is in progress. Its score is not yet available. This configuration will not be tuned or retried against those outcomes. Release preparation must authenticate the original artifact and independently regrade all sixteen records before publishing a result.
+The one-time [reserved workflow 41926653086](https://github.com/mekala27-45/handoff/actions/runs/41926653086) completed at `2026-11-04T22:49:11.380Z`. Run `model-heldout-v5-1793831838679` produced **13/16 valid proposals**, three incorrect proposals rejected by the validator, and no missing output. Independent regrading confirms complete SQL and authority observations, zero accepted incorrect proposals, zero model reviews, zero approvals and zero effects. All 24 original export hashes match. The quality status remains `failed`.
+
+Two failures selected the delivery-delay policy for the cancellation wording "A dispatch notice arrived before my request to stop the purchase." The third selected escalation despite absent tracking evidence. All three expected a manual-review draft with the corresponding policy citation. These are recorded post-evaluation findings; the frozen operating point was not changed or rerun.
+
+V5's 13/16 and v4's 12/16 use different reserved subsets. They do not establish a paired or causal one-case improvement. V5 eliminated missing proposals in this measured subset, but the three rejected decisions still demonstrate limited reliability. A later experiment needs separately registered development work and fresh evaluation data.
 
 Scripted workflow results remain separate from actual model results. The workbench displays recorded model evidence; it does not host this model. No model proposal is approved or executed by this experiment.

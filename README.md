@@ -35,7 +35,11 @@ npm run eval:faults
 
 The full fault matrix is intentionally larger than a unit suite. It runs eight overlays for each of 80 held-out cases, writes incremental evidence and excludes explicitly non-applicable execution boundaries. Run it against an isolated database. It creates and terminates only its own API workers.
 
-For current agent-quality work, follow [the v4 runbook](docs/RUNBOOK.md#current-v4-protocol), [experiment notes](docs/MODEL-IMPROVEMENT-V4.md), [registered plan](eval/plans/model-experiment-v4.json) and [verified model lock](docs/sources/model-lock-v4.json). V4 runs the isolated `agent-v4` project with `qwen3:4b-q4_K_M` on a Linux CPU and disposable local PostgreSQL. It uses the same three bounded proposal tools. The original v3 implementation and frozen source hashes remain preserved.
+The current [v5 experiment](docs/MODEL-IMPROVEMENT-V5.md) scored **13/16 valid proposals** on its single reserved evaluation, with three incorrect proposals rejected and no missing output. Independent SQL regrading confirmed complete records and zero model reviews, approvals or effects. Two errors misread cancellation intent; one ignored missing tracking evidence. The model remains unreliable, and its recorded quality status is `failed`.
+
+V5 development improved from 18/32 in the retained first attempt to 32/32 on the same registered cases. The successful version was authenticated and frozen before the reserved run. Follow [the v5 protocol](docs/RUNBOOK.md#current-v5-protocol), [registered plan](eval/plans/model-experiment-v5.json) and [original held-out workflow](https://github.com/mekala27-45/handoff/actions/runs/41926653086). It uses the same locked 4B CPU model and three proposal tools. The earlier v2/v3/v4 source and evidence remain preserved. Different reserved subsets are unpaired comparisons within existing template lineages.
+
+For the preserved v4 protocol, follow [the v4 runbook](docs/RUNBOOK.md#current-v4-protocol), [experiment notes](docs/MODEL-IMPROVEMENT-V4.md), [registered plan](eval/plans/model-experiment-v4.json) and [verified model lock](docs/sources/model-lock-v4.json). V4 runs the isolated `agent-v4` project with `qwen3:4b-q4_K_M` on a Linux CPU and disposable local PostgreSQL. It uses the same three bounded proposal tools. The original v3 implementation and frozen source hashes remain preserved.
 
 The complete recorded v4 development run produced 15 acceptable proposals from 16 cases. One incorrect escalation proposal was rejected, and no case lacked a proposal. All sixteen used the actual model, and independent SQL/authority observations were complete with zero accepted incorrect proposals, review records, approvals or effects. This meets the numeric development bar of at least fourteen; it is not a held-out result.
 
@@ -72,7 +76,8 @@ The agent database role cannot create approvals or effects. Runtime artifacts ex
 | `apps/api` | Native HTTP API and strict request validation |
 | `apps/site` | Four-view workbench and recorded evaluation display |
 | `agent` | Preserved v3 agent, local channel and three tools |
-| `agent-v4` | Isolated current agent project using the locked 4B CPU model |
+| `agent-v4` | Preserved frozen v4 agent using the locked 4B CPU model |
+| `agent-v5` | Frozen v5 agent with constrained policy topics and conditional guidance |
 | `packages/domain` | Policy, scope, transitions and execution |
 | `packages/db` | Isolated schema and database role |
 | `packages/fixtures` | Public synthetic data and fictional policy |

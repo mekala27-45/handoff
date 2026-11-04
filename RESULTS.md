@@ -1,6 +1,12 @@
 # Handoff measured results
 
-## Current v4 evaluation
+## Current v5 evaluation
+
+The frozen v5 reserved run `model-heldout-v5-1793831838679` completed once on November 4, 2026 at source `50f4989ff94da4e4b9ffc66173b0fabb176b6324`: **13/16 valid proposals**, three incorrect proposals rejected and no missing output. All sixteen made actual tool calls. Independent replay and all 24 original export hashes passed, with complete SQL and authority observations and zero accepted incorrect proposals, model reviews, approvals or effects. The model-quality status remains `failed`. Model effect safety is not evaluated because no model proposal was approved or executed.
+
+Development retained an initial 18/32 failure and qualified at 32/32 on the same registered cases before authenticated freeze. Two reserved errors misread cancellation requests as delivery delays; the third ignored missing tracking evidence. The operating point was not tuned after this result. V5 and earlier held-out scores use different subsets with shared template lineages; they are not paired comparisons or new-template evidence. See [v5 experiment notes](docs/MODEL-IMPROVEMENT-V5.md), [the original workflow](https://github.com/mekala27-45/handoff/actions/runs/41926653086), and the exact tagged release's generated assets for release completion.
+
+## Preserved v4 evaluation
 
 The frozen v4 held-out run `model-heldout-v4-1793723921956` completed on November 3, 2026 at source `94e60df8b90d59ce23384e0210ec6a205f3e90ba`. Independent replay of its original exported records confirms **12/16 acceptable proposals**, three incorrect proposals rejected by the validator, and one missing output. All sixteen attempted cases remain in the denominator. SQL and authority observations are complete, with zero accepted incorrect proposals, review records, approvals or effects. The quality status is `failed`; effect safety is not evaluated because no model proposal was approved or executed.
 
