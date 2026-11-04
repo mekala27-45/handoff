@@ -1,0 +1,829 @@
+{
+  "run_id": "model-heldout-v4-1793723921956-fx_d4d04948ffe758211db4",
+  "mode": "local-model",
+  "source_commit": "94e60df8b90d59ce23384e0210ec6a205f3e90ba",
+  "dependency_digest": "64896b6564a14d4cee5f835b4a016e9a1ea2b7e992a49989df3679028b1606f9",
+  "dataset_digest": "ca9660440ba1ee74c6ae406ec15bad99e5a88c699985c2b50e6d911b07609834",
+  "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+  "configuration_digest": "33ded0308e0ed5cf1b8092932e8e5c3a438969e4fb93c1707d1429418803d256",
+  "model_digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+  "trace": [
+    {
+      "at": "2026-11-03T16:54:29.006Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_delivery",
+      "data": {
+        "session_id": "wrun_01M6H5ATC83RZJK8766J3DA5K1"
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:29.067Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama-v4/qwen3:4b-q4_K_M",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:29.079Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 0
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:29.079Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:4b-q4_K_M",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.163Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1131,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "get_order_facts",
+            "argument_fields": [
+              "order_id"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.168Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_q99tbqx7",
+        "capability": {
+          "kind": "tool",
+          "name": "get_order_facts"
+        },
+        "input": {
+          "order_id": "SYN-ORDER-d4d04948ffe758211db4"
+        },
+        "owner": {
+          "runId": "run_0"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.174Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 1,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.174Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "get_order_facts",
+        "input": {
+          "order_id": "SYN-ORDER-d4d04948ffe758211db4"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.187Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "tool_result",
+      "data": {
+        "tool": "get_order_facts",
+        "result": {
+          "order": {
+            "order_id": "SYN-ORDER-d4d04948ffe758211db4",
+            "customer_id": "SYN-CUSTOMER-d4d04948ffe758211db4",
+            "currency": "USD",
+            "captured_cents": 12455,
+            "refunded_cents": 0,
+            "shipping_state": "paid",
+            "delivered_at": null,
+            "shipped_at": null,
+            "tracking": "SYN-TRACK-d4d04948ffe758211db4",
+            "revision": 1
+          },
+          "captures": [
+            {
+              "capture_id": "SYN-CAPTURE-d4d04948ffe758211db4-1",
+              "amount_cents": 12455,
+              "refunded_cents": 0,
+              "confirmed_at": "2026-01-01T01:00:00.000Z",
+              "revision": 1,
+              "duplicate": false
+            }
+          ],
+          "received_at": "2026-02-15T12:00:00.000Z",
+          "existing_effect_ref": null,
+          "fact_versions": {
+            "order_id": "SYN-ORDER-d4d04948ffe758211db4",
+            "order_revision": 1,
+            "capture_versions": {
+              "SYN-CAPTURE-d4d04948ffe758211db4-1": 1
+            },
+            "policy_id": "SAMPLE-SUPPLY",
+            "policy_version": 1,
+            "policy_revision": 1,
+            "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76"
+          },
+          "snapshot_token": "f1"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.189Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_q99tbqx7",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.190Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_0"
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.190Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_0"
+        },
+        "usage": {
+          "cacheReadTokens": 675,
+          "cacheWriteTokens": 0,
+          "inputTokens": 738,
+          "outputTokens": 43
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.226Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama-v4/qwen3:4b-q4_K_M",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.231Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 1
+      }
+    },
+    {
+      "at": "2026-11-03T16:54:40.232Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:4b-q4_K_M",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.071Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1129,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "find_policy_clauses",
+            "argument_fields": [
+              "query"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.075Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_g5236m1o",
+        "capability": {
+          "kind": "tool",
+          "name": "find_policy_clauses"
+        },
+        "input": {
+          "query": "I no longer need it."
+        },
+        "owner": {
+          "runId": "run_1"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.079Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 2,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.080Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "find_policy_clauses",
+        "input": {
+          "query": "I no longer need it."
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.092Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "tool_result",
+      "data": {
+        "tool": "find_policy_clauses",
+        "result": []
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.094Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_g5236m1o",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.097Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_1"
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.098Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_1"
+        },
+        "usage": {
+          "cacheReadTokens": 725,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1066,
+          "outputTokens": 27
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.129Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama-v4/qwen3:4b-q4_K_M",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.134Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 3,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:00.134Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:4b-q4_K_M",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:17.093Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 7934,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "propose_resolution",
+            "argument_fields": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "unknown_field_count": 0,
+            "action_code": "propose_refund",
+            "citation_count": 0,
+            "snapshot_token": "f1",
+            "argument_status": "invalid_schema",
+            "schema_issues": [
+              {
+                "code": "too_small",
+                "path": [
+                  "cited_clause_ids"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:17.099Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_2"
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:17.100Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_2"
+        },
+        "usage": {
+          "cacheReadTokens": 1062,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1105,
+          "outputTokens": 85
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:17.175Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama-v4/qwen3:4b-q4_K_M",
+        "runId": "run_3"
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:17.181Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 4,
+        "tools": 2
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:17.182Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "effective_tool_inventory",
+      "data": {
+        "inventory": [
+          "find_policy_clauses",
+          "get_order_facts",
+          "propose_resolution"
+        ],
+        "model": "qwen3:4b-q4_K_M",
+        "max_tokens": 512,
+        "temperature": 0,
+        "reasoning_effort": "none",
+        "tool_schema_summary": [
+          {
+            "tool": "find_policy_clauses",
+            "properties": [
+              "query"
+            ],
+            "required": [
+              "query"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "get_order_facts",
+            "properties": [
+              "order_id"
+            ],
+            "required": [
+              "order_id"
+            ],
+            "action_values": []
+          },
+          {
+            "tool": "propose_resolution",
+            "properties": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "required": [
+              "action_code",
+              "cited_clause_ids",
+              "rationale",
+              "snapshot_token"
+            ],
+            "action_values": [
+              "propose_refund",
+              "draft_escalation",
+              "draft_manual_review",
+              "draft_confirmation",
+              "request_identity_review"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.280Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_admission",
+      "data": {
+        "response_bytes": 1121,
+        "truncated": false,
+        "malformed_events": 0,
+        "dropped_calls": 0,
+        "tool_calls": [
+          {
+            "index": 0,
+            "tool": "find_policy_clauses",
+            "argument_fields": [
+              "query"
+            ],
+            "unknown_field_count": 0,
+            "action_code": null,
+            "citation_count": null,
+            "snapshot_token": null,
+            "argument_status": "valid",
+            "schema_issues": []
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.284Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_call_requested",
+      "data": {
+        "callId": "call_npvc5qxc",
+        "capability": {
+          "kind": "tool",
+          "name": "find_policy_clauses"
+        },
+        "input": {
+          "query": "duplicate"
+        },
+        "owner": {
+          "runId": "run_3"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.289Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "budget",
+      "data": {
+        "models": 4,
+        "tools": 3
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.289Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_tool_request",
+      "data": {
+        "tool": "find_policy_clauses",
+        "input": {
+          "query": "duplicate"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.301Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "tool_result",
+      "data": {
+        "tool": "find_policy_clauses",
+        "result": [
+          {
+            "clause": {
+              "text": "Two distinct confirmed captures for one order permit a reviewed simulated refund of the explicitly identified duplicate capture balance only. Repeated events do not prove a second capture.",
+              "lines": [
+                9,
+                10
+              ],
+              "terms": [
+                "duplicate",
+                "twice",
+                "capture",
+                "payment"
+              ],
+              "action": "propose_refund",
+              "heading": "Duplicate capture",
+              "clause_id": "P-DUPLICATE"
+            },
+            "ref": {
+              "policy_id": "SAMPLE-SUPPLY",
+              "version": 1,
+              "clause_id": "P-DUPLICATE",
+              "content_digest": "fd46499138f12e8e0c042bef8f794e6d0d66f0a68498a53ce9f04b79633217ad",
+              "policy_digest": "27e865bb8c26e9d66be8906d6e970762acc688eef111972b0226fbe97d24ad76",
+              "lines": [
+                9,
+                10
+              ]
+            },
+            "score": 1
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.304Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_call_settled",
+      "data": {
+        "call_id": "call_npvc5qxc",
+        "outcome": "completed",
+        "error": null
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.307Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_settled",
+      "data": {
+        "finishReason": "tool-calls",
+        "outcome": "completed",
+        "runId": "run_3"
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.307Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "usage_recorded",
+      "data": {
+        "kind": "model",
+        "owner": {
+          "runId": "run_3"
+        },
+        "usage": {
+          "cacheReadTokens": 1101,
+          "cacheWriteTokens": 0,
+          "inputTokens": 1254,
+          "outputTokens": 21
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.340Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_started",
+      "data": {
+        "attempt": 0,
+        "modelId": "ollama-v4/qwen3:4b-q4_K_M",
+        "runId": "run_4"
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.370Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "model_settled",
+      "data": {
+        "runId": "run_4",
+        "outcome": "failed",
+        "error": {
+          "code": "MODEL_CALL_FAILED",
+          "id": "367f51a2-fa24-4e4b-ba89-776ce80eebff",
+          "message": "models_budget_exhausted"
+        }
+      }
+    },
+    {
+      "at": "2026-11-03T16:55:28.375Z",
+      "case_id": "case_da6db03c-9b72-4f05-bdba-34e90a3de97c",
+      "type": "eve_result",
+      "data": {
+        "outcome": "handled"
+      }
+    }
+  ]
+}

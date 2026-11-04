@@ -1,0 +1,104 @@
+{
+  "experiment": "v4",
+  "source_commit": "94e60df8b90d59ce23384e0210ec6a205f3e90ba",
+  "split": "held-out",
+  "exported": [
+    {
+      "file": "reports/runs/model-heldout-v4-1793723921956-cases.json",
+      "sha256": "5692ef9c7e152d90e20f1355dcbfdc4bb998038aed144af529435d954ac59629"
+    },
+    {
+      "file": "reports/runs/model-heldout-v4-1793723921956.json",
+      "sha256": "043e83e924e997a7ec312d22259c433b2acc8a11b015eb5b3e15af43231111fd"
+    },
+    {
+      "file": "reports/runs/model-heldout-v4-1793723921956.txt",
+      "sha256": "2e2e2e98b00164a5010a77267eb181aeaf965f901bf5f234fcaea0aca17c9d7e"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_27df0129045c1365f2d6.json",
+      "sha256": "85a334983e85a45b7ce914e8b7907f4412cc42091ee80accdb807605139c6beb"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_5062401417da1090285b.json",
+      "sha256": "0517cee7cb50bfb8b35c3cbb75cda985c698c661daca3e0c10ba69ec09adf6d9"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_66471cc231e5688ab746.json",
+      "sha256": "c10365d120afb6550bf15c14a64b1da9988b524232b137c1efd0985cad6a4778"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_70f69dbe5a3824357a84.json",
+      "sha256": "0d0bfcfacb8a8da90cc86fce78079843e6f22aeb1594073a7584440f1b320f77"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_780143c67626a92b0906.json",
+      "sha256": "4bb52787ff109b20cb49651730226197f03e0ebc0e68849d754d441a04a9ff30"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_7936281a8b53072674b6.json",
+      "sha256": "91a66266272302b2ca6bf5a596b4fdae73d482f3089760676538d962d4c29d56"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_7e8dfc96b332aeec5a48.json",
+      "sha256": "79043b43e039cce5209be4660d780a2ec2c8425fee98e7ac11e97e8802f21c74"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_8d86e5bc218760ea3d7a.json",
+      "sha256": "667b86f67bf0a6f8fb4e426ac95f2bc67717673f8288e0bacfe3e9f8a0f36ede"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_9d320cc5376188c66de7.json",
+      "sha256": "a881d507f3903966442f2a37a1b2957e706a4bc6f64c61773224346cfc170d69"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_a30b921fdd9536b74d57.json",
+      "sha256": "62e847e6dd2a9b4e69509823b4f0fd53e511f85db4d19545a4f87e510439a831"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_a55666ed5de60ba60c20.json",
+      "sha256": "87d81345975fe1a1480b1fedc3d79bcbf91d5a0b09906776e909bf0313be2534"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_b314fe7cfabafb3249ca.json",
+      "sha256": "b91adb9c285076ca99102a6530ac2b582f19490a7f5693d629fb41651e79d472"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_b7b5487e0250fe6c261d.json",
+      "sha256": "9e7141197a2b7dc9822683a35498c56288725581634be1c4958fc5c1af01b4db"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_d134712bc76a2038be73.json",
+      "sha256": "eb1539e0543e5926086fc9645ec79289e5e615b93f7e8845ecd49b12336e68c6"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_d4d04948ffe758211db4.json",
+      "sha256": "81736251c4e6f0af119de33a24028ed427ed65bede19c5b04c72fff9c08edc83"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-fx_fdd5a892d11f480d3112.json",
+      "sha256": "74819b6213fd6fb127d5ac838e3f32c98610072f5c9123e79e3361577d2ecb85"
+    },
+    {
+      "file": "reports/model-traces/model-heldout-v4-1793723921956-progress.json",
+      "sha256": "5692ef9c7e152d90e20f1355dcbfdc4bb998038aed144af529435d954ac59629"
+    },
+    {
+      "file": "reports/environments/model-experiment-v4-ci-1793723915829.json",
+      "sha256": "81963d7ec219869ddf2112fcef28d1ff8db3e8123b22e3d0785dfdca461639b9"
+    },
+    {
+      "file": "reports/checks/model-experiment-v4-diagnostics.json",
+      "sha256": "483a92d76619c8644463949c1c08783ad101f697bcd3b3e265a869c40db6802a"
+    },
+    {
+      "file": "reports/checks/model-experiment-v4-runner.json",
+      "sha256": "575153518c01c93589e43f062058dc0da9aa77f6b15418f1803aa95e243bb6fe"
+    },
+    {
+      "file": "reports/checks/model-preflight-v4.json",
+      "sha256": "cb41e72ceec23cf7aee9880873e8d92b0850b4f34ef89b1c9940dc9e24144f73"
+    }
+  ],
+  "private_logs_exported": false
+}
