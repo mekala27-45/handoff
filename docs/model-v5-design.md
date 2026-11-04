@@ -1,0 +1,15 @@
+# V5 experiment rationale and limits
+
+V4's reserved run is consumed evidence. This analysis does not change its published 12/16 result and does not turn those cases into v5 development cases.
+
+The two failed shipped cancellation cases searched a customer sentence containing "before". Retrieval returned only the before-shipping clause. Both model proposals contradicted the trusted shipped state and were rejected. The failed paid cancellation case retrieved both cancellation clauses but selected the after-shipping clause even though the trusted state was paid. The missing proposal case first searched a sentence that matched no policy, attempted an invalid empty citation list, then searched an unrelated duplicate-capture topic before exhausting its budget.
+
+V5 tests three related changes. The search input accepts seven explicit topics, chosen by the model. The cancellation topic is simply "cancel", which retrieves both shipping conditions. The model sees exact clause text and versioned references without the search ranking score or the clause's default action field. Instructions require reading conditions against trusted facts, explain the shipping-state vocabulary, and distinguish missing required evidence from irrelevant null fields. The application still retrieves policies with the original scoped search, stores the raw retrieval observation, derives amounts and applies the unchanged validator. No expected action, answer-table row, fixture family or evaluator label is given to the model.
+
+The 32 development cases are selected from development metadata, four per family. This expands coverage beyond the previous sixteen. Freeze requires at least 30 correct, complete observed SQL and authority records, actual tool use for all cases, and no accepted incorrect action or model review, approval or execution. This is a development qualification gate, not a claim of production reliability or a passing held-out score.
+
+The 16 reserved cases exclude all 48 cases used by the v2, v3 and v4 model held-out runs. Their selection is deterministic from metadata and is checked in the harness and independently before freeze. They still share existing template lineages. Scores from different versions use different subsets, so differences are descriptive and unpaired. Because prompt, search input and result presentation change together, this experiment cannot isolate the contribution of each change.
+
+Original workflow artifacts, export hashes, exact source commits, CPU preflight and model digest remain authoritative. Regrading checks the actual SQL amount, action, evidence and proposal identity. All failures and missing outputs retain their place in the denominator. Scripted workflow safety checks remain separate from model-quality evidence.
+
+Development inference runs on agent-quality-v5. A freeze is produced only from an authenticated successful workflow artifact after independent regrading. Reserved inference is selected automatically only on agent-heldout-v5 and requires the committed frozen configuration. V3 and v4 source hashes and evidence remain unchanged.
