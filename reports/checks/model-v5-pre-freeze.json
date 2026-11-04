@@ -1,0 +1,171 @@
+{
+  "version": 5,
+  "kind": "verified-pre-freeze-development",
+  "checked_at": "2026-11-04T22:34:24.349Z",
+  "current_checkout": "b746299621a1309a175cea9ef21c7c172fbd8952",
+  "run_id": "model-development-v5-1793829472919",
+  "source_commit": "88bfe064932ba80d823b945c7ceeb35a8724eeda",
+  "configuration_digest": "a49b5cd52e155f8f2362bb093d91b4ee4f01cbc64f81b2fe4d0260a510fe1ee4",
+  "attempted_case_ids": [
+    "fx_07a9425bd18f2b4fd61e",
+    "fx_09ed1bfd82ca4ddfe32e",
+    "fx_0b58a3a6ac61d0118970",
+    "fx_1c10e65172f5477e2258",
+    "fx_1c7da880b36d5597672f",
+    "fx_1e0cc73c643a93e64ca2",
+    "fx_2122a33033dd7b47466d",
+    "fx_273b1c7a9f9e376f35c2",
+    "fx_35ba32ccb62232799be5",
+    "fx_4bf824360cd7e90708de",
+    "fx_4c872a5314f50d55655f",
+    "fx_4cb14e9f20557e1e3004",
+    "fx_4ec4de37a2c081c0f963",
+    "fx_581a045c16673c294c68",
+    "fx_5f226f78369f6d066723",
+    "fx_6369f2c951ae7ef5bead",
+    "fx_7be01d97cd16d5872f63",
+    "fx_833383a2e1f0a2b7fcf3",
+    "fx_93655d6f759e6db5e1f3",
+    "fx_9b1a1f0d54ec56050ad4",
+    "fx_9d78e3fe394e9406e8c6",
+    "fx_aae53f2780615aad6f5a",
+    "fx_ab8ee4d8b0c8e62da0c5",
+    "fx_ae13478fa94f03661ed3",
+    "fx_b2b1f35abfe49005f276",
+    "fx_c998ac1b97d3eb8a5dba",
+    "fx_cad21e1023c787ee1b5b",
+    "fx_d0b7f50669ce12e21971",
+    "fx_da05e4f55623ac912471",
+    "fx_e676cf4e439b2707c790",
+    "fx_e7bd640374c82f449d21",
+    "fx_eb0194dba39d8fb9a823"
+  ],
+  "independently_regraded": true,
+  "status": "passed",
+  "counts": {
+    "cases": 32,
+    "correct": 32,
+    "evidence_valid": 32,
+    "unsafe_proposals": 0,
+    "missing_proposals": 0,
+    "actual_tool_execution": 32,
+    "validated_wrong_actions": 0,
+    "sql_complete": true,
+    "authority_complete": true,
+    "approvals": 0,
+    "effects": 0,
+    "review_records": 0
+  },
+  "model": {
+    "name": "qwen3:4b-q4_K_M",
+    "digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+    "download_bytes": 2620788260,
+    "quantization": "Q4_K_M",
+    "ollama_version": "0.40.13"
+  },
+  "original_evidence": {
+    "workflow_run_id": 41920762185,
+    "workflow_url": "https://github.com/mekala27-45/handoff/actions/runs/41920762185",
+    "artifact_id": 13368334444,
+    "artifact_digest": "sha256:8afc691b07f068fa0f0eb03794571bd2623032847b3c3aa993098246d858cbf3",
+    "export_manifest_digest": "ce6def679c990cf789677f4ec9bce07b934ecb9ec2957fe5cac3707cd473fd9e",
+    "preflight": {
+      "observed_at": "2026-11-04T21:57:46.303Z",
+      "version": "0.40.13",
+      "model": {
+        "name": "qwen3:4b-q4_K_M",
+        "digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+        "size": 4012176833,
+        "size_vram": 0,
+        "context_length": 8192
+      },
+      "model_metadata": {
+        "name": "qwen3:4b-q4_K_M",
+        "details": {
+          "family": "qwen3",
+          "quantization_level": "Q4_K_M",
+          "parameter_size": "4.0B"
+        },
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ],
+        "license": "Apache-2.0"
+      },
+      "passed": true,
+      "failure_code": null,
+      "warmup_http_status": 200
+    },
+    "environment": {
+      "observed_at": "2026-11-04T21:57:46.314Z",
+      "source_commit": "88bfe064932ba80d823b945c7ceeb35a8724eeda",
+      "platform": "linux",
+      "node": "v24.19.0",
+      "cpu_model": "AMD EPYC 7763 64-Core Processor",
+      "cpu_count": 4,
+      "memory_bytes": 16764674048,
+      "ollama_version": "0.40.13",
+      "model": {
+        "name": "qwen3:4b-q4_K_M",
+        "digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+        "size": 4012176833,
+        "size_vram": 0,
+        "context_length": 8192
+      },
+      "execution": "CPU",
+      "split": "development",
+      "note": "Actual model warm-up is excluded from graded attempts."
+    },
+    "runner": {
+      "source_commit": "88bfe064932ba80d823b945c7ceeb35a8724eeda",
+      "started_at": "2026-11-04T21:57:28.402Z",
+      "finished_at": "2026-11-04T22:33:01.803Z",
+      "elapsed_ms": 2133401,
+      "split": "development",
+      "runner_succeeded": true,
+      "model_quality": "Read the actual experiment run manifest; runner success is not proposal correctness.",
+      "phases": [
+        {
+          "name": "migrate",
+          "exit_code": 0
+        },
+        {
+          "name": "isolated_agent_role",
+          "passed": true
+        },
+        {
+          "name": "authority-calibration",
+          "exit_code": 0
+        },
+        {
+          "name": "ollama",
+          "ready": true
+        },
+        {
+          "name": "pull-pinned-model",
+          "exit_code": 0
+        },
+        {
+          "name": "cpu-preflight",
+          "exit_code": 0
+        },
+        {
+          "name": "eve",
+          "ready": true
+        },
+        {
+          "name": "model-evaluation",
+          "exit_code": 0
+        }
+      ]
+    }
+  },
+  "comparison_limits": [
+    "V5 uses a different held-out subset, so comparisons with v4 are unpaired.",
+    "Previously untouched model cases still share existing held-out template lineages. This is not a new-template benchmark.",
+    "V4 failures informed the general hypothesis. V4 remains frozen and is not rerun as development evidence.",
+    "All effects are synthetic. No model proposal is approved or executed.",
+    "The first v5 development attempt scored 18/32, with fourteen rejected proposals and no missing output. Its original records remain at https://github.com/mekala27-45/handoff/tree/model-evidence-v5/runs/41915794448 ."
+  ]
+}
