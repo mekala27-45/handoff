@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,mkdtemp,unlink,rmdir} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
 import {resolve,join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 const repository='mekala27-45/handoff',pagesUrl='https://mekala27-45.github.io/handoff/';
@@ -27,13 +28,17 @@ async function checkFiles(manifest){
  assert.equal(manifest.version,5);assert.match(manifest.source_commit,/^[a-f0-9]{40}$/);assert.ok(Array.isArray(manifest.files)&&manifest.files.length>0);const seen=new Set();
  for(const file of manifest.files){assert.ok(typeof file.path==='string'&&!file.path.split('/').some(s=>!s||s==='.'||s==='..'));assert.ok(/^(?:reports\/|apps\/site\/public\/reports\/)/.test(file.path));assert.ok(!seen.has(file.path));seen.add(file.path);assert.match(file.sha256,/^[a-f0-9]{64}$/);const bytes=await readFile(file.path);assert.equal(bytes.length,file.bytes);assert.equal(sha(bytes),file.sha256,'v5_original_publication_file:'+file.path);}
 }
+export async function requireResultArtifactBytes(directory,heldBytes,publicationBytes){
+ // upload-artifact removes the shared reports/checks parent for this pair.
+ for(const [name,expected] of [['model-v5-heldout.json',heldBytes],['model-v5-publication.json',publicationBytes]])assert.equal(sha(await readFile(join(directory,name))),sha(expected),'v5_authenticated_result_bytes:'+name);
+}
 async function originalPublication(manifest,held){
  assert.equal(manifest.source_commit,held.current_checkout);const runs=(await github('actions/runs?head_sha='+manifest.source_commit+'&per_page=100')).workflow_runs;
  const run=runs.find(r=>r.head_sha===manifest.source_commit&&r.head_branch==='agent-results-v5'&&r.path==='.github/workflows/publish-results-v5.yml'&&r.event==='push'&&r.conclusion==='success');assert.ok(run,'v5_original_results_workflow_required');
  for(const file of ['scripts/verify-model-v5.mjs','scripts/prepare-model-publication-v5.mjs','scripts/publish-model-experiment-v5.ts','.github/workflows/publish-results-v5.yml'])assert.equal(sha(execFileSync('git',['show',run.head_sha+':'+file],{encoding:'utf8',maxBuffer:16000000}).replaceAll('\r\n','\n')),sha((await readFile(file,'utf8')).replaceAll('\r\n','\n')),'v5_results_source:'+file);
  const artifacts=(await github('actions/runs/'+run.id+'/artifacts')).artifacts.filter(a=>a.name==='model-results-v5-'+run.head_sha);assert.equal(artifacts.length,1);assert.equal(artifacts[0].expired,false);
  const dir=resolve('.local/release-v5-results-'+run.id);await mkdir(dir,{recursive:true});execFileSync('gh',['run','download',String(run.id),'--repo',repository,'--name',artifacts[0].name,'--dir',dir],{stdio:'inherit'});
- for(const file of ['reports/checks/model-v5-heldout.json','reports/checks/model-v5-publication.json'])assert.equal(sha(await readFile(join(dir,file))),sha(await readFile(file)),'v5_authenticated_result_bytes');
+ await requireResultArtifactBytes(dir,await readFile('reports/checks/model-v5-heldout.json'),await readFile('reports/checks/model-v5-publication.json'));
  return {workflow_run_id:run.id,workflow_url:run.html_url,artifact_id:artifacts[0].id,artifact_digest:artifacts[0].digest};
 }
 export function requirePriorGrade(prior,checked,rows){
@@ -99,7 +104,9 @@ async function publish(){
  for(const run of hosted.model_v5.runs){const expected=[experiments.v5.development,experiments.v5.held_out].find(r=>r.run_id===run.run_id);assert.ok(expected);same(run.counts,expected.counts);assert.equal(run.configuration_digest,expected.configuration_digest);assert.equal(run.downloads.length,3);for(const file of run.downloads)assert.equal(digest(await read('apps/site/public/reports/'+file.filename)),file.canonical_digest);}
  assert.ok((await readFile('release-assets/RESULTS.md','utf8')).includes('## Agent v5 model evidence'));previous('publish');
 }
-function selfTest(){
+async function selfTest(){
+ const dir=await mkdtemp(join(tmpdir(),'handoff-v5-artifact-')),held=Buffer.from('{"result":13}\n'),publication=Buffer.from('{"files":["original"]}\n');
+ try{await writeFile(join(dir,'model-v5-heldout.json'),held);await writeFile(join(dir,'model-v5-publication.json'),publication);await requireResultArtifactBytes(dir,held,publication);await writeFile(join(dir,'model-v5-heldout.json'),'{"result":16}\n');await assert.rejects(requireResultArtifactBytes(dir,held,publication),/v5_authenticated_result_bytes/);}finally{await unlink(join(dir,'model-v5-heldout.json'));await unlink(join(dir,'model-v5-publication.json'));await rmdir(dir);}
  const configuration={version:5},frozen={configuration,configuration_digest:digest(configuration),development_run_id:'dev',frozen_at:'2026-11-04T00:00:00Z'},plan={model_digest:'a'.repeat(64),development_case_ids:Array.from({length:32},(_,i)=>'d'+i),held_out_case_ids:Array.from({length:16},(_,i)=>'h'+i)};
  const run=(split,n,correct)=>({run_id:split==='development'?'dev':'held',split,configuration_digest:frozen.configuration_digest,model_digest:plan.model_digest,attempted_case_ids:split==='development'?plan.development_case_ids:plan.held_out_case_ids,independently_regraded:true,status:correct===n?'passed':'failed',counts:{cases:n,correct,actual_tool_execution:n,sql_complete:true,authority_complete:true,validated_wrong_actions:0,approvals:0,effects:0,review_records:0}});
  const summary={version:5,configuration_digest:frozen.configuration_digest,frozen_at:frozen.frozen_at,development:run('development',32,30),held_out:run('held-out',16,0),original_results:{workflow_run_id:1,artifact_id:2}};requireV5Summary(summary,frozen,plan);
@@ -107,4 +114,4 @@ function selfTest(){
  for(const mutate of [p=>p.correct=32,p=>p.rejected_proposals=0,p=>p.missing=1,p=>p.incorrect_actions=0,p=>p.freeze_qualified=true]){const p=structuredClone(prior);mutate(p);assert.throws(()=>requirePriorGrade(p,checked,rows));}const tamperedRows=structuredClone(rows);tamperedRows[0].authority_audit.review_records=1;assert.throws(()=>requirePriorGrade(prior,checked,tamperedRows));
  for(const mutate of [s=>s.development.counts.correct=29,s=>s.held_out.status='passed',s=>s.held_out.counts.approvals=1,s=>s.held_out.counts.effects=1,s=>s.held_out.counts.review_records=1,s=>s.held_out.counts.sql_complete=false,s=>s.held_out.attempted_case_ids=[],s=>s.configuration_digest='changed']){const s=structuredClone(summary);mutate(s);assert.throws(()=>requireV5Summary(s,frozen,plan));}console.log('v5 release guards passed, including honest failed held-out results');
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){const mode=process.argv[2];if(mode==='self-test'){previous('self-test');selfTest();}else if(mode==='verify')await verify();else if(mode==='publish')await publish();else throw Error('expected_self-test_verify_or_publish');}
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){const mode=process.argv[2];if(mode==='self-test'){previous('self-test');await selfTest();}else if(mode==='verify')await verify();else if(mode==='publish')await publish();else throw Error('expected_self-test_verify_or_publish');}
