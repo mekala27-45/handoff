@@ -2,7 +2,7 @@
   "version": 5,
   "stage": "registered-candidate",
   "created_at": "2026-11-04T21:20:45.664Z",
-  "operating_point": "qwen3-4b-policy-topic-and-predicate-guidance",
+  "operating_point": "qwen3-4b-policy-topic-and-predicate-guidance-r2",
   "model": "qwen3:4b-q4_K_M",
   "model_digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
   "model_lock_path": "docs/sources/model-lock-v4.json",
@@ -149,10 +149,10 @@
   ],
   "hypothesis": "Constrained policy topic queries, full conditional-clause reading and explicit comparison with trusted shipping state improve retrieval and decisions without changing the model, validator or authority.",
   "changes": [
-    "Search input is a model-selected policy-topic enum; cancellation returns both shipping conditions.",
-    "Model sees clause text and versioned citation rather than ranking score or an unconditional-looking action label.",
-    "Instructions distinguish required missing evidence from irrelevant null fields and require comparing policy conditions with trusted facts.",
-    "Development scope expands to 32 metadata-selected cases. No v4 held-out replay is used for v5 tuning."
+    "Search uses a model-selected topic enum, with separate cancellation-before and cancellation-after topics.",
+    "Policy text, its original action label and versioned citation remain visible; the label must be read with its conditions.",
+    "Balanced intent guidance replaces the first candidate's repeated cancellation and manual-review emphasis.",
+    "Development uses the same registered 32 cases. The prior 18/32 failed attempt is retained."
   ],
   "initial_limits": {
     "context_tokens": 8192,
@@ -179,7 +179,58 @@
     "V5 uses a different held-out subset, so comparisons with v4 are unpaired.",
     "Previously untouched model cases still share existing held-out template lineages. This is not a new-template benchmark.",
     "V4 failures informed the general hypothesis. V4 remains frozen and is not rerun as development evidence.",
-    "All effects are synthetic. No model proposal is approved or executed."
+    "All effects are synthetic. No model proposal is approved or executed.",
+    "The first v5 development attempt scored 18/32, with fourteen rejected proposals and no missing output. Its original records remain at https://github.com/mekala27-45/handoff/tree/model-evidence-v5/runs/41915794448 ."
   ],
-  "prior_attempts": []
+  "prior_attempts": [
+    {
+      "operating_point": "qwen3-4b-policy-topic-and-predicate-guidance-r1",
+      "run_id": "model-development-v5-1793827559795",
+      "workflow_run_id": 41915794448,
+      "source_commit": "53f378ff47bb9e1b404a7d170e7e5c903463c69d",
+      "configuration_digest": "925c84de7c77f121e543a974c999fae94d57eb9514235fc9a51206df1b66382a",
+      "model_digest": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+      "case_ids": [
+        "fx_07a9425bd18f2b4fd61e",
+        "fx_09ed1bfd82ca4ddfe32e",
+        "fx_0b58a3a6ac61d0118970",
+        "fx_1c10e65172f5477e2258",
+        "fx_1c7da880b36d5597672f",
+        "fx_1e0cc73c643a93e64ca2",
+        "fx_2122a33033dd7b47466d",
+        "fx_273b1c7a9f9e376f35c2",
+        "fx_35ba32ccb62232799be5",
+        "fx_4bf824360cd7e90708de",
+        "fx_4c872a5314f50d55655f",
+        "fx_4cb14e9f20557e1e3004",
+        "fx_4ec4de37a2c081c0f963",
+        "fx_581a045c16673c294c68",
+        "fx_5f226f78369f6d066723",
+        "fx_6369f2c951ae7ef5bead",
+        "fx_7be01d97cd16d5872f63",
+        "fx_833383a2e1f0a2b7fcf3",
+        "fx_93655d6f759e6db5e1f3",
+        "fx_9b1a1f0d54ec56050ad4",
+        "fx_9d78e3fe394e9406e8c6",
+        "fx_aae53f2780615aad6f5a",
+        "fx_ab8ee4d8b0c8e62da0c5",
+        "fx_ae13478fa94f03661ed3",
+        "fx_b2b1f35abfe49005f276",
+        "fx_c998ac1b97d3eb8a5dba",
+        "fx_cad21e1023c787ee1b5b",
+        "fx_d0b7f50669ce12e21971",
+        "fx_da05e4f55623ac912471",
+        "fx_e676cf4e439b2707c790",
+        "fx_e7bd640374c82f449d21",
+        "fx_eb0194dba39d8fb9a823"
+      ],
+      "correct": 18,
+      "incorrect_actions": 10,
+      "missing": 0,
+      "rejected_proposals": 14,
+      "quality_status": "failed",
+      "freeze_qualified": false,
+      "evidence_url": "https://github.com/mekala27-45/handoff/tree/model-evidence-v5/runs/41915794448"
+    }
+  ]
 }

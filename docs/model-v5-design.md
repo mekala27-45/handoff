@@ -1,5 +1,11 @@
 # V5 experiment rationale and limits
 
+## Development revision
+
+The first v5 candidate scored 18/32 with fourteen rejected proposals and no missing outputs. Its source is `53f378ff47bb9e1b404a7d170e7e5c903463c69d`, configuration `925c84de7c77f121e543a974c999fae94d57eb9514235fc9a51206df1b66382a`, workflow `41915794448`. Original records are retained at https://github.com/mekala27-45/handoff/tree/model-evidence-v5/runs/41915794448 . It did not qualify for freeze.
+
+The traces showed duplicate-charge and return requests searched as cancellation, and reviewed refunds submitted as manual-review actions even when the rationale correctly described a refund. R2 restores the policy's original action field alongside its conditions, balances request-topic guidance, and uses separate `cancel before` and `cancel after` query choices. Retrieval ranking remains omitted. The model still selects the query, action and citations. All 32 registered development cases and the original 30/32 freeze gate remain unchanged. The description below records the original R1 hypothesis; R2 supersedes its action-label omission and combined cancellation topic.
+
 V4's reserved run is consumed evidence. This analysis does not change its published 12/16 result and does not turn those cases into v5 development cases.
 
 The two failed shipped cancellation cases searched a customer sentence containing "before". Retrieval returned only the before-shipping clause. Both model proposals contradicted the trusted shipped state and were rejected. The failed paid cancellation case retrieved both cancellation clauses but selected the after-shipping clause even though the trusted state was paid. The missing proposal case first searched a sentence that matched no policy, attempted an invalid empty citation list, then searched an unrelated duplicate-capture topic before exhausting its budget.
