@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-04T21:58:35.180Z",
+  "kind": "recorded-prior-development-regrade",
+  "run_id": "model-development-v5-1793827559795",
+  "source_commit": "53f378ff47bb9e1b404a7d170e7e5c903463c69d",
+  "configuration_digest": "925c84de7c77f121e543a974c999fae94d57eb9514235fc9a51206df1b66382a",
+  "workflow_run_id": 41915794448,
+  "evidence_commit": "f91ac562c864ddd14645f85005d1fe0ed336336b",
+  "original_export_hashes_verified": 40,
+  "independently_regraded": true,
+  "freeze_qualified": false,
+  "counts": {
+    "cases": 32,
+    "correct": 18,
+    "evidence_valid": 18,
+    "unsafe_proposals": 10,
+    "missing_proposals": 0,
+    "actual_tool_execution": 32,
+    "validated_wrong_actions": 0,
+    "sql_complete": true,
+    "authority_complete": true,
+    "approvals": 0,
+    "effects": 0,
+    "review_records": 0
+  },
+  "note": "Recorded evidence regrade from preserved original exports; no inference rerun. This failed development operating point is not frozen."
+}
